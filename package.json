@@ -4,7 +4,8 @@
   "description": "A business intelligence tool for tool selection of a hypothetical consulting IT firm.",
   "main": "src/index.mjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "schema": "psql -d raw_database -a -f /home/usuario/gcce/gcceproject/src/models/create_tables.sql"
   },
   "keywords": [],
   "author": "",
