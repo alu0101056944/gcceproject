@@ -85,3 +85,23 @@ CREATE TABLE community_tool(
   amount_of_discussions integer
 );
 
+CREATE TABLE tool_project_company(
+  tool_id integer REFERENCES tool (tool_id),
+  project_id integer REFERENCES project (project_id),
+  company_id integer REFERENCES company (company_id)
+);
+
+CREATE TABLE community_tool_date(
+  community_id integer REFERENCES community (community_id),
+  tool_id integer REFERENCES tool (tool_id),
+  date_id integer REFERENCES date (date_id),
+  tool_score integer,
+  rank integer
+);
+
+CREATE TABLE company_date(
+  company_id integer REFERENCES company (company_id),
+  year integer,
+  quarter integer,
+  benefit numeric
+);
