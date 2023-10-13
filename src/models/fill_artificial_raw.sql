@@ -1,5 +1,54 @@
 
- -- Clear the table first
+INSERT INTO employee(employee_id, name, title, department)
+  VALUES
+    (1, 'John Smith', 'Software Engineer', 'IT'),
+    (2, 'Sarah Johnson', 'Software Engineer', 'IT'),
+    (3, 'Michael Williams', 'Software Engineer', 'IT'),
+    (4, 'Emily Davis', 'Software Engineer', 'IT'),
+    (5, 'David Anderson', 'Software Engineer', 'IT'),
+    (6, 'Jennifer Brown', 'Software Engineer', 'IT'),
+    (7, 'Jessica Taylor', 'Software Engineer', 'IT'),
+    (8, 'Robert Martin', 'Software Engineer', 'IT'),
+    (9, 'Susan Harris', 'Software Engineer', 'IT'),
+    (10, 'Christopher Lee', 'Software Engineer', 'IT'),
+    (11, 'Mary White', 'Software Engineer', 'IT'),
+    (12, 'Daniel Turner', 'Software Engineer', 'IT'),
+    (13, 'Karen Martinez', 'Software Engineer', 'IT'),
+    (14, 'William Clark', 'Software Engineer', 'IT'),
+    (15, 'Lisa Young', 'Software Engineer', 'IT'),
+    (16, 'Joseph Rodriguez', 'Software Engineer', 'IT'),
+    (17, 'Patricia Hall', 'Software Engineer', 'IT'),
+    (18, 'Richard Jackson', 'Software Engineer', 'IT'),
+    (19, 'Linda Lewis', 'Software Engineer', 'IT'),
+    (20, 'Thomas Moore', 'Software Engineer', 'IT');
+
+INSERT INTO company(company_id, name, employee_amount, amount_of_searches)
+  VALUES (1, 'gcce', 20, 28732);
+
+
+INSERT INTO tool (
+    tool_id,
+    name,
+    author_company,
+    type,
+    specialization,
+    license,
+    isOpenSource,
+    isPeriodicPay,
+    downloads,
+    searches,
+    easeOfLearning
+) VALUES
+    (1, 'JavaScript', 'Various', 'Programming Language', 'Web Development', 'MIT', true, false, 1000000, 50000, 4),
+    (2, 'Ansible', 'Red Hat', 'Automation Tool', 'Infrastructure Automation', 'GPLv3', true, false, 150000, 10000, 3),
+    (3, 'Git', 'Various', 'Version Control System', 'Software Development', 'GPL', true, false, 5000000, 200000, 5),
+    (4, 'GitHub', 'GitHub, Inc.', 'Version Control System', 'Software Development', 'Proprietary', true, true, 20000000, 1000000, 3),
+    (5, 'Sass', 'Various', 'CSS Preprocessor', 'Web Development', 'MIT', true, false, 50000, 5000, 3),
+    (6, 'Ruby', 'Various', 'Programming Language', 'Web Development', 'Ruby License', true, false, 100000, 10000, 2),
+    (7, 'React.js', 'Facebook', 'JavaScript Library', 'Front-end Development', 'MIT', true, false, 5000000, 300000, 4),
+    (8, 'PostgreSQL', 'PostgreSQL Global Development Group', 'Database Management System', 'Database', 'PostgreSQL License', true, false, 2000000, 100000, 4);
+
+
 INSERT INTO employee_tool(employee_id, tool_id, years_of_experience)
   VALUES
     (1, 1, 7),
@@ -161,4 +210,5 @@ INSERT INTO employee_tool(employee_id, tool_id, years_of_experience)
     (20, 5, 3),
     (20, 6, 5),
     (20, 7, 5),
-    (20, 8, 4)
+    (20, 8, 4);
+
