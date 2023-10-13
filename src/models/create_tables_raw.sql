@@ -55,3 +55,7 @@ CREATE TABLE employee_tool(
   years_of_experience integer
 )
 
+CREATE TABLE project_tool(
+  project_id integer REFERENCES project (project_id),
+  tool_id integer REFERENCES tool (tool_id)
+)
