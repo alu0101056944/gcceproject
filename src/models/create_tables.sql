@@ -37,6 +37,5 @@ CREATE TABLE project(
   status text,
   downloads integer,
   contributors integer,
-  downloads integer,
   searches integer
 );
