@@ -1,6 +1,6 @@
 
 CREATE TABLE tool(
-  tool_id numeric PRIMARY KEY,
+  tool_id integer PRIMARY KEY,
   name text,
   author_company text,
   type text,
@@ -8,13 +8,19 @@ CREATE TABLE tool(
   license text,
   isOpenSource boolean,
   isPeriodicPay boolean,
-  downloads numeric,
-  searches numeric,
-  easeOfLearning numeric
+  downloads integer,
+  searches integer,
+  easeOfLearning integer
 );
 
 CREATE TABLE date(
   date date
+);
+
+CREATE TABLE community(
+  community_id integer,
+  name text,
+  type text
 );
 
 
