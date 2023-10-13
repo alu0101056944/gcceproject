@@ -1,4 +1,10 @@
 
+CREATE TABLE employee(
+  employee_id integer PRIMARY KEY,
+  title text,
+  department text
+);
+
 CREATE TABLE tool(
   tool_id integer PRIMARY KEY,
   name text,
@@ -18,13 +24,13 @@ CREATE TABLE date(
 );
 
 CREATE TABLE community(
-  community_id integer,
+  community_id integer PRIMARY KEY,
   name text,
   type text
 );
 
 CREATE TABLE company(
-  company_id integer,
+  company_id integer PRIMARY KEY,
   name text,
   employee_amount integer,
   amount_of_searches integer,
@@ -32,10 +38,12 @@ CREATE TABLE company(
 );
 
 CREATE TABLE project(
-  project_id integer,
+  project_id integer PRIMARY KEY,
   project_name text,
   status text,
   downloads integer,
   contributors integer,
   searches integer
 );
+
+
