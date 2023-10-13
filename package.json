@@ -1,12 +1,16 @@
 {
   "name": "gcceproject",
   "version": "1.0.0",
-  "description": "A business intelligence tool for tool selection of a hyphotetical consulting IT firm.",
-  "main": "index.js",
+  "description": "A business intelligence tool for tool selection of a hypothetical consulting IT firm.",
+  "main": "src/index.mjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "schema": "psql -d raw_database -a -f /home/usuario/gcce/gcceproject/src/models/create_tables.sql"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "pg-promise": "^11.5.4"
+  }
 }
