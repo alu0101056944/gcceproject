@@ -13,4 +13,8 @@ CREATE TABLE tool(
   easeOfLearning numeric
 );
 
+CREATE TABLE date(
+  date date
+);
+
 
