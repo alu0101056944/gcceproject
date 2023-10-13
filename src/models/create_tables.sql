@@ -23,4 +23,10 @@ CREATE TABLE community(
   type text
 );
 
-
+CREATE TABLE company(
+  company_id integer,
+  name text,
+  employee_amount integer,
+  amount_of_searches integer,
+  type text
+);
