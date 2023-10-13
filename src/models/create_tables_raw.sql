@@ -2,6 +2,7 @@
 
 CREATE TABLE employee(
   employee_id integer PRIMARY KEY,
+  name text,
   title text,
   department text
 );
@@ -48,7 +49,7 @@ CREATE TABLE project(
   searches integer
 );
 
-CREATE TABLE MARKET(
+CREATE TABLE market(
   market_id integer PRIMARY KEY
 );
 
