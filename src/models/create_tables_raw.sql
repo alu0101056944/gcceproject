@@ -21,6 +21,7 @@ CREATE TABLE tool(
 );
 
 CREATE TABLE date(
+  date_id integer PRIMARY KEY,
   date date
 );
 
@@ -53,9 +54,34 @@ CREATE TABLE employee_tool(
   employee_id integer REFERENCES employee (employee_id),
   tool_id integer REFERENCES tool (tool_id),
   years_of_experience integer
-)
+);
 
 CREATE TABLE project_tool(
   project_id integer REFERENCES project (project_id),
   tool_id integer REFERENCES tool (tool_id)
-)
+);
+
+CREATE TABLE project_company(
+  project_id integer REFERENCES project (project_id),
+  company_id integer REFERENCES company (company_id),
+  budget numeric,
+  amount_of_employees_assigned integer
+);
+
+CREATE TABLE tool_date(
+  tool_id integer REFERENCES tool (tool_id),
+  date_id integer REFERENCES date (date_id),
+  version text,
+  interest_level integer,
+  change_type text
+);
+
+CREATE TABLE community_tool(
+  community_id integer REFERENCES community (community_id),
+  tool_id integer REFERENCES tool (tool_id),
+  amount_of_bugs_reported integer,
+  amount_of_bugs_solved integer,
+  amount_of_changes_commited integer,
+  amount_of_discussions integer
+);
+
