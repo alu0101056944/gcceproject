@@ -43,7 +43,6 @@ CREATE TABLE company(
 CREATE TABLE project(
   project_id integer PRIMARY KEY,
   project_name text,
-  status text,
   downloads integer,
   contributors integer,
   searches integer
