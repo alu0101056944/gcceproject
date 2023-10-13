@@ -30,3 +30,13 @@ CREATE TABLE company(
   amount_of_searches integer,
   type text
 );
+
+CREATE TABLE project(
+  project_id integer,
+  project_name text,
+  status text,
+  downloads integer,
+  contributors integer,
+  downloads integer,
+  searches integer
+);
