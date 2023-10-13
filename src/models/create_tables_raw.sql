@@ -48,6 +48,10 @@ CREATE TABLE project(
   searches integer
 );
 
+CREATE TABLE MARKET(
+  market_id integer PRIMARY KEY
+);
+
  -- Fact tables
 
 CREATE TABLE employee_tool(
@@ -104,4 +108,17 @@ CREATE TABLE company_date(
   year integer,
   quarter integer,
   benefit numeric
+);
+
+CREATE TABLE market_date(
+  market_id integer REFERENCES market (market_id),
+  date_id integer REFERENCES date (date_id),
+  total_amount_of_offers integer
+);
+
+CREATE TABLE market_tool_date(
+  market_id integer REFERENCES market (market_id),
+  tool_id integer REFERENCES tool (tool_id),
+  date_id integer REFERENCES date (date_id),
+  amount_of_mentions integer
 );
