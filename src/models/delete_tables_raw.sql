@@ -1,13 +1,13 @@
 
  -- Dimension tables
 
-DROP TABLE employee;
-DROP TABLE tool;
-DROP TABLE date;
-DROP TABLE community;
-DROP TABLE company;
-DROP TABLE project;
-DROP TABLE market;
+DROP TABLE employee CASCADE;
+DROP TABLE tool CASCADE;
+DROP TABLE date CASCADE;
+DROP TABLE community CASCADE;
+DROP TABLE company CASCADE;
+DROP TABLE project CASCADE;
+DROP TABLE market CASCADE;
 
  -- Fact tables
 

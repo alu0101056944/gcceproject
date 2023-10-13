@@ -17,7 +17,7 @@ INSERT INTO employee(employee_id, name, title, department)
   VALUES (5, 'David Anderson', 'Software Engineer', 'IT');
 
 INSERT INTO employee(employee_id, name, title, department)
-  VALUES (6, 'James Wilson', 'Jennifer Brown', 'Software Engineer', 'IT');
+  VALUES (6, 'Jennifer Brown', 'Software Engineer', 'IT');
 
 INSERT INTO employee(employee_id, name, title, department)
   VALUES (7, 'Jessica Taylor', 'Software Engineer', 'IT');
