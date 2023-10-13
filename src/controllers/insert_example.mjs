@@ -1,4 +1,3 @@
-
 import pgPromise from 'pg-promise';
 const pgp = pgPromise();
 const db = pgp({
