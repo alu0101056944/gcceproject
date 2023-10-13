@@ -1,3 +1,4 @@
+-- Dimension tables
 
 CREATE TABLE employee(
   employee_id integer PRIMARY KEY,
@@ -46,4 +47,11 @@ CREATE TABLE project(
   searches integer
 );
 
+ -- Fact tables
+
+CREATE TABLE employee_tool(
+  employee_id integer REFERENCES employee (employee_id),
+  tool_id integer REFERENCES tool (tool_id),
+  years_of_experience integer
+)
 
