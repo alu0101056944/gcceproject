@@ -1,5 +1,5 @@
  -- Clear the table first
-DELETE FROM employee WHERE employee_id = 1;
+DELETE FROM employee;
 
 INSERT INTO employee(employee_id, name, title, department)
   VALUES (1, 'John Smith', 'Software Engineer', 'IT');
