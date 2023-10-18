@@ -5,18 +5,24 @@
 
 'use strict';
 
-import { CheerioCrawler } from "crawlee";
+import { CheerioCrawler, Dataset, purgeDefaultStorages } from "crawlee";
 
-const crawler = new CheerioCrawler({
-  maxRequestsPerCrawl: 5,
-  async requestHandler({ $, request, enqueueLinks }) {
-    const title =  $('title').text();
-    console.log('This is a test, title: ' + title + ' at' + request.loadedUrl);
-    await enqueueLinks({
-      strategy: 'same-domain'
-    });
-  },
-});
+async function execute() {
+  await purgeDefaultStorages();
+  const myDataset = await Dataset.open('foo');
 
-crawler.run(['https://crawlee.dev/']);
+  const crawler = new CheerioCrawler({
+    maxRequestsPerCrawl: 5,
+    async requestHandler({ $, request, enqueueLinks }) {
+      const title =  $('title').text();
+      console.log('This is a test, title: ' + title + ' at' + request.loadedUrl);
+      await myDataset.pushData({title});
+      await enqueueLinks({
+        strategy: 'same-domain'
+      });
+    },
+  });
+  crawler.run(['https://crawlee.dev/']);
+}
 
+execute();
