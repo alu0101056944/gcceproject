@@ -5,18 +5,18 @@
 
 'use strict';
 
-import { CheerioCrawler, Dataset, purgeDefaultStorages } from "crawlee";
+import { CheerioCrawler, KeyValueStore, purgeDefaultStorages } from "crawlee";
 
 async function execute() {
   await purgeDefaultStorages();
-  const myDataset = await Dataset.open('foo');
+  const myMapStore = await KeyValueStore.open('foo');
 
   const crawler = new CheerioCrawler({
     maxRequestsPerCrawl: 5,
     async requestHandler({ $, request, enqueueLinks }) {
       const title =  $('title').text();
       console.log('This is a test, title: ' + title + ' at' + request.loadedUrl);
-      await myDataset.pushData({title});
+      await myMapStore.setValue('somevalue', {xyzz: 'something'});
       await enqueueLinks({
         strategy: 'same-domain'
       });
