@@ -14,7 +14,8 @@ const crawler = new PlaywrightCrawler({
     await purgeDefaultStorages();
     const topicTitleContainer =
         await page.waitForSelector('.gutter-md .d-flex.flex-1 .h1')
-    const topicTitle = await topicTitleContainer.textContent();
+    const topicTitleHandler = await topicTitleContainer.textContent();
+    const topicTitle = topicTitleHandler.trim();
     console.log('Title: ' + topicTitle);
     const allNameAndAuthorHandlers = await page.$$('article div.d-flex.flex-1 h3')
     const mapNameAndAuthor = await Promise.all(
@@ -22,7 +23,6 @@ const crawler = new PlaywrightCrawler({
         return (async () => {
           const allHandlersOfLink = await elementHandler.$$('a');
           const nameLinkHandler = await allHandlersOfLink[0].textContent();
-          console.log();
           const name = nameLinkHandler.trim();
           const authorLinkHandler = await allHandlersOfLink[1].textContent();
           const author = authorLinkHandler.trim();
