@@ -1,7 +1,7 @@
 /**
  * @author Marcos Barrios
  * @since 19_10_2023
- * @desc Scrape for the Tool table from Github Explore frontend topic.
+ * @desc Scrap for the Tool table from Github Explore frontend topic.
  *
  * tool_id - name - author_company - specialization - license
  * 
@@ -11,8 +11,6 @@
 'use strict';
 
 import { CheerioCrawler, purgeDefaultStorages } from "crawlee";
-
-
 
 const crawler = new CheerioCrawler({
   async requestHandler({ $, request, enqueueLinks }) {
