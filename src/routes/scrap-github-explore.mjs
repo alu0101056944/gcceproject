@@ -19,17 +19,17 @@ const crawler = new PlaywrightCrawler({
     const allNameAndAuthorHandlers = await page.$$('article div.d-flex.flex-1 h3')
     const mapNameAndAuthor = await Promise.all(
       allNameAndAuthorHandlers.map((elementHandler) => {
-          (async () => {
-            const allHandlersOfLink = await elementHandler.$$('a');
-            const nameLinkHandler = await allHandlersOfLink[0].textContent();
-            console.log();
-            const name = nameLinkHandler.trim();
-            const authorLinkHandler = await allHandlersOfLink[1].textContent().trim();
-            const author = authorLinkHandler.trim();
-            return { name, author };
-          })();
-        })
-      );
+        return (async () => {
+          const allHandlersOfLink = await elementHandler.$$('a');
+          const nameLinkHandler = await allHandlersOfLink[0].textContent();
+          console.log();
+          const name = nameLinkHandler.trim();
+          const authorLinkHandler = await allHandlersOfLink[1].textContent();
+          const author = authorLinkHandler.trim();
+          return { name, author };
+        })();
+      })
+    );
     mapNameAndAuthor.forEach((e) => console.log(`${e.name}/${e.author}`));
   }
 });
