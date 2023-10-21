@@ -9,7 +9,10 @@
 
 'use strict';
 
-import { PlaywrightCrawler, purgeDefaultStorages } from "crawlee";
+import { PlaywrightCrawler, purgeDefaultStorages, Configuration } from 'crawlee';
+import { load } from 'cheerio'
+
+Configuration.set('headless', true);
 
 const crawler = new PlaywrightCrawler({
   async requestHandler({ page, request, enqueueLinks }) {
@@ -19,11 +22,13 @@ const crawler = new PlaywrightCrawler({
     const topicTitleHandler = await topicTitleContainer.textContent();
     const topicTitle = topicTitleHandler.trim();
     console.log('Title: ' + topicTitle);
-    const moreButton = await page.getByRole('button', { name: /Load.*more/i });
-    await moreButton.click();
-    await moreButton.click();
-    await moreButton.click();
+    const AMOUNT_OF_RESULTS = await extractAmountOfResults(page);
     const mapNameAndAuthor = await makeArrayOfUsefulInfo(page);
+    const INITIAL_AMOUNT_OF_RESULTS = mapNameAndAuthor.length;
+    const moreButton = page.getByRole('button', { name: /Load.*more/i });
+    // for (let i = 0; i < 40; i++) {
+    //   await moreButton.click();
+    // }
     mapNameAndAuthor.forEach((e) => console.log(`${e.name}/${e.author}`));
   }
 });
@@ -43,6 +48,17 @@ async function makeArrayOfUsefulInfo(page) {
     })
   );
   return mapNameAndAuthor;
+}
+
+async function extractAmountOfResults(page) {
+  const locatorOfTextWithAmountOfResults = await page.getByRole('h2').filter({
+        hasText: /Here.*are.*public.*repositories.*matching/i
+      });
+  console.log(await locatorOfTextWithAmountOfResults.innerHTML());
+  // const TEXT_WITH_AMOUNT_OF_RESULTS = await locatorOfTextWithAmountOfResults.textContent();
+  // const AMOUNT_OF_RESULTS =
+  //     parseFloat(TEXT_WITH_AMOUNT_OF_RESULTS.replace(',', '.').match(/(\d+.\d+)|\d+/g));
+  return 0;
 }
 
 crawler.run(['https://github.com/topics/frontend']);
