@@ -10,11 +10,10 @@
 'use strict';
 
 import { PlaywrightCrawler, purgeDefaultStorages, Configuration } from 'crawlee';
-import { load } from 'cheerio'
-
-Configuration.set('headless', true);
 
 const crawler = new PlaywrightCrawler({
+  headless: false,
+  navigationTimeoutSecs: 600,
   async requestHandler({ page, request, enqueueLinks }) {
     await purgeDefaultStorages();
     const topicTitleContainer =
@@ -27,11 +26,11 @@ const crawler = new PlaywrightCrawler({
     const mapNameAndAuthor = await makeArrayOfUsefulInfo(page);
     const INITIAL_AMOUNT_OF_RESULTS = mapNameAndAuthor.length;
     const moreButton = page.getByRole('button', { name: /Load.*more/i });
-    // for (let i = 0; i < 40; i++) {
-    //   await moreButton.click();
-    // }
+    for (let i = 0; i < 40; i++) {
+      await moreButton.click();
+    }
     mapNameAndAuthor.forEach((e) => console.log(`${e.name}/${e.author}`));
-  }
+  },
 });
 
 async function makeArrayOfUsefulInfo(page) {
