@@ -19,6 +19,10 @@ const crawler = new PlaywrightCrawler({
     const topicTitleHandler = await topicTitleContainer.textContent();
     const topicTitle = topicTitleHandler.trim();
     console.log('Title: ' + topicTitle);
+    const moreButton = await page.getByRole('button', { name: /Load.*more/i });
+    await moreButton.click();
+    await moreButton.click();
+    await moreButton.click();
     const mapNameAndAuthor = await makeArrayOfUsefulInfo(page);
     mapNameAndAuthor.forEach((e) => console.log(`${e.name}/${e.author}`));
   }
