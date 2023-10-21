@@ -23,6 +23,7 @@ const crawler = new PlaywrightCrawler({
     const topicTitle = topicTitleHandler.trim();
     console.log('Title: ' + topicTitle);
     const AMOUNT_OF_RESULTS = await extractAmountOfResults(page);
+    console.log(AMOUNT_OF_RESULTS);
     const mapNameAndAuthor = await makeArrayOfUsefulInfo(page);
     const INITIAL_AMOUNT_OF_RESULTS = mapNameAndAuthor.length;
     const moreButton = page.getByRole('button', { name: /Load.*more/i });
@@ -51,14 +52,12 @@ async function makeArrayOfUsefulInfo(page) {
 }
 
 async function extractAmountOfResults(page) {
-  const locatorOfTextWithAmountOfResults = await page.getByRole('h2').filter({
-        hasText: /Here.*are.*public.*repositories.*matching/i
-      });
-  console.log(await locatorOfTextWithAmountOfResults.innerHTML());
-  // const TEXT_WITH_AMOUNT_OF_RESULTS = await locatorOfTextWithAmountOfResults.textContent();
-  // const AMOUNT_OF_RESULTS =
-  //     parseFloat(TEXT_WITH_AMOUNT_OF_RESULTS.replace(',', '.').match(/(\d+.\d+)|\d+/g));
-  return 0;
+  const handlerOfTextWithAmount = await page.$('h2.h3.color-fg-muted');
+  const TEXT_WITH_AMOUNT_OF_RESULTS = await handlerOfTextWithAmount.textContent();
+  const AMOUNT_OF_RESULTS = parseFloat(
+      TEXT_WITH_AMOUNT_OF_RESULTS.replace(',', '').match(/\d+/g)
+    );
+  return AMOUNT_OF_RESULTS;
 }
 
 crawler.run(['https://github.com/topics/frontend']);
