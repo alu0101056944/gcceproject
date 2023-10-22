@@ -13,7 +13,7 @@
 
 import { PlaywrightCrawler, purgeDefaultStorages } from 'crawlee';
 
-const crawler = new PlaywrightCrawler({
+export default crawler = new PlaywrightCrawler({
   headless: true,
   navigationTimeoutSecs: 100000,
   requestHandlerTimeoutSecs: 100000,
