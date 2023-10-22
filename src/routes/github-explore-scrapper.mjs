@@ -18,7 +18,7 @@ export default class GithubExploreScrapper {
   constructor(url) {
     this.#url = url;
     this.#processedInfoObject = {};
-    const requestHandler = myHandler.bind(this);
+    const requestHandler = this.#myHandler.bind(this);
     this.#scrapper = new PlaywrightCrawler({
       headless: true,
       navigationTimeoutSecs: 100000,
