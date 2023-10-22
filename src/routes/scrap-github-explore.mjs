@@ -36,8 +36,7 @@ const crawler = new PlaywrightCrawler({
       stopScrollCallback: async () => {
         console.log(`Pressed button ${amount++}`);
         const repos = await page.$$('article.border');
-        // return repos.length >= AMOUNT_OF_RESULTS;
-        return repos.length >= 10;
+        return amount >= 100;
       }
     });
     console.log('Reached the end of infinite scroll');
@@ -47,18 +46,16 @@ const crawler = new PlaywrightCrawler({
 });
 
 async function makeArrayOfUsefulInfo(page) {
-  const allArticleLocators = await page.getByRole('article');
-  const allH3Locators = await allArticleLocators.getByRole('h3');
-  const repositoryInfo = allH3Locators.evaluateAll((allDOMNodes) => {
-      const array = [];
-      allDOMNodes.forEach((node) => {
-        const children = node.children;
-        const toText = (element) => element && element.innerText.trim();
-        array.push({ name: toText(children[0]), author: toText(children[2]) });
-      });
-      return array;
+  const h3 = page.getByRole('heading').filter({ hasText: '/' });
+  return await h3.evaluateAll((h) => {
+    const outputArray = [];
+    h.forEach((headerDOM) => {
+      const children = headerDOM.children;
+      const toText = (node) => node && node.textContent.trim();
+      outputArray.push({ name: toText(children[0]), author: toText(children[1])});
     });
-  return repositoryInfo;
+    return outputArray;
+  });
 }
 
 async function extractAmountOfResults(page) {
