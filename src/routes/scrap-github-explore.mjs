@@ -15,6 +15,12 @@ import { PlaywrightCrawler, purgeDefaultStorages } from 'crawlee';
 
 const crawler = new PlaywrightCrawler({
   headless: true,
+  navigationTimeoutSecs: 100000,
+  requestHandlerTimeoutSecs: 100000,
+  browserPoolOptions: {
+    closeInactiveBrowserAfterSecs: 100000,
+    operationTimeoutSecs: 100000,
+  },
   async requestHandler({ page, request, enqueueLinks, infiniteScroll }) {
     await purgeDefaultStorages();
     const topicTitleContainer =
@@ -24,33 +30,35 @@ const crawler = new PlaywrightCrawler({
     console.log('Title: ' + topicTitle);
     const AMOUNT_OF_RESULTS = await extractAmountOfResults(page);
     console.log('Amount of results: ' + AMOUNT_OF_RESULTS);
+    let amount = 0;
     await infiniteScroll({
       buttonSelector: 'text=Load more',
       stopScrollCallback: async () => {
+        console.log(`Pressed button ${amount++}`);
         const repos = await page.$$('article.border');
-        return repos.length >= AMOUNT_OF_RESULTS;
+        // return repos.length >= AMOUNT_OF_RESULTS;
+        return repos.length >= 10;
       }
-    })
+    });
+    console.log('Reached the end of infinite scroll');
     const mapNameAndAuthor = await makeArrayOfUsefulInfo(page);
     mapNameAndAuthor.forEach((e) => console.log(`${e.name}/${e.author}`));
   },
 });
 
 async function makeArrayOfUsefulInfo(page) {
-  const allNameAndAuthorHandlers = await page.$$('article div.d-flex.flex-1 h3')
-  const mapNameAndAuthor = await Promise.all(
-    allNameAndAuthorHandlers.map((elementHandler) => {
-      return (async () => {
-        const allHandlersOfLink = await elementHandler.$$('a');
-        const nameLinkHandler = await allHandlersOfLink[0].textContent();
-        const name = nameLinkHandler.trim();
-        const authorLinkHandler = await allHandlersOfLink[1].textContent();
-        const author = authorLinkHandler.trim();
-        return { name, author };
-      })();
-    })
-  );
-  return mapNameAndAuthor;
+  const allArticleLocators = await page.getByRole('article');
+  const allH3Locators = await allArticleLocators.getByRole('h3');
+  const repositoryInfo = allH3Locators.evaluateAll((allDOMNodes) => {
+      const array = [];
+      allDOMNodes.forEach((node) => {
+        const children = node.children;
+        const toText = (element) => element && element.innerText.trim();
+        array.push({ name: toText(children[0]), author: toText(children[2]) });
+      });
+      return array;
+    });
+  return repositoryInfo;
 }
 
 async function extractAmountOfResults(page) {
