@@ -41,18 +41,17 @@ export default class GithubExploreScrapper {
     
     const AMOUNT_OF_RESULTS = await this.#extractAmountOfResults(page);
     console.log('Amount of results: ' + AMOUNT_OF_RESULTS);
-    let amount = 0;
+    let amountOfClicks = 0;
     await infiniteScroll({
       buttonSelector: 'text=Load more',
       stopScrollCallback: async () => {
-        console.log(`Pressed button ${amount++}`);
-        const repos = await page.$$('article.border');
-        return amount >= 100;
+        console.log(`Pressed button ${amountOfClicks++}`);
+        return amountOfClicks >= 4;
       }
     });
     console.log('Reached the end of infinite scroll');
     const mapNameAndAuthor = await this.#makeArrayOfUsefulInfo(page);
-    mapNameAndAuthor.forEach((e) => console.log(`${e.name}/${e.author}`));
+    mapNameAndAuthor.forEach((e) => console.log(`${e.name}/${e.author},${e.url}`));
   };
 
   async #makeArrayOfUsefulInfo(page) {
@@ -60,9 +59,15 @@ export default class GithubExploreScrapper {
     return await h3.evaluateAll((h) => {
       const outputArray = [];
       h.forEach((headerDOM) => {
-        const children = headerDOM.children;
+        const childrenElements = headerDOM.children;
+        const urlToRepository =
+            'github.com' + childrenElements[1].getAttribute('href');
         const toText = (node) => node && node.textContent.trim();
-        outputArray.push({ name: toText(children[0]), author: toText(children[1])});
+        outputArray.push({
+          name: toText(childrenElements[0]),
+          author: toText(childrenElements[1]),
+          url: urlToRepository,
+        });
       });
       return outputArray;
     });
