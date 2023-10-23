@@ -88,17 +88,7 @@ export default class GithubExploreScrapper {
     const articleLocators = await page.locator('article.border').all();
     for (const articleLocator of articleLocators) {
       const tagLocator = articleLocator.locator('a.topic-tag');
-      const currentArticleTags = await tagLocator.evaluateAll((tagElements) => {
-          console.log('one tags inside article');
-          const tags = [];
-          tagElements.forEach((tagNode) => {
-            const toText = (node) => node && node.textContent.trim();
-            tags.push(toText(tagNode));
-          });
-          console.log('added tags: ' + tags);
-          return tags;
-        });
-      allTagsArrays.push(currentArticleTags);
+      allTagsArrays.push(await tagLocator.allInnerTexts());
     }
     return allTagsArrays;
   }
