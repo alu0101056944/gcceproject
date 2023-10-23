@@ -238,4 +238,81 @@ INSERT INTO market (market_id)
     (2),
     (3);
 
+INSERT INTO project_tool (project_id, tool_id)
+  VALUES
+    (1, 1),
+    (2, 2),
+    (3, 3),
+    (4, 4),
+    (5, 5);
+
+INSERT INTO project_company (project_id, company_id, budget, amount_of_employees_assigned)
+  VALUES
+    (1, 1, 500000, 10),
+    (1, 2, 300000, 5),
+    (2, 3, 750000, 15),
+    (3, 4, 400000, 8),
+    (4, 2, 1000000, 20);
+
+INSERT INTO tool_date (tool_id, date_id, version, interest_level, change_type)
+  VALUES
+    (1, 1, '1.0.0', 90, 'Major Update'),
+    (2, 2, '2.3.1', 80, 'Bug Fix'),
+    (3, 3, '3.1.0', 95, 'Feature Release'),
+    (4, 1, '2.0.0', 85, 'Major Update'),
+    (5, 2, '1.1.0', 75, 'Minor Update');
+
+INSERT INTO community_tool (
+  community_id,
+  tool_id,
+  amount_of_bugs_reported,
+  amount_of_bugs_solved,
+  amount_of_changes_commited,
+  amount_of_discussions)
+  VALUES
+    (1, 1, 150, 120, 200, 50),
+    (1, 2, 80, 70, 120, 30),
+    (2, 3, 200, 180, 250, 60),
+    (3, 4, 100, 90, 150, 40),
+    (4, 5, 120, 100, 170, 45);
+
+INSERT INTO tool_project_company (tool_id, project_id, company_id)
+  VALUES
+    (1, 1, 1),
+    (2, 2, 2),
+    (3, 3, 3),
+    (4, 4, 4),
+    (5, 5, 5);
+
+INSERT INTO community_tool_date (community_id, tool_id, date_id, tool_score, rank)
+  VALUES
+    (1, 1, 1, 90, 1),
+    (1, 2, 2, 85, 2),
+    (2, 3, 3, 92, 1),
+    (3, 4, 4, 88, 1),
+    (4, 5, 5, 89, 1);
+
+INSERT INTO company_date (company_id, year, quarter, benefit)
+  VALUES
+    (1, 2023, 1, 1200000.00),
+    (1, 2023, 2, 1100000.00),
+    (2, 2023, 1, 950000.00),
+    (3, 2023, 1, 1300000.00),
+    (4, 2023, 2, 1050000.00);
+
+INSERT INTO market_date (market_id, date_id, total_amount_of_offers)
+  VALUES
+    (1, 1, 1500),
+    (1, 2, 1200),
+    (2, 3, 2200),
+    (3, 4, 1800),
+    (4, 5, 2500);
+
+INSERT INTO market_tool_date (market_id, tool_id, date_id, amount_of_mentions)
+  VALUES
+    (1, 1, 1, 80),
+    (1, 2, 2, 70),
+    (2, 3, 3, 90),
+    (3, 4, 4, 85),
+    (4, 5, 5, 100);
 
