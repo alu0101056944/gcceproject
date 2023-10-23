@@ -54,8 +54,8 @@ export default class GithubExploreScrapper {
     headersInfo.forEach((e) => console.log(`${e.name}/${e.author},${e.url}`));
     const arraysOfTags = await this.#arraysOfTags(page);
     const allTypes = arraysOfTags.map((tags) => this.getTypeFromTags(tags));
-    // const allTypes = arraysOfTags.forEach((tags) => console.log(tags));
-    console.log(allTypes);
+    allTypes.forEach((type, i) => headersInfo[i]['type'] = type);
+    console.log(headersInfo);
   };
 
   async #arrayOfHeadersInfo(page) {
