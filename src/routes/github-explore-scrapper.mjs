@@ -10,14 +10,17 @@
 import { PlaywrightCrawler, purgeDefaultStorages } from 'crawlee';
 
 export default class GithubExploreScrapper {
+  /** @private */
+  #amountOfClicks = 4;
+
   /** @private @constant  */
   #scrapper = undefined;
   #url = undefined;
-  #processedInfoObject = undefined;
+  #outputObject = undefined;
 
   constructor(url) {
     this.#url = url;
-    this.#processedInfoObject = {};
+    this.#outputObject = {};
     const requestHandler = this.#myHandler.bind(this);
     this.#scrapper = new PlaywrightCrawler({
       headless: true,
@@ -46,16 +49,17 @@ export default class GithubExploreScrapper {
       buttonSelector: 'text=Load more',
       stopScrollCallback: async () => {
         console.log(`Pressed button ${amountOfClicks++}`);
-        return amountOfClicks >= 4;
+        return amountOfClicks >= this.#amountOfClicks;
       }
     });
     console.log('Reached the end of infinite scroll');
     const headersInfo = await this.#arrayOfHeadersInfo(page);
-    headersInfo.forEach((e) => console.log(`${e.name}/${e.author},${e.url}`));
+    // headersInfo.forEach((e) => console.log(`${e.name}/${e.author},${e.url}`));
     const arraysOfTags = await this.#arraysOfTags(page);
     const allTypes = arraysOfTags.map((tags) => this.getTypeFromTags(tags));
     allTypes.forEach((type, i) => headersInfo[i]['type'] = type);
-    console.log(headersInfo);
+    // console.log(headersInfo);
+    this.#outputObject = headersInfo;
   };
 
   async #arrayOfHeadersInfo(page) {
@@ -129,6 +133,10 @@ export default class GithubExploreScrapper {
       }
     }
     return null;
+  }
+
+  getOutputObject() {
+    return this.#outputObject;
   }
 
   run() {

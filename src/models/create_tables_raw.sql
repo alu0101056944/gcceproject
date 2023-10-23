@@ -13,12 +13,6 @@ CREATE TABLE tool(
   author_company text,
   type text,
   specialization text,
-  license text,
-  isOpenSource boolean,
-  isPeriodicPay boolean,
-  downloads integer,
-  searches integer,
-  easeOfLearning integer
 );
 
 CREATE TABLE date(
