@@ -4,7 +4,6 @@
   "description": "A business intelligence tool for tool selection of a hypothetical consulting IT firm.",
   "main": "src/index.mjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "schema": "psql -d raw_database -a -f /home/usuario/gcce/gcceproject/src/models/create_tables.sql"
   },
   "keywords": [],
@@ -14,5 +13,9 @@
     "crawlee": "^3.5.8",
     "pg-promise": "^11.5.4",
     "playwright": "^1.39.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.39.0",
+    "@types/node": "^20.8.7"
   }
 }

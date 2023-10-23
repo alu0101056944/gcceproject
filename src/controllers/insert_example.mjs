@@ -1,3 +1,6 @@
+
+/** Recomendado para repaso rápido: https://sqlbolt.com/ */
+
 import pgPromise from 'pg-promise';
 const pgp = pgPromise();
 const db = pgp({
