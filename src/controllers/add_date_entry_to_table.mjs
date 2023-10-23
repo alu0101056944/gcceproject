@@ -6,7 +6,7 @@
 
 'use strict';
 
-import { readFile, readFileSync, writeFileSync } from 'fs';
+import { readFileSync, writeFileSync } from 'fs';
 
 import pgPromise from 'pg-promise';
 const pgp = pgPromise();
