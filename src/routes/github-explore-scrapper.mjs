@@ -53,6 +53,9 @@ export default class GithubExploreScrapper {
     const headersInfo = await this.#arrayOfHeadersInfo(page);
     headersInfo.forEach((e) => console.log(`${e.name}/${e.author},${e.url}`));
     const arraysOfTags = await this.#arraysOfTags(page);
+    const allTypes = arraysOfTags.map((tags) => this.getTypeFromTags(tags));
+    // const allTypes = arraysOfTags.forEach((tags) => console.log(tags));
+    console.log(allTypes);
   };
 
   async #arrayOfHeadersInfo(page) {
@@ -106,9 +109,10 @@ export default class GithubExploreScrapper {
       'continuous-integration',
       'devops',
       'documentation',
+      'embedded',
     ];
-    tags.forEach((tag) => {
-      types.forEach((type) => {
+    for (const tag of tags) {
+      for (const type of types) {
         if (typeof type === 'object') {
           for (const finalType of Object.getOwnPropertyNames(type)) {
             type[finalType].forEach((possibleTag) => {
@@ -122,8 +126,8 @@ export default class GithubExploreScrapper {
             return type;
           }
         }
-      });
-    });
+      }
+    }
     return null;
   }
 
