@@ -41,6 +41,8 @@ export default class GithubExploreScrapper {
   }
 
   run() {
-    this.#scrapper.run([this.#url]);
+    (async () => {
+      await this.#scrapper.run([this.#url]);
+    })();
   }
 }
