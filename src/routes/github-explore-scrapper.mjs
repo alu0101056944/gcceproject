@@ -50,11 +50,12 @@ export default class GithubExploreScrapper {
       }
     });
     console.log('Reached the end of infinite scroll');
-    const mapNameAndAuthor = await this.#makeArrayOfUsefulInfo(page);
-    mapNameAndAuthor.forEach((e) => console.log(`${e.name}/${e.author},${e.url}`));
+    const headersInfo = await this.#arrayOfHeadersInfo(page);
+    headersInfo.forEach((e) => console.log(`${e.name}/${e.author},${e.url}`));
+    const arraysOfTags = await this.#arraysOfTags(page);
   };
 
-  async #makeArrayOfUsefulInfo(page) {
+  async #arrayOfHeadersInfo(page) {
     const h3 = page.getByRole('heading').filter({ hasText: '/' });
     return await h3.evaluateAll((h) => {
       const outputArray = [];
@@ -80,6 +81,60 @@ export default class GithubExploreScrapper {
         TEXT_WITH_AMOUNT_OF_RESULTS.replace(',', '').match(/\d+/g)
       );
     return AMOUNT_OF_RESULTS;
+  }
+
+  async #arraysOfTags(page) {
+    const allTagsArrays = [];
+    const articleLocators = await page.locator('article.border').all();
+    for (const articleLocator of articleLocators) {
+      const tagLocator = articleLocator.locator('a.topic-tag');
+      const currentArticleTags = await tagLocator.evaluateAll((tagElements) => {
+          console.log('one tags inside article');
+          const tags = [];
+          tagElements.forEach((tagNode) => {
+            const toText = (node) => node && node.textContent.trim();
+            tags.push(toText(tagNode));
+          });
+          console.log('added tags: ' + tags);
+          return tags;
+        });
+      allTagsArrays.push(currentArticleTags);
+    }
+    return allTagsArrays;
+  }
+
+  getTypeFromTags(tags) {
+    const types = [
+      'language',
+      'testing',
+      'db',
+      'editor',
+      { 'ai': ['machine-learning', 'deep-learning', 'deep-neural-networks'] },
+      'code-quality',
+      'code-review',
+      'compiler',
+      'continuous-integration',
+      'devops',
+      'documentation',
+    ];
+    tags.forEach((tag) => {
+      types.forEach((type) => {
+        if (typeof type === 'object') {
+          for (const finalType of Object.getOwnPropertyNames(type)) {
+            type[finalType].forEach((possibleTag) => {
+              if (tag === possibleTag) {
+                return finalType;
+              }
+            });
+          }
+        } else {
+          if (tag === type) {
+            return type;
+          }
+        }
+      });
+    });
+    return null;
   }
 
   run() {
