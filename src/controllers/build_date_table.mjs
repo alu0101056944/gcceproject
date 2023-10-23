@@ -6,6 +6,8 @@
 
 'use strict';
 
+import { readFile, readFileSync, writeFileSync } from 'fs';
+
 import pgPromise from 'pg-promise';
 const pgp = pgPromise();
 const db = pgp({
@@ -13,27 +15,32 @@ const db = pgp({
   max: 20
 });
 
-// Create a record with the Date object
-const record = {
-  tool_id: 1,
-  name: 'ansible',
-  author_company: 'Michael Dehaan',
-  type: 'Automation',
-  your_date_column: dateObject,
-};
-
-// Use pg-promise's helpers to insert the record
-const insertQuery = pgp.helpers.insert(record, ['tool_id', 'name', 'author_company', 'type', 'your_date_column'], 'your_table');
-
-// Execute the insert query
-db.none(insertQuery)
-  .then(() => {
-    console.log('Insert successful');
-  })
-  .catch(error => {
-    console.error('Error:', error);
-  });
-
 export default function addDateEntry() {
-
+  try {
+    const PERSISTENT_OBJECT_CONTENT =
+        readFileSync('./src/persistent_ids.json', 'utf-8');
+    const idsInfo = JSON.parse(PERSISTENT_OBJECT_CONTENT);
+    idsInfo.date++;
+    try {
+      writeFileSync('./src/persistent_ids.json', JSON.stringify(idsInfo, null, 2));
+    } catch (err) {
+      console.error('Error reading persistent object at build table date ' +
+          err);
+    }
+    const record = {
+      date_id: idsInfo.date,
+      date: new Date(),
+    };
+    const insertQuery = pgp.helpers.insert(record, ['date_id', 'date'], 'date');
+    db.none(insertQuery)
+      .then(() => {
+        console.log('Insert into date successful.');
+      })
+      .catch(error => {
+        console.error('Error inserting into date: ', error);
+      });
+  } catch (err) {
+    console.err('Error reading persistent object at build table date' +
+        err);
+  }
 }
