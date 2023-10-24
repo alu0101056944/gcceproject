@@ -51,20 +51,22 @@ export default class GoogleTrendsScrapper {
   async #myHandler({ page }) {
     const rejectCookiesButton = page.getByRole('button')
         .getByText('Rechazar todo');
-    await new Promise((resolve) => setTimeout(resolve, 4000));
+    await new Promise((resolve) => setTimeout(resolve, 1000));
     await rejectCookiesButton.click();
-    const loginButton = page.getByRole('a').getByText(/Iniciar/);
+    const loginButton = page.getByRole('link').getByText(/Iniciar/);
     await loginButton.click();
     await page.waitForURL(/accounts/);
     await new Promise((resolve) => setTimeout(resolve, 1000));
     const textfieldForEmail = page.locator('#identifierId');
     await textfieldForEmail.fill(this.#accountInfo.username);
+    const buttonNext1 = page.getByRole('button').getByText(/Siguiente/);
+    await buttonNext1.click();
     await new Promise((resolve) => setTimeout(resolve, 1000));
     const textfieldForPass = page.locator('input[name="Passwd"]');
     await textfieldForPass.fill(this.#accountInfo.pass);
     await new Promise((resolve) => setTimeout(resolve, 1000));
-    const buttonNext = page.getByRole('button').getByText(/Siguiente/);
-    await buttonNext.click();
+    const buttonNext2 = page.getByRole('button').getByText(/Siguiente/);
+    await buttonNext2.click();
     await new Promise((resolve) => setTimeout(resolve, 1000));
   };
 
