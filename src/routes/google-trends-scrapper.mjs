@@ -7,21 +7,21 @@
 
 'use strict';
 
-import { PlaywrightCrawler, purgeDefaultStorages } from 'crawlee';
+import { PlaywrightCrawler } from 'crawlee';
 
 import { readFileSync } from 'fs';
 
 export default class GoogleTrendsScrapper {
   /** @private @constant  */
   #scrapper = undefined;
-  #url = undefined;
   #outputObject = undefined;
   #accountInfo = undefined;
+  #searchTermsArray = undefined;
 
-  constructor(url) {
-    this.#url = url;
+  constructor(searchTermsArray) {
     this.#outputObject = {};
     this.#accountInfo = {};
+    this.#searchTermsArray = searchTermsArray;
     try {
       const FILE_CONTENT =
           readFileSync('./playwright/.auth/account.json', 'utf-8');
@@ -49,8 +49,27 @@ export default class GoogleTrendsScrapper {
   }
 
   async #myHandler({ page }) {
+    await this.#loginIntoAccount(page);
+    // await page.goto('https://trends.google.es/');
+    // const searchBar = page.getByRole('input').locator('#i9');
+    // await searchBar.fill(this.#searchTermsArray.pop());
+    // const buttonExplore = page.getByRole('button').getByText(/Explorar/);
+    // await buttonExplore.click();
+    const toURL = (queryString) => {
+      const PROCESSED = queryString.toLowerCase();
+      return 'https://trends.google.es/trends/explore?date=today%205-y&geo=ES&q='
+          + PROCESSED + '&hl=es';
+    };
+    while (this.#searchTermsArray.length > 0) {
+      await page.goto(toURL(this.#searchTermsArray.pop()));
+      await page.waitForURL(/explore?/);
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+    }
+  };
+
+  async #loginIntoAccount(page) {
     const rejectCookiesButton = page.getByRole('button')
-        .getByText('Rechazar todo');
+      .getByText('Rechazar todo');
     await new Promise((resolve) => setTimeout(resolve, 1000));
     await rejectCookiesButton.click();
     const loginButton = page.getByRole('link').getByText(/Iniciar/);
@@ -68,7 +87,7 @@ export default class GoogleTrendsScrapper {
     const buttonNext2 = page.getByRole('button').getByText(/Siguiente/);
     await buttonNext2.click();
     await new Promise((resolve) => setTimeout(resolve, 1000));
-  };
+  }
 
   getOutputObject() {
     return this.#outputObject;
@@ -76,7 +95,7 @@ export default class GoogleTrendsScrapper {
 
   run() {
     (async () => {
-      await this.#scrapper.run([this.#url]);
+      await this.#scrapper.run(['https://google.com']);
     })();
   }
 }

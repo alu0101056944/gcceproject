@@ -9,8 +9,11 @@
 import GoogleTrendsScrapper from "../routes/google-trends-scrapper.mjs";
 
 export default function addInterest() {
-  const URL = 'https://google.com';
-  const scrapper = new GoogleTrendsScrapper(URL);
+  const searchTerms = [
+    'rafa nadal',
+    'roger federer'
+  ];
+  const scrapper = new GoogleTrendsScrapper(searchTerms);
   scrapper.run();
 }
 
