@@ -50,6 +50,10 @@ export default class GoogleTrendsScrapper {
         operationTimeoutSecs: 100000,
       },
       requestHandler,
+      retryOnBlocked: true,
+      sameDomainDelaySecs: 3,
+      maxConcurrency: 1,
+      maxRequestRetries: 1,
     });
     const toURL = (queryString) => {
       const PROCESSED = queryString.toLowerCase();
@@ -60,17 +64,17 @@ export default class GoogleTrendsScrapper {
   }
 
   async #myHandler({ page }) {
-    if (!this.#hasLoggedIn) {
-      await this.#loginIntoAccount(page);
-    }
     if (!this.#hasAddedURLs) {
       await this.#scrapper.addRequests(this.#searchTermsURLs);
       this.#hasAddedURLs = true;
       console.log('GoogleTrendsScrapper added url request for search terms.');
+      await new Promise((r) => setTimeout(r, 6000));
     }
-    await new Promise((resolve) => setTimeout(resolve, 2000));
   };
 
+  /** It was used in the request handler but getting captcha overtime, so
+   *   leaving it unused.
+   */
   async #loginIntoAccount(page) {
     const rejectCookiesButton = page.getByRole('button')
       .getByText('Rechazar todo');
@@ -100,7 +104,7 @@ export default class GoogleTrendsScrapper {
 
   run() {
     (async () => {
-      await this.#scrapper.run(['https://google.com']);
+      await this.#scrapper.run([this.#searchTermsURLs.pop()]);
     })();
   }
 }
