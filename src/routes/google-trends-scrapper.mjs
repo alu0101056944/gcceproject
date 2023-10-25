@@ -96,6 +96,7 @@ export default class GoogleTrendsScrapper {
   run() {
     (async () => {
       await this.#scrapper.run(this.#searchTermsInfo);
+      console.log(this.#interestsPerTerm);
     })();
   }
 }
