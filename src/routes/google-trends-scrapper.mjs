@@ -9,7 +9,7 @@
 
 import { PlaywrightCrawler, enqueueLinks } from 'crawlee';
 
-import { readFileSync } from 'fs';
+import { readFile } from 'fs/promises';
 
 export default class GoogleTrendsScrapper {
   /** @private @constant  */
@@ -20,6 +20,7 @@ export default class GoogleTrendsScrapper {
   #searchTermsURLs = undefined;
   #hasLoggedIn = undefined;
   #hasAddedURLs = undefined;
+  #interestPerSearchTerm = undefined;
 
   constructor(searchTerms) {
     this.#hasLoggedIn = false;
@@ -27,6 +28,7 @@ export default class GoogleTrendsScrapper {
     this.#outputObject = {};
     this.#accountInfo = {};
     this.#searchTerms = searchTerms;
+    this.#interestPerSearchTerm = {};
     try {
       const FILE_CONTENT =
           readFileSync('./playwright/.auth/account.json', 'utf-8');
@@ -63,12 +65,27 @@ export default class GoogleTrendsScrapper {
     this.#searchTermsURLs = this.#searchTerms.map(term => toURL(term));
   }
 
-  async #myHandler({ page }) {
+  async #myHandler({ page, request }) {
     if (!this.#hasAddedURLs) {
-      await this.#scrapper.addRequests(this.#searchTermsURLs);
+      await this.#scrapper.addRequests(this.#searchTermsURLs, {
+        waitForAllRequestsToBeAdded: true, // Let it process before continuing
+      });
+      
       this.#hasAddedURLs = true;
       console.log('GoogleTrendsScrapper added url request for search terms.');
       await new Promise((r) => setTimeout(r, 6000));
+    }
+    const downloadCSVButton = page.getByRole('button')
+        .getByText(/file_download/);
+    await downloadCSVButton.click();
+    const downloadObject = await page.waitForEvent('download');
+    const DOWNLOADED_FILE_PATH = await downloadObject.path();
+    const FILE_CONTENT = await readFile(DOWNLOADED_FILE_PATH, 'utf-8');
+    const EXTRACT_TODAY_REG_EXP =
+        /(?<year>\d\d\d\d)-(?<month>\d\d)-(?<day>\d\d),(?<interest>\d+)/g;
+    let execResult;
+    while (execResult = EXTRACT_TODAY_REG_EXP.exec()) {
+      this.#interestPerSearchTerm[]
     }
   };
 
@@ -104,7 +121,7 @@ export default class GoogleTrendsScrapper {
 
   run() {
     (async () => {
-      await this.#scrapper.run([this.#searchTermsURLs.pop()]);
+      await this.#scrapper.run();
     })();
   }
 }
