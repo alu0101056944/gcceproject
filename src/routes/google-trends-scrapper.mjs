@@ -14,21 +14,22 @@ import { readFile } from 'fs/promises';
 export default class GoogleTrendsScrapper {
   /** @private @constant  */
   #scrapper = undefined;
-  #outputObject = undefined;
+  #interestsPerTerm = undefined;
   #accountInfo = undefined;
-  #searchTerms = undefined;
-  #searchTermsURLs = undefined;
-  #hasLoggedIn = undefined;
-  #hasAddedURLs = undefined;
-  #interestPerSearchTerm = undefined;
+  #searchTermsInfo = undefined;
 
   constructor(searchTerms) {
-    this.#hasLoggedIn = false;
-    this.#hasAddedURLs = false;
-    this.#outputObject = {};
+    this.#interestsPerTerm = {};
     this.#accountInfo = {};
-    this.#searchTerms = searchTerms;
-    this.#interestPerSearchTerm = {};
+    const toURL = (queryString) => {
+        const PROCESSED = queryString.toLowerCase();
+        return 'https://trends.google.es/trends/explore?date=today%205-y&geo=ES&q='
+            + PROCESSED + '&hl=es';
+      };
+
+    // url and label keys so that I can later directly pass it to run()
+    this.#searchTermsInfo =
+        searchTerms.map(label => { url: toURL(label), label });
     try {
       const FILE_CONTENT =
           readFileSync('./playwright/.auth/account.json', 'utf-8');
@@ -57,24 +58,9 @@ export default class GoogleTrendsScrapper {
       maxConcurrency: 1,
       maxRequestRetries: 1,
     });
-    const toURL = (queryString) => {
-      const PROCESSED = queryString.toLowerCase();
-      return 'https://trends.google.es/trends/explore?date=today%205-y&geo=ES&q='
-          + PROCESSED + '&hl=es';
-    };
-    this.#searchTermsURLs = this.#searchTerms.map(term => toURL(term));
   }
 
   async #myHandler({ page, request }) {
-    if (!this.#hasAddedURLs) {
-      await this.#scrapper.addRequests(this.#searchTermsURLs, {
-        waitForAllRequestsToBeAdded: true, // Let it process before continuing
-      });
-      
-      this.#hasAddedURLs = true;
-      console.log('GoogleTrendsScrapper added url request for search terms.');
-      await new Promise((r) => setTimeout(r, 6000));
-    }
     const downloadCSVButton = page.getByRole('button')
         .getByText(/file_download/);
     await downloadCSVButton.click();
@@ -83,45 +69,29 @@ export default class GoogleTrendsScrapper {
     const FILE_CONTENT = await readFile(DOWNLOADED_FILE_PATH, 'utf-8');
     const EXTRACT_TODAY_REG_EXP =
         /(?<year>\d\d\d\d)-(?<month>\d\d)-(?<day>\d\d),(?<interest>\d+)/g;
+    const arrayOfInterests = [];
+    const MAX_SIZE_OF_INTERESTS_ARRAY = 5; // I just want the latest interests
     let execResult;
-    while (execResult = EXTRACT_TODAY_REG_EXP.exec()) {
-      this.#interestPerSearchTerm[]
+    while (execResult = EXTRACT_TODAY_REG_EXP.exec(FILE_CONTENT)) {
+      const INTEREST = parseInt(execResult.groups.interest);
+      if (arrayOfInterests.length < MAX_SIZE_OF_INTERESTS_ARRAY) {
+        arrayOfInterests.push(INTEREST);
+      } else {
+        arrayOfInterests.shift();
+        arrayOfInterests.push(INTEREST);
+      }
     }
+    this.#interestsPerTerm[request.label] =
+        arrayOfInterests.reduce((acc, current) => acc + current, 0);
   };
 
-  /** It was used in the request handler but getting captcha overtime, so
-   *   leaving it unused.
-   */
-  async #loginIntoAccount(page) {
-    const rejectCookiesButton = page.getByRole('button')
-      .getByText('Rechazar todo');
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    await rejectCookiesButton.click();
-    const loginButton = page.getByRole('link').getByText(/Iniciar/);
-    await loginButton.click();
-    await page.waitForURL(/accounts/);
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    const textfieldForEmail = page.locator('#identifierId');
-    await textfieldForEmail.fill(this.#accountInfo.username);
-    const buttonNext1 = page.getByRole('button').getByText(/Siguiente/);
-    await buttonNext1.click();
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    const textfieldForPass = page.locator('input[name="Passwd"]');
-    await textfieldForPass.fill(this.#accountInfo.pass);
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    const buttonNext2 = page.getByRole('button').getByText(/Siguiente/);
-    await buttonNext2.click();
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    this.#hasLoggedIn = true;
-  }
-
   getOutputObject() {
-    return this.#outputObject;
+    return this.#interestsPerTerm;
   }
 
   run() {
     (async () => {
-      await this.#scrapper.run();
+      await this.#scrapper.run(this.#searchTermsInfo);
     })();
   }
 }
