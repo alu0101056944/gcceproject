@@ -10,6 +10,7 @@
 import { PlaywrightCrawler, enqueueLinks } from 'crawlee';
 
 import { readFile } from 'fs/promises';
+import { readFileSync } from 'fs';
 
 export default class GoogleTrendsScrapper {
   /** @private @constant  */
@@ -29,7 +30,7 @@ export default class GoogleTrendsScrapper {
 
     // url and label keys so that I can later directly pass it to run()
     this.#searchTermsInfo =
-        searchTerms.map(label => { url: toURL(label), label });
+        searchTerms.map(label => { return { url: toURL(label), label } });
     try {
       const FILE_CONTENT =
           readFileSync('./playwright/.auth/account.json', 'utf-8');
