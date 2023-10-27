@@ -12,6 +12,7 @@ import { inspect } from 'util';
 
 export default function addCompanies() {
   const scrapper = new CompaniesmarketcapScrapper();
+  scrapper.setMaxAmountfPageSurfs(5);
   scrapper.run().then(() => console.log(inspect(scrapper.getOutputObject())));
 }
 

@@ -16,9 +16,13 @@ export default class CompaniesmarketcapScrapper {
   /** @private @constant  */
   #scrapper = undefined;
   #companiesInfo = undefined;
+  #maxPageSurfs = undefined;
+  #currentAmountOfPagesSurfed = undefined;
 
   constructor() {
     this.#companiesInfo = {};
+    this.#maxPageSurfs = Infinity;
+    this.#currentAmountOfPagesSurfed = 1;
 
     const requestHandler = this.#myHandler.bind(this);
     this.#scrapper = new PlaywrightCrawler({
@@ -32,12 +36,6 @@ export default class CompaniesmarketcapScrapper {
       requestHandler,
       retryOnBlocked: true,
       maxConcurrency: 1,
-      // sessionPoolOptions: {
-      //   blockedStatusCodes: [429],
-      // },
-      // maxRequestRetries: 2,
-      // sameDomainDelaySecs: 2,
-      // keepAlive: true, // to temporarily debug the console messages
     });
   }
 
@@ -55,14 +53,15 @@ export default class CompaniesmarketcapScrapper {
       const AMOUNT_OF_EMPLOYEES_STRING = await allTdRightLocators[2].textContent();
       const IS_COMMA_SEPARATED_NUMBER_REG_EXP = /\d+,?\d+/
       if (IS_COMMA_SEPARATED_NUMBER_REG_EXP.test(AMOUNT_OF_EMPLOYEES_STRING)) {
-        this.#companiesInfo[COMPANY_NAME] = parseInt(
+        this.#companiesInfo[COMPANY_NAME.toLowerCase().trim()] = parseInt(
           AMOUNT_OF_EMPLOYEES_STRING.replace(',', '').trim()
         );
       } else {
-        this.#companiesInfo[COMPANY_NAME] = null;
+        this.#companiesInfo[COMPANY_NAME.toLowerCase().trim()] = null;
       }
     }
-    await enqueueLinks({
+    if (this.#currentAmountOfPagesSurfed < this.#maxPageSurfs) {
+      await enqueueLinks({
         regexps: [/largest-companies-by-number-of-employees\/page\/\d+\/$/],
         transformRequestFunction(nextRequest) {
           const PAGE_NUMBER_REG_EXP = /(?<page>\/page\/(?<currentpage>\d+)\/?)?/;
@@ -81,7 +80,16 @@ export default class CompaniesmarketcapScrapper {
           return nextRequest;
         }
       });
+      this.#currentAmountOfPagesSurfed++;
+    }
   };
+
+  /**
+   * @param {number} newMaxAmountOfPageSurfs 
+   */
+  setMaxAmountfPageSurfs(newMaxAmountOfPageSurfs) {
+    this.#maxPageSurfs = newMaxAmountOfPageSurfs;
+  }
 
   getOutputObject() {
     return this.#companiesInfo;
