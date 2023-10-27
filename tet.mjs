@@ -1,6 +1,4 @@
-const currentDate = new Date();
-const currentDay = currentDate.getDate();
-const currentMonth = currentDate.getMonth() + 1; // Add 1 to get a 1-based month
-const currentYear = currentDate.getFullYear();
+const url = 'https://companiesmarketcap.com/largest-companies-by-number-of-employees/';
+const pageNumberRegExp = /employees\/?(page\/(?<currentpage>\d+)\/?)?/;
 
-console.log(`Current Date: ${currentYear}-${currentMonth}-${currentDay}`);
+console.log(pageNumberRegExp.exec(url));
