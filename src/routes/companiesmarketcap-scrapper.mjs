@@ -32,12 +32,6 @@ export default class CompaniesmarketcapScrapper {
       requestHandler,
       retryOnBlocked: true,
       maxConcurrency: 1,
-      // sessionPoolOptions: {
-      //   blockedStatusCodes: [429],
-      // },
-      // maxRequestRetries: 2,
-      // sameDomainDelaySecs: 2,
-      // keepAlive: true, // to temporarily debug the console messages
     });
   }
 
