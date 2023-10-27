@@ -56,11 +56,16 @@ export default class GoogleTrendsScrapper {
       requestHandler,
       retryOnBlocked: true,
       maxConcurrency: 1,
-      maxRequestRetries: 1,
+      sessionPoolOptions: {
+        blockedStatusCodes: [429],
+      },
+      maxRequestRetries: 2,
+      sameDomainDelaySecs: 2,
+
     });
   }
 
-  async #myHandler({ page, request, response}) {
+  async #myHandler({ page, request, response }) {
     if (response.status() !== 429) {
       const downloadCSVButton = page.locator('widget')
           .filter({ hasText: 'Interés a lo largo del tiempo' })
