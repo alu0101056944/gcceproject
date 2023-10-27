@@ -16,12 +16,10 @@ export default class GoogleTrendsScrapper {
   /** @private @constant  */
   #scrapper = undefined;
   #interestsPerTerm = undefined;
-  #accountInfo = undefined;
   #searchTermsInfo = undefined;
 
   constructor(searchTerms) {
     this.#interestsPerTerm = {};
-    this.#accountInfo = {};
     const toURL = (queryString) => {
         const PROCESSED = queryString.toLowerCase();
         return 'https://trends.google.es/trends/explore?date=today%205-y&geo=ES&q='
@@ -31,19 +29,6 @@ export default class GoogleTrendsScrapper {
     // url and label keys so that I can later directly pass it to run()
     this.#searchTermsInfo =
         searchTerms.map(label => { return { url: toURL(label), label } });
-    try {
-      const FILE_CONTENT =
-          readFileSync('./playwright/.auth/account.json', 'utf-8');
-      this.#accountInfo = JSON.parse(FILE_CONTENT);
-      if (!this.#accountInfo.username || !this.#accountInfo.pass) {
-        throw new Error('playwright/.auth/account.json does not contain a' +
-          'and or pass key.');
-      }
-      console.log('Successfuly read account info from ' +
-          'playwright/.auth/account.json');
-    } catch (err) {
-      console.error('Error while reading on GoogleTrendsScrapper: ' + err);
-    }
     const requestHandler = this.#myHandler.bind(this);
     this.#scrapper = new PlaywrightCrawler({
       headless: false,
@@ -61,7 +46,6 @@ export default class GoogleTrendsScrapper {
       },
       maxRequestRetries: 2,
       sameDomainDelaySecs: 2,
-
     });
   }
 
