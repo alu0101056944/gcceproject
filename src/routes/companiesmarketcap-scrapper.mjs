@@ -16,9 +16,13 @@ export default class CompaniesmarketcapScrapper {
   /** @private @constant  */
   #scrapper = undefined;
   #companiesInfo = undefined;
+  #maxPageSurfs = undefined;
+  #currentAmountOfPagesSurfed = undefined;
 
   constructor() {
     this.#companiesInfo = {};
+    this.#maxPageSurfs = Infinity;
+    this.#currentAmountOfPagesSurfed = 1;
 
     const requestHandler = this.#myHandler.bind(this);
     this.#scrapper = new PlaywrightCrawler({
@@ -56,7 +60,8 @@ export default class CompaniesmarketcapScrapper {
         this.#companiesInfo[COMPANY_NAME.toLowerCase().trim()] = null;
       }
     }
-    await enqueueLinks({
+    if (this.#currentAmountOfPagesSurfed < this.#maxPageSurfs) {
+      await enqueueLinks({
         regexps: [/largest-companies-by-number-of-employees\/page\/\d+\/$/],
         transformRequestFunction(nextRequest) {
           const PAGE_NUMBER_REG_EXP = /(?<page>\/page\/(?<currentpage>\d+)\/?)?/;
@@ -75,7 +80,16 @@ export default class CompaniesmarketcapScrapper {
           return nextRequest;
         }
       });
+      this.#currentAmountOfPagesSurfed++;
+    }
   };
+
+  /**
+   * @param {number} newMaxAmountOfPageSurfs 
+   */
+  setMaxAmountfPageSurfs(newMaxAmountOfPageSurfs) {
+    this.#maxPageSurfs = newMaxAmountOfPageSurfs;
+  }
 
   getOutputObject() {
     return this.#companiesInfo;

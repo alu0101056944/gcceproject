@@ -14,9 +14,18 @@ import { inspect } from 'util';
 export default async function addCompanies() {
   const scrapperOfCompanies = new CompaniesmarketcapScrapper();
   const companiesEmployeeAmount = await scrapperOfCompanies.run();
-  const scrapper = new CompaniesmarketcapProfileScrapper();
+  const companyNames = Object.getOwnPropertyNames(companiesEmployeeAmount);
+  const scrapper = new CompaniesmarketcapProfileScrapper(companyNames);
   const companiesType = await scrapper.run();
-  
+  const companyRegisters = [];
+  for (let i = 0; i < companyNames.length; i++) {
+    companyRegisters.push({
+      name: companyNames[i],
+      employeeAmount: companiesEmployeeAmount[i],
+      type: companiesType[i],
+    });
+  }
+  console.log(inspect(companyRegisters));
 }
 
 addCompanies();
