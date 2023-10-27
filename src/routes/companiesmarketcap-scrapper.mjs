@@ -7,7 +7,7 @@
 
 'use strict';
 
-import { PlaywrightCrawler, enqueueLinks } from 'crawlee';
+import { PlaywrightCrawler, log } from 'crawlee';
 
 /**
  * Scrapper for {@link https://companiesmarketcap.com/largest-companies-by-number-of-employees/}
@@ -21,7 +21,7 @@ export default class CompaniesmarketcapScrapper {
     this.#companiesInfo = {};
     const requestHandler = this.#myHandler.bind(this);
     this.#scrapper = new PlaywrightCrawler({
-      headless: false,
+      headless: true,
       navigationTimeoutSecs: 100000,
       requestHandlerTimeoutSecs: 100000,
       browserPoolOptions: {
@@ -31,16 +31,17 @@ export default class CompaniesmarketcapScrapper {
       requestHandler,
       retryOnBlocked: true,
       maxConcurrency: 1,
-      sessionPoolOptions: {
-        blockedStatusCodes: [429],
-      },
-      maxRequestRetries: 2,
-      sameDomainDelaySecs: 2,
+      // sessionPoolOptions: {
+      //   blockedStatusCodes: [429],
+      // },
+      // maxRequestRetries: 2,
+      // sameDomainDelaySecs: 2,
       // keepAlive: true, // to temporarily debug the console messages
     });
   }
 
   async #myHandler({ page, request, enqueueLinks }) {
+    log.info('Visited page: ' + request.url);
     const rowLocator = page.locator('tbody').locator('tr');
     const rowsOfCompany = await rowLocator.all();
     for (const row of rowsOfCompany) {
@@ -55,23 +56,21 @@ export default class CompaniesmarketcapScrapper {
       this.#companiesInfo[COMPANY_NAME] = AMOUNT_OF_EMPLOYEES;
     }
     await enqueueLinks({
-      globs: ['https://companiesmarketcap.com/largest-companies-by-number-of-employees/*'],
-      transformRequestFunction(nextRequest) {
-        // ignore all links ending with `.pdf`
-        const PAGE_NUMBER_REG_EXP =
-            /(?<page>\/page\/(?<currentpage>\d+)\/?)?/;
-        const execResultA = PAGE_NUMBER_REG_EXP.exec(request.url);
-        const CURRENT_PAGE_NUMBER = 
-            execResultA.groups.page ? parseInt(execResultA.groups.currentpage) : 1;
-        const execResultB = PAGE_NUMBER_REG_EXP.exec(nextRequest.url);
-        const POTENTIAL_PAGE_NUMBER =
-            execResultB.groups.page ? parseInt(execResultB.groups.currentpage) : 1;
-        if (POTENTIAL_PAGE_NUMBER < CURRENT_PAGE_NUMBER) {
-          return false;
+        regexps: [/largest-companies-by-number-of-employees\/page\/\d+\/$/],
+        transformRequestFunction(nextRequest) {
+          const PAGE_NUMBER_REG_EXP = /(?<page>\/page\/(?<currentpage>\d+)\/?)?/;
+          const execResultA = PAGE_NUMBER_REG_EXP.exec(request.url);
+          const CURRENT_PAGE_NUMBER = 
+              execResultA.groups.page ? parseInt(execResultA.groups.currentpage) : 1;
+          const execResultB = PAGE_NUMBER_REG_EXP.exec(nextRequest.url);
+          const POTENTIAL_PAGE_NUMBER =
+              execResultB.groups.page ? parseInt(execResultB.groups.currentpage) : 1;
+          if (POTENTIAL_PAGE_NUMBER < CURRENT_PAGE_NUMBER) {
+            return false;
+          }
+          return nextRequest;
         }
-        return nextRequest;
-      }
-    });
+      });
   };
 
   getOutputObject() {
