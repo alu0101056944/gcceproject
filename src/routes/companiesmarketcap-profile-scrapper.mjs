@@ -63,7 +63,8 @@ export default class CompaniesmarketcapProfileScrapper {
       const CATEGORY = await badge.textContent();
       categories.push(CATEGORY);
     }
-    this.#outputObject[request.label] = categories.pop() ?? null;
+    const UNPROCESSED_NAME = request.label.replace('-', ' ');
+    this.#outputObject[UNPROCESSED_NAME] = categories.pop() ?? null;
   };
 
   getOutputObject() {
