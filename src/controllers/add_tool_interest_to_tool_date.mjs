@@ -15,6 +15,8 @@ export default function addInterest() {
     'naranja',
     'manzana',
   ];
+  // IMPORTANT: because first term is always 429, then pad the array and
+  // put a trash search term first before using.
   const scrapper = new GoogleTrendsScrapper(searchTerms);
   scrapper.run();
 }

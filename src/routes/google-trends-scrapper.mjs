@@ -10,7 +10,6 @@
 import { PlaywrightCrawler } from 'crawlee';
 
 import { readFile } from 'fs/promises';
-import { readFileSync } from 'fs';
 
 export default class GoogleTrendsScrapper {
   /** @private @constant  */
@@ -41,11 +40,11 @@ export default class GoogleTrendsScrapper {
       requestHandler,
       retryOnBlocked: true,
       maxConcurrency: 1,
-      sessionPoolOptions: {
-        blockedStatusCodes: [429],
-      },
-      maxRequestRetries: 2,
-      sameDomainDelaySecs: 2,
+      // sessionPoolOptions: { // was put because first request was always 429
+      //   blockedStatusCodes: [429],
+      // },
+      // maxRequestRetries: 2,
+      // sameDomainDelaySecs: 2,
     });
   }
 
@@ -82,10 +81,7 @@ export default class GoogleTrendsScrapper {
     return this.#interestsPerTerm;
   }
 
-  run() {
-    (async () => {
-      await this.#scrapper.run(this.#searchTermsInfo);
-      console.log(this.#interestsPerTerm);
-    })();
+  async run() {
+    await this.#scrapper.run(this.#searchTermsInfo);
   }
 }

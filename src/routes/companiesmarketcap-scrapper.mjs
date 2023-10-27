@@ -15,11 +15,9 @@ import { PlaywrightCrawler } from 'crawlee';
 export default class CompaniesmarketcapScrapper {
   /** @private @constant  */
   #scrapper = undefined;
-  #url = undefined;
   #companiesInfo = undefined;
 
-  constructor(url) {
-    this.#url = url;
+  constructor() {
     this.#companiesInfo = {};
     const requestHandler = this.#myHandler.bind(this);
     this.#scrapper = new PlaywrightCrawler({
@@ -38,6 +36,7 @@ export default class CompaniesmarketcapScrapper {
       },
       maxRequestRetries: 2,
       sameDomainDelaySecs: 2,
+      keepAlive: true, // to temporarily debug the console messages
     });
   }
 
@@ -58,16 +57,15 @@ export default class CompaniesmarketcapScrapper {
         }
         return companiesInfo;
       });
+    console.log();
   };
 
   getOutputObject() {
     return this.#companiesInfo;
   }
 
-  run() {
-    (async () => {
-      await this.#scrapper.run([url]);
-      console.log('CompaniesmarketcapScrapper output: ' + this.#companiesInfo);
-    })();
+  async run() {
+    const URL = 'https://companiesmarketcap.com/largest-companies-by-number-of-employees/';
+    await this.#scrapper.run([URL]);
   }
 }
