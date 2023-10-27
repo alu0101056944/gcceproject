@@ -36,27 +36,39 @@ export default class CompaniesmarketcapScrapper {
       },
       maxRequestRetries: 2,
       sameDomainDelaySecs: 2,
-      keepAlive: true, // to temporarily debug the console messages
+      // keepAlive: true, // to temporarily debug the console messages
     });
   }
 
   async #myHandler({ page, request, response }) {
-    const rowsOfCompany = page.getByRole('tr');
-    this.#companiesInfo = await rowsOfCompany.evaluateAll((rows) => {
-        const companiesInfo = {};
-        for (let row of rows) {
-          const children = row.children;
-          const COMPANY_NAME = children[1].querySelector('.company-name')
-              .textContent;
-          const EMPLOYEE_AMOUNT = parseInt(children[2].textContent.trim()
-              .replace(',', '.'));
-          companiesInfo.push({
-            company: COMPANY_NAME,
-            amount: EMPLOYEE_AMOUNT,
-          });
-        }
-        return companiesInfo;
-      });
+    const rowLocator = page.locator('tbody').locator('tr');
+    const rowsOfCompany = await rowLocator.all();
+    for (const row of rowsOfCompany) {
+      const companyNameLocator = row.locator('.company-name');
+      const COMPANY_NAME = await companyNameLocator.textContent();
+      const tdRightLocator = row.locator('td');
+      const allTdRightLocators = await tdRightLocator.all();
+      const AMOUNT_OF_EMPLOYEES_STRING = await allTdRightLocators[2].textContent();
+      const AMOUNT_OF_EMPLOYEES = parseInt(
+          AMOUNT_OF_EMPLOYEES_STRING.replace(',', '').trim()
+        );
+      this.#companiesInfo[COMPANY_NAME] = AMOUNT_OF_EMPLOYEES;
+    }
+    // this.#companiesInfo = await rowsOfCompany.evaluateAll((rows) => {
+    //     const companiesInfo = {};
+    //     for (let row of rows) {
+    //       const children = row.children;
+    //       const COMPANY_NAME = children[1].querySelector('.company-name')
+    //           .textContent;
+    //       const EMPLOYEE_AMOUNT = parseInt(children[2].textContent.trim()
+    //           .replace(',', '.'));
+    //       companiesInfo.push({
+    //         company: COMPANY_NAME,
+    //         amount: EMPLOYEE_AMOUNT,
+    //       });
+    //     }
+    //     return companiesInfo;
+    //   });
     console.log();
   };
 
