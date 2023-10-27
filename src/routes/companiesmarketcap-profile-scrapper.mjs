@@ -68,7 +68,7 @@ export default class CompaniesmarketcapProfileScrapper {
   };
 
   getOutputObject() {
-    return this.#companiesInfo;
+    return this.#outputObject;
   }
 
   async run() {

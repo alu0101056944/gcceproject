@@ -36,6 +36,10 @@ export default class CompaniesmarketcapScrapper {
       requestHandler,
       retryOnBlocked: true,
       maxConcurrency: 1,
+      sessionPoolOptions: {
+        blockedStatusCodes: [404],
+      },
+      maxRequestRetries: 2,
     });
   }
 
@@ -49,7 +53,7 @@ export default class CompaniesmarketcapScrapper {
       const companyNameLocator = row.locator('.company-name');
       const COMPANY_NAME = await companyNameLocator.textContent();
       const PROCESSED_COMPANY_NAME =
-          COMPANY_NAME.replace(/\(.*\)/, '').trim().replace(' ', '-').toLowerCase();
+          COMPANY_NAME.replace(/\(.*\)/, '').trim().toLowerCase();
 
       const tdRightLocator = row.locator('td');
       const allTdRightLocators = await tdRightLocator.all();
