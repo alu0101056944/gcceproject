@@ -13,10 +13,15 @@ import { inspect } from 'util';
 
 export default async function addCompanies() {
   const scrapperOfCompanies = new CompaniesmarketcapScrapper();
-  const companiesEmployeeAmount = await scrapperOfCompanies.run();
+  scrapperOfCompanies.setMaxAmountfPageSurfs(1);
+  await scrapperOfCompanies.run();
+  const companiesEmployeeAmount = scrapperOfCompanies.getOutputObject();
+
   const companyNames = Object.getOwnPropertyNames(companiesEmployeeAmount);
-  const scrapper = new CompaniesmarketcapProfileScrapper(companyNames);
-  const companiesType = await scrapper.run();
+  const scrapperOfProfiles = new CompaniesmarketcapProfileScrapper(companyNames);
+  await scrapperOfProfiles.run();
+  const companiesType = scrapperOfProfiles.getOutputObject();
+
   const companyRegisters = [];
   for (let i = 0; i < companyNames.length; i++) {
     companyRegisters.push({

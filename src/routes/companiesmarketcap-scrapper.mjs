@@ -22,7 +22,7 @@ export default class CompaniesmarketcapScrapper {
   constructor() {
     this.#companiesInfo = {};
     this.#maxPageSurfs = Infinity;
-    this.#currentAmountOfPagesSurfed = 1;
+    this.#currentAmountOfPagesSurfed = 0;
 
     const requestHandler = this.#myHandler.bind(this);
     this.#scrapper = new PlaywrightCrawler({
@@ -40,24 +40,27 @@ export default class CompaniesmarketcapScrapper {
   }
 
   async #myHandler({ page, request, enqueueLinks }) {
-    log.info('Visited page: ' + request.url);
+    log.info('CompaniesmarketcapScrapper visited page: ' + request.url);
+    this.#currentAmountOfPagesSurfed++;
 
     const rowLocator = page.locator('tbody').locator('tr');
     const rowsOfCompany = await rowLocator.all();
     for (const row of rowsOfCompany) {
       const companyNameLocator = row.locator('.company-name');
       const COMPANY_NAME = await companyNameLocator.textContent();
+      const PROCESSED_COMPANY_NAME =
+          COMPANY_NAME.replace(/\(.*\)/, '').trim().replace(' ', '-').toLowerCase();
 
       const tdRightLocator = row.locator('td');
       const allTdRightLocators = await tdRightLocator.all();
       const AMOUNT_OF_EMPLOYEES_STRING = await allTdRightLocators[2].textContent();
       const IS_COMMA_SEPARATED_NUMBER_REG_EXP = /\d+,?\d+/
       if (IS_COMMA_SEPARATED_NUMBER_REG_EXP.test(AMOUNT_OF_EMPLOYEES_STRING)) {
-        this.#companiesInfo[COMPANY_NAME.toLowerCase().trim()] = parseInt(
+        this.#companiesInfo[PROCESSED_COMPANY_NAME] = parseInt(
           AMOUNT_OF_EMPLOYEES_STRING.replace(',', '').trim()
         );
       } else {
-        this.#companiesInfo[COMPANY_NAME.toLowerCase().trim()] = null;
+        this.#companiesInfo[PROCESSED_COMPANY_NAME] = null;
       }
     }
     if (this.#currentAmountOfPagesSurfed < this.#maxPageSurfs) {
@@ -80,7 +83,6 @@ export default class CompaniesmarketcapScrapper {
           return nextRequest;
         }
       });
-      this.#currentAmountOfPagesSurfed++;
     }
   };
 

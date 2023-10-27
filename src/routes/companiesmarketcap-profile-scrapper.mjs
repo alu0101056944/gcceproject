@@ -53,7 +53,7 @@ export default class CompaniesmarketcapProfileScrapper {
   }
 
   async #myHandler({ page, request }) {
-    log.info('Visited page: ' + request.url);
+    log.info('CompaniesmarketcapProfileScrapper visited page: ' + request.url);
 
     const categoriesContainerLocator = page.locator('.info-box.categories-box')
         .locator('.badge.badge-light');
