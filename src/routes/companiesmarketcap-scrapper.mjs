@@ -19,6 +19,7 @@ export default class CompaniesmarketcapScrapper {
 
   constructor() {
     this.#companiesInfo = {};
+
     const requestHandler = this.#myHandler.bind(this);
     this.#scrapper = new PlaywrightCrawler({
       headless: true,
@@ -42,29 +43,38 @@ export default class CompaniesmarketcapScrapper {
 
   async #myHandler({ page, request, enqueueLinks }) {
     log.info('Visited page: ' + request.url);
+
     const rowLocator = page.locator('tbody').locator('tr');
     const rowsOfCompany = await rowLocator.all();
     for (const row of rowsOfCompany) {
       const companyNameLocator = row.locator('.company-name');
       const COMPANY_NAME = await companyNameLocator.textContent();
+
       const tdRightLocator = row.locator('td');
       const allTdRightLocators = await tdRightLocator.all();
       const AMOUNT_OF_EMPLOYEES_STRING = await allTdRightLocators[2].textContent();
-      const AMOUNT_OF_EMPLOYEES = parseInt(
+      const IS_COMMA_SEPARATED_NUMBER_REG_EXP = /\d+,?\d+/
+      if (IS_COMMA_SEPARATED_NUMBER_REG_EXP.test(AMOUNT_OF_EMPLOYEES_STRING)) {
+        this.#companiesInfo[COMPANY_NAME] = parseInt(
           AMOUNT_OF_EMPLOYEES_STRING.replace(',', '').trim()
         );
-      this.#companiesInfo[COMPANY_NAME] = AMOUNT_OF_EMPLOYEES;
+      } else {
+        this.#companiesInfo[COMPANY_NAME] = null;
+      }
     }
     await enqueueLinks({
         regexps: [/largest-companies-by-number-of-employees\/page\/\d+\/$/],
         transformRequestFunction(nextRequest) {
           const PAGE_NUMBER_REG_EXP = /(?<page>\/page\/(?<currentpage>\d+)\/?)?/;
+
           const execResultA = PAGE_NUMBER_REG_EXP.exec(request.url);
           const CURRENT_PAGE_NUMBER = 
               execResultA.groups.page ? parseInt(execResultA.groups.currentpage) : 1;
+
           const execResultB = PAGE_NUMBER_REG_EXP.exec(nextRequest.url);
           const POTENTIAL_PAGE_NUMBER =
               execResultB.groups.page ? parseInt(execResultB.groups.currentpage) : 1;
+
           if (POTENTIAL_PAGE_NUMBER < CURRENT_PAGE_NUMBER) {
             return false;
           }
