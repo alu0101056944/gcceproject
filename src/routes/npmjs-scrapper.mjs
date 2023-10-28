@@ -28,7 +28,7 @@ export default class NPMJSScrapper {
     this.#outputObject = {};
 
     const toURL = (projectName) => {
-      const PROCESSED_PROJECT_NAME = projectName.replace(' ', '-');
+      const PROCESSED_PROJECT_NAME = projectName.replace(/\s/, '-');
       return `https://www.npmjs.com/package/${PROCESSED_PROJECT_NAME}`;
     }
     this.#urlsInfo = projectNames.map((name) => {
@@ -56,17 +56,16 @@ export default class NPMJSScrapper {
   async #myHandler({ page, request }) {
     log.info('NPMJSScrapper visited page: ' + request.url);
 
-    const COMMA_SEPARATED_NUMBER_REG_EXP = /\d+,?\d+/
-    const amountOfDownloadsLocator =
-        page.locator('div').getByText(COMMA_SEPARATED_NUMBER_REG_EXP);
+    const COMMA_SEPARATED_NUMBER_REG_EXP = /\d+\.?\d+/
+    const amountOfDownloadsLocator = page
+        .locator('div._702d723c')
+        .filter({ has: page.locator('h3').filter({ hasText: 'Weekly Downloads' }) })
+        .getByText(COMMA_SEPARATED_NUMBER_REG_EXP, { exact: true });
     const AMOUNT_OF_DOWNLOADS_STRING =
         await amountOfDownloadsLocator.textContent();
     const AMOUNT_OF_DOWNLOADS =
-        parseInt(AMOUNT_OF_DOWNLOADS_STRING.replace(',', ''));
-    this.#outputObject.push({
-      name: request.label,
-      downloads: AMOUNT_OF_DOWNLOADS
-    });
+        parseInt(AMOUNT_OF_DOWNLOADS_STRING.replace(/\./, ''));
+    this.#outputObject[request.label] = AMOUNT_OF_DOWNLOADS;
   };
 
   getOutputObject() {

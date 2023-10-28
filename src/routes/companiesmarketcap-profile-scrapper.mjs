@@ -27,7 +27,7 @@ export default class CompaniesmarketcapProfileScrapper {
     this.#outputObject = {};
 
     const toURL = (url) => {
-      const PROCESSED_URL = url.replace(' ', '-').toLowerCase();
+      const PROCESSED_URL = url.replace(/\s/, '-').toLowerCase();
       return `https://companiesmarketcap.com/${PROCESSED_URL}/marketcap/`;
     }
     this.#companiesInfo = companyNames.map(name => {
@@ -63,8 +63,8 @@ export default class CompaniesmarketcapProfileScrapper {
       const CATEGORY = await badge.textContent();
       categories.push(CATEGORY);
     }
-    const UNPROCESSED_NAME = request.label.replace('-', ' ');
-    this.#outputObject[UNPROCESSED_NAME] = categories.pop() ?? null;
+    const UNPROCESSED_NAME = request.label.replace(/-/, ' ');
+    this.#outputObject[UNPROCESSED_NAME] = categories.shift() ?? null;
   };
 
   getOutputObject() {
