@@ -32,7 +32,7 @@ export default class NamesToURLScrapper {
    * @param {function} callback What is going to be called inside the
    *    requestHandler. It has an outputObject parameter available.
    */
-  constructor(projectNames, preUrl, postUrl, callback) {
+  constructor(projectNames, preUrl, postUrl = '', callback) {
     this.#outputObject = {};
     this.#callback = callback;
 
@@ -47,7 +47,6 @@ export default class NamesToURLScrapper {
       };
     });
     
-    const requestHandler = this.#myHandler.bind(this);
     this.#scrapper = new PlaywrightCrawler({
       headless: true,
       navigationTimeoutSecs: 100000,
@@ -56,18 +55,22 @@ export default class NamesToURLScrapper {
         closeInactiveBrowserAfterSecs: 100000,
         operationTimeoutSecs: 100000,
       },
-      requestHandler,
+      requestHandler: this.#myHandler(),
       retryOnBlocked: true,
       maxConcurrency: 1,
     });
   }
 
-  async #myHandler(requestOptions) {
-    this.#callback({
+  #myHandler() {
+    const callback = this.#callback;
+    const outputObject = this.#outputObject;
+    return async (requestOptions) => {
+      callback({
         ...requestOptions,
-        outputObject: this.#outputObject,
+        outputObject,
         log,
       });
+    }
   };
 
   async run() {
