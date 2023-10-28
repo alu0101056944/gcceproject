@@ -1,10 +1,11 @@
 /**
  * @author Marcos Barrios
  * @since 28_10_2023
- * @desc Scrapper for NPMJS registry webpage of package.
+ * @desc Scrapper for PYPISTATS webpage, which allows to get statistics
+ * about packages in Python.
  * 
  * References used during development:
- *    {@link https://www.npmjs.com/package/http-server}
+ *    {@link https://pypistats.org/packages/pandas}
  *
  */
 
@@ -15,7 +16,7 @@ import { PlaywrightCrawler, log } from 'crawlee';
 /**
  * Scrapper for NPMJS registry webpage of package.
  */
-export default class NPMJSScrapper {
+export default class PypistatsScrapper {
   /** @private @constant */
   #scrapper = undefined;
   #outputObject = undefined;

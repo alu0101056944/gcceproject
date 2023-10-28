@@ -11,7 +11,7 @@
 
 'use strict';
 
-import { PlaywrightCrawler, enqueueLinks, log } from 'crawlee';
+import { PlaywrightCrawler, log } from 'crawlee';
 
 /**
  * Scrapper for github repository.
