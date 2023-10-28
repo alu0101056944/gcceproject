@@ -27,7 +27,7 @@ export default class CompaniesmarketcapProfileScrapper {
     this.#outputObject = {};
 
     const toURL = (url) => {
-      const PROCESSED_URL = url.replace(/\s/, '-').toLowerCase();
+      const PROCESSED_URL = url.replace(/\s/g, '-').toLowerCase();
       return `https://companiesmarketcap.com/${PROCESSED_URL}/marketcap/`;
     }
     this.#companiesInfo = companyNames.map(name => {
@@ -54,7 +54,9 @@ export default class CompaniesmarketcapProfileScrapper {
 
   async #myHandler({ page, request }) {
     log.info('CompaniesmarketcapProfileScrapper visited page: ' + request.url);
-
+    if (/bank-of-america/.test(request.url)) {
+      console.log('?!)');
+    }
     const categoriesContainerLocator = page.locator('.info-box.categories-box')
         .locator('.badge.badge-light');
     const allCategoryBadges = await categoriesContainerLocator.all();
@@ -63,7 +65,7 @@ export default class CompaniesmarketcapProfileScrapper {
       const CATEGORY = await badge.textContent();
       categories.push(CATEGORY);
     }
-    const UNPROCESSED_NAME = request.label.replace(/-/, ' ');
+    const UNPROCESSED_NAME = request.label.replace(/-/g, ' ');
     this.#outputObject[UNPROCESSED_NAME] = categories.shift() ?? null;
   };
 

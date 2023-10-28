@@ -85,7 +85,7 @@ export default class GithubExploreScrapper {
     const handlerOfTextWithAmount = await page.$('h2.h3.color-fg-muted');
     const TEXT_WITH_AMOUNT_OF_RESULTS = await handlerOfTextWithAmount.textContent();
     const AMOUNT_OF_RESULTS = parseFloat(
-        TEXT_WITH_AMOUNT_OF_RESULTS.replace(/,/, '').match(/\d+/g)
+        TEXT_WITH_AMOUNT_OF_RESULTS.replace(/,/g, '').match(/\d+/g)
       );
     return AMOUNT_OF_RESULTS;
   }

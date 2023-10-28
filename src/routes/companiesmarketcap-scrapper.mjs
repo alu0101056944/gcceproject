@@ -53,7 +53,7 @@ export default class CompaniesmarketcapScrapper {
       const companyNameLocator = row.locator('.company-name');
       const COMPANY_NAME = await companyNameLocator.textContent();
       const PROCESSED_COMPANY_NAME =
-          COMPANY_NAME.replace(/\(.*\)/, '').trim().toLowerCase();
+          COMPANY_NAME.replace(/\(.*\)/g, '').trim().toLowerCase();
 
       const tdRightLocator = row.locator('td');
       const allTdRightLocators = await tdRightLocator.all();
@@ -61,7 +61,7 @@ export default class CompaniesmarketcapScrapper {
       const IS_COMMA_SEPARATED_NUMBER_REG_EXP = /\d+,?\d+/
       if (IS_COMMA_SEPARATED_NUMBER_REG_EXP.test(AMOUNT_OF_EMPLOYEES_STRING)) {
         this.#companiesInfo[PROCESSED_COMPANY_NAME] = parseInt(
-          AMOUNT_OF_EMPLOYEES_STRING.replace(/,/, '').trim()
+          AMOUNT_OF_EMPLOYEES_STRING.replace(/,/g, '').trim()
         );
       } else {
         this.#companiesInfo[PROCESSED_COMPANY_NAME] = null;
