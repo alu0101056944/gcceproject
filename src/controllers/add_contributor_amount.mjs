@@ -9,7 +9,7 @@
 import { inspect } from 'util';
 import GithubRepositoryScrapper from '../routes/github-repository-scrapper.mjs';
 
-export default function addCompanies() {
+export default function addContributors() {
   const urls = [
     'https://github.com/alu0101056944/gcceproject/', // without contributors
     'https://github.com/facebook/react', // with contributors
@@ -18,4 +18,4 @@ export default function addCompanies() {
   scrapper.run().then(() => console.log(inspect(scrapper.getOutputObject())));
 }
 
-addCompanies();
+addContributors();
