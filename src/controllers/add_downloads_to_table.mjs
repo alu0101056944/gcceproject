@@ -30,11 +30,19 @@ export default function addDownloads() {
         packageNames,
         URL_PREFIX,
         URL_POSTFIX,
-        ({ page, request, log }) => {
+        async ({ page, request, log, outputObject }) => {
           log.info('PythonScrapper visited ' + request.url);
+          const paragraphWithDownloads = page.getByText('Downloads last week:');
+          const WHOLE_PARAGRAPH = await paragraphWithDownloads.textContent();
+          const DOWNLOADS_LAST_WEEK_STRING =
+              /Downloads(\n|.)*last(\n|.)*week:(\n|.)*(\d+,?\d+)/.exec(WHOLE_PARAGRAPH)[0];
+          const DOWNLOADS_LAST_WEEK =
+              parseInt(DOWNLOADS_LAST_WEEK_STRING.replace(/,/g, ''));
+          outputObject[request.label] = DOWNLOADS_LAST_WEEK;
         },
       );
-  scrapperPython.run().then(() => console.log('Python scrapper finished'));
+  scrapperPython.create([500]);
+  scrapperPython.run().then((output) => console.log(inspect(output)));
 }
 
 addDownloads();

@@ -46,9 +46,11 @@ export default class NamesToURLScrapper {
         label: name
       };
     });
-    
+  }
+
+  create(errorCodes = []) {
     this.#scrapper = new PlaywrightCrawler({
-      headless: true,
+      headless: false,
       navigationTimeoutSecs: 100000,
       requestHandlerTimeoutSecs: 100000,
       browserPoolOptions: {
@@ -58,6 +60,9 @@ export default class NamesToURLScrapper {
       requestHandler: this.#myHandler(),
       retryOnBlocked: true,
       maxConcurrency: 1,
+      sessionPoolOptions: {
+        blockedStatusCodes: errorCodes,
+      }
     });
   }
 
@@ -65,7 +70,7 @@ export default class NamesToURLScrapper {
     const callback = this.#callback;
     const outputObject = this.#outputObject;
     return async (requestOptions) => {
-      callback({
+      await callback({
         ...requestOptions,
         outputObject,
         log,
@@ -74,6 +79,9 @@ export default class NamesToURLScrapper {
   };
 
   async run() {
+    if (!this.#scrapper) {
+      throw new Error('Create the scrapper first. call create().');
+    }
     await this.#scrapper.run(this.#urlsInfo);
     return this.#outputObject;
   }
