@@ -54,17 +54,18 @@ export default class CompaniesmarketcapProfileScrapper {
 
   async #myHandler({ page, request }) {
     log.info('CompaniesmarketcapProfileScrapper visited page: ' + request.url);
-    if (/bank-of-america/.test(request.url)) {
-      console.log('?!)');
-    }
+
     const categoriesContainerLocator = page.locator('.info-box.categories-box')
         .locator('.badge.badge-light');
     const allCategoryBadges = await categoriesContainerLocator.all();
     const categories = [];
     for (const badge of allCategoryBadges) {
       const CATEGORY = await badge.textContent();
-      categories.push(CATEGORY);
+      const NON_EMOJI_REG_EXP = /[\x00-\x7F]+/u;
+      const PROCESSED_CATEGORY = NON_EMOJI_REG_EXP.exec(CATEGORY)[0].trim();
+      categories.push(PROCESSED_CATEGORY);
     }
+
     const UNPROCESSED_NAME = request.label.replace(/-/g, ' ');
     this.#outputObject[UNPROCESSED_NAME] = categories.shift() ?? null;
   };
