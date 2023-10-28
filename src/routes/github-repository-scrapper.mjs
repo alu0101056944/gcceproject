@@ -47,9 +47,10 @@ export default class GithubRepositoryScrapper {
     log.info('GithubRepositoryScrapper visited page: ' + request.url);
 
     const elementWithAmountOfContributors =
-        page.getByRole('link').getByText('Contributors').locate('span');
+        page.getByRole('link').getByText('Contributors').locator('span');
     const allLocators = await elementWithAmountOfContributors.all();
     if (allLocators.length > 0) {
+      log.info('GithubRepositoryScrapper is able to find contributors section.');
 
       // I assume that when it matches something, then it is only 1 element
       const AMOUNT_OF_CONTRIBUTORS_STRING = await allLocators[0].textContent();
