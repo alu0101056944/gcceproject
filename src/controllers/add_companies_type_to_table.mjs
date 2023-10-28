@@ -22,9 +22,6 @@ export default async function addCompanies() {
   await scrapperOfProfiles.run();
   const companiesType = scrapperOfProfiles.getOutputObject();
 
-  // @todo Investigate why Profile scrapper sometimes does not find (null)
-  // any categories although there are categories present.
-
   const companyRegisters = [];
   for (let i = 0; i < companyNames.length; i++) {
     companyRegisters.push({

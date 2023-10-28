@@ -56,7 +56,7 @@ export default class GithubRepositoryScrapper {
       // I assume that when it matches something, then it is only 1 element
       const AMOUNT_OF_CONTRIBUTORS_STRING = await allLocators[0].textContent();
       const AMOUNT_OF_CONTRIBUTORS =
-          AMOUNT_OF_CONTRIBUTORS_STRING.replace(/,/, '');
+          AMOUNT_OF_CONTRIBUTORS_STRING.replace(/,/g, '');
       this.#outputObject.push(parseInt(AMOUNT_OF_CONTRIBUTORS));
     }
   };

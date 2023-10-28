@@ -64,7 +64,7 @@ export default class NPMJSScrapper {
     const AMOUNT_OF_DOWNLOADS_STRING =
         await amountOfDownloadsLocator.textContent();
     const AMOUNT_OF_DOWNLOADS =
-        parseInt(AMOUNT_OF_DOWNLOADS_STRING.replace(/\./, ''));
+        parseInt(AMOUNT_OF_DOWNLOADS_STRING.replace(/\./g, ''));
     this.#outputObject[request.label] = AMOUNT_OF_DOWNLOADS;
   };
 
