@@ -3,8 +3,9 @@
  * @since 28_10_2023
  * @desc Scrapper for github repository.
  * 
- * Reference used during develop:
+ * References used during development:
  *    {@link https://github.com/facebook/react}
+ *    {@link https://github.com/alu0101056944/gcceproject}
  *
  */
 
@@ -16,13 +17,13 @@ import { PlaywrightCrawler, enqueueLinks, log } from 'crawlee';
  * Scrapper for github repository.
  */
 export default class GithubRepositoryScrapper {
-  /** @private @constant  */
+  /** @private @constant */
   #scrapper = undefined;
   #outputObject = undefined;
   #urls = undefined;
 
   /**
-   * @param {object} companyNames array of strings with the company names
+   * @param {object} companyNames array of strings representing the company names
    */
   constructor(urls) {
     this.#outputObject = [];
