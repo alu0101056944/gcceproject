@@ -50,7 +50,7 @@ export default class NamesToURLScrapper {
 
   create(errorCodes = []) {
     this.#scrapper = new PlaywrightCrawler({
-      headless: false,
+      headless: true,
       navigationTimeoutSecs: 100000,
       requestHandlerTimeoutSecs: 100000,
       browserPoolOptions: {
@@ -62,7 +62,7 @@ export default class NamesToURLScrapper {
       maxConcurrency: 1,
       sessionPoolOptions: {
         blockedStatusCodes: errorCodes,
-      }
+      },
     });
   }
 

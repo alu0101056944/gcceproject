@@ -35,7 +35,7 @@ export default function addDownloads() {
           const paragraphWithDownloads = page.getByText('Downloads last week:');
           const WHOLE_PARAGRAPH = await paragraphWithDownloads.textContent();
           const DOWNLOADS_LAST_WEEK_STRING =
-              /Downloads(\n|.)*last(\n|.)*week:(\n|.)*(\d+,?\d+)/.exec(WHOLE_PARAGRAPH)[0];
+              /Downloads\slast\sweek:\s(\d+,?\d+)+/.exec(WHOLE_PARAGRAPH)[1];
           const DOWNLOADS_LAST_WEEK =
               parseInt(DOWNLOADS_LAST_WEEK_STRING.replace(/,/g, ''));
           outputObject[request.label] = DOWNLOADS_LAST_WEEK;
