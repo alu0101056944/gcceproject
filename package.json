@@ -1,6 +1,6 @@
 {
   "name": "gcceproject",
-  "version": "0.14.0",
+  "version": "0.15.0",
   "description": "A business intelligence tool for tool selection of a hypothetical consulting IT firm.",
   "main": "src/index.mjs",
   "scripts": {
