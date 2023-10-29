@@ -24,7 +24,8 @@ export default async function addOrganizationMembers() {
         URL_POSTFIX,
         async ({ page, request, log, outputObject }) => {
           const countMembers = async () => {
-            const row = page.locator('org-members-table').locator('li');
+            const row = page.locator('div#org-members-table')
+                .locator('li.member-list-item');
             const allRows = await row.all();
             outputObject[request.label] = allRows.length;
           }
@@ -33,15 +34,16 @@ export default async function addOrganizationMembers() {
 
           let keepIterating = true;
           while (keepIterating) {
-            const NEXT_URL = await buttonNextPage.getAttribute('href');
-            log.info('GithubOrganizationContributorsScrapper visited page: '
-                + NEXT_URL);
-
             await countMembers();
 
             try {
-              await expect(buttonNextPage).toBeEnabled({ timeout: 5000 });
-              await buttonNextPage.click();
+              await expect(buttonNextPage).toBeEnabled({ timeout: 1000 });
+
+              const NEXT_URL = await buttonNextPage.getAttribute('href');
+              log.info('GithubOrganizationContributorsScrapper visited page: '
+                  + NEXT_URL);
+
+              await buttonNextPage.click({ timeout: 1000 });
               await page.waitForNavigation();
             } catch (error) {
               keepIterating = false;
