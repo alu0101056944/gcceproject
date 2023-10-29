@@ -1,7 +1,7 @@
 /**
  * @author Marcos Barrios
  * @since 28_10_2023
- * @desc Test whether NPMJSScrapper works
+ * @desc Scrapping simple download pages like NPMJS and PYPISTATS.
  */
 
 'use strict';
