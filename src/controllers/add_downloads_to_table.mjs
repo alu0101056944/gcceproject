@@ -10,7 +10,7 @@ import { inspect } from 'util';
 import NPMJSScrapper from '../routes/npmjs-scrapper.mjs';
 import NamesToURLScrapper from '../routes/names-to-urls-scrapper.mjs';
 
-export default function addDownloads() {
+export default async function addDownloads() {
   const packageNames = [
     'react',
     'eslint-plugin-react',
@@ -21,8 +21,8 @@ export default function addDownloads() {
   // for example:
   //  react is in npmjs and pypi, but pypi's is an impersonification.
 
-  // const scrapperNPM = new NPMJSScrapper(packageNames);
-  // scrapperNPM.run().then(() => console.log(inspect(scrapperNPM.getOutputObject())));
+  const scrapperNPM = new NPMJSScrapper(packageNames);
+  const allNpmjsPackageDownloads = await scrapperNPM.run();
 
   const URL_PREFIX = 'https://pypistats.org/packages/';
   const URL_POSTFIX = '';
@@ -42,7 +42,23 @@ export default function addDownloads() {
         },
       );
   scrapperPython.create([500]);
-  scrapperPython.run().then((output) => console.log(inspect(output)));
+  const allPythonPackageDownloads = await scrapperPython.run();
+
+  const allScrapperResults = [
+    allPythonPackageDownloads,
+    allNpmjsPackageDownloads
+  ];
+
+  const packageDownloads = {};
+  for (const scrapperResult of allScrapperResults) {
+    const packageNames = Object.getOwnPropertyNames(scrapperResult);             
+    for (const name of packageNames) {
+      packageDownloads[name] =
+            Math.max(packageDownloads[name] ?? 0, scrapperResult[name]);
+    }
+  }
+
+  console.log(inspect(packageDownloads));
 }
 
 addDownloads();
