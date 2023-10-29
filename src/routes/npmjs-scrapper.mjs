@@ -47,9 +47,13 @@ export default class NPMJSScrapper {
         closeInactiveBrowserAfterSecs: 100000,
         operationTimeoutSecs: 100000,
       },
+
       requestHandler,
       retryOnBlocked: true,
       maxConcurrency: 1,
+      sessionPoolOptions: {
+        blockedStatusCodes: [404]
+      },
     });
   }
 
@@ -68,11 +72,8 @@ export default class NPMJSScrapper {
     this.#outputObject[request.label] = AMOUNT_OF_DOWNLOADS;
   };
 
-  getOutputObject() {
-    return this.#outputObject;
-  }
-
   async run() {
     await this.#scrapper.run(this.#urlsInfo);
+    return this.#outputObject;
   }
 }

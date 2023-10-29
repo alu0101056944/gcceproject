@@ -16,6 +16,8 @@ export default class CompaniesmarketcapScrapper {
   /** @private @constant  */
   #scrapper = undefined;
   #companiesInfo = undefined;
+
+  /** @private */
   #maxPageSurfs = undefined;
   #currentAmountOfPagesSurfed = undefined;
 
