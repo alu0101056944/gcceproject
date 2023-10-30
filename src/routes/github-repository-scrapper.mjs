@@ -23,7 +23,8 @@ export default class GithubRepositoryScrapper {
   #urls = undefined;
 
   /**
-   * @param {object} companyNames array of strings representing the company names
+   * @param {object} companyNames array of strings representing the company
+   *    names
    */
   constructor(urls) {
     this.#outputObject = [];
