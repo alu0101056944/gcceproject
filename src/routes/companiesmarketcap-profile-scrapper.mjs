@@ -66,8 +66,8 @@ export default class CompaniesmarketcapProfileScrapper {
       categories.push(PROCESSED_CATEGORY);
     }
 
-    const UNPROCESSED_NAME = request.label.replace(/-/g, ' ');
-    this.#outputObject[UNPROCESSED_NAME] = categories.shift() ?? null;
+    const GITHUB_COMPATIBLE_NAME = request.label.replace(/-/g, '');
+    this.#outputObject[GITHUB_COMPATIBLE_NAME] = categories.shift() ?? null;
   };
 
   getOutputObject() {

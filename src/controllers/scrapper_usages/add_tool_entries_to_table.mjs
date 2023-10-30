@@ -27,7 +27,7 @@ export default async function makeToolsFromGithubExplore() {
     const scrapper = new GithubExploreScrapper(`https://github.com/topics/${specialization}`);
     const output = await scrapper.run();
     output.forEach((entry) => tableObject.push({
-          name: entry.name,
+          name: entry.name.toLowerCase(),
           author_company: entry.author_company,
           specialization,
           type: entry.type,
