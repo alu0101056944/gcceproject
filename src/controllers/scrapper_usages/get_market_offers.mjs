@@ -40,4 +40,4 @@ export default async function getAmountOfOffers() {
   console.log(inspect(output));
 }
 
-getAmountOfOffers();
+// getAmountOfOffers();

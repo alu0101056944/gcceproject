@@ -33,4 +33,4 @@ export default async function addCompanies() {
   console.log(inspect(companyRegisters));
 }
 
-addCompanies();
+// addCompanies();

@@ -63,4 +63,4 @@ export default async function addDownloads() {
   console.log(inspect(packageDownloads));
 }
 
-addDownloads();
+// addDownloads();

@@ -28,4 +28,4 @@ export default function addInterest() {
   scrapper.run();
 }
 
-addInterest();
+// addInterest();

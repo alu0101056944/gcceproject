@@ -21,4 +21,4 @@ export default function addDependencies() {
   scrapper.run().then(() => console.log(inspect(scrapper.getOutputObject())));
 }
 
-addDependencies();
+// addDependencies();

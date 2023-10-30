@@ -65,4 +65,4 @@ export default async function countDiscussionAmount() {
   console.log(inspect(output));
 }
 
-countDiscussionAmount();
+// countDiscussionAmount();

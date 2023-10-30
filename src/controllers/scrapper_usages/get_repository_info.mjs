@@ -45,4 +45,4 @@ export default async function addInfo() {
   console.log(inspect(output));
 }
 
-addInfo();
+// addInfo();

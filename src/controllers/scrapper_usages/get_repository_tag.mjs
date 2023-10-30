@@ -39,4 +39,4 @@ export default async function addTags() {
   console.log(inspect(output));
 }
 
-addTags();
+// addTags();

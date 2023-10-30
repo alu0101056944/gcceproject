@@ -23,4 +23,4 @@ export default async function getAmountOfOffers() {
   console.log(inspect(mentionsObject));
 }
 
-getAmountOfOffers();
+// getAmountOfOffers();

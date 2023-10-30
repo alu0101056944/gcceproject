@@ -18,4 +18,4 @@ export default function addContributors() {
   scrapper.run().then(() => console.log(inspect(scrapper.getOutputObject())));
 }
 
-addContributors();
+// addContributors();
