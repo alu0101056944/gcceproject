@@ -15,6 +15,7 @@ import CompaniesmarketcapScrapper from "../routes/companiesmarketcap-scrapper.mj
 import CompaniesmarketcapProfileScrapper from '../routes/companiesmarketcap-profile-scrapper.mjs';
 
 import { inspect } from 'util';
+import GoogleTrendsScrapper from '../routes/google-trends-scrapper.mjs';
 
 export default async function makeTable() {
   const recordsGithub = await makeToolsFromGithubExplore();
@@ -39,6 +40,7 @@ export default async function makeTable() {
   });
 
   const companyNames = Object.getOwnPropertyNames(amountsOfEmployeesPerCompany);
+
   const scrapperOfProfiles = new CompaniesmarketcapProfileScrapper(companyNames);
   await scrapperOfProfiles.run();
   const typePerCompany = scrapperOfProfiles.getOutputObject();
@@ -50,7 +52,24 @@ export default async function makeTable() {
     }
   });
 
-  
+  const scrapperTrends = new GoogleTrendsScrapper(companyNames);
+  const interestPerCompany = scrapperTrends.run();
+
+  // const githubCompatibleNames =
+  //     Object.getOwnPropertyNames(interestPerCompany).map((name) => {
+  //           return name.replace(/\s/g, '').toLowerCase();
+  //         });
+
+  // @todo: process output of google trends scrapper so that the
+  // keys are github compatible names. 
+
+  recordsGithub.forEach(record => {
+    if (typePerCompany[record.name]) {
+      record.type = typePerCompany[record.name]; 
+    } else {
+      record.type = null;
+    }
+  });
 
   const FILE_CONTENT = await readFile('./src/persistent_ids.json', 'utf8');
   const persistentIds = JSON.parse(FILE_CONTENT);
