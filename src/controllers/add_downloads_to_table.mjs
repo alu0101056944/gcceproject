@@ -27,9 +27,11 @@ export default async function addDownloads() {
   const URL_PREFIX = 'https://pypistats.org/packages/';
   const URL_POSTFIX = '';
   const scrapperPython = new NamesToURLScrapper(
-        packageNames,
-        URL_PREFIX,
-        URL_POSTFIX,
+        {
+          names: packageNames,
+          preUrl: URL_PREFIX,
+          postUrl: URL_POSTFIX,
+        },
         async ({ page, request, log, outputObject }) => {
           log.info('PythonScrapper visited ' + request.url);
           const paragraphWithDownloads = page.getByText('Downloads last week:');

@@ -7,7 +7,6 @@
 
 import { inspect } from 'util';
 import NamesToURLScrapper from '../routes/names-to-urls-scrapper.mjs';
-import { expect } from 'playwright/test'
 
 export default async function addInfo() {
   const allRepositories = [
@@ -18,9 +17,11 @@ export default async function addInfo() {
   const URL_PREFIX = 'https://github.com/';
   const URL_POSTFIX = '';
   const scrapperRepositoryInfo = new NamesToURLScrapper(
-        allRepositories,
-        URL_PREFIX,
-        URL_POSTFIX,
+        {
+          names: allRepositories,
+          preUrl: URL_PREFIX,
+          postUrl: URL_POSTFIX,
+        },
         async ({ page, request, log, outputObject }) => {
           log.info('GithubInfoScrapper visited ' + request.url);
           const commitsLocator = page.locator('span.d-none.d-sm-inline')

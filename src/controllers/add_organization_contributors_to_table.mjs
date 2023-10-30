@@ -19,9 +19,11 @@ export default async function addOrganizationMembers() {
   const URL_PREFIX = 'https://github.com/orgs/';
   const URL_POSTFIX = '/people';
   const scrapperOrganizations = new NamesToURLScrapper(
-        allOrganizationNames,
-        URL_PREFIX,
-        URL_POSTFIX,
+        {
+          names: allOrganizationNames,
+          preUrl: URL_PREFIX,
+          postUrl: URL_POSTFIX,
+        },
         async ({ page, request, log, outputObject }) => {
           const countMembers = async () => {
             const row = page.locator('div#org-members-table')

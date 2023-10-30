@@ -32,15 +32,15 @@ export default class NamesToURLScrapper {
    * @param {function} callback What is going to be called inside the
    *    requestHandler. It has an outputObject parameter available.
    */
-  constructor(projectNames, preUrl, postUrl = '', callback) {
+  constructor(options, callback) {
     this.#outputObject = {};
     this.#callback = callback;
 
     const toURL = (projectName) => {
       const PROCESSED_PROJECT_NAME = projectName.replace(/\s/, '-');
-      return `${preUrl}${PROCESSED_PROJECT_NAME}${postUrl}`;
+      return `${options.preUrl}${PROCESSED_PROJECT_NAME}${options.postUrl}`;
     }
-    this.#urlsInfo = projectNames.map((name) => {
+    this.#urlsInfo = options.names.map((name) => {
       return {
         url: toURL(name),
         label: name
