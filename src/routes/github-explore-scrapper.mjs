@@ -7,7 +7,7 @@
 
 'use strict';
 
-import { PlaywrightCrawler, purgeDefaultStorages } from 'crawlee';
+import { PlaywrightCrawler } from 'crawlee';
 
 export default class GithubExploreScrapper {
   /** @private */
@@ -35,7 +35,6 @@ export default class GithubExploreScrapper {
   }
 
   async #myHandler({ page, request, enqueueLinks, infiniteScroll}) {
-    await purgeDefaultStorages();
     const topicTitleContainer =
         await page.waitForSelector('.gutter-md .d-flex.flex-1 .h1')
     const topicTitleHandler = await topicTitleContainer.textContent();
@@ -48,11 +47,10 @@ export default class GithubExploreScrapper {
     await infiniteScroll({
       buttonSelector: 'text=Load more',
       stopScrollCallback: async () => {
-        console.log(`Pressed button ${amountOfClicks++}`);
+        amountOfClicks++;
         return amountOfClicks >= this.#amountOfClicks;
       }
     });
-    console.log('Reached the end of infinite scroll');
     const headersInfo = await this.#arrayOfHeadersInfo(page);
     // headersInfo.forEach((e) => console.log(`${e.name}/${e.author},${e.url}`));
     const arraysOfTags = await this.#arraysOfTags(page);
@@ -73,7 +71,7 @@ export default class GithubExploreScrapper {
         const toText = (node) => node && node.textContent.trim();
         outputArray.push({
           name: toText(childrenElements[0]),
-          author: toText(childrenElements[1]),
+          author_company: toText(childrenElements[1]),
           url: urlToRepository,
         });
       });
@@ -139,9 +137,8 @@ export default class GithubExploreScrapper {
     return this.#outputObject;
   }
 
-  run() {
-    (async () => {
-      await this.#scrapper.run([this.#url]);
-    })();
+  async run() {
+    await this.#scrapper.run([this.#url]);
+    return this.#outputObject;
   }
 }
