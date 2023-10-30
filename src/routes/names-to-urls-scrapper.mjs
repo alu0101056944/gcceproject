@@ -33,7 +33,9 @@ export default class NamesToURLScrapper {
 
     const toURL = (projectName) => {
       if (options.doNameProcessing) {
-        const PROCESSED_PROJECT_NAME = projectName.replace(/\s/, '-');
+        const processingFunction =
+            options.processingFunction ?? ((name) => name.replace(/\s/, '-'));
+        const PROCESSED_PROJECT_NAME = processingFunction(projectName);
         return `${options.preUrl}${PROCESSED_PROJECT_NAME}${options.postUrl}`;
       } else {
         return `${options.preUrl}${projectName}${options.postUrl}`;
