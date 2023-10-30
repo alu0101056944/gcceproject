@@ -27,10 +27,11 @@ export default async function countDiscussionAmount() {
           postUrl: URL_POSTFIX,
           doNameProcessing: false,
         },
-        async ({ page, request, log, outputObject }) => {
+        async ({ page, request, infiniteScroll, log, outputObject }) => {
           log.info('RedditDiscussionsScrapper visited ' + request.url);
 
-          const publication = page.locator('._2dkUkgRYbhbpU_2O2Wc5am');
+          // await new Promise((resolve)=> setTimeout(resolve, 300000));
+          const publication = page.locator('post-consume-tracker');
           let allPublications = await publication.all();
           await infiniteScroll({
             stopScrollCallback: async () => {
@@ -42,16 +43,16 @@ export default async function countDiscussionAmount() {
           // weekly discussions
           let count = 0;
           for (const publication of allPublications) {
-            const postTimestamp = publication.getByTestId('post_timestamp');
+            const postTimestamp = publication.locator('faceplate-timeago');
             const TIMESTAMP_STRING = await postTimestamp.textContent();
             const TIMESTAMP_STRING_PROCESSED = TIMESTAMP_STRING.trim();
 
-            const REG_EXP = /hace\s(\d+)\s(día(s)?|mes(es)?|año(s)?)/;
+            const REG_EXP = /(\d+)\s(day(s)?|month(s)?|year(s)?) ago/;
             const execResult = REG_EXP.exec(TIMESTAMP_STRING_PROCESSED);
             const AMOUNT = parseInt(execResult[1]);
             const TIME_SPECIFIER_STRING = execResult[2];
 
-            if (TIME_SPECIFIER_STRING === 'días' && AMOUNT <= 7) {
+            if (TIME_SPECIFIER_STRING === 'days' && AMOUNT <= 7) {
               count++;
             }
           }
