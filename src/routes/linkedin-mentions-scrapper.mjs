@@ -25,7 +25,7 @@ export default class LinkedinMentionsScrapper {
 
     const requestHandler = this.#myHandler.bind(this);
     this.#scrapper = new PlaywrightCrawler({
-      headless: false,
+      headless: true,
       navigationTimeoutSecs: 100000,
       requestHandlerTimeoutSecs: 100000,
       browserPoolOptions: {
@@ -56,31 +56,48 @@ export default class LinkedinMentionsScrapper {
     for (const publication of allPublications) {
       await publication.click();
       // await page.waitForTimeout(3000000);
-      
-      const showMoreButton = page.getByRole('button').getByText(/Show.*more/);
-      const amountOfShowButtons = await showMoreButton.all();
-      if (amountOfShowButtons.length > 0) {
-        await showMoreButton.click();
-        await new Promise((resolve) => setTimeout(resolve, 7000));
+      // await new Promise((resolve) => setTimeout(resolve, 2000));
 
-        const descriptionLocator =
-            page.locator('.show-more-less-html__markup.relative.overflow-hidden');
-        const DESCRIPTION_STRING = await descriptionLocator.textContent();
-        const DESCRIPTION_STRING_PROCESSED = DESCRIPTION_STRING.trim();
-        
-        for (const name of this.#toolNames) {
-          const nameRegExp = new RegExp(name, 'gi');
-          let execResult;
-          while (execResult = nameRegExp.exec(DESCRIPTION_STRING_PROCESSED)) {
-            if (!this.#outputObject[name]) {
-              this.#outputObject[name] = 0;
+      const showMoreButton = page
+          .locator('button.show-more-less-html__button.show-more-less-button' +
+              '.show-more-less-html__button--more');
+      const allShowMoreButtons = await showMoreButton.all();
+      if (allShowMoreButtons.length > 0) {
+        const attemptClick = async () => {
+          await showMoreButton.click({ timeout: 2000 });
+
+          const descriptionLocator =
+              page.locator('.show-more-less-html__markup.relative.overflow-hidden');
+          const DESCRIPTION_STRING = await descriptionLocator.textContent();
+          const DESCRIPTION_STRING_PROCESSED = DESCRIPTION_STRING.trim();
+
+          for (const name of this.#toolNames) {
+            const nameRegExp = new RegExp(name, 'gi');
+            let execResult;
+            while (execResult = nameRegExp.exec(DESCRIPTION_STRING_PROCESSED)) {
+              if (!this.#outputObject[name]) {
+                this.#outputObject[name] = 0;
+              }
+              this.#outputObject[name]++;
             }
-            this.#outputObject[name]++;
           }
         }
-      }
-    }
 
+        try {
+          await attemptClick();
+        } catch (timeoutError) {
+          log.info('Linkedin timeout while waiting for description to load.');
+
+          // try again
+          await allPublications[0].click({ timeout: 2000 });
+          await attemptClick();
+          await new Promise((resolve) => setTimeout(resolve, 500));
+        }
+      } else {
+        log.info('Did not find show button');
+      }
+      // await new Promise((resolve) => setTimeout(resolve, 3000));
+    }
   }
 
   getOutputObject() {
