@@ -6,7 +6,7 @@
 
 'use strict';
 
-import GoogleTrendsScrapper from "../routes/google-trends-scrapper.mjs";
+import GoogleTrendsScrapper from "../../routes/google-trends-scrapper.mjs";
 
 export default function addInterest() {
   const searchTerms = [

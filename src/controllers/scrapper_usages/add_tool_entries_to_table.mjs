@@ -6,7 +6,7 @@
 
 'use strict';
 
-import GithubExploreScrapper from "../routes/github-explore-scrapper.mjs";
+import GithubExploreScrapper from "../../routes/github-explore-scrapper.mjs";
 
 import pgPromise from 'pg-promise';
 const pgp = pgPromise();

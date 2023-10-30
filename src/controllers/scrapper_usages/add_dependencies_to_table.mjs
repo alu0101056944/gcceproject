@@ -7,7 +7,7 @@
 'use strict';
 
 import { inspect } from 'util';
-import GithubDependenciesScrapper from '../routes/github-dependencies-scrapper.mjs';
+import GithubDependenciesScrapper from '../../routes/github-dependencies-scrapper.mjs';
 
 export default function addDependencies() {
   const allrepositoryInfos = [

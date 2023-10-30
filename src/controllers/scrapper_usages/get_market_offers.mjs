@@ -8,7 +8,7 @@
 'use strict';
 
 import { inspect } from 'util';
-import NamesToURLScrapper from '../routes/names-to-urls-scrapper.mjs';
+import NamesToURLScrapper from '../../routes/names-to-urls-scrapper.mjs';
 
 export default async function getAmountOfOffers() {
   const allCompanyNames = [

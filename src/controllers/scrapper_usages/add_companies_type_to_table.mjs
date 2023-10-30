@@ -6,8 +6,8 @@
 
 'use strict';
 
-import CompaniesmarketcapProfileScrapper from '../routes/companiesmarketcap-profile-scrapper.mjs';
-import CompaniesmarketcapScrapper from '../routes/companiesmarketcap-scrapper.mjs';
+import CompaniesmarketcapProfileScrapper from '../../routes/companiesmarketcap-profile-scrapper.mjs';
+import CompaniesmarketcapScrapper from '../../routes/companiesmarketcap-scrapper.mjs';
 
 import { inspect } from 'util';
 

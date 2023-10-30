@@ -7,8 +7,8 @@
 'use strict';
 
 import { inspect } from 'util';
-import NPMJSScrapper from '../routes/npmjs-scrapper.mjs';
-import NamesToURLScrapper from '../routes/names-to-urls-scrapper.mjs';
+import NPMJSScrapper from '../../routes/npmjs-scrapper.mjs';
+import NamesToURLScrapper from '../../routes/names-to-urls-scrapper.mjs';
 
 export default async function addDownloads() {
   const packageNames = [

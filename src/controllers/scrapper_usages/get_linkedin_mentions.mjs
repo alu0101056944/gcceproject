@@ -9,7 +9,7 @@
 'use strict';
 
 import { inspect } from 'util';
-import LinkedinMentionsScrapper from '../routes/linkedin-mentions-scrapper.mjs';
+import LinkedinMentionsScrapper from '../../routes/linkedin-mentions-scrapper.mjs';
 
 export default async function getAmountOfOffers() {
   const allToolNames = [

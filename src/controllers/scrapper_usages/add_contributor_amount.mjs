@@ -7,7 +7,7 @@
 'use strict';
 
 import { inspect } from 'util';
-import GithubRepositoryScrapper from '../routes/github-repository-scrapper.mjs';
+import GithubRepositoryScrapper from '../../routes/github-repository-scrapper.mjs';
 
 export default function addContributors() {
   const urls = [

@@ -6,7 +6,7 @@
 
 'use strict';
 
-import CompaniesmarketcapScrapper from "../routes/companiesmarketcap-scrapper.mjs";
+import CompaniesmarketcapScrapper from "../../routes/companiesmarketcap-scrapper.mjs";
 
 import { inspect } from 'util';
 
