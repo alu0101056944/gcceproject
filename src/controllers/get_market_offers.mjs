@@ -24,7 +24,7 @@ export default async function getAmountOfOffers() {
           postUrl: URL_POSTFIX,
           doNameProcessing: false,
         },
-        async ({ page, request, infiniteScroll, log, outputObject }) => {
+        async ({ page, request, log, outputObject }) => {
           log.info('Linkedin amount of offers scrapper visited ' + request.url);
           const jobCountLocator =
               page.locator('.results-context-header__job-count');
