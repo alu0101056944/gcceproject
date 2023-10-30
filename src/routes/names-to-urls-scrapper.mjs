@@ -24,11 +24,6 @@ export default class NamesToURLScrapper {
    * Example:
    *    https://companiesmarketcap.com/${processedCompanyName}/marketcap/
    *    <preUrl>${processedCompanyName}<postUrl>
-   * @param {object} companyNames array of strings representing project names
-   * @param {string} preUrl prefix of the final url on left side of the project
-   *    name part.
-   * @param {string} postUrl postfix of the final url on left side of the project
-   *    name part.
    * @param {function} callback What is going to be called inside the
    *    requestHandler. It has an outputObject parameter available.
    */
@@ -37,8 +32,12 @@ export default class NamesToURLScrapper {
     this.#callback = callback;
 
     const toURL = (projectName) => {
-      const PROCESSED_PROJECT_NAME = projectName.replace(/\s/, '-');
-      return `${options.preUrl}${PROCESSED_PROJECT_NAME}${options.postUrl}`;
+      if (options.doNameProcessing) {
+        const PROCESSED_PROJECT_NAME = projectName.replace(/\s/, '-');
+        return `${options.preUrl}${PROCESSED_PROJECT_NAME}${options.postUrl}`;
+      } else {
+        return `${options.preUrl}${projectName}${options.postUrl}`;
+      }
     }
     this.#urlsInfo = options.names.map((name) => {
       return {
