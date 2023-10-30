@@ -13,7 +13,7 @@ import { PlaywrightCrawler, log } from 'crawlee';
 /**
  * Scrapper for {@link https://www.linkedin.com/jobs/search?keywords=software%20engineer}
  */
-export default class CompaniesmarketcapScrapper {
+export default class LinkedinMentionsScrapper {
   /** @private @constant  */
   #scrapper = undefined;
   #outputObject = undefined;
@@ -25,7 +25,7 @@ export default class CompaniesmarketcapScrapper {
 
     const requestHandler = this.#myHandler.bind(this);
     this.#scrapper = new PlaywrightCrawler({
-      headless: true,
+      headless: false,
       navigationTimeoutSecs: 100000,
       requestHandlerTimeoutSecs: 100000,
       browserPoolOptions: {
@@ -36,7 +36,7 @@ export default class CompaniesmarketcapScrapper {
       retryOnBlocked: true,
       maxConcurrency: 1,
       sessionPoolOptions: {
-        blockedStatusCodes: errorCodes,
+        blockedStatusCodes: [],
       },
     });
   }
@@ -55,26 +55,32 @@ export default class CompaniesmarketcapScrapper {
 
     for (const publication of allPublications) {
       await publication.click();
-
-      const showMoreButton = page.getByRole('button').getByText(/Show.*more/);
-      await showMoreButton.click();
-
-      const descriptionLocator =
-          page.locator('.show-more-less-html__markup.relative.overflow-hidden');
-      const DESCRIPTION_STRING = await descriptionLocator.textContent();
-      const DESCRIPTION_STRING_PROCESSED = DESCRIPTION_STRING.trim();
+      // await page.waitForTimeout(3000000);
       
-      for (const name of this.#toolNames) {
-        const nameRegExp = new RegExp(name, 'g');
-        let execResult;
-        while (execResult = nameRegExp.exec(DESCRIPTION_STRING_PROCESSED)) {
-          if (!this.#outputObject[name]) {
-            this.#outputObject[name] = 0;
+      const showMoreButton = page.getByRole('button').getByText(/Show.*more/);
+      const amountOfShowButtons = await showMoreButton.all();
+      if (amountOfShowButtons.length > 0) {
+        await showMoreButton.click();
+        await new Promise((resolve) => setTimeout(resolve, 7000));
+
+        const descriptionLocator =
+            page.locator('.show-more-less-html__markup.relative.overflow-hidden');
+        const DESCRIPTION_STRING = await descriptionLocator.textContent();
+        const DESCRIPTION_STRING_PROCESSED = DESCRIPTION_STRING.trim();
+        
+        for (const name of this.#toolNames) {
+          const nameRegExp = new RegExp(name, 'gi');
+          let execResult;
+          while (execResult = nameRegExp.exec(DESCRIPTION_STRING_PROCESSED)) {
+            if (!this.#outputObject[name]) {
+              this.#outputObject[name] = 0;
+            }
+            this.#outputObject[name]++;
           }
-          this.#outputObject[name]++;
         }
       }
     }
+
   }
 
   getOutputObject() {
