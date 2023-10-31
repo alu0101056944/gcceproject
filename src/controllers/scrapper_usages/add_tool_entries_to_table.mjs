@@ -15,15 +15,9 @@ import GithubExploreScrapper from "../../routes/github-explore-scrapper.mjs";
 //   max: 20
 // });
 
-export default async function makeToolsFromGithubExplore() {
-  const specializations = [
-    'front-end',
-    'back-end',
-    'embedded',
-    'devops',
-  ];
+export default async function makeToolsFromGithubExplore(topicNames) {
   const tableObject = [];
-  for (const specialization of specializations) {
+  for (const specialization of topicNames) {
     const scrapper = new GithubExploreScrapper(`https://github.com/topics/${specialization}`);
     const output = await scrapper.run();
     output.forEach((entry) => tableObject.push({

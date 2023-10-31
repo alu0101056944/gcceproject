@@ -11,7 +11,7 @@ import { PlaywrightCrawler, log } from 'crawlee';
 
 export default class GithubExploreScrapper {
   /** @private */
-  #amountOfClicks = 4;
+  #maximumAmountOfClicks = undefined;
 
   /** @private @constant  */
   #scrapper = undefined;
@@ -21,6 +21,8 @@ export default class GithubExploreScrapper {
   constructor(url) {
     this.#url = url;
     this.#outputObject = {};
+    this.#maximumAmountOfClicks = 1;
+
     const requestHandler = this.#myHandler.bind(this);
     this.#scrapper = new PlaywrightCrawler({
       headless: true,
@@ -34,7 +36,7 @@ export default class GithubExploreScrapper {
     });
   }
 
-  async #myHandler({ page, request, enqueueLinks, infiniteScroll}) {
+  async #myHandler({ page, infiniteScroll}) {
     const topicTitleContainer =
         await page.waitForSelector('.gutter-md .d-flex.flex-1 .h1')
     const topicTitleHandler = await topicTitleContainer.textContent();
@@ -43,12 +45,13 @@ export default class GithubExploreScrapper {
     
     const AMOUNT_OF_RESULTS = await this.#extractAmountOfResults(page);
     console.log('Amount of results: ' + AMOUNT_OF_RESULTS);
+
     let amountOfClicks = 0;
     await infiniteScroll({
       buttonSelector: 'text=Load more',
       stopScrollCallback: async () => {
         amountOfClicks++;
-        return amountOfClicks >= this.#amountOfClicks;
+        return amountOfClicks >= this.#maximumAmountOfClicks;
       }
     });
 
@@ -63,6 +66,7 @@ export default class GithubExploreScrapper {
     log.info('GithubExploreScrapper typesPerRepoLength=' +
         typesPerRepo.length + ' headersInfoLength=' + headersInfo.length);
     typesPerRepo.forEach((type, i) => headersInfo[i].type = type);
+
     this.#outputObject = headersInfo;
   };
 

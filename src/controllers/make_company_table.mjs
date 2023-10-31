@@ -18,7 +18,13 @@ import { inspect } from 'util';
 import GoogleTrendsScrapper from '../routes/google-trends-scrapper.mjs';
 
 export default async function makeTable() {
-  const recordsGithub = await makeToolsFromGithubExplore();
+  const specializations = [
+    'front-end',
+    // 'back-end',
+    // 'embedded',
+    // 'devops',
+  ];
+  const recordsGithub = await makeToolsFromGithubExplore(specializations);
   let companyId = 1;
   recordsGithub.forEach(record => {
         record.company_id = companyId++
@@ -58,8 +64,7 @@ export default async function makeTable() {
 
   const nameKeys = Object.getOwnPropertyNames(interestPerCompany);
   for (const companyNameWithSpaces of nameKeys) {
-    const COMPANY_NAME_WITHOUT_SPACES =
-        companyNameWithSpaces.replace(/\s/g, '');
+    const COMPANY_NAME_WITHOUT_SPACES = companyNameWithSpaces.replace(/\s/g, '');
     recordsGithub[COMPANY_NAME_WITHOUT_SPACES].amount_of_searches =
         interestPerCompany[companyNameWithSpaces];
   }
