@@ -7,7 +7,7 @@
 
 'use strict';
 
-import { PlaywrightCrawler } from 'crawlee';
+import { PlaywrightCrawler, log } from 'crawlee';
 
 export default class GithubExploreScrapper {
   /** @private */
@@ -51,34 +51,21 @@ export default class GithubExploreScrapper {
         return amountOfClicks >= this.#amountOfClicks;
       }
     });
+
+    // @todo Find out why sometimes headerInfo[i].type throws errors.
+    //    its a race condition.
+
     const headersInfo = await this.#arrayOfHeadersInfo(page);
-    // headersInfo.forEach((e) => console.log(`${e.name}/${e.author},${e.url}`));
-    const arraysOfTags = await this.#arraysOfTags(page);
-    const allTypes = arraysOfTags.map((tags) => this.getTypeFromTags(tags));
-    allTypes.forEach((type, i) => headersInfo[i]['type'] = type);
-    // console.log(headersInfo);
+    const tagsPerRepo = await this.#arraysOfTags(page);
+    const typesPerRepo = tagsPerRepo.map(tags => this.getTypeFromTags(tags));
+    log.info('GithubExploreScrapper tagsPerRepoLength=' +
+        tagsPerRepo.length + ' headersInfoLength=' + headersInfo.length);
+    log.info('GithubExploreScrapper typesPerRepoLength=' +
+        typesPerRepo.length + ' headersInfoLength=' + headersInfo.length);
+    typesPerRepo.forEach((type, i) => headersInfo[i].type = type);
     this.#outputObject = headersInfo;
   };
 
-  async #arrayOfHeadersInfo(page) {
-    const h3 = page.getByRole('heading').filter({ hasText: '/' });
-    return await h3.evaluateAll((h) => {
-      const outputArray = [];
-      h.forEach((headerDOM) => {
-        const childrenElements = headerDOM.children;
-        const urlToRepository =
-            'github.com' + childrenElements[1].getAttribute('href');
-        const toText = (node) => node && node.textContent.trim();
-        outputArray.push({
-          name: toText(childrenElements[0]),
-          author_company: toText(childrenElements[1]),
-          url: urlToRepository,
-        });
-      });
-      return outputArray;
-    });
-  }
-  
   async #extractAmountOfResults(page) {
     const handlerOfTextWithAmount = await page.$('h2.h3.color-fg-muted');
     const TEXT_WITH_AMOUNT_OF_RESULTS = await handlerOfTextWithAmount.textContent();
@@ -88,13 +75,37 @@ export default class GithubExploreScrapper {
     return AMOUNT_OF_RESULTS;
   }
 
+  async #arrayOfHeadersInfo(page) {
+    const h3 = page.getByRole('heading').filter({ hasText: '/' });
+    return await h3.evaluateAll((h) => {
+      const outputArray = [];
+
+      h.forEach((headerDOM) => {
+        const childrenElements = headerDOM.children;
+        
+        const URL_TO_REPOSITORY =
+            'github.com' + childrenElements[1].getAttribute('href');
+        const toText = (node) => node && node.textContent.trim();
+        outputArray.push({
+          name: toText(childrenElements[0]),
+          author_company: toText(childrenElements[1]),
+          url: URL_TO_REPOSITORY,
+        });
+      });
+
+      return outputArray;
+    });
+  }
+
   async #arraysOfTags(page) {
     const allTagsArrays = [];
+
     const articleLocators = await page.locator('article.border').all();
     for (const articleLocator of articleLocators) {
       const tagLocator = articleLocator.locator('a.topic-tag');
       allTagsArrays.push(await tagLocator.allInnerTexts());
     }
+
     return allTagsArrays;
   }
 

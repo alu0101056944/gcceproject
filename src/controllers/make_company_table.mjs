@@ -22,13 +22,14 @@ export default async function makeTable() {
   let companyId = 1;
   recordsGithub.forEach(record => {
         record.company_id = companyId++
-        record.name = author_company;
+        record.name = record.author_company;
         delete record.author_company;
         delete record.type;
         delete record.specialization;
       });
 
   const scrapperEmployees = new CompaniesmarketcapScrapper();
+  scrapperEmployees.setMaxAmountfPageSurfs(4);
   await scrapperEmployees.run();
   const amountsOfEmployeesPerCompany = scrapperEmployees.getOutputObject();
   recordsGithub.forEach(record => {
@@ -55,19 +56,17 @@ export default async function makeTable() {
   const scrapperTrends = new GoogleTrendsScrapper(companyNames);
   const interestPerCompany = scrapperTrends.run();
 
-  // const githubCompatibleNames =
-  //     Object.getOwnPropertyNames(interestPerCompany).map((name) => {
-  //           return name.replace(/\s/g, '').toLowerCase();
-  //         });
-
-  // @todo: process output of google trends scrapper so that the
-  // keys are github compatible names. 
+  const nameKeys = Object.getOwnPropertyNames(interestPerCompany);
+  for (const companyNameWithSpaces of nameKeys) {
+    const COMPANY_NAME_WITHOUT_SPACES =
+        companyNameWithSpaces.replace(/\s/g, '');
+    recordsGithub[COMPANY_NAME_WITHOUT_SPACES].amount_of_searches =
+        interestPerCompany[companyNameWithSpaces];
+  }
 
   recordsGithub.forEach(record => {
-    if (typePerCompany[record.name]) {
-      record.type = typePerCompany[record.name]; 
-    } else {
-      record.type = null;
+    if (!record.amount_of_searches) {
+      record.amount_of_searches = null;
     }
   });
 
@@ -80,4 +79,4 @@ export default async function makeTable() {
   return recordsGithub;
 }
 
-// makeTable().then((data) => console.log(inspect(data)));
+makeTable().then((data) => console.log(inspect(data)));
