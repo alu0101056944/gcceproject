@@ -34,6 +34,12 @@ export default async function makeTable() {
         delete record.specialization;
       });
 
+  // for temporalily testing of the rest of the function.
+  recordsGithub.push({
+    companyId: recordsGithub.length + 1,
+    author_company: 'microsoft',
+  });
+
   const scrapperEmployees = new CompaniesmarketcapScrapper();
   scrapperEmployees.setMaxAmountfPageSurfs(1);
   await scrapperEmployees.run();
@@ -61,7 +67,7 @@ export default async function makeTable() {
 
   companyNames.unshift('foo'); // first search always fails so add arbitrary
   const scrapperTrends = new GoogleTrendsScrapper(companyNames);
-  const interestPerCompany = scrapperTrends.run();
+  const interestPerCompany = await scrapperTrends.run();
 
   const nameKeys = Object.getOwnPropertyNames(interestPerCompany);
   for (const companyNameWithSpaces of nameKeys) {
