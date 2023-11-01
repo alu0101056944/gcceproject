@@ -1,0 +1,1 @@
+GoogleTrendsScrapper is stopping for some reason after a `TimeoutError`. I did some testing and come to the conclusion that it should not stop; if I wrap a `try catch` on the statement that throws then it becomes a caught exception and it does not propagate, so things still go like normally.
