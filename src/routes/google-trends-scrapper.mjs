@@ -7,7 +7,7 @@
 
 'use strict';
 
-import { PlaywrightCrawler, log } from 'crawlee';
+import { PlaywrightCrawler, log, enqueueLinks } from 'crawlee';
 
 import { readFile } from 'fs/promises';
 
@@ -41,7 +41,7 @@ export default class GoogleTrendsScrapper {
       },
       requestHandler,
       retryOnBlocked: true,
-      maxConcurrency: 2,
+      maxConcurrency: 8,
       // sessionPoolOptions: { // was put because first request was always 429
       //   blockedStatusCodes: [429],
       // },
@@ -54,17 +54,9 @@ export default class GoogleTrendsScrapper {
    * @todo Make it faster. For 20000 searches at 3 seconds per search
    *    it takes 111 minutes for completion.
    */
-  async #myHandler({ page, request, response, enqueueLinks }) {
+  async #myHandler({ page, request, response }) {
     if (response.status() !== 429) {
-      const IS_THERE_ANY_ERROR = (await (page.getByText(/error/gi)).all()).length > 0;
-
-      if (IS_THERE_ANY_ERROR) {
-        log.error('GoogleTrendsScrapper: graph widget load error');
-        enqueueLinks({
-          url: request.url,
-          label: request.label,
-        })
-      } else {
+      try {
         const downloadCSVButton = page.locator('widget')
             .filter({ hasText: 'Interés a lo largo del tiempo' })
             .getByTitle('CSV');
@@ -90,9 +82,21 @@ export default class GoogleTrendsScrapper {
         }
         this.#interestsPerTerm[request.label] =
             arrayOfInterests.reduce((acc, current) => acc + current, 0);
+      } catch (error) {
+        if (error instanceof playwright.errors.TimeoutError) {
+          log.error('GoogleTrendsScrapper error. Will retry request.' + error);
+          const requestQueue = await this.#scrapper.getRequestQueue();
+          enqueueLinks({
+            urls: [request.url],
+            requestQueue,
+            label: request.label,
+          });
+        } else {
+          log.error('GoogleTrendsScrapper uncaught error');
+        }
       }
     }
-  };
+  }
 
   getOutputObject() {
     return this.#interestsPerTerm;
