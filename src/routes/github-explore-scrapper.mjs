@@ -128,7 +128,9 @@ export default class GithubExploreScrapper {
       'devops',
       'documentation',
       'embedded',
-      'ui'
+      'ui',
+      'framework',
+      'build-tool'
     ];
     for (const tag of tags) {
       for (const type of types) {
