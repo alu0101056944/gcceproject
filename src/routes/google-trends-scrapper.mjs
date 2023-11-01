@@ -9,6 +9,8 @@
 
 import { PlaywrightCrawler, log, enqueueLinks } from 'crawlee';
 
+import playwright from 'playwright';
+
 import { readFile } from 'fs/promises';
 
 export default class GoogleTrendsScrapper {
@@ -41,7 +43,7 @@ export default class GoogleTrendsScrapper {
       },
       requestHandler,
       retryOnBlocked: true,
-      maxConcurrency: 8,
+      maxConcurrency: 1,
       // sessionPoolOptions: { // was put because first request was always 429
       //   blockedStatusCodes: [429],
       // },
@@ -60,8 +62,8 @@ export default class GoogleTrendsScrapper {
         const downloadCSVButton = page.locator('widget')
             .filter({ hasText: 'Interés a lo largo del tiempo' })
             .getByTitle('CSV');
-        const downloadPromise = page.waitForEvent('download');
         await downloadCSVButton.click({ timeout: 5000 });
+        const downloadPromise = page.waitForEvent('download');
         const downloadObject = await downloadPromise;
         const DOWNLOADED_FILE_PATH = await downloadObject.path();
         const FILE_CONTENT = await readFile(DOWNLOADED_FILE_PATH, 'utf-8');
@@ -84,15 +86,16 @@ export default class GoogleTrendsScrapper {
             arrayOfInterests.reduce((acc, current) => acc + current, 0);
       } catch (error) {
         if (error instanceof playwright.errors.TimeoutError) {
-          log.error('GoogleTrendsScrapper error. Will retry request.' + error);
-          const requestQueue = await this.#scrapper.getRequestQueue();
-          enqueueLinks({
-            urls: [request.url],
-            requestQueue,
-            label: request.label,
-          });
+          log.error('GoogleTrendsScrapper timeout error.');
+
+          // const requestQueue = await this.#scrapper.getRequestQueue();
+          // enqueueLinks({
+          //   urls: [request.url],
+          //   requestQueue,
+          //   label: request.label,
+          // });
         } else {
-          log.error('GoogleTrendsScrapper uncaught error');
+          log.error('GoogleTrendsScrapper error' + error);
         }
       }
     }
