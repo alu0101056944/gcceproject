@@ -59,6 +59,7 @@ export default async function makeTable() {
     }
   });
 
+  companyNames.unshift('foo'); // first search always fails so add arbitrary
   const scrapperTrends = new GoogleTrendsScrapper(companyNames);
   const interestPerCompany = scrapperTrends.run();
 

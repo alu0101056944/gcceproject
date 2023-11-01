@@ -27,7 +27,9 @@ export default class GoogleTrendsScrapper {
 
     // url and label keys so that I can later directly pass it to run()
     this.#searchTermsInfo =
-        searchTerms.map(label => { return { url: toURL(label), label } });
+        searchTerms.map(label => {
+          return { url: toURL(label), label }
+        });
     const requestHandler = this.#myHandler.bind(this);
     this.#scrapper = new PlaywrightCrawler({
       headless: false,
@@ -48,6 +50,10 @@ export default class GoogleTrendsScrapper {
     });
   }
 
+  /**
+   * @todo Make it faster. For 20000 searches, at 3 seconds per search,
+   *    it takes 111 minutes for completion.
+   */
   async #myHandler({ page, request, response }) {
     if (response.status() !== 429) {
       const downloadCSVButton = page.locator('widget')

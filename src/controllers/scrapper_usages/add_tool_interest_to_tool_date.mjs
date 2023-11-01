@@ -8,7 +8,9 @@
 
 import GoogleTrendsScrapper from "../../routes/google-trends-scrapper.mjs";
 
-export default function addInterest() {
+import { inspect } from 'util';
+
+export default async function addInterest() {
   const searchTerms = [
     'foo',
     'rafa nadal',
@@ -22,10 +24,13 @@ export default function addInterest() {
     'amazon stocks',
     'microsoft stocks',
   ];
+
   // IMPORTANT: because first term is always 429, then pad the array and
-  // put a trash search term first before using.
+  // put a trash search term as first element.
+
   const scrapper = new GoogleTrendsScrapper(searchTerms);
-  scrapper.run();
+  const output = await scrapper.run();
+  console.log(inspect(output));
 }
 
-// addInterest();
+addInterest();
