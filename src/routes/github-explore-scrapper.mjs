@@ -72,7 +72,8 @@ export default class GithubExploreScrapper {
 
   async #extractAmountOfResults(page) {
     const handlerOfTextWithAmount = await page.$('h2.h3.color-fg-muted');
-    const TEXT_WITH_AMOUNT_OF_RESULTS = await handlerOfTextWithAmount.textContent();
+    const TEXT_WITH_AMOUNT_OF_RESULTS =
+        await handlerOfTextWithAmount.textContent();
     const AMOUNT_OF_RESULTS = parseFloat(
         TEXT_WITH_AMOUNT_OF_RESULTS.replace(/,/g, '').match(/\d+/g)
       );
@@ -91,8 +92,8 @@ export default class GithubExploreScrapper {
             'github.com' + childrenElements[1].getAttribute('href');
         const toText = (node) => node && node.textContent.trim();
         outputArray.push({
-          name: toText(childrenElements[0]),
-          author_company: toText(childrenElements[1]),
+          author_company: toText(childrenElements[0]),
+          name: toText(childrenElements[1]),
           url: URL_TO_REPOSITORY,
         });
       });
@@ -127,6 +128,7 @@ export default class GithubExploreScrapper {
       'devops',
       'documentation',
       'embedded',
+      'ui'
     ];
     for (const tag of tags) {
       for (const type of types) {

@@ -28,4 +28,4 @@ export default async function addDateEntry() {
   return dateEntry;
 }
 
-console.log((await addDateEntry()));
+// console.log((await addDateEntry()));

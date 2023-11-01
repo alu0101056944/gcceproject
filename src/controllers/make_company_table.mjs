@@ -19,8 +19,8 @@ import GoogleTrendsScrapper from '../routes/google-trends-scrapper.mjs';
 
 export default async function makeTable() {
   const specializations = [
-    'front-end',
-    // 'back-end',
+    'frontend',
+    // 'backend',
     // 'embedded',
     // 'devops',
   ];
@@ -35,7 +35,7 @@ export default async function makeTable() {
       });
 
   const scrapperEmployees = new CompaniesmarketcapScrapper();
-  scrapperEmployees.setMaxAmountfPageSurfs(4);
+  scrapperEmployees.setMaxAmountfPageSurfs(1);
   await scrapperEmployees.run();
   const amountsOfEmployeesPerCompany = scrapperEmployees.getOutputObject();
   recordsGithub.forEach(record => {
@@ -84,4 +84,4 @@ export default async function makeTable() {
   return recordsGithub;
 }
 
-makeTable().then((data) => console.log(inspect(data)));
+makeTable().then((data) => console.log('Make company output object: ' + inspect(data)));

@@ -54,7 +54,7 @@ export default class GoogleTrendsScrapper {
           .filter({ hasText: 'Interés a lo largo del tiempo' })
           .getByTitle('CSV');
       const downloadPromise = page.waitForEvent('download');
-      await downloadCSVButton.click();
+      await downloadCSVButton.click({ timeout: 5000 });
       const downloadObject = await downloadPromise;
       const DOWNLOADED_FILE_PATH = await downloadObject.path();
       const FILE_CONTENT = await readFile(DOWNLOADED_FILE_PATH, 'utf-8');
