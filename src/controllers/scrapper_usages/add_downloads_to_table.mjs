@@ -37,7 +37,7 @@ export default async function getDownloadsPerPackage(packageNames) {
           const paragraphWithDownloads = page.getByText('Downloads last week:');
           const WHOLE_PARAGRAPH = await paragraphWithDownloads.textContent();
           const DOWNLOADS_LAST_WEEK_STRING =
-              /Downloads\slast\sweek:\s(\d+,?\d+)+/.exec(WHOLE_PARAGRAPH)[1];
+              /Downloads\slast\sweek:\s(\d+(,?\d+)*)+/.exec(WHOLE_PARAGRAPH)[1];
           const DOWNLOADS_LAST_WEEK =
               parseInt(DOWNLOADS_LAST_WEEK_STRING.replace(/,/g, ''));
           outputObject[request.label] = DOWNLOADS_LAST_WEEK;

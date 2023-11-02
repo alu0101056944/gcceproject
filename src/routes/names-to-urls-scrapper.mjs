@@ -71,6 +71,7 @@ export default class NamesToURLScrapper {
     const callback = this.#callback;
     const outputObject = this.#outputObject;
     return async (requestOptions) => {
+      requestOptions.page.setDefaultTimeout(5000);
       await callback({
         ...requestOptions,
         outputObject,

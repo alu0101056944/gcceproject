@@ -11,6 +11,7 @@
 'use strict';
 
 import { PlaywrightCrawler, log } from 'crawlee';
+import playwright from 'playwright';
 
 /**
  * Scrapper for NPMJS registry webpage of package.
@@ -54,22 +55,32 @@ export default class NPMJSScrapper {
       sessionPoolOptions: {
         blockedStatusCodes: [404]
       },
+      maxRequestRetries: 1,
     });
   }
 
   async #myHandler({ page, request }) {
+    page.setDefaultTimeout(5000);
     log.info('NPMJSScrapper visited page: ' + request.url);
 
-    const COMMA_SEPARATED_NUMBER_REG_EXP = /\d+(\.?\d+)*/
-    const amountOfDownloadsLocator = page
-        .locator('div._702d723c')
-        .filter({ has: page.locator('h3').filter({ hasText: 'Weekly Downloads' }) })
-        .getByText(COMMA_SEPARATED_NUMBER_REG_EXP, { exact: true });
-    const AMOUNT_OF_DOWNLOADS_STRING =
-        await amountOfDownloadsLocator.textContent();
-    const AMOUNT_OF_DOWNLOADS =
-        parseInt(AMOUNT_OF_DOWNLOADS_STRING.replace(/\./g, ''));
-    this.#outputObject[request.label] = AMOUNT_OF_DOWNLOADS;
+    try {
+      const COMMA_SEPARATED_NUMBER_REG_EXP = /\d+(\.?\d+)*/
+      const amountOfDownloadsLocator = page
+          .locator('div._702d723c')
+          .filter({ has: page.locator('h3').filter({ hasText: 'Weekly Downloads' }) })
+          .getByText(COMMA_SEPARATED_NUMBER_REG_EXP, { exact: true });
+      const AMOUNT_OF_DOWNLOADS_STRING =
+          await amountOfDownloadsLocator.textContent();
+      const AMOUNT_OF_DOWNLOADS =
+          parseInt(AMOUNT_OF_DOWNLOADS_STRING.replace(/\./g, ''));
+      this.#outputObject[request.label] = AMOUNT_OF_DOWNLOADS;
+    } catch (error) {
+      if (error instanceof playwright.errors.TimeoutError) {
+        log.error('NPMJSScrapper timeout error.');
+      } else {
+        log.error('NPMJSScrapper error: ' + error);
+      }
+    }
   };
 
   async run() {
