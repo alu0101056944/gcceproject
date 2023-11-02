@@ -72,5 +72,6 @@ export default class GithubRepositoryScrapper {
         url,
       }
     }));
+    return this.#outputObject;
   }
 }

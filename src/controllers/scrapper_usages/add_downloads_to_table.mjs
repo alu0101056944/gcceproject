@@ -6,15 +6,15 @@
 
 'use strict';
 
-import { inspect } from 'util';
+// import { inspect } from 'util';
 import NPMJSScrapper from '../../routes/npmjs-scrapper.mjs';
 import NamesToURLScrapper from '../../routes/names-to-urls-scrapper.mjs';
 
-export default async function addDownloads() {
-  const packageNames = [
-    'react',
-    'eslint-plugin-react',
-  ];
+export default async function getDownloadsPerPackage(packageNames) {
+  // const packageNames = [
+  //   'react',
+  //   'eslint-plugin-react',
+  // ];
 
   // If a package is present on more than one programming language, then
   // get the one with the most downloads
@@ -60,7 +60,7 @@ export default async function addDownloads() {
     }
   }
 
-  console.log(inspect(packageDownloads));
+  return packageDownloads;
 }
 
-// addDownloads();
+// getDownloadsPerPackage();
