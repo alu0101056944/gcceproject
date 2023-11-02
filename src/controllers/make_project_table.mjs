@@ -14,7 +14,11 @@ import getDownloadsPerPackage from './scrapper_usages/add_downloads_to_table.mjs
 
 import { inspect } from 'util';
 import GithubRepositoryScrapper from '../routes/github-repository-scrapper.mjs';
+import GoogleTrendsScrapper from '../routes/google-trends-scrapper.mjs';
 
+/**
+ * @todo Logic for when project names are not github project names
+ */
 export default async function makeTable() {
   const specializations = [
     'frontend',
@@ -32,29 +36,34 @@ export default async function makeTable() {
         }
       );
 
-  const packageNames = recordsGithub.map(record => record.name);
-  const downloadsPerPackage = getDownloadsPerPackage(packageNames);
+  const projectNames = recordsGithub.map(record => record.name);
+
+  const downloadsPerPackage = getDownloadsPerPackage(projectNames);
   recordsGithub.forEach((record, i) => record.downloads = downloadsPerPackage[i]);
 
   const urlsOfRepositories = recordsGithub.map(record => {
-        let companyName = record.companyName;
-        let projectName = record.name;
-        if (/\s/g.test(record.author_company)) {
-          companyName = companyName.replace(/\s/g, '');
+        let AUTHOR_NAME = record.author_company;
+        let PROJECT_NAME = record.name;
+        if (/\s/.test(AUTHOR_NAME)) {
+          AUTHOR_NAME = AUTHOR_NAME.replace(/\s/g, '');
         }
-        if (/\s/g.test(record.name)) {
-          projectName = projectName.replace(/\s/g, '');;
+        if (/\s/.test(PROJECT_NAME)) {
+          PROJECT_NAME = PROJECT_NAME.replace(/\s/g, '');;
         }
-        return `https://github.com/${record.author_company}/${record.name}`;
+        return `https://github.com/${AUTHOR_NAME}/${PROJECT_NAME}`;
       });
-  const githubProfileScrapper = new GithubRepositoryScrapper(urlsOfRepositories);
-  const allAmountOfContributors = await githubProfileScrapper.run();
+  const scrapperOfGithubRepos = new GithubRepositoryScrapper(urlsOfRepositories);
+  const allAmountOfContributors = await scrapperOfGithubRepos.run();
   recordsGithub.forEach((record, i) => {
-        return record.contributors = allAmountOfContributors[i];
+        record.contributors = allAmountOfContributors[i];
       });
 
-  
+  const scrapperOfTrends = new GoogleTrendsScrapper(projectNames);
+  const interestPerProject = await scrapperOfTrends.run();
+  recordsGithub.forEach((record, i) => record.searches = interestPerProject[i]);
 
+  // I just kept author_company for the github repository access, it does not
+  // belong to the table.
   recordsGithub.forEach(record => delete record.author_company);
 
   const FILE_CONTENT = await readFile('./src/persistent_ids.json', 'utf8');
@@ -66,4 +75,4 @@ export default async function makeTable() {
   return recordsGithub;
 }
 
-// makeTable().then((data) => console.log(inspect(data)));
+console.log(inspect(await makeTable()));
