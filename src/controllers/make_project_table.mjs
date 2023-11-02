@@ -38,7 +38,7 @@ export default async function makeTable() {
 
   const projectNames = recordsGithub.map(record => record.name);
 
-  const downloadsPerPackage = getDownloadsPerPackage(projectNames);
+  const downloadsPerPackage = await getDownloadsPerPackage(projectNames);
   recordsGithub.forEach((record, i) => record.downloads = downloadsPerPackage[i]);
 
   const urlsOfRepositories = recordsGithub.map(record => {

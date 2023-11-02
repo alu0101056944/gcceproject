@@ -60,7 +60,7 @@ export default class NPMJSScrapper {
   async #myHandler({ page, request }) {
     log.info('NPMJSScrapper visited page: ' + request.url);
 
-    const COMMA_SEPARATED_NUMBER_REG_EXP = /\d+\.?\d+/
+    const COMMA_SEPARATED_NUMBER_REG_EXP = /\d+(\.?\d+)*/
     const amountOfDownloadsLocator = page
         .locator('div._702d723c')
         .filter({ has: page.locator('h3').filter({ hasText: 'Weekly Downloads' }) })
