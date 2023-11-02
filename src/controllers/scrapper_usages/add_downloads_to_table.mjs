@@ -63,4 +63,4 @@ export default async function getDownloadsPerPackage(packageNames) {
   return packageDownloads;
 }
 
-// getDownloadsPerPackage();
+// getDownloadsPerPackage(['react', 'ant-design-vue']);
