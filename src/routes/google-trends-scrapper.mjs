@@ -87,13 +87,6 @@ export default class GoogleTrendsScrapper {
       } catch (error) {
         if (error instanceof playwright.errors.TimeoutError) {
           log.error('GoogleTrendsScrapper timeout error.');
-
-          // const requestQueue = await this.#scrapper.getRequestQueue();
-          // enqueueLinks({
-          //   urls: [request.url],
-          //   requestQueue,
-          //   label: request.label,
-          // });
         } else {
           log.error('GoogleTrendsScrapper error' + error);
         }
