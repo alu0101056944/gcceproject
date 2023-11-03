@@ -17,7 +17,7 @@ import CompaniesmarketcapProfileScrapper from '../routes/companiesmarketcap-prof
 import { inspect } from 'util';
 // import GoogleTrendsScrapper from '../routes/google-trends-scrapper.mjs';
 
-export default async function makeTable() {
+export default async function makeCompanyTable() {
   const specializations = [
     'frontend',
     // 'backend',
@@ -102,4 +102,4 @@ export default async function makeTable() {
   return recordsGithub;
 }
 
-makeTable().then((data) => console.log('Make company output object: ' + inspect(data)));
+// makeCompanyTable().then((data) => console.log('Make company output object: ' + inspect(data)));

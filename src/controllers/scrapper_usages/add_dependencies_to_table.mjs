@@ -13,12 +13,17 @@ export default function addDependencies() {
   const allrepositoryInfos = [
     {
       name: 'react',
-      author: 'facebook'
+      author_company: 'facebook'
+    },
+    {
+      name: 'gatsbyjs',
+      author_company: 'gatsby',
     }
   ];
   const scrapper = new GithubDependenciesScrapper(allrepositoryInfos);
-  scrapper.setMaxAmountfPageSurfs(5);
-  scrapper.run().then(() => console.log(inspect(scrapper.getOutputObject())));
+  scrapper.setOutputLength(1);
+  scrapper.setMaxAmountOfPageSurfs(2);
+  scrapper.run().then((data) => console.log(inspect(data)));
 }
 
-// addDependencies();
+addDependencies();

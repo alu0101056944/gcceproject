@@ -9,7 +9,7 @@
 
 import { readFile, writeFile } from 'fs/promises'
 
-export default async function makeTable() {
+export default async function makeCommunityTable() {
   const records = [
     {
       community_id: 1,
@@ -27,4 +27,4 @@ export default async function makeTable() {
   return records;
 }
 
-// makeTable().then((data) => console.log(data));
+// makeCommunityTable().then((data) => console.log(data));

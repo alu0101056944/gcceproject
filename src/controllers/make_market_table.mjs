@@ -11,7 +11,7 @@
 // import { inspect } from 'util';
 import { readFile, writeFile } from 'fs/promises'
 
-export default async function makeTable() {
+export default async function makeMarketTable() {
   const table = [];
 
   const markets = [
@@ -36,4 +36,4 @@ export default async function makeTable() {
   return table;
 }
 
-// makeTable().then((data) => console.log(inspect(data)));
+// makeMarketTable().then((data) => console.log(inspect(data)));

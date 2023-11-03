@@ -10,14 +10,14 @@
 import { readFile, writeFile } from 'fs/promises'
 
 
-import { inspect } from 'util';
+// import { inspect } from 'util';
 
-export default async function addDateEntry() {
+export default async function getnewDateRecord() {
   const FILE_CONTENT = await readFile('./src/persistent_ids.json', 'utf8');
   const persistentIds = JSON.parse(FILE_CONTENT);
 
   ++persistentIds.date;
-  const dateEntry = {
+  const dateRecord = {
     date_id: persistentIds.date,
     date: new Date(),
   };
@@ -25,7 +25,7 @@ export default async function addDateEntry() {
   const TO_JSON = JSON.stringify(persistentIds, null, 2);
   await writeFile('./src/persistent_ids.json', TO_JSON);
 
-  return dateEntry;
+  return dateRecord;
 }
 
-// console.log((await addDateEntry()));
+// console.log((await getnewDateRecord()));
