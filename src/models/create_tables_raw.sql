@@ -12,7 +12,7 @@ CREATE TABLE tool(
   name text,
   author_company text,
   type text,
-  specialization text,
+  specialization text
 );
 
 CREATE TABLE date(

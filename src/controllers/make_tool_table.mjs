@@ -14,7 +14,9 @@ import makeToolsFromGithubExplore from './scrapper_usages/add_tool_entries_to_ta
 // import { inspect } from 'util';
 
 export default async function makeToolTable() {
-  const records = await makeToolsFromGithubExplore();
+  const records = await makeToolsFromGithubExplore([
+        'frontend'
+      ]);
   let toolId = 1;
   records.forEach(record => record.tool_id = toolId++);
 

@@ -3,7 +3,7 @@
 import pgPromise from 'pg-promise';
 const pgp = pgPromise();
 const db = pgp({
-  connectionString: 'postgres://postgres:foo@localhost:5432/raw_database',
+  connectionString: 'postgres://postgres:454565@localhost:5432/raw_database',
   max: 20
 });
 
@@ -30,30 +30,32 @@ export default async function insertAllTables() {
       pgp.helpers.insert(communityTable,
         ['community_id', 'name', 'type'], 'community');
 
-  const companyTable = await makeCompanyTable();
-  const insertCompanyTable =
-      pgp.helpers.insert(companyTable,
-        ['company_id', 'name', 'employee_amount', 'amount_of_searches', 'type'],
-            'company');
+  // const companyTable = await makeCompanyTable();
+  // const insertCompanyTable =
+  //     pgp.helpers.insert(companyTable,
+  //       ['company_id', 'name', 'employee_amount', 'amount_of_searches', 'type'],
+  //           'company');
 
-  const projectTable = await makeProjectTable();
-  const insertProjectTable =
-      pgp.helpers.insert(projectTable,
-        ['project_id', 'project_name', 'downloads', 'contributors', 'searches'],
-            'project');
+  // const projectTable = await makeProjectTable();
+  // const insertProjectTable =
+  //     pgp.helpers.insert(projectTable,
+  //       ['project_id', 'project_name', 'downloads', 'contributors', 'searches'],
+  //           'project');
 
   const marketTable = await makeMarketTable();
   const insertMarketTable =
       pgp.helpers.insert(marketTable, ['market_id'], 'market');
 
   try {
-    await db.none(insertEmployeeTable);
-    await db.none(insertToolTable);
-    await db.none(insertCommunityTable);
-    await db.none(insertCompanyTable);
-    await db.none(insertProjectTable);
+    // await db.none(insertEmployeeTable);
+    // await db.none(insertToolTable);
+    // await db.none(insertCommunityTable);
+    // await db.none(insertCompanyTable);
+    // await db.none(insertProjectTable);
     await db.none(insertMarketTable);
   } catch (error) {
     console.error('Error when inserting a table: ' + error);
   }
 }
+
+insertAllTables();
