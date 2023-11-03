@@ -19,7 +19,7 @@ import GoogleTrendsScrapper from '../routes/google-trends-scrapper.mjs';
 /**
  * @todo Logic for when project names are not github project names
  */
-export default async function makeTable() {
+export default async function makeProjectTable() {
   const specializations = [
     'frontend',
     // 'backend',
@@ -79,4 +79,4 @@ export default async function makeTable() {
   return recordsGithub;
 }
 
-console.log(inspect(await makeTable()));
+// console.log(inspect(await makeProjectTable()));

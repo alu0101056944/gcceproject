@@ -16,7 +16,7 @@ import GithubDependenciesScrapper from "../routes/github-dependencies-scrapper.m
  * @param {array} toolTable ready for database insertion
 //  * @param {array} projectTable ready for database insertion
  */
-export default async function makeTable(toolTable/*, projectTable*/) {
+export default async function makeProjectToolTable(toolTable/*, projectTable*/) {
   const table = [];
 
   // @todo Diferentiate tool from project
@@ -47,4 +47,4 @@ export default async function makeTable(toolTable/*, projectTable*/) {
   return table;
 }
   
-// makeTable().then((data) => console.log(inspect(data)));
+// makeProjectToolTable().then((data) => console.log(inspect(data)));

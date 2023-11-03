@@ -19,7 +19,7 @@ function getRandomInt(min, max) {
 /**
  * @param {number} amountOfTools
  */
-export default async function makeTable(amountOfTools) {
+export default async function makeEmployeeToolTable(amountOfTools) {
   const table = [];
 
   for (let i = 1; i <= 20; i++) {
@@ -35,4 +35,4 @@ export default async function makeTable(amountOfTools) {
   return table;
 }
   
-// makeTable(8).then((data) => console.log(inspect(data)));
+// makeEmployeeToolTable(8).then((data) => console.log(inspect(data)));

@@ -9,7 +9,7 @@
 
 import { readFile, writeFile } from 'fs/promises'
 
-export default async function makeTable() {
+export default async function makeEmployeeTable() {
   const records = [
       {
         employee_id: 1,
