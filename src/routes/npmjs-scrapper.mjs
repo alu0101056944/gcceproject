@@ -51,29 +51,27 @@ export default class NPMJSScrapper {
 
       requestHandler,
       retryOnBlocked: true,
-      maxConcurrency: 1,
-      sessionPoolOptions: {
-        blockedStatusCodes: [404]
-      },
-      maxRequestRetries: 1,
+      maxConcurrency: 3,
     });
   }
 
-  async #myHandler({ page, request }) {
+  async #myHandler({ page, request, response }) {
     page.setDefaultTimeout(5000);
     log.info('NPMJSScrapper visited page: ' + request.url);
 
-    try {
-      const amountOfDownloadsLocator = page.locator('._9ba9a726');
-      const AMOUNT_OF_DOWNLOADS_STRING = await amountOfDownloadsLocator.textContent();
-      const AMOUNT_OF_DOWNLOADS = parseInt(AMOUNT_OF_DOWNLOADS_STRING.replace(/\./g, ''));
-      this.#outputObject[request.label] = AMOUNT_OF_DOWNLOADS;
-    } catch (error) {
-      if (error instanceof playwright.errors.TimeoutError) {
-        log.error('NPMJSScrapper timeout error.');
-      } else {
-        log.error('NPMJSScrapper error: ' + 'on page ' + request.url + ':' +
-            error);
+    if (response.status() !== 404) {
+      try {
+        const amountOfDownloadsLocator = page.locator('._9ba9a726');
+        const AMOUNT_OF_DOWNLOADS_STRING = await amountOfDownloadsLocator.textContent();
+        const AMOUNT_OF_DOWNLOADS = parseInt(AMOUNT_OF_DOWNLOADS_STRING.replace(/\./g, ''));
+        this.#outputObject[request.label] = AMOUNT_OF_DOWNLOADS;
+      } catch (error) {
+        if (error instanceof playwright.errors.TimeoutError) {
+          log.error('NPMJSScrapper timeout error.');
+        } else {
+          log.error('NPMJSScrapper error: ' + 'on page ' + request.url + ':' +
+              error);
+        }
       }
     }
   };

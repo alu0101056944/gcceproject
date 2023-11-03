@@ -60,7 +60,7 @@ export default class NamesToURLScrapper {
       },
       requestHandler: this.#myHandler(),
       retryOnBlocked: true,
-      maxConcurrency: 1,
+      maxConcurrency: 2,
       sessionPoolOptions: {
         blockedStatusCodes: errorCodes,
       },
