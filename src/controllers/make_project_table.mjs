@@ -20,27 +20,21 @@ import GoogleTrendsScrapper from '../routes/google-trends-scrapper.mjs';
  * @todo Logic for when project names are not github project names
  */
 export default async function makeTable() {
-  // const specializations = [
-  //   'frontend',
-  //   // 'backend',
-  //   // 'embedded',
-  //   // 'devops',
-  // ];
-  // const recordsGithub = await makeToolsFromGithubExplore(specializations);
-  // let projectId = 1;
-  // recordsGithub.forEach(
-  //       record => {
-  //         record.project_id = projectId++;
-  //         delete record.specialization;
-  //         delete record.type;
-  //       }
-  //     );
-  const recordsGithub = [
-    {
-      name: 'react',
-      project_id: 1,
-    }
+  const specializations = [
+    'frontend',
+    // 'backend',
+    // 'embedded',
+    // 'devops',
   ];
+  const recordsGithub = await makeToolsFromGithubExplore(specializations);
+  let projectId = 1;
+  recordsGithub.forEach(
+        record => {
+          record.project_id = projectId++;
+          delete record.specialization;
+          delete record.type;
+        }
+      );
 
   const projectNames = recordsGithub.map(record => record.name);
 
@@ -68,7 +62,9 @@ export default async function makeTable() {
 
   const scrapperOfTrends = new GoogleTrendsScrapper(projectNames);
   const interestPerProject = await scrapperOfTrends.run();
-  recordsGithub.forEach((record, i) => record.searches = interestPerProject[i]);
+  recordsGithub.forEach((record) => {
+        record.searches = interestPerProject[record.name];
+      });
 
   // I just kept author_company for the github repository access, it does not
   // belong to the table.
