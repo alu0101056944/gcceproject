@@ -6,7 +6,7 @@
 
 'use strict';
 
-// import { inspect } from 'util';
+import { inspect } from 'util';
 import NPMJSScrapper from '../../routes/npmjs-scrapper.mjs';
 import NamesToURLScrapper from '../../routes/names-to-urls-scrapper.mjs';
 
@@ -34,13 +34,26 @@ export default async function getDownloadsPerPackage(packageNames) {
         },
         async ({ page, request, log, outputObject }) => {
           log.info('PythonScrapper visited ' + request.url);
-          const paragraphWithDownloads = page.getByText('Downloads last week:');
-          const WHOLE_PARAGRAPH = await paragraphWithDownloads.textContent();
-          const DOWNLOADS_LAST_WEEK_STRING =
-              /Downloads\slast\sweek:\s(\d+(,?\d+)*)+/.exec(WHOLE_PARAGRAPH)[1];
-          const DOWNLOADS_LAST_WEEK =
-              parseInt(DOWNLOADS_LAST_WEEK_STRING.replace(/,/g, ''));
-          outputObject[request.label] = DOWNLOADS_LAST_WEEK;
+
+          try {
+            const containsSearchResultsStrings = page.getByText('Search results');
+            const paragraphWithDownloads = page.getByText('Downloads last week:');
+              
+            const eitherTextcontentOrUndefined = await Promise.any([
+                    containsSearchResultsStrings.waitFor(),
+                    paragraphWithDownloads.textContent(),
+                  ]);
+            if (eitherTextcontentOrUndefined) {
+              const DOWNLOADS_LAST_WEEK_STRING =
+                  /Downloads\slast\sweek:\s(\d+(,?\d+)*)+/
+                    .exec(eitherTextcontentOrUndefined)[1];
+              const DOWNLOADS_LAST_WEEK =
+                  parseInt(DOWNLOADS_LAST_WEEK_STRING.replace(/,/g, ''));
+              outputObject[request.label] = DOWNLOADS_LAST_WEEK;
+            }
+          } catch (error) {
+            log.error('Python scrapper error: ' + error);
+          }
         },
       );
   scrapperPython.create([500]);
@@ -63,4 +76,4 @@ export default async function getDownloadsPerPackage(packageNames) {
   return packageDownloads;
 }
 
-// getDownloadsPerPackage(['react', 'ant-design-vue']);
+getDownloadsPerPackage(['react', 'ant-design-vue']);
