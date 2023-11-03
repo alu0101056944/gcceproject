@@ -20,26 +20,34 @@ import GoogleTrendsScrapper from '../routes/google-trends-scrapper.mjs';
  * @todo Logic for when project names are not github project names
  */
 export default async function makeTable() {
-  const specializations = [
-    'frontend',
-    // 'backend',
-    // 'embedded',
-    // 'devops',
+  // const specializations = [
+  //   'frontend',
+  //   // 'backend',
+  //   // 'embedded',
+  //   // 'devops',
+  // ];
+  // const recordsGithub = await makeToolsFromGithubExplore(specializations);
+  // let projectId = 1;
+  // recordsGithub.forEach(
+  //       record => {
+  //         record.project_id = projectId++;
+  //         delete record.specialization;
+  //         delete record.type;
+  //       }
+  //     );
+  const recordsGithub = [
+    {
+      name: 'react',
+      project_id: 1,
+    }
   ];
-  const recordsGithub = await makeToolsFromGithubExplore(specializations);
-  let projectId = 1;
-  recordsGithub.forEach(
-        record => {
-          record.project_id = projectId++;
-          delete record.specialization;
-          delete record.type;
-        }
-      );
 
   const projectNames = recordsGithub.map(record => record.name);
 
   const downloadsPerPackage = await getDownloadsPerPackage(projectNames);
-  recordsGithub.forEach((record, i) => record.downloads = downloadsPerPackage[i]);
+  recordsGithub.forEach((record, i) => {
+        record.downloads = downloadsPerPackage[record.name]
+      });
 
   const urlsOfRepositories = recordsGithub.map(record => {
         let AUTHOR_NAME = record.author_company;

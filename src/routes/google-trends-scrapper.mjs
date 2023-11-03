@@ -44,11 +44,6 @@ export default class GoogleTrendsScrapper {
       requestHandler,
       retryOnBlocked: true,
       maxConcurrency: 1,
-      // sessionPoolOptions: { // was put because first request was always 429
-      //   blockedStatusCodes: [429],
-      // },
-      // maxRequestRetries: 2,
-      // sameDomainDelaySecs: 2,
     });
   }
 
@@ -57,6 +52,8 @@ export default class GoogleTrendsScrapper {
    *    it takes 111 minutes for completion.
    */
   async #myHandler({ page, request, response }) {
+    page.setDefaultTimeout(3500);
+
     if (response.status() !== 429) {
       try {
         const downloadCSVButton = page.locator('widget')
@@ -86,7 +83,7 @@ export default class GoogleTrendsScrapper {
             arrayOfInterests.reduce((acc, current) => acc + current, 0);
       } catch (error) {
         if (error instanceof playwright.errors.TimeoutError) {
-          log.error('GoogleTrendsScrapper timeout error.');
+          log.error('GoogleTrendsScrapper timeout error.' + error.message);
         } else {
           log.error('GoogleTrendsScrapper error' + error);
         }
