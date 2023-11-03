@@ -22,7 +22,7 @@ export default class GithubDependenciesScrapper {
   /** @private */
   #maxPageSurfs = undefined;
   #currentAmountOfPagesSurfed = undefined;
-  
+  #outputLength = undefined;
 
   /**
    * @param {object} repositoryInfo with name of repository and author of the
@@ -32,12 +32,15 @@ export default class GithubDependenciesScrapper {
     this.#outputObject = {};
     this.#maxPageSurfs = Infinity;
     this.#currentAmountOfPagesSurfed = 0;
+    this.#outputLength = 0;
 
     this.#urlsInfo = repositoryInfo.map((info) => {
+      this.#outputObject[info.name] = new Map();
+
       return {
-        url: `https://github.com/${info.author}/${info.name}`
+        url: `https://github.com/${info.author_company}/${info.name}`
             + '/network/dependencies',
-        label: `${info.author}/${info.name}`,
+        label: `${info.author_company}/${info.name}`,
       };
     });
 
@@ -56,11 +59,13 @@ export default class GithubDependenciesScrapper {
       sessionPoolOptions: {
         blockedStatusCodes: [404],
       },
-      maxRequestRetries: 2,
+      maxRequestRetries: 0,
     });
   }
 
   async #myHandler({ page, request }) {
+    const REPO_NAME = /^.+?\/(.+?)$/m.exec(request.label)[1];
+
     const iterationAction = async () => {
       const rowLocator = page.locator('div#dependencies').locator('div.Box')
           .locator('ul').locator('li');
@@ -68,9 +73,10 @@ export default class GithubDependenciesScrapper {
       for (const row of allRows) {
         const linkWithName = row.locator('a.h4');
         const DEPENDENCY_NAME = (await linkWithName.textContent()).trim();
-        this.#outputObject[DEPENDENCY_NAME] = true;
+        this.#outputObject[REPO_NAME].set(DEPENDENCY_NAME, true);
       }
     }
+
     const buttonNextPage = page.locator('a.next_page');
     while (this.#maxPageSurfs > 0 &&
           this.#currentAmountOfPagesSurfed < this.#maxPageSurfs
@@ -90,15 +96,28 @@ export default class GithubDependenciesScrapper {
   /**
    * @param {number} newMaxAmountOfPageSurfs 
    */
-  setMaxAmountfPageSurfs(newMaxAmountOfPageSurfs) {
+  setMaxAmountOfPageSurfs(newMaxAmountOfPageSurfs) {
     this.#maxPageSurfs = newMaxAmountOfPageSurfs;
   }
 
-  getOutputObject() {
-    return this.#outputObject;
+  setOutputLength(newOutputLength) {
+    this.#outputLength = newOutputLength;
   }
 
   async run() {
+    if (this.#outputLength !== 0) {
+      await this.#scrapper.run(this.#urlsInfo.slice(0, this.#outputLength));
+
+      const newOutput = {};
+      const repositoryNames = Object.getOwnPropertyNames(this.#outputObject);
+      const NON_INDEX_OUT_OF_BOUNDS_SIZE =
+          Math.min(repositoryNames.length, this.#outputLength);
+      for (let i = 0; i < NON_INDEX_OUT_OF_BOUNDS_SIZE; i++) {
+        newOutput[repositoryNames[i]] = this.#outputObject[repositoryNames[i]];
+      }
+      return newOutput;
+    }
+
     await this.#scrapper.run(this.#urlsInfo);
     return this.#outputObject;
   }
