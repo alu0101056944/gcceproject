@@ -21,7 +21,7 @@ export default class GithubExploreScrapper {
   constructor(url) {
     this.#url = url;
     this.#outputObject = {};
-    this.#maximumAmountOfClicks = 1;
+    this.#maximumAmountOfClicks = 4;
 
     const requestHandler = this.#myHandler.bind(this);
     this.#scrapper = new PlaywrightCrawler({

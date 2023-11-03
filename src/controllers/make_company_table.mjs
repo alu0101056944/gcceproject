@@ -13,9 +13,9 @@ import makeToolsFromGithubExplore from './scrapper_usages/add_tool_entries_to_ta
 
 import CompaniesmarketcapScrapper from "../routes/companiesmarketcap-scrapper.mjs";
 import CompaniesmarketcapProfileScrapper from '../routes/companiesmarketcap-profile-scrapper.mjs';
+import GoogleTrendsScrapper from '../routes/google-trends-scrapper.mjs';
 
 import { inspect } from 'util';
-// import GoogleTrendsScrapper from '../routes/google-trends-scrapper.mjs';
 
 export default async function makeCompanyTable() {
   const specializations = [
@@ -64,27 +64,26 @@ export default async function makeCompanyTable() {
     }
   });
 
-  // Commented when I fixed google trends scrapper but had to wait for heavy 429
-  //    gettings.
-  //
-  // companyNames.unshift('foo'); // first search always fails so add arbitrary
-  // const scrapperTrends = new GoogleTrendsScrapper(companyNames);
-  // const interestPerCompany = await scrapperTrends.run();
+  companyNames.unshift('foo'); // first search always fails so add arbitrary
+  const scrapperTrends = new GoogleTrendsScrapper(companyNames);
+  const interestPerCompany = await scrapperTrends.run();
 
-  // const nameKeys = Object.getOwnPropertyNames(interestPerCompany);
-  // for (const companyNameWithSpaces of nameKeys) {
-  //   const COMPANY_NAME_WITHOUT_SPACES = companyNameWithSpaces.replace(/\s/g, '');
-  //   recordsGithub[COMPANY_NAME_WITHOUT_SPACES].amount_of_searches =
-  //       interestPerCompany[companyNameWithSpaces];
-  // }
+  const nameKeys = Object.getOwnPropertyNames(interestPerCompany);
+  for (const companyNameWithSpaces of nameKeys) {
+    const COMPANY_NAME_WITHOUT_SPACES = companyNameWithSpaces.replace(/\s/g, '');
+    if (recordsGithub[COMPANY_NAME_WITHOUT_SPACES]) {
+      recordsGithub[COMPANY_NAME_WITHOUT_SPACES].amount_of_searches =
+          interestPerCompany[companyNameWithSpaces];
+    }
+  }
 
   recordsGithub.forEach(record => {
-    // if (!record.amount_of_searches) {
-    //   record.amount_of_searches = null;
-    // }
+    if (!record.amount_of_searches) {
+      record.amount_of_searches = null;
+    }
 
     // temporal solution to always getting 429 on Google trends
-    record.amount_of_searches = 0;
+    // record.amount_of_searches = 0;
   });
 
   const FILE_CONTENT = await readFile('./src/persistent_ids.json', 'utf8');

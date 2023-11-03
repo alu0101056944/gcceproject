@@ -7,7 +7,7 @@
 
 'use strict';
 
-import { PlaywrightCrawler, log, enqueueLinks } from 'crawlee';
+import { PlaywrightCrawler, log } from 'crawlee';
 
 import playwright from 'playwright';
 
@@ -18,8 +18,10 @@ export default class GoogleTrendsScrapper {
   #scrapper = undefined;
   #interestsPerTerm = undefined;
   #searchTermsInfo = undefined;
+  #amountOfVisited = undefined;
 
   constructor(searchTerms) {
+    this.#amountOfVisited = 0;
     this.#interestsPerTerm = {};
     const toURL = (queryString) => {
         const PROCESSED = queryString.toLowerCase();
@@ -52,19 +54,33 @@ export default class GoogleTrendsScrapper {
    *    it takes 111 minutes for completion.
    */
   async #myHandler({ page, request, response }) {
+    log.info('GoogleTrendsScrapper visited page: ' + request.url +
+        ` (has visited ${this.#amountOfVisited++} pages)`);
     page.setDefaultTimeout(3500);
 
     if (response.status() !== 429) {
-      try {
-        const downloadPromise = page.waitForEvent('download');
-        const downloadCSVButton = page.locator('widget')
-            .filter({ hasText: 'Interés a lo largo del tiempo' })
-            .getByTitle('CSV');
+      const downloadCSVButton = page.locator('widget')
+          .filter({ hasText: 'Interés a lo largo del tiempo' })
+          .getByTitle('CSV');
+      const someErrorLocator = page.getByText('error');
+
+      const getDownload = async () => {
+        const downloadPromise =
+          page.waitForEvent('download', { timeout: 7000 });
         await downloadCSVButton.click({ timeout: 5000 });
         const downloadObject = await downloadPromise;
         const DOWNLOADED_FILE_PATH = await downloadObject.path();
         const FILE_CONTENT = await readFile(DOWNLOADED_FILE_PATH, 'utf-8');
+        return FILE_CONTENT;
+      };
 
+      const FILE_CONTENT =
+          await Promise.any([
+            someErrorLocator.waitFor({ timeout: 7000 }),
+            getDownload()
+          ]);
+      if (FILE_CONTENT) {
+        log.info('GoogleTrendsScrapper could download file.' + FILE_CONTENT.slice(0, 50));
         const arrayOfInterests = [];
         const MAX_SIZE_OF_INTERESTS_ARRAY = 5; // I just want the latest interests
         const EXTRACT_TODAY_REG_EXP =
@@ -81,12 +97,6 @@ export default class GoogleTrendsScrapper {
         }
         this.#interestsPerTerm[request.label] =
             arrayOfInterests.reduce((acc, current) => acc + current, 0);
-      } catch (error) {
-        if (error instanceof playwright.errors.TimeoutError) {
-          log.error('GoogleTrendsScrapper timeout error.' + error);
-        } else {
-          log.error('GoogleTrendsScrapper error' + error);
-        }
       }
     }
 
