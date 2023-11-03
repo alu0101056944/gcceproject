@@ -56,7 +56,7 @@ export default class GoogleTrendsScrapper {
   async #myHandler({ page, request, response }) {
     log.info('GoogleTrendsScrapper visited page: ' + request.url +
         ` (has visited ${this.#amountOfVisited++} pages)`);
-    page.setDefaultTimeout(3500);
+    page.setDefaultTimeout(7000);
 
     if (response.status() !== 429) {
       const downloadCSVButton = page.locator('widget')
@@ -64,39 +64,59 @@ export default class GoogleTrendsScrapper {
           .getByTitle('CSV');
       const someErrorLocator = page.getByText('error');
 
+      let hasError = false;
+      try {
+        await someErrorLocator.waitFor();
+        hasError = true;
+      } catch (error ) {
+        log.error('Google trends scrapper Failed error locator');
+      }
+
       const getDownload = async () => {
-        const downloadPromise =
-          page.waitForEvent('download', { timeout: 7000 });
-        await downloadCSVButton.click({ timeout: 5000 });
-        const downloadObject = await downloadPromise;
-        const DOWNLOADED_FILE_PATH = await downloadObject.path();
-        const FILE_CONTENT = await readFile(DOWNLOADED_FILE_PATH, 'utf-8');
-        return FILE_CONTENT;
+        try {
+          const downloadPromise =
+            page.waitForEvent('download', { timeout: 40000 });
+          await downloadCSVButton.click({ timeout: 5000 });
+          const downloadObject = await downloadPromise;
+          const DOWNLOADED_FILE_PATH = await downloadObject.path();
+          const FILE_CONTENT = await readFile(DOWNLOADED_FILE_PATH, 'utf-8');
+          return FILE_CONTENT;
+        } catch (error) {
+          log.error('GoogleTrendsScrapper Download timeout');
+        }
       };
 
-      const FILE_CONTENT =
-          await Promise.any([
-            someErrorLocator.waitFor({ timeout: 7000 }),
-            getDownload()
-          ]);
-      if (FILE_CONTENT) {
-        log.info('GoogleTrendsScrapper could download file.' + FILE_CONTENT.slice(0, 50));
-        const arrayOfInterests = [];
-        const MAX_SIZE_OF_INTERESTS_ARRAY = 5; // I just want the latest interests
-        const EXTRACT_TODAY_REG_EXP =
-            /(?<year>\d\d\d\d)-(?<month>\d\d)-(?<day>\d\d),(?<interest>\d+)/g;
-        let execResult;
-        while (execResult = EXTRACT_TODAY_REG_EXP.exec(FILE_CONTENT)) {
-          const INTEREST = parseInt(execResult.groups.interest);
-          if (arrayOfInterests.length < MAX_SIZE_OF_INTERESTS_ARRAY) {
-            arrayOfInterests.push(INTEREST);
-          } else {
-            arrayOfInterests.shift();
-            arrayOfInterests.push(INTEREST);
+      // only wait for error if i am sure that the event will take place.
+      // const FILE_CONTENT =
+      //     await Promise.any([
+      //       someErrorLocator.waitFor({ timeout: 7000 }),
+      //       getDownload()
+      //     ]);
+
+      if (!hasError) {
+        log.info('Google trends scrapper does not have error');
+        const FILE_CONTENT = await getDownload();
+        if (FILE_CONTENT) {
+          log.info('GoogleTrendsScrapper could download file.' + FILE_CONTENT.slice(0, 50));
+          const arrayOfInterests = [];
+          const MAX_SIZE_OF_INTERESTS_ARRAY = 5; // I just want the latest interests
+          const EXTRACT_TODAY_REG_EXP =
+              /(?<year>\d\d\d\d)-(?<month>\d\d)-(?<day>\d\d),(?<interest>\d+)/g;
+          let execResult;
+          while (execResult = EXTRACT_TODAY_REG_EXP.exec(FILE_CONTENT)) {
+            const INTEREST = parseInt(execResult.groups.interest);
+            if (arrayOfInterests.length < MAX_SIZE_OF_INTERESTS_ARRAY) {
+              arrayOfInterests.push(INTEREST);
+            } else {
+              arrayOfInterests.shift();
+              arrayOfInterests.push(INTEREST);
+            }
           }
+          this.#interestsPerTerm[request.label] =
+              arrayOfInterests.reduce((acc, current) => acc + current, 0);
+        } else {
+          log.error('Error');
         }
-        this.#interestsPerTerm[request.label] =
-            arrayOfInterests.reduce((acc, current) => acc + current, 0);
       }
     }
 
