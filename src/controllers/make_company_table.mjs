@@ -102,4 +102,4 @@ export default async function makeCompanyTable() {
   return recordsGithub;
 }
 
-makeCompanyTable().then((data) => console.log('Make company output object: ' + inspect(data)));
+// makeCompanyTable().then((data) => console.log('Make company output object: ' + inspect(data)));

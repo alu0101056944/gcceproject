@@ -11,7 +11,7 @@ import { readFile, writeFile } from 'fs/promises'
 
 import makeToolsFromGithubExplore from './scrapper_usages/add_tool_entries_to_table.mjs';
 
-import { inspect } from 'util';
+// import { inspect } from 'util';
 
 export default async function makeToolTable() {
   const records = await makeToolsFromGithubExplore();

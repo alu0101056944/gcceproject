@@ -7,25 +7,53 @@ const db = pgp({
   max: 20
 });
 
+import makeEmployeeTable from './make_employee_table.mjs';
+import makeToolTable from './make_tool_table.mjs';
+import makeCommunityTable from './make_community_table.mjs';
+import makeCompanyTable from './make_company_table.mjs';
+import makeProjectTable from './make_project_table.mjs';
+import makeMarketTable from './make_market_table.mjs';
+
 export default async function insertAllTables() {
-  
+  const employeeTable = await makeEmployeeTable();
+  const insertEmployeeTable =
+      pgp.helpers.insert(employeeTable,
+        ['employee_id', 'name', 'title', 'department'], 'employee');
 
+  const toolTable = await makeToolTable();
+  const insertToolTable =
+      pgp.helpers.insert(toolTable,
+        ['tool_id', 'name', 'author_company', 'type', 'specialization'], 'tool');
+
+  const communityTable = await makeCommunityTable();
+  const insertCommunityTable =
+      pgp.helpers.insert(communityTable,
+        ['community_id', 'name', 'type'], 'community');
+
+  const companyTable = await makeCompanyTable();
+  const insertCompanyTable =
+      pgp.helpers.insert(companyTable,
+        ['company_id', 'name', 'employee_amount', 'amount_of_searches', 'type'],
+            'company');
+
+  const projectTable = await makeProjectTable();
+  const insertProjectTable =
+      pgp.helpers.insert(projectTable,
+        ['project_id', 'project_name', 'downloads', 'contributors', 'searches'],
+            'project');
+
+  const marketTable = await makeMarketTable();
+  const insertMarketTable =
+      pgp.helpers.insert(marketTable, ['market_id'], 'market');
+
+  try {
+    await db.none(insertEmployeeTable);
+    await db.none(insertToolTable);
+    await db.none(insertCommunityTable);
+    await db.none(insertCompanyTable);
+    await db.none(insertProjectTable);
+    await db.none(insertMarketTable);
+  } catch (error) {
+    console.error('Error when inserting a table: ' + error);
+  }
 }
-
-// Assuming you have an array of records, each represented as an object
-const records = [
-  { tool_id: 1, name: 'ansible', author_company: 'Michael Dehaan', type: 'Automation' },
-  // ... more records ...
-];
-
-// Convert the array of records to a multi-row insert query
-const insertQuery = pgp.helpers.insert(records, ['tool_id', 'name', 'author_company', 'type'], 'tool');
-
-// Execute the multi-row insert query
-db.none(insertQuery)
- .then(() => {
-     console.log('Bulk insert successful');
- })
- .catch(error => {
-     console.error('Error:', error);
- });
