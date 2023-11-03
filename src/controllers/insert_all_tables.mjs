@@ -13,6 +13,15 @@ import makeCommunityTable from './make_community_table.mjs';
 import makeCompanyTable from './make_company_table.mjs';
 import makeProjectTable from './make_project_table.mjs';
 import makeMarketTable from './make_market_table.mjs';
+import { inspect } from 'util';
+
+// export default async function insertAllTables() {
+//   const toolTable = await makeToolTable();
+//   const insertToolTable =
+//       pgp.helpers.insert(toolTable,
+//         ['tool_id', 'name', 'author_company', 'type', 'specialization'], 'tool');
+//   console.log(inspect(toolTable));
+// }
 
 export default async function insertAllTables() {
   const employeeTable = await makeEmployeeTable();
@@ -30,28 +39,29 @@ export default async function insertAllTables() {
       pgp.helpers.insert(communityTable,
         ['community_id', 'name', 'type'], 'community');
 
-  // const companyTable = await makeCompanyTable();
-  // const insertCompanyTable =
-  //     pgp.helpers.insert(companyTable,
-  //       ['company_id', 'name', 'employee_amount', 'amount_of_searches', 'type'],
-  //           'company');
+  const companyTable = await makeCompanyTable();
+  console.log(inspect(companyTable));
+  const insertCompanyTable =
+      pgp.helpers.insert(companyTable,
+        ['company_id', 'name', 'employee_amount', 'amount_of_searches', 'type'],
+            'company');
 
-  // const projectTable = await makeProjectTable();
-  // const insertProjectTable =
-  //     pgp.helpers.insert(projectTable,
-  //       ['project_id', 'project_name', 'downloads', 'contributors', 'searches'],
-  //           'project');
+  const projectTable = await makeProjectTable();
+  const insertProjectTable =
+      pgp.helpers.insert(projectTable,
+        ['project_id', 'project_name', 'downloads', 'contributors', 'searches'],
+            'project');
 
   const marketTable = await makeMarketTable();
   const insertMarketTable =
       pgp.helpers.insert(marketTable, ['market_id'], 'market');
 
   try {
-    // await db.none(insertEmployeeTable);
-    // await db.none(insertToolTable);
-    // await db.none(insertCommunityTable);
-    // await db.none(insertCompanyTable);
-    // await db.none(insertProjectTable);
+    await db.none(insertEmployeeTable);
+    await db.none(insertToolTable);
+    await db.none(insertCommunityTable);
+    await db.none(insertCompanyTable);
+    await db.none(insertProjectTable);
     await db.none(insertMarketTable);
   } catch (error) {
     console.error('Error when inserting a table: ' + error);

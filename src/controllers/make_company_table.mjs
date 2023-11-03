@@ -34,12 +34,6 @@ export default async function makeCompanyTable() {
         delete record.specialization;
       });
 
-  // for temporalily testing of the rest of the function.
-  recordsGithub.push({
-    companyId: recordsGithub.length + 1,
-    author_company: 'microsoft',
-  });
-
   const scrapperEmployees = new CompaniesmarketcapScrapper();
   scrapperEmployees.setMaxAmountfPageSurfs(1);
   await scrapperEmployees.run();
