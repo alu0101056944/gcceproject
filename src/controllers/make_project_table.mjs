@@ -39,7 +39,9 @@ export default async function makeTable() {
   const projectNames = recordsGithub.map(record => record.name);
 
   const downloadsPerPackage = await getDownloadsPerPackage(projectNames);
-  recordsGithub.forEach((record, i) => record.downloads = downloadsPerPackage[i]);
+  recordsGithub.forEach((record, i) => {
+        record.downloads = downloadsPerPackage[record.name]
+      });
 
   const urlsOfRepositories = recordsGithub.map(record => {
         let AUTHOR_NAME = record.author_company;
@@ -60,7 +62,9 @@ export default async function makeTable() {
 
   const scrapperOfTrends = new GoogleTrendsScrapper(projectNames);
   const interestPerProject = await scrapperOfTrends.run();
-  recordsGithub.forEach((record, i) => record.searches = interestPerProject[i]);
+  recordsGithub.forEach((record) => {
+        record.searches = interestPerProject[record.name];
+      });
 
   // I just kept author_company for the github repository access, it does not
   // belong to the table.

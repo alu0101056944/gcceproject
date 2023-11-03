@@ -59,6 +59,8 @@ export default class GithubRepositoryScrapper {
       const AMOUNT_OF_CONTRIBUTORS =
           AMOUNT_OF_CONTRIBUTORS_STRING.replace(/,/g, '');
       this.#outputObject.push(parseInt(AMOUNT_OF_CONTRIBUTORS));
+    } else {
+      this.#outputObject.push(null);
     }
   };
 

@@ -44,11 +44,6 @@ export default class GoogleTrendsScrapper {
       requestHandler,
       retryOnBlocked: true,
       maxConcurrency: 1,
-      // sessionPoolOptions: { // was put because first request was always 429
-      //   blockedStatusCodes: [429],
-      // },
-      // maxRequestRetries: 2,
-      // sameDomainDelaySecs: 2,
     });
   }
 
@@ -57,13 +52,15 @@ export default class GoogleTrendsScrapper {
    *    it takes 111 minutes for completion.
    */
   async #myHandler({ page, request, response }) {
+    page.setDefaultTimeout(3500);
+
     if (response.status() !== 429) {
       try {
+        const downloadPromise = page.waitForEvent('download');
         const downloadCSVButton = page.locator('widget')
             .filter({ hasText: 'Interés a lo largo del tiempo' })
             .getByTitle('CSV');
         await downloadCSVButton.click({ timeout: 5000 });
-        const downloadPromise = page.waitForEvent('download');
         const downloadObject = await downloadPromise;
         const DOWNLOADED_FILE_PATH = await downloadObject.path();
         const FILE_CONTENT = await readFile(DOWNLOADED_FILE_PATH, 'utf-8');
@@ -86,11 +83,15 @@ export default class GoogleTrendsScrapper {
             arrayOfInterests.reduce((acc, current) => acc + current, 0);
       } catch (error) {
         if (error instanceof playwright.errors.TimeoutError) {
-          log.error('GoogleTrendsScrapper timeout error.');
+          log.error('GoogleTrendsScrapper timeout error.' + error);
         } else {
           log.error('GoogleTrendsScrapper error' + error);
         }
       }
+    }
+
+    if (!this.#interestsPerTerm[request.label]) {
+      this.#interestsPerTerm[request.label] = null;
     }
   }
 
