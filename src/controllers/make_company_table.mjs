@@ -9,7 +9,7 @@
 
 import { readFile, writeFile } from 'fs/promises'
 
-import makeToolsFromGithubExplore from './scrapper_usages/add_tool_entries_to_table.mjs';
+import makeToolsFromGithubExplore from './scrapper_usages/make_tools_from_github_explore.mjs';
 
 import CompaniesmarketcapScrapper from "../routes/companiesmarketcap-scrapper.mjs";
 import CompaniesmarketcapProfileScrapper from '../routes/companiesmarketcap-profile-scrapper.mjs';
