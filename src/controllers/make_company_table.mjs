@@ -66,7 +66,17 @@ export default async function makeCompanyTable() {
 
   companyNames.unshift('foo'); // first search always fails so add arbitrary
   const scrapperTrends = new GoogleTrendsScrapper(companyNames);
-  const interestPerCompany = await scrapperTrends.run();
+  let interestPerCompany;
+  try {
+    interestPerCompany = await scrapperTrends.run();
+  } catch (error) {
+    console.log('An error has taken place on the run() of the google trends' +
+        'scrapper' + error.message);
+    interestPerCompany = {};
+  }
+
+  // do not wait for this
+  writeFile('./iterests' + JSON.stringify(interestPerCompany, null, 2));
 
   const nameKeys = Object.getOwnPropertyNames(interestPerCompany);
   for (const companyNameWithSpaces of nameKeys) {

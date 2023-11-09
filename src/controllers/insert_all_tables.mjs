@@ -25,10 +25,10 @@ import { inspect } from 'util';
 
 export default async function insertAllTables() {
   await db.none('DELETE FROM $1:raw', ['company']);
-  // const employeeTable = await makeEmployeeTable();
-  // const insertEmployeeTable =
-  //     pgp.helpers.insert(employeeTable,
-  //       ['employee_id', 'name', 'title', 'department'], 'employee');
+  const employeeTable = await makeEmployeeTable();
+  const insertEmployeeTable =
+      pgp.helpers.insert(employeeTable,
+        ['employee_id', 'name', 'title', 'department'], 'employee');
 
   // const toolTable = await makeToolTable();
   // const insertToolTable =

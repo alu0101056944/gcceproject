@@ -1,0 +1,4 @@
+
+`waitForEvent` tells the waiter of playwright to make a `setTimeout` promise and enqueue it as a failure promise along with a `dispose()` to cancel the promise that once fulfilled will throw a `TimeoutError`. The waiter has a `waitForPromise()` that when called it races the enqueued failure promises, and if any failure promise wins then it catches and rethrows an error after calling it's `dispose()` to call all the dispose functions it has stored, which will cancel all the failure promises and I suppose other non failure promises if there are any stored for some reason.
+
+So, because a `waitForEvent` starts that process, then **another object will have to call waiter's `dispose()` before any failure promise ends**, including the timeout failure promise. It simply calls all the `dispose` it has stored.
