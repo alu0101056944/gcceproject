@@ -26,7 +26,8 @@ export default async function makeProjectTable() {
     // 'embedded',
     // 'devops',
   ];
-  const recordsGithub = await makeToolsFromGithubExplore(specializations);
+  const recordsGithub =
+      (await makeToolsFromGithubExplore(specializations)).tableObject;
   let projectId = 1;
   recordsGithub.forEach(
         record => {

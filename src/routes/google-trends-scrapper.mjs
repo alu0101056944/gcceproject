@@ -63,7 +63,7 @@ export default class GoogleTrendsScrapper {
           .filter({ hasText: 'Interés a lo largo del tiempo' })
           .getByTitle('CSV');
 
-      const getDownload = async () => {
+      async function getDownload() {
         try {
           const downloadPromise =
             page.waitForEvent('download');
@@ -73,9 +73,8 @@ export default class GoogleTrendsScrapper {
           const FILE_CONTENT = await readFile(DOWNLOADED_FILE_PATH, 'utf-8');
           return FILE_CONTENT;
         } catch (error) {
-          // remove event listener, assuming the page does not get closed on waitForEvent
-          // it should work.
-          log.error('GoogleTrendsScrapper Download timeout');
+          log.error('GoogleTrendsScrapper Download error: ' + error);
+          log.info('-------------------------');
         }
       };
 

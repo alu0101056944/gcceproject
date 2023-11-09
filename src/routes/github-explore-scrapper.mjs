@@ -17,6 +17,7 @@ export default class GithubExploreScrapper {
   #scrapper = undefined;
   #url = undefined;
   #outputObject = undefined;
+  #repositoryUrls = undefined;
 
   constructor(url) {
     this.#url = url;
@@ -62,7 +63,7 @@ export default class GithubExploreScrapper {
       const headersInfo = await this.#arrayOfHeadersInfo(page);
       const tagsPerRepo = await this.#arraysOfTags(page);
       const typesPerRepo = tagsPerRepo.map(tags => this.getTypeFromTags(tags));
-      log.info('GithubExploreScrapper tagsPerRepoLength=' +
+      log.info('GithubExploreScrapper tagsPerRepoLength=' + // for debugging
           tagsPerRepo.length + ' headersInfoLength=' + headersInfo.length);
       log.info('GithubExploreScrapper typesPerRepoLength=' +
           typesPerRepo.length + ' headersInfoLength=' + headersInfo.length);
