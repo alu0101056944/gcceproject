@@ -26,10 +26,9 @@ export default async function makeProjectTable() {
     // 'embedded',
     // 'devops',
   ];
-  const recordsGithub =
-      (await makeToolsFromGithubExplore(specializations)).tableObject;
+  const { tableObject } = await makeToolsFromGithubExplore(specializations);
   let projectId = 1;
-  recordsGithub.forEach(
+  tableObject.forEach(
         record => {
           record.project_id = projectId++;
           delete record.specialization;
@@ -37,14 +36,14 @@ export default async function makeProjectTable() {
         }
       );
 
-  const projectNames = recordsGithub.map(record => record.name);
+  const projectNames = tableObject.map(record => record.name);
 
   const downloadsPerPackage = await getDownloadsPerPackage(projectNames);
-  recordsGithub.forEach((record, i) => {
+  tableObject.forEach((record, i) => {
         record.downloads = downloadsPerPackage[record.name]
       });
 
-  const urlsOfRepositories = recordsGithub.map(record => {
+  const urlsOfRepositories = tableObject.map(record => {
         let AUTHOR_NAME = record.author_company;
         let PROJECT_NAME = record.name;
         if (/\s/.test(AUTHOR_NAME)) {
@@ -57,27 +56,27 @@ export default async function makeProjectTable() {
       });
   const scrapperOfGithubRepos = new GithubRepositoryScrapper(urlsOfRepositories);
   const allAmountOfContributors = await scrapperOfGithubRepos.run();
-  recordsGithub.forEach((record, i) => {
+  tableObject.forEach((record, i) => {
         record.contributors = allAmountOfContributors[i];
       });
 
   const scrapperOfTrends = new GoogleTrendsScrapper(projectNames);
   const interestPerProject = await scrapperOfTrends.run();
-  recordsGithub.forEach((record) => {
+  tableObject.forEach((record) => {
         record.searches = interestPerProject[record.name];
       });
 
   // I just kept author_company for the github repository access, it does not
   // belong to the table.
-  recordsGithub.forEach(record => delete record.author_company);
+  tableObject.forEach(record => delete record.author_company);
 
   const FILE_CONTENT = await readFile('./src/persistent_ids.json', 'utf8');
   const persistentIds = JSON.parse(FILE_CONTENT);
-  persistentIds.tool = recordsGithub.length;
+  persistentIds.tool = tableObject.length;
   const TO_JSON = JSON.stringify(persistentIds, null, 2);
   await writeFile('./src/persistent_ids.json', TO_JSON);
 
-  return recordsGithub;
+  return tableObject;
 }
 
 // console.log(inspect(await makeProjectTable()));

@@ -24,8 +24,7 @@ export default async function makeCompanyTable() {
     // 'embedded',
     // 'devops',
   ];
-  const recordsGithub =
-      (await makeToolsFromGithubExplore(specializations)).tableObject;
+  const recordsGithub = (await makeToolsFromGithubExplore(specializations));
   let companyId = 1;
   recordsGithub.forEach(record => {
         record.company_id = companyId++
