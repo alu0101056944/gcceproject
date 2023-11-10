@@ -17,15 +17,23 @@ import GithubExploreScrapper from "../../routes/github-explore-scrapper.mjs";
 
 export default async function makeToolsFromGithubExplore(topicNames) {
   const tableObject = [];
+  const urlsObject = {};
   for (const specialization of topicNames) {
     const scrapper = new GithubExploreScrapper(`https://github.com/topics/${specialization}`);
     const output = await scrapper.run();
-    output.forEach((entry) => tableObject.push({
-          name: entry.name.toLowerCase(),
-          author_company: entry.author_company,
-          specialization,
-          type: entry.type,
-        }));
+    if (output.forEach) {
+      output.forEach((entry) => {
+          tableObject.push({
+              name: entry.name.toLowerCase(),
+              author_company: entry.author_company,
+              specialization,
+              type: entry.type,
+            });
+
+          urlsObject[entry.name] = entry.url;
+        });
+
+    }
   }
-  return tableObject;
+  return { tableObject, urlsObject, };
 }

@@ -7,7 +7,7 @@
 
 'use strict';
 
-import { PlaywrightCrawler, log, enqueueLinks } from 'crawlee';
+import { PlaywrightCrawler, log } from 'crawlee';
 
 import playwright from 'playwright';
 
@@ -18,8 +18,10 @@ export default class GoogleTrendsScrapper {
   #scrapper = undefined;
   #interestsPerTerm = undefined;
   #searchTermsInfo = undefined;
+  #amountOfVisited = undefined;
 
   constructor(searchTerms) {
+    this.#amountOfVisited = 0;
     this.#interestsPerTerm = {};
     const toURL = (queryString) => {
         const PROCESSED = queryString.toLowerCase();
@@ -35,11 +37,11 @@ export default class GoogleTrendsScrapper {
     const requestHandler = this.#myHandler.bind(this);
     this.#scrapper = new PlaywrightCrawler({
       headless: false,
-      navigationTimeoutSecs: 100000,
-      requestHandlerTimeoutSecs: 100000,
+      navigationTimeoutSecs: undefined,
+      requestHandlerTimeoutSecs: 5,
       browserPoolOptions: {
-        closeInactiveBrowserAfterSecs: 100000,
-        operationTimeoutSecs: 100000,
+        closeInactiveBrowserAfterSecs: 300,
+        operationTimeoutSecs: 7,
       },
       requestHandler,
       retryOnBlocked: true,
@@ -52,21 +54,30 @@ export default class GoogleTrendsScrapper {
    *    it takes 111 minutes for completion.
    */
   async #myHandler({ page, request, response }) {
-    page.setDefaultTimeout(3500);
+    log.info('GoogleTrendsScrapper visited page: ' + request.url +
+        ` (has visited ${this.#amountOfVisited++} pages)`);
 
     if (response.status() !== 429) {
-      try {
+      const downloadCSVButton = page
+          .locator('widget')
+          .filter({ hasText: 'Interés a lo largo del tiempo' })
+          .getByTitle('CSV');
+
+      async function getDownload() {
         const downloadPromise = page.waitForEvent('download');
-        const downloadCSVButton = page.locator('widget')
-            .filter({ hasText: 'Interés a lo largo del tiempo' })
-            .getByTitle('CSV');
-        await downloadCSVButton.click({ timeout: 5000 });
+        await downloadCSVButton.click();
         const downloadObject = await downloadPromise;
         const DOWNLOADED_FILE_PATH = await downloadObject.path();
         const FILE_CONTENT = await readFile(DOWNLOADED_FILE_PATH, 'utf-8');
+        return FILE_CONTENT;
+      };
+
+      try {
+        const FILE_CONTENT = await getDownload();
 
         const arrayOfInterests = [];
         const MAX_SIZE_OF_INTERESTS_ARRAY = 5; // I just want the latest interests
+
         const EXTRACT_TODAY_REG_EXP =
             /(?<year>\d\d\d\d)-(?<month>\d\d)-(?<day>\d\d),(?<interest>\d+)/g;
         let execResult;
@@ -79,20 +90,15 @@ export default class GoogleTrendsScrapper {
             arrayOfInterests.push(INTEREST);
           }
         }
+
         this.#interestsPerTerm[request.label] =
             arrayOfInterests.reduce((acc, current) => acc + current, 0);
       } catch (error) {
-        if (error instanceof playwright.errors.TimeoutError) {
-          log.error('GoogleTrendsScrapper timeout error.' + error);
-        } else {
-          log.error('GoogleTrendsScrapper error' + error);
-        }
+        info.error('GoogleTrendsScrapper could not get interest.');
       }
     }
 
-    if (!this.#interestsPerTerm[request.label]) {
-      this.#interestsPerTerm[request.label] = null;
-    }
+    this.#interestsPerTerm[request.label] ??= null;
   }
 
   getOutputObject() {

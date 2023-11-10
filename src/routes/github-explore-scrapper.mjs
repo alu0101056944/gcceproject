@@ -17,11 +17,12 @@ export default class GithubExploreScrapper {
   #scrapper = undefined;
   #url = undefined;
   #outputObject = undefined;
+  #repositoryUrls = undefined;
 
   constructor(url) {
     this.#url = url;
     this.#outputObject = {};
-    this.#maximumAmountOfClicks = 1;
+    this.#maximumAmountOfClicks = 4;
 
     const requestHandler = this.#myHandler.bind(this);
     this.#scrapper = new PlaywrightCrawler({
@@ -58,16 +59,21 @@ export default class GithubExploreScrapper {
     // @todo Find out why sometimes headerInfo[i].type throws errors.
     //    its a race condition.
 
-    const headersInfo = await this.#arrayOfHeadersInfo(page);
-    const tagsPerRepo = await this.#arraysOfTags(page);
-    const typesPerRepo = tagsPerRepo.map(tags => this.getTypeFromTags(tags));
-    log.info('GithubExploreScrapper tagsPerRepoLength=' +
-        tagsPerRepo.length + ' headersInfoLength=' + headersInfo.length);
-    log.info('GithubExploreScrapper typesPerRepoLength=' +
-        typesPerRepo.length + ' headersInfoLength=' + headersInfo.length);
-    typesPerRepo.forEach((type, i) => headersInfo[i].type = type);
+    try {
+      const headersInfo = await this.#arrayOfHeadersInfo(page);
+      const tagsPerRepo = await this.#arraysOfTags(page);
+      const typesPerRepo = tagsPerRepo.map(tags => this.getTypeFromTags(tags));
+      log.info('GithubExploreScrapper tagsPerRepoLength=' + // for debugging
+          tagsPerRepo.length + ' headersInfoLength=' + headersInfo.length);
+      log.info('GithubExploreScrapper typesPerRepoLength=' +
+          typesPerRepo.length + ' headersInfoLength=' + headersInfo.length);
+      typesPerRepo.forEach((type, i) => headersInfo[i].type = type);
+      this.#outputObject = headersInfo;
 
-    this.#outputObject = headersInfo;
+    } catch (error) {
+      console.error('github explore error: ' + error);
+    }
+ 
   };
 
   async #extractAmountOfResults(page) {
