@@ -25,7 +25,7 @@ export default class GoogleTrendsScrapper {
     this.#interestsPerTerm = {};
     const toURL = (queryString) => {
         const PROCESSED = queryString.toLowerCase();
-        return 'https://trends.google.es/trends/explore?date=today%205-y&geo=ES&q='
+        return 'https://trends.google.es/trends/explore?date=today%205-y&q='
             + PROCESSED + '&hl=es';
       };
 
@@ -62,7 +62,7 @@ export default class GoogleTrendsScrapper {
           .locator('widget')
           .filter({ hasText: 'Interés a lo largo del tiempo' })
           .getByTitle('CSV');
-
+      
       async function getDownload() {
         const downloadPromise = page.waitForEvent('download');
         await downloadCSVButton.click();
