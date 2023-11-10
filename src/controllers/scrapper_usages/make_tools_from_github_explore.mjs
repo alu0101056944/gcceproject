@@ -22,14 +22,17 @@ export default async function makeToolsFromGithubExplore(topicNames) {
     const scrapper = new GithubExploreScrapper(`https://github.com/topics/${specialization}`);
     const output = await scrapper.run();
     if (output.forEach) {
-      output.forEach((entry) => tableObject.push({
-        name: entry.name.toLowerCase(),
-        author_company: entry.author_company,
-        specialization,
-        type: entry.type,
-      }));
+      output.forEach((entry) => {
+          tableObject.push({
+              name: entry.name.toLowerCase(),
+              author_company: entry.author_company,
+              specialization,
+              type: entry.type,
+            });
 
-      urlsObject[entry.name] = entry.url;
+          urlsObject[entry.name] = entry.url;
+        });
+
     }
   }
   return { tableObject, urlsObject, };

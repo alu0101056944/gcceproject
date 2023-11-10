@@ -56,33 +56,28 @@ export default class GoogleTrendsScrapper {
   async #myHandler({ page, request, response }) {
     log.info('GoogleTrendsScrapper visited page: ' + request.url +
         ` (has visited ${this.#amountOfVisited++} pages)`);
-    page.setDefaultTimeout(7000);
 
     if (response.status() !== 429) {
-      const downloadCSVButton = page.locator('widget')
+      const downloadCSVButton = page
+          .locator('widget')
           .filter({ hasText: 'Interés a lo largo del tiempo' })
           .getByTitle('CSV');
 
       async function getDownload() {
-        try {
-          const downloadPromise =
-            page.waitForEvent('download');
-          await downloadCSVButton.click({ timeout: 3000 });
-          const downloadObject = await downloadPromise;
-          const DOWNLOADED_FILE_PATH = await downloadObject.path();
-          const FILE_CONTENT = await readFile(DOWNLOADED_FILE_PATH, 'utf-8');
-          return FILE_CONTENT;
-        } catch (error) {
-          log.error('GoogleTrendsScrapper Download error: ' + error);
-          log.info('-------------------------');
-        }
+        const downloadPromise = page.waitForEvent('download');
+        await downloadCSVButton.click();
+        const downloadObject = await downloadPromise;
+        const DOWNLOADED_FILE_PATH = await downloadObject.path();
+        const FILE_CONTENT = await readFile(DOWNLOADED_FILE_PATH, 'utf-8');
+        return FILE_CONTENT;
       };
 
-      const FILE_CONTENT = await getDownload();
-      if (FILE_CONTENT) {
-        log.info('GoogleTrendsScrapper could download file.');
+      try {
+        const FILE_CONTENT = await getDownload();
+
         const arrayOfInterests = [];
         const MAX_SIZE_OF_INTERESTS_ARRAY = 5; // I just want the latest interests
+
         const EXTRACT_TODAY_REG_EXP =
             /(?<year>\d\d\d\d)-(?<month>\d\d)-(?<day>\d\d),(?<interest>\d+)/g;
         let execResult;
@@ -95,16 +90,15 @@ export default class GoogleTrendsScrapper {
             arrayOfInterests.push(INTEREST);
           }
         }
+
         this.#interestsPerTerm[request.label] =
             arrayOfInterests.reduce((acc, current) => acc + current, 0);
-      } else {
-        log.error('Error');
+      } catch (error) {
+        info.error('GoogleTrendsScrapper could not get interest.');
       }
     }
 
-    if (!this.#interestsPerTerm[request.label]) {
-      this.#interestsPerTerm[request.label] = null;
-    }
+    this.#interestsPerTerm[request.label] ??= null;
   }
 
   getOutputObject() {

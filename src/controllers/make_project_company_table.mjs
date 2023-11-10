@@ -6,9 +6,12 @@
 
 'use strict';
 
-import makeToolsFromGithubExplore from './scrapper_usages/add_tool_entries_to_table.mjs'
+import makeToolsFromGithubExplore from './scrapper_usages/make_tools_from_github_explore.mjs'
 
-export default async function makeProjectCompany() {
+import { inspect } from 'util';
+
+// assumes companyTable names are github compatible names (without spaces)
+export default async function makeProjectCompany(companyTable, projectTable) {
   const specializations = [
     'frontend',
     // 'backend',
@@ -16,4 +19,17 @@ export default async function makeProjectCompany() {
     // 'devops',
   ];
   const { urlsObject } = (await makeToolsFromGithubExplore(specializations));
+  
+  const nameAuthorPairs = [];
+  for (const url of Object.getOwnPropertyNames(urlsObject)) {
+    const [ _, author_company, name ] = /github.com\/(.*?)\/(.*?)\//.exec(url);
+    nameAuthorPairs.push({ author_company, name });
+  }
+
+  for (const pairObject of nameAuthorPairs) {
+
+    const project_id = url
+
+  }
 };
+
