@@ -8,7 +8,17 @@
 
 import makeToolsFromGithubExplore from './scrapper_usages/make_tools_from_github_explore.mjs'
 
+import getCommitAmount from '../routes/get_repository_commit_amount.mjs';
+
 import { inspect } from 'util';
+
+async function getContributorAmount(authorCompany, name) {
+  const API_URL =
+      `https://api.github.com/repos/${authorCompany}/${name}/contributors`;
+  const response = await fetch(API_URL);
+  const allContributors = await response.json();
+  return allContributors.length;
+}
 
 // assumes companyTable names are github compatible names (without spaces)
 export default async function makeProjectCompanyTable(companyTable, projectTable) {
@@ -28,12 +38,16 @@ export default async function makeProjectCompanyTable(companyTable, projectTable
     author_companies.add(AUTHOR_COMPANY);
   }
 
-  const authorCompanyIds = {};
+  const authorCompaniesIdAndName = []; // All I use is the index later, so not obj.
   for (const companyObject of companyTable) {
     if (author_companies.has(companyObject.name)) {
-      authorCompanyIds[companyObject.author_company] = companyObject.company_id;
+      authorCompaniesIdAndName.push(
+        { // I need the name later so push object.
+          company_id: companyObject.company_id,
+          name: companyObject.name,
+        });
     } else {
-      authorCompanyIds[companyObject.name] = null;
+      authorCompaniesIdAndName.push(null);
     }
   }
 
@@ -46,20 +60,30 @@ export default async function makeProjectCompanyTable(companyTable, projectTable
     }
   }
 
+  // WIP: maeke the input for the getCommitAmount function.
+
+  const allCommitAmount =
+      getCommitAmount(names.map(name => {
+            return {
+              authorCompany: 
+            };
+          }));
+
   const projectCompanyTable = [];
   if (names.length != author_companies.length) {
     throw new Error('Error when extracting author/name repo from url;' +
       'different lengths')
   }
-  const allAuthorCompanyIds = Array.from(authorCompanyIds);
-  names.forEach((name, i) => {
-        projectCompanyTable.push({
-              project_id: namesIds[name],
-              company_id: allAuthorCompanyIds[i],
-            });
-      });
+  for (const [index, name] of names.entries()) {
+    const allProjectContributors =
+        await getContributorAmount(authorCompaniesIdAndName[index].name, name);
 
-  // needs budget
+    projectCompanyTable.push({
+        project_id: namesIds[name],
+        company_id: authorCompaniesIdAndName[index].company_id,
+        budget: 
+      });
+  }
 
   // needs amount of employees assigned.
 
