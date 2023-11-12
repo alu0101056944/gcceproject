@@ -13,6 +13,8 @@ import makeCommunityTable from './make_community_table.mjs';
 import makeCompanyTable from './make_company_table.mjs';
 import makeProjectTable from './make_project_table.mjs';
 import makeMarketTable from './make_market_table.mjs';
+import makeProjectCompany from './make_project_company_table.mjs';
+
 import { inspect } from 'util';
 
 // export default async function insertAllTables() {
@@ -27,31 +29,85 @@ export default async function insertAllTables() {
   await db.none('DELETE FROM $1:raw', ['company']);
   const employeeTable = await makeEmployeeTable();
   const insertEmployeeTable =
-      pgp.helpers.insert(employeeTable,
-        ['employee_id', 'name', 'title', 'department'], 'employee');
+      pgp.helpers.insert(
+          employeeTable,
+          [
+            'employee_id',
+            'name',
+            'title',
+            'department'
+          ],
+          'employee'
+        );
 
-  // const toolTable = await makeToolTable();
-  // const insertToolTable =
-  //     pgp.helpers.insert(toolTable,
-  //       ['tool_id', 'name', 'author_company', 'type', 'specialization'], 'tool');
+  const toolTable = await makeToolTable();
+  const insertToolTable =
+      pgp.helpers.insert(
+          toolTable,
+          [
+            'tool_id',
+            'name',
+            'author_company',
+            'type',
+            'specialization'
+          ],
+          'tool'
+        );
 
-  // const communityTable = await makeCommunityTable();
-  // const insertCommunityTable =
-  //     pgp.helpers.insert(communityTable,
-  //       ['community_id', 'name', 'type'], 'community');
+  const communityTable = await makeCommunityTable();
+  const insertCommunityTable =
+      pgp.helpers.insert(
+          communityTable,
+          [
+            'community_id',
+            'name',
+            'type'
+          ],
+          'community'
+        );
 
   const companyTable = await makeCompanyTable();
-  console.log(inspect(companyTable));
+  // console.log(inspect(companyTable));
   const insertCompanyTable =
-      pgp.helpers.insert(companyTable,
-        ['company_id', 'name', 'employee_amount', 'amount_of_searches', 'type'],
-            'company');
+      pgp.helpers.insert(
+          companyTable,
+          [
+            'company_id',
+            'name',
+            'employee_amount',
+            'amount_of_searches',
+            'type'
+          ],
+          'company'
+        );
 
-  // const projectTable = await makeProjectTable();
-  // const insertProjectTable =
-  //     pgp.helpers.insert(projectTable,
-  //       ['project_id', 'project_name', 'downloads', 'contributors', 'searches'],
-  //           'project');
+  const projectTable = await makeProjectTable();
+  const insertProjectTable =
+      pgp.helpers.insert(
+          projectTable,
+          [
+            'project_id',
+            'project_name',
+            'downloads',
+            'contributors',
+            'searches'
+          ],
+          'project'
+        );
+
+  const projectCompanyTable =
+      await makeProjectCompany(companyTable, projectTable);
+  const insertProjectCompanyTable =
+      pgp.helpers.insert(
+          projectTable,
+          [
+            'project_id',
+            'company_id',
+            'budget',
+            'amount_of_employees_assigned'
+          ],
+          'project_company'
+        );
 
   // const marketTable = await makeMarketTable();
   // const insertMarketTable =
