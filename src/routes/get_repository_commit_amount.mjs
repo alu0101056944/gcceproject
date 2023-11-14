@@ -11,13 +11,13 @@
 import NamesToURLScrapper from '../../routes/names-to-urls-scrapper.mjs';
 
 /**
- * @param {array} allRepositoryInfo where each entry is an object with
+ * @param {array} allRepository where each entry is an object with
  *    authorCompany and name properties.
  * @return {object} where keys are repo names and values are numbers for
  *    the commit amount.
  */
-export default async function getCommitAmount(allRepositoryInfo) {
-  const names = allRepositoryInfo
+export default async function getCommitAmount(allRepository) {
+  const names = allRepository
       .map(object => `${object.authorCompany}/${object.name}`);
   const URL_PREFIX = 'https://github.com/';
   const URL_POSTFIX = '';
@@ -40,10 +40,7 @@ export default async function getCommitAmount(allRepositoryInfo) {
             AMOUNT_OF_COMMITS_STRING.trim().replace(/,/g, '');
         const AMOUNT_OF_COMMITS = parseInt(AMOUNT_OF_COMMITS_PROCESSED);
 
-        if (!outputObject[request.label]) {
-          outputObject[request.label] = {}
-        } 
-        outputObject[request.label].commits = AMOUNT_OF_COMMITS;
+        outputObject[request.label] = { commits: AMOUNT_OF_COMMITS }
       },
   );
   scrapperRepositoryInfo.create();
