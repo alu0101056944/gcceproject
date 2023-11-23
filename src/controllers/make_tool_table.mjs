@@ -9,12 +9,12 @@
 
 import { readFile, writeFile } from 'fs/promises'
 
-import makeToolsFromGithubExplore from './scrapper_usages/make_tools_from_github_explore.mjs';
+import makeToolsTableWithoutIdFromGithubExploreScrapper from './scrapper_usages/make_tools_from_github_explore.mjs';
 
 // import { inspect } from 'util';
 
 export default async function makeToolTable() {
-  const { tableObject } = await makeToolsFromGithubExplore(['frontend']);
+  const { tableObject } = await makeToolsTableWithoutIdFromGithubExploreScrapper(['frontend']);
   let toolId = 1;
   tableObject.forEach(record => record.tool_id = toolId++);
 

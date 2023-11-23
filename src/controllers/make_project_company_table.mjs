@@ -6,7 +6,7 @@
 
 'use strict';
 
-import makeToolsFromGithubExplore from './scrapper_usages/make_tools_from_github_explore.mjs'
+import makeToolsTableWithoutIdFromGithubExploreScrapper from './scrapper_usages/make_tools_from_github_explore.mjs'
 
 import getCommitAmount from '../routes/get_repository_commit_amount.mjs';
 
@@ -28,40 +28,41 @@ export default async function makeProjectCompanyTable(companyTable, projectTable
     // 'embedded',
     // 'devops',
   ];
-  const { urlsObject } = (await makeToolsFromGithubExplore(specializations));
+  const { repoNameToURL } =
+      (await makeToolsTableWithoutIdFromGithubExploreScrapper(specializations));
 
-  const names = new Set();
-  const author_companies = new Set();
-  for (const url of Object.getOwnPropertyNames(urlsObject)) {
+  const allRepoName = new Set();
+  const allAuthorCompany = new Set();
+  for (const url of Object.getOwnPropertyNames(repoNameToURL)) {
     const [ _, AUTHOR_COMPANY, NAME ] = /github.com\/(.*?)\/(.*?)\//.exec(url);
-    names.add(NAME);
-    author_companies.add(AUTHOR_COMPANY);
+    allRepoName.add(NAME);
+    allAuthorCompany.add(AUTHOR_COMPANY);
   }
 
-  const authorCompaniesIdAndName = []; // All I use is the index later, so not obj.
-  for (const companyObject of companyTable) {
-    if (author_companies.has(companyObject.name)) {
-      authorCompaniesIdAndName.push(
+  const allAuthorCompanyIdAndName = []; // All I use is the index later, so not obj.
+  for (const companyRecord of companyTable) {
+    if (allAuthorCompany.has(companyRecord.name)) {
+      allAuthorCompanyIdAndName.push(
         { // I need the name later so push object.
-          company_id: companyObject.company_id,
-          name: companyObject.name,
+          company_id: companyRecord.company_id,
+          name: companyRecord.name,
         });
     } else {
-      authorCompaniesIdAndName.push(null);
+      allAuthorCompanyIdAndName.push(null);
     }
   }
 
-  const namesIds = {};
-  for (const projectInfo of projectTable) {
-    if (names.has(projectInfo.project_name)) {
-      namesIds[projectInfo.project_name] = projectInfo.project_id;
+  const repoNameToId = {};
+  for (const projectRecord of projectTable) {
+    if (allRepoName.has(projectRecord.project_name)) {
+      repoNameToId[projectRecord.project_name] = projectRecord.project_id;
     } else {
-      namesIds[projectInfo.project_name] = null;
+      repoNameToId[projectRecord.project_name] = null;
     }
   }
 
   const allCommitAmount =
-      getCommitAmount(names.map((name, index) => {
+      getCommitAmount(allRepoName.map((name, index) => {
             return {
               authorCompany: authorCompaniesIdAndName[index].name,
               name,
@@ -69,7 +70,7 @@ export default async function makeProjectCompanyTable(companyTable, projectTable
           }));
 
   const projectCompanyTable = [];
-  if (names.length != author_companies.length) {
+  if (allRepoName.length != allAuthorCompany.length) {
     throw new Error('Error when extracting author/name repo from url;' +
       'different lengths')
   }
@@ -79,7 +80,7 @@ export default async function makeProjectCompanyTable(companyTable, projectTable
     
 
     projectCompanyTable.push({
-        project_id: namesIds[name],
+        project_id: repoNameToId[name],
         company_id: authorCompaniesIdAndName[index].company_id,
         budget: allProjectContributors.length * 
       });

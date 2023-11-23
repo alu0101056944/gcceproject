@@ -9,7 +9,7 @@
 
 import { readFile, writeFile } from 'fs/promises'
 
-import makeToolsFromGithubExplore from './scrapper_usages/make_tools_from_github_explore.mjs';
+import makeToolsTableWithoutIdFromGithubExploreScrapper from './scrapper_usages/make_tools_from_github_explore.mjs';
 
 import CompaniesmarketcapScrapper from "../routes/companiesmarketcap-scrapper.mjs";
 import CompaniesmarketcapProfileScrapper from '../routes/companiesmarketcap-profile-scrapper.mjs';
@@ -24,7 +24,7 @@ export default async function makeCompanyTable() {
     // 'embedded',
     // 'devops',
   ];
-  const recordsGithub = (await makeToolsFromGithubExplore(specializations));
+  const recordsGithub = (await makeToolsTableWithoutIdFromGithubExploreScrapper(specializations));
   let companyId = 1;
   recordsGithub.forEach(record => {
         record.company_id = companyId++

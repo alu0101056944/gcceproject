@@ -9,7 +9,7 @@
 
 import { readFile, writeFile } from 'fs/promises'
 
-import makeToolsFromGithubExplore from './scrapper_usages/make_tools_from_github_explore.mjs';
+import makeToolsTableWithoutIdFromGithubExploreScrapper from './scrapper_usages/make_tools_from_github_explore.mjs';
 import getDownloadsPerPackage from './scrapper_usages/add_downloads_to_table.mjs';
 
 import { inspect } from 'util';
@@ -26,7 +26,7 @@ export default async function makeProjectTable() {
     // 'embedded',
     // 'devops',
   ];
-  const { tableObject } = await makeToolsFromGithubExplore(specializations);
+  const { tableObject } = await makeToolsTableWithoutIdFromGithubExploreScrapper(specializations);
   let projectId = 1;
   tableObject.forEach(
         record => {
