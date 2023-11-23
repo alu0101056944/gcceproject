@@ -5,7 +5,7 @@
   "main": "src/index.mjs",
   "scripts": {
     "schema": "psql -d raw_database -a -f /home/usuario/gcce/gcceproject/src/models/create_tables.sql",
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --verbose"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "type": "module",
   "keywords": [],

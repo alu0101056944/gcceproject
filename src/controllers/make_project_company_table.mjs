@@ -60,12 +60,11 @@ export default async function makeProjectCompanyTable(companyTable, projectTable
     }
   }
 
-  // WIP: maeke the input for the getCommitAmount function.
-
   const allCommitAmount =
-      getCommitAmount(names.map(name => {
+      getCommitAmount(names.map((name, index) => {
             return {
-              authorCompany: 
+              authorCompany: authorCompaniesIdAndName[index].name,
+              name,
             };
           }));
 
@@ -77,11 +76,12 @@ export default async function makeProjectCompanyTable(companyTable, projectTable
   for (const [index, name] of names.entries()) {
     const allProjectContributors =
         await getContributorAmount(authorCompaniesIdAndName[index].name, name);
+    
 
     projectCompanyTable.push({
         project_id: namesIds[name],
         company_id: authorCompaniesIdAndName[index].company_id,
-        budget: 
+        budget: allProjectContributors.length * 
       });
   }
 

@@ -1,14 +1,7 @@
 import { inspect } from 'util';
 
-async function myfetch() {
-  const url = 
-    `https://api.github.com/repos/Teidesat/paqueteCommsOBC/commits`;
-  const response = await fetch(url,
-      {
-        headers: {'User-Agent': 'Our script'},
-      });
-  const json = await response.json();
-  console.log(inspect(json));
-}
+import getCommitAmount from './src/routes/get_repository_commit_amount.mjs';
 
-myfetch();
+async function print() {
+  const commits = 
+}

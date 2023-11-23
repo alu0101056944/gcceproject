@@ -9,6 +9,7 @@
 'use strict';
 
 import { PlaywrightCrawler, log } from 'crawlee';
+import { inspect } from 'util';
 
 /**
  * Scrapper for NPMJS registry webpage of package.

@@ -8,7 +8,7 @@
 
 'use strict';
 
-import NamesToURLScrapper from '../../routes/names-to-urls-scrapper.mjs';
+import NamesToURLScrapper from './names-to-urls-scrapper.mjs';
 
 /**
  * @param {array} allRepository where each entry is an object with
@@ -31,7 +31,7 @@ export default async function getCommitAmount(allRepository) {
       async ({ page, request, log, outputObject }) => {
         log.info('GithubInfoScrapper visited ' + request.url);
         const commitsLocator = page.locator('span.d-none.d-sm-inline')
-            page.locator('strong');
+            .locator('strong');
         const allcommitsLocator = await commitsLocator.all();
 
         const AMOUNT_OF_COMMITS_STRING =
