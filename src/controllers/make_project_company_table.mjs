@@ -95,19 +95,6 @@ export default async function makeProjectCompanyTable(companyTable, projectTable
       // @todo: missing amount of employeees
     });
   }
-  for (const [index, name] of repoNameToId.entries()) {
-    const allProjectContributors =
-        await getContributorAmount(allAuthorCompanyIdAndName[index].name, name);
-    
-
-    projectCompanyTable.push({
-        project_id: repoNameToId[name],
-        company_id: allAuthorCompanyIdAndName[index].company_id,
-        budget: allProjectContributors.length * 
-      });
-  }
-
-  // needs amount of employees assigned.
 
   return projectCompanyTable;
 };
