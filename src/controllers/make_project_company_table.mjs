@@ -20,8 +20,7 @@ async function getContributorAmount(authorCompany, name) {
   return allContributors.length;
 }
 
-// assumes companyTable names are github compatible names (without spaces)
-export default async function makeProjectCompanyTable(companyTable, projectTable) {
+function getInfoFromScrapper() {
   const specializations = [
     'frontend',
     // 'backend',
@@ -29,59 +28,81 @@ export default async function makeProjectCompanyTable(companyTable, projectTable
     // 'devops',
   ];
   const { repoNameToURL } =
-      (await makeToolsTableWithoutIdFromGithubExploreScrapper(specializations));
+      await makeToolsTableWithoutIdFromGithubExploreScrapper(specializations);
 
-  const allRepoName = new Set();
-  const allAuthorCompany = new Set();
+  const allRelation = [];
+  const allUniqueRepoName = new Set();
+  const allUniqueAuthorCompany = new Set();
   for (const url of Object.getOwnPropertyNames(repoNameToURL)) {
     const [ _, AUTHOR_COMPANY, NAME ] = /github.com\/(.*?)\/(.*?)\//.exec(url);
-    allRepoName.add(NAME);
-    allAuthorCompany.add(AUTHOR_COMPANY);
+    allRelation.push({
+          authorCompany: AUTHOR_COMPANY,
+          name: NAME,
+        });
+    allUniqueRepoName.add(NAME);
+    allUniqueAuthorCompany.add(AUTHOR_COMPANY);
   }
 
-  const allAuthorCompanyIdAndName = []; // All I use is the index later, so not obj.
+  return { allRelation, allUniqueRepoName, allUniqueAuthorCompany };
+}
+
+// assumes companyTable names are github compatible names (without spaces)
+export default async function makeProjectCompanyTable(companyTable, projectTable) {
+  const {
+        allRelation,
+        allUniqueRepoName,
+        allUniqueAuthorCompany
+      } = getInfoFromScrapper();
+
+  const authorCompanyToId = {};
   for (const companyRecord of companyTable) {
-    if (allAuthorCompany.has(companyRecord.name)) {
-      allAuthorCompanyIdAndName.push(
-        { // I need the name later so push object.
-          company_id: companyRecord.company_id,
-          name: companyRecord.name,
-        });
+    if (allUniqueAuthorCompany.has(companyRecord.name)) {
+      authorCompanyToId[companyRecord.name] = companyRecord.name;
     } else {
-      allAuthorCompanyIdAndName.push(null);
+      authorCompanyToId[companyRecord.name] = null;
     }
   }
 
   const repoNameToId = {};
   for (const projectRecord of projectTable) {
-    if (allRepoName.has(projectRecord.project_name)) {
+    if (allUniqueRepoName.has(projectRecord.project_name)) {
       repoNameToId[projectRecord.project_name] = projectRecord.project_id;
     } else {
       repoNameToId[projectRecord.project_name] = null;
     }
   }
 
-  const allCommitAmount =
-      getCommitAmount(allRepoName.map((name, index) => {
-            return {
-              authorCompany: authorCompaniesIdAndName[index].name,
-              name,
-            };
-          }));
+  const allCommitAmount = getCommitAmount(allRelation);
 
   const projectCompanyTable = [];
-  if (allRepoName.length != allAuthorCompany.length) {
-    throw new Error('Error when extracting author/name repo from url;' +
-      'different lengths')
+  for (let i = 0; i < allRelation.length; i++) {
+    const REPO_NAME = allRelation[i].name;
+    const AUTHOR_COMPANY_NAME = allRelation[i].authorCompany;
+
+    const PROJECT_CONTRIBUTOR_AMOUNT =
+        getContributorAmount(AUTHOR_COMPANY_NAME, REPO_NAME);
+
+    const AVERAGE_INCOME_PER_HOUR = 37;
+    const ARBITRARY_PROJECT_DURATION_IN_YEARS = 5;
+    const BUDGET_ESTIMATED =
+        PROJECT_CONTRIBUTOR_AMOUNT * AVERAGE_INCOME_PER_HOUR *
+        ARBITRARY_PROJECT_DURATION_IN_YEARS;
+
+    projectCompanyTable.push({
+      project_id: repoNameToId[REPO_NAME],
+      company_id: authorCompanyToId[AUTHOR_COMPANY_NAME],
+      budget: BUDGET_ESTIMATED,
+      // @todo: missing amount of employeees
+    });
   }
-  for (const [index, name] of names.entries()) {
+  for (const [index, name] of repoNameToId.entries()) {
     const allProjectContributors =
-        await getContributorAmount(authorCompaniesIdAndName[index].name, name);
+        await getContributorAmount(allAuthorCompanyIdAndName[index].name, name);
     
 
     projectCompanyTable.push({
         project_id: repoNameToId[name],
-        company_id: authorCompaniesIdAndName[index].company_id,
+        company_id: allAuthorCompanyIdAndName[index].company_id,
         budget: allProjectContributors.length * 
       });
   }
