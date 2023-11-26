@@ -9,7 +9,7 @@
 
 import { readFile, writeFile } from 'fs/promises'
 
-import makeToolsTableWithoutIdFromGithubExploreScrapper from './scrapper_usages/make_tools_from_github_explore.mjs';
+import makeToolsTableWithoutIdFromGithubExploreScrapper from '../../scrapper_usages/make_tools_from_github_explore.mjs';
 
 // import { inspect } from 'util';
 

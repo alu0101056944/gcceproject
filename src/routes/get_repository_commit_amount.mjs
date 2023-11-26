@@ -16,7 +16,7 @@ import NamesToURLScrapper from './names-to-urls-scrapper.mjs';
  * @return {object} where keys are repo names and values are numbers for
  *    the commit amount.
  */
-export default async function getCommitAmount(allRepository) {
+export default async function fetchCommitAmount(allRepository) {
   const names = allRepository
       .map(object => `${object.authorCompany}/${object.name}`);
   const URL_PREFIX = 'https://github.com/';

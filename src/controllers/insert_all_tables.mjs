@@ -7,13 +7,13 @@ const db = pgp({
   max: 20
 });
 
-import makeEmployeeTable from './make_employee_table.mjs';
-import makeToolTable from './make_tool_table.mjs';
-import makeCommunityTable from './make_community_table.mjs';
-import makeCompanyTable from './make_company_table.mjs';
-import makeProjectTable from './make_project_table.mjs';
-import makeMarketTable from './make_market_table.mjs';
-import makeProjectCompany from './make_project_company_table.mjs';
+import makeEmployeeTable from './tables/dimension/make_employee_table.mjs';
+import makeToolTable from './tables/dimension/make_tool_table.mjs';
+import makeCommunityTable from './tables/dimension/make_community_table.mjs';
+import makeCompanyTable from './tables/dimension/make_company_table.mjs';
+import makeProjectTable from './tables/dimension/make_project_table.mjs';
+import makeMarketTable from './tables/dimension/make_market_table.mjs';
+import makeProjectCompany from './tables/fact/make_project_company_table.mjs';
 
 import { inspect } from 'util';
 

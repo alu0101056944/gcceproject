@@ -8,7 +8,7 @@
 
 'use strict';
 
-import GithubDependenciesScrapper from "../routes/github-dependencies-scrapper.mjs";
+import GithubDependenciesScrapper from "../../../routes/github-dependencies-scrapper.mjs";
 
 // import { inspect } from 'util';
 

@@ -6,21 +6,41 @@
 
 'use strict';
 
-import makeToolsTableWithoutIdFromGithubExploreScrapper from './scrapper_usages/make_tools_from_github_explore.mjs'
-
-import getCommitAmount from '../routes/get_repository_commit_amount.mjs';
+import makeToolsTableWithoutIdFromGithubExploreScrapper from '../../scrapper_usages/make_tools_from_github_explore.mjs'
 
 import { inspect } from 'util';
 
-async function getContributorAmount(authorCompany, name) {
-  const API_URL =
-      `https://api.github.com/repos/${authorCompany}/${name}/contributors`;
-  const response = await fetch(API_URL);
-  const allContributors = await response.json();
-  return allContributors.length;
+// @todo Use scrapper instead, it's probably faster than doing many api requests.
+async function fetchContributorAmount(authorCompany, repoName) {
+  async function* fetchContributors() {
+    let url =
+        `https://api.github.com/repos/${authorCompany}/${repoName}/contributors`;
+    while (url) {
+      const response = await fetch(url, {
+            headers: {
+              'User-Agent': 'Our script',
+              Authorization: `Bearer ${process.env.GITHUB_TOKEN}`
+            }
+          });
+  
+      const body = await response.json();
+      yield body.length;
+  
+      const ALL_LINKS_STRING = response.headers.get('Link');
+      const EXTRACT_NEXT_URL_REG_EXP = /<([^\s]+?)>; rel="next"/;
+      url = ALL_LINKS_STRING?.match(EXTRACT_NEXT_URL_REG_EXP)?.[1];
+    }
+  }
+
+  const iterator = fetchContributors(repoName);
+  let count = 0;
+  for await (const partialAmount of iterator) {
+    count += partialAmount;
+  }
+  return count === 0 ? null : count;
 }
 
-function getInfoFromScrapper() {
+async function fetchInfoUsingScrapper() {
   const specializations = [
     'frontend',
     // 'backend',
@@ -52,7 +72,7 @@ export default async function makeProjectCompanyTable(companyTable, projectTable
         allRelation,
         allUniqueRepoName,
         allUniqueAuthorCompany
-      } = getInfoFromScrapper();
+      } = await fetchInfoUsingScrapper();
 
   const authorCompanyToId = {};
   for (const companyRecord of companyTable) {
@@ -72,15 +92,13 @@ export default async function makeProjectCompanyTable(companyTable, projectTable
     }
   }
 
-  const allCommitAmount = getCommitAmount(allRelation);
-
   const projectCompanyTable = [];
   for (let i = 0; i < allRelation.length; i++) {
     const REPO_NAME = allRelation[i].name;
-    const AUTHOR_COMPANY_NAME = allRelation[i].authorCompany;
+    const AUTHOR_COMPANY = allRelation[i].authorCompany;
 
     const PROJECT_CONTRIBUTOR_AMOUNT =
-        getContributorAmount(AUTHOR_COMPANY_NAME, REPO_NAME);
+        fetchContributorAmount(AUTHOR_COMPANY, REPO_NAME);
 
     const AVERAGE_INCOME_PER_HOUR = 37;
     const ARBITRARY_PROJECT_DURATION_IN_YEARS = 5;
@@ -90,9 +108,9 @@ export default async function makeProjectCompanyTable(companyTable, projectTable
 
     projectCompanyTable.push({
       project_id: repoNameToId[REPO_NAME],
-      company_id: authorCompanyToId[AUTHOR_COMPANY_NAME],
+      company_id: authorCompanyToId[AUTHOR_COMPANY],
       budget: BUDGET_ESTIMATED,
-      // @todo: missing amount of employeees
+      amount_of_employees_assigned: PROJECT_CONTRIBUTOR_AMOUNT,
     });
   }
 
