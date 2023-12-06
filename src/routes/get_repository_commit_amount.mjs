@@ -16,34 +16,33 @@ import NamesToURLScrapper from './names-to-urls-scrapper.mjs';
  * @return {object} where keys are repo names and values are numbers for
  *    the commit amount.
  */
-export default async function fetchCommitAmount(allRepository) {
-  const names = allRepository
-      .map(object => `${object.authorCompany}/${object.name}`);
+export default async function fetchAllCommitAmount(allRepoInfo) {
+  const allPartialURL =
+      allRepoInfo.map(info => `${info.authorCompany}/${info.name}`);
   const URL_PREFIX = 'https://github.com/';
   const URL_POSTFIX = '';
 
   const scrapperRepositoryInfo = new NamesToURLScrapper(
-      {
-        names,
-        preUrl: URL_PREFIX,
-        postUrl: URL_POSTFIX,
-      },
-      async ({ page, request, log, outputObject }) => {
-        log.info('GithubInfoScrapper visited ' + request.url);
-        const commitsLocator = page.locator('span.d-none.d-sm-inline')
-            .locator('strong');
-        const allcommitsLocator = await commitsLocator.all();
+        {
+          allPartialURL,
+          preUrl: URL_PREFIX,
+          postUrl: URL_POSTFIX,
+        },
+        async ({ page, request, log, outputObject }) => {
+          log.info('GithubInfoScrapper visited ' + request.url);
+          const commitAmountLocator = page.locator('span.d-none.d-sm-inline')
+              .locator('strong');
+          const allcommitLocator = await commitAmountLocator.all();
 
-        const AMOUNT_OF_COMMITS_STRING =
-            await allcommitsLocator[1].textContent();
-        const AMOUNT_OF_COMMITS_PROCESSED =
-            AMOUNT_OF_COMMITS_STRING.trim().replace(/,/g, '');
-        const AMOUNT_OF_COMMITS = parseInt(AMOUNT_OF_COMMITS_PROCESSED);
+          const AMOUNT_OF_COMMITS_STRING =
+              await allcommitLocator[1].textContent();
+          const AMOUNT_OF_COMMITS_PROCESSED =
+              AMOUNT_OF_COMMITS_STRING.trim().replace(/,/g, '');
+          const AMOUNT_OF_COMMITS = parseInt(AMOUNT_OF_COMMITS_PROCESSED);
 
-        outputObject[request.label] = { commits: AMOUNT_OF_COMMITS }
-      },
-  );
+          outputObject[request.label] = AMOUNT_OF_COMMITS;
+        },
+      );
   scrapperRepositoryInfo.create();
-  const commitAmountsObject = await scrapperRepositoryInfo.run();
-  return commitAmountsObject;
+  return await scrapperRepositoryInfo.run();
 }

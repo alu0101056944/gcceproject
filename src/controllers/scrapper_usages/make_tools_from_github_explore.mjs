@@ -15,10 +15,10 @@ import GithubExploreScrapper from "../../routes/github-explore-scrapper.mjs";
 //   max: 20
 // });
 
-export default async function makeToolsTableWithoutIdFromGithubExploreScrapper(topicNames) {
+export default async function makeToolsTableWithoutIdFromGithubExploreScrapper(allSpecialization) {
   const allRecord = [];
   const repoNameToURL = {};
-  for (const specialization of topicNames) {
+  for (const specialization of allSpecialization) {
     const scrapper = new GithubExploreScrapper(`https://github.com/topics/${specialization}`);
     const output = await scrapper.run();
     if (output.forEach) {
