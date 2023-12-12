@@ -1,3 +1,4 @@
+# Some notes on web scraping in general
 
 - [Good resource on web scraping (Python but I am interested in the concepts)](https://thepythonscrapyplaybook.com/)
 

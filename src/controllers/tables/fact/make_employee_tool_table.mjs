@@ -1,4 +1,3 @@
-
 /**
  * @author Marcos Barrios
  * @since 03_11_2023
@@ -7,8 +6,6 @@
  */
 
 'use strict';
-
-// import { inspect } from 'util';
 
 function getRandomInt(min, max) {
   min = Math.ceil(min);

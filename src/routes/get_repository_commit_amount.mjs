@@ -8,7 +8,7 @@
 
 'use strict';
 
-import NamesToURLScrapper from './names-to-urls-scrapper.mjs';
+import NamesToURLScraper from './scrapers/names-to-urls-scraper.mjs';
 
 /**
  * @param {array} allRepository where each entry is an object with
@@ -22,14 +22,14 @@ export default async function fetchAllCommitAmount(allRepoInfo) {
   const URL_PREFIX = 'https://github.com/';
   const URL_POSTFIX = '';
 
-  const scrapperRepositoryInfo = new NamesToURLScrapper(
+  const scraperRepositoryInfo = new NamesToURLScraper(
         {
           allPartialURL,
           preUrl: URL_PREFIX,
           postUrl: URL_POSTFIX,
         },
         async ({ page, request, log, outputObject }) => {
-          log.info('GithubInfoScrapper visited ' + request.url);
+          log.info('GithubInfoScraper visited ' + request.url);
           const commitAmountLocator = page.locator('span.d-none.d-sm-inline')
               .locator('strong');
           const allcommitLocator = await commitAmountLocator.all();
@@ -43,6 +43,6 @@ export default async function fetchAllCommitAmount(allRepoInfo) {
           outputObject[request.label] = AMOUNT_OF_COMMITS;
         },
       );
-  scrapperRepositoryInfo.create();
-  return await scrapperRepositoryInfo.run();
+  scraperRepositoryInfo.create();
+  return await scraperRepositoryInfo.run();
 }

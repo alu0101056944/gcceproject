@@ -9,16 +9,14 @@
 
 import { readFile, writeFile } from 'fs/promises'
 
-import makeToolsTableWithoutIdFromGithubExploreScrapper from '../../scrapper_usages/make_tools_from_github_explore.mjs';
-import getDownloadsPerPackage from '../../scrapper_usages/add_downloads_to_table.mjs';
+import makeToolsTableWithoutIdFromGithubExploreScraper from '../../scraper_use_cases/make_tools_from_github_explore.mjs';
+import getDownloadsPerPackage from '../../scraper_use_cases/add_downloads_to_table.mjs';
 
 import { inspect } from 'util';
-import GithubRepositoryScrapper from '../../../routes/github-repository-scrapper.mjs';
-import GoogleTrendsScrapper from '../../../routes/google-trends-scrapper.mjs';
+import GithubRepositoryScraper from '../../../routes/scrapers/github-repository-scraper.mjs';
+import GoogleTrendsScraper from '../../../routes/scrapers/google-trends-scraper.mjs';
 
-/**
- * @todo Logic for when project names are not github project names
- */
+// Update README.md when deciding what to do with all projects are github projects issue
 export default async function makeProjectTable() {
   const specializations = [
     'frontend',
@@ -26,7 +24,7 @@ export default async function makeProjectTable() {
     // 'embedded',
     // 'devops',
   ];
-  const { tableObject } = await makeToolsTableWithoutIdFromGithubExploreScrapper(specializations);
+  const { tableObject } = await makeToolsTableWithoutIdFromGithubExploreScraper(specializations);
   let projectId = 1;
   tableObject.forEach(
         record => {
@@ -54,14 +52,14 @@ export default async function makeProjectTable() {
         }
         return `https://github.com/${AUTHOR_NAME}/${PROJECT_NAME}`;
       });
-  const scrapperOfGithubRepos = new GithubRepositoryScrapper(urlsOfRepositories);
-  const allAmountOfContributors = await scrapperOfGithubRepos.run();
+  const scraperOfGithubRepos = new GithubRepositoryScraper(urlsOfRepositories);
+  const allAmountOfContributors = await scraperOfGithubRepos.run();
   tableObject.forEach((record, i) => {
         record.contributors = allAmountOfContributors[i];
       });
 
-  const scrapperOfTrends = new GoogleTrendsScrapper(projectNames);
-  const interestPerProject = await scrapperOfTrends.run();
+  const scraperOfTrends = new GoogleTrendsScraper(projectNames);
+  const interestPerProject = await scraperOfTrends.run();
   tableObject.forEach((record) => {
         record.searches = interestPerProject[record.name];
       });

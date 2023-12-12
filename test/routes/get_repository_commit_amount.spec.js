@@ -5,7 +5,7 @@ import fetchAllCommitAmount from '../../src/routes/get_repository_commit_amount.
 
 const TIMEOUT_IN_MILLISECONDS = 20000;
 
-describe('Get commit amount NamesToUrlScrapper testing', () => {
+describe('Get commit amount NamesToUrlScraper testing', () => {
   test('Result is correct; Everything is a number', async () => {
     const allRepoInfo = [
         {
