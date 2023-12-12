@@ -9,13 +9,11 @@
 
 import { readFile, writeFile } from 'fs/promises'
 
-import makeToolsTableWithoutIdFromGithubExploreScrapper from '../../scrapper_usages/make_tools_from_github_explore.mjs';
+import makeToolsTableWithoutIdFromGithubExploreScraper from '../../scraper_use_cases/make_tools_from_github_explore.mjs';
 
-import CompaniesmarketcapScrapper from "../../../routes/companiesmarketcap-scrapper.mjs";
-import CompaniesmarketcapProfileScrapper from '../../../routes/companiesmarketcap-profile-scrapper.mjs';
-import GoogleTrendsScrapper from '../../../routes/google-trends-scrapper.mjs';
-
-import { inspect } from 'util';
+import CompaniesmarketcapScraper from "../../../routes/scrapers/companiesmarketcap-scraper.mjs";
+import CompaniesmarketcapProfileScraper from '../../../routes/scrapers/companiesmarketcap-profile-scraper.mjs';
+import GoogleTrendsScraper from '../../../routes/scrapers/google-trends-scraper.mjs';
 
 export default async function makeCompanyTable() {
   const specializations = [
@@ -24,7 +22,7 @@ export default async function makeCompanyTable() {
     // 'embedded',
     // 'devops',
   ];
-  const recordsGithub = (await makeToolsTableWithoutIdFromGithubExploreScrapper(specializations));
+  const recordsGithub = (await makeToolsTableWithoutIdFromGithubExploreScraper(specializations));
   let companyId = 1;
   recordsGithub.forEach(record => {
         record.company_id = companyId++
@@ -34,10 +32,10 @@ export default async function makeCompanyTable() {
         delete record.specialization;
       });
 
-  const scrapperEmployees = new CompaniesmarketcapScrapper();
-  scrapperEmployees.setMaxAmountfPageSurfs(1);
-  await scrapperEmployees.run();
-  const amountsOfEmployeesPerCompany = scrapperEmployees.getOutputObject();
+  const scraperEmployees = new CompaniesmarketcapScraper();
+  scraperEmployees.setMaxAmountfPageSurfs(1);
+  await scraperEmployees.run();
+  const amountsOfEmployeesPerCompany = scraperEmployees.getOutputObject();
   recordsGithub.forEach(record => {
     if (amountsOfEmployeesPerCompany[record.name]) {
       record.employee_amount = amountsOfEmployeesPerCompany[record.name]; 
@@ -48,9 +46,9 @@ export default async function makeCompanyTable() {
 
   const companyNames = Object.getOwnPropertyNames(amountsOfEmployeesPerCompany);
 
-  const scrapperOfProfiles = new CompaniesmarketcapProfileScrapper(companyNames);
-  await scrapperOfProfiles.run();
-  const typePerCompany = scrapperOfProfiles.getOutputObject();
+  const scraperOfProfiles = new CompaniesmarketcapProfileScraper(companyNames);
+  await scraperOfProfiles.run();
+  const typePerCompany = scraperOfProfiles.getOutputObject();
   Object.getOwnPropertyNames(typePerCompany)
       .forEach(nameWithSpaces => {
         const NAME_WITHOUT_SPACES = nameWithSpaces.replace(/\s/g, '');
@@ -65,13 +63,13 @@ export default async function makeCompanyTable() {
   });
 
   companyNames.unshift('foo'); // first search always fails so add arbitrary
-  const scrapperTrends = new GoogleTrendsScrapper(companyNames);
+  const scraperTrends = new GoogleTrendsScraper(companyNames);
   let interestPerCompany;
   try {
-    interestPerCompany = await scrapperTrends.run();
+    interestPerCompany = await scraperTrends.run();
   } catch (error) {
     console.log('An error has taken place on the run() of the google trends' +
-        'scrapper' + error.message);
+        'scraper' + error.message);
     interestPerCompany = {};
   }
 

@@ -1,4 +1,3 @@
-
 /**
  * @author Marcos Barrios
  * @since 03_11_2023
@@ -8,9 +7,7 @@
 
 'use strict';
 
-import GithubDependenciesScrapper from "../../../routes/github-dependencies-scrapper.mjs";
-
-// import { inspect } from 'util';
+import GithubDependenciesScraper from "../../../routes/scrapers/github-dependencies-scraper.mjs";
 
 /**
  * @param {array} toolTable ready for database insertion
@@ -19,15 +16,13 @@ import GithubDependenciesScrapper from "../../../routes/github-dependencies-scra
 export default async function makeProjectToolTable(toolTable/*, projectTable*/) {
   const table = [];
 
-  // @todo Diferentiate tool from project
-
   // For now I just check if the dependency is in the tool table.
   // if it's not then nothing.
 
-  const scrapperOfDependencies = new GithubDependenciesScrapper(toolTable);
-  scrapperOfDependencies.setOutputLength(20);
-  scrapperOfDependencies.setMaxAmountOfPageSurfs(20);
-  const dependenciesPerTool = await scrapperOfDependencies.run();
+  const scraperOfDependencies = new GithubDependenciesScraper(toolTable);
+  scraperOfDependencies.setOutputLength(20);
+  scraperOfDependencies.setMaxAmountOfPageSurfs(20);
+  const dependenciesPerTool = await scraperOfDependencies.run();
 
   for (const toolInfo of toolTable) {
     for (const dependency of dependenciesPerTool[toolInfo.name]) {

@@ -6,11 +6,9 @@
 
 'use strict';
 
-import makeToolsTableWithoutIdFromGithubExploreScrapper from '../../scrapper_usages/make_tools_from_github_explore.mjs'
+import makeToolsTableWithoutIdFromGithubExploreScraper from '../../scraper_use_cases/make_tools_from_github_explore.mjs'
 
-import { inspect } from 'util';
-
-// @todo Use scrapper instead, it's probably faster than doing many api requests.
+// Update README.md if changed to scraper usage instead of api calls.
 async function fetchContributorAmount(authorCompany, repoName) {
   async function* fetchContributors() {
     let url =
@@ -40,7 +38,7 @@ async function fetchContributorAmount(authorCompany, repoName) {
   return count === 0 ? null : count;
 }
 
-async function fetchInfoUsingScrapper() {
+async function fetchInfoUsingScraper() {
   const specializations = [
     'frontend',
     // 'backend',
@@ -48,7 +46,7 @@ async function fetchInfoUsingScrapper() {
     // 'devops',
   ];
   const { repoNameToURL } =
-      await makeToolsTableWithoutIdFromGithubExploreScrapper(specializations);
+      await makeToolsTableWithoutIdFromGithubExploreScraper(specializations);
 
   const allRelation = [];
   const allUniqueRepoName = new Set();
@@ -72,7 +70,7 @@ export default async function makeProjectCompanyTable(companyTable, projectTable
         allRelation,
         allUniqueRepoName,
         allUniqueAuthorCompany
-      } = await fetchInfoUsingScrapper();
+      } = await fetchInfoUsingScraper();
 
   const authorCompanyToId = {};
   for (const companyRecord of companyTable) {

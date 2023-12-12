@@ -1,4 +1,3 @@
-
 /**
  * @author Marcos Barrios
  * @since 03_11_2023
@@ -8,7 +7,6 @@
 
 'use strict';
 
-// import { inspect } from 'util';
 import { readFile, writeFile } from 'fs/promises'
 
 export default async function makeMarketTable() {
