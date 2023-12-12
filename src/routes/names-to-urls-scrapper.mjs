@@ -9,6 +9,7 @@
 'use strict';
 
 import { PlaywrightCrawler, log } from 'crawlee';
+import { inspect } from 'util';
 
 /**
  * Scrapper for NPMJS registry webpage of package.
@@ -44,7 +45,7 @@ export default class NamesToURLScrapper {
     this.#urlsInfo = options.names.map((name) => {
       return {
         url: toURL(name),
-        label: name
+        label: name,
       };
     });
   }
@@ -58,7 +59,7 @@ export default class NamesToURLScrapper {
         closeInactiveBrowserAfterSecs: 100000,
         operationTimeoutSecs: 100000,
       },
-      requestHandler: this.#myHandler(),
+      requestHandler: this.#createMyHandler(),
       retryOnBlocked: true,
       maxConcurrency: 2,
       sessionPoolOptions: {
@@ -67,16 +68,16 @@ export default class NamesToURLScrapper {
     });
   }
 
-  #myHandler() {
+  #createMyHandler() {
     const callback = this.#callback;
     const outputObject = this.#outputObject;
     return async (requestOptions) => {
       requestOptions.page.setDefaultTimeout(5000);
       await callback({
-        ...requestOptions,
-        outputObject,
-        log,
-      });
+            ...requestOptions,
+            outputObject,
+            log,
+          });
     }
   };
 

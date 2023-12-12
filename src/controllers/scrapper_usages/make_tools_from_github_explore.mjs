@@ -15,25 +15,25 @@ import GithubExploreScrapper from "../../routes/github-explore-scrapper.mjs";
 //   max: 20
 // });
 
-export default async function makeToolsFromGithubExplore(topicNames) {
-  const tableObject = [];
-  const urlsObject = {};
-  for (const specialization of topicNames) {
+export default async function makeToolsTableWithoutIdFromGithubExploreScrapper(allSpecialization) {
+  const allRecord = [];
+  const repoNameToURL = {};
+  for (const specialization of allSpecialization) {
     const scrapper = new GithubExploreScrapper(`https://github.com/topics/${specialization}`);
     const output = await scrapper.run();
     if (output.forEach) {
       output.forEach((entry) => {
-          tableObject.push({
+          allRecord.push({
               name: entry.name.toLowerCase(),
               author_company: entry.author_company,
               specialization,
               type: entry.type,
             });
 
-          urlsObject[entry.name] = entry.url;
+          repoNameToURL[entry.name] = entry.url;
         });
 
     }
   }
-  return { tableObject, urlsObject, };
+  return { allRecord, repoNameToURL, };
 }

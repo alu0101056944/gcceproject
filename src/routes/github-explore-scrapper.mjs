@@ -39,7 +39,7 @@ export default class GithubExploreScrapper {
 
   async #myHandler({ page, infiniteScroll}) {
     const topicTitleContainer =
-        await page.waitForSelector('.gutter-md .d-flex.flex-1 .h1')
+        await page.waitForSelector('.gutter-md .d-flex.flex-1 .h1');
     const topicTitleHandler = await topicTitleContainer.textContent();
     const topicTitle = topicTitleHandler.trim();
     console.log('Title: ' + topicTitle);
