@@ -4,8 +4,9 @@
  * @description Make and insert all tables into the postgresql database.
  */
 
-// import pgPromise from 'pg-promise';
 import { writeFile } from 'fs/promises';
+
+// import pgPromise from 'pg-promise';
 
 import makeEmployeeTable from './tables/dimension/make_employee_table.mjs';
 import makeToolTable from './tables/dimension/make_tool_table.mjs';

@@ -7,8 +7,6 @@
 
 'use strict';
 
-import { readFile, writeFile } from 'fs/promises'
-
 import makeToolsTableWithoutIdFromGithubExploreScraper from '../../scraper_use_cases/make_tools_from_github_explore.mjs';
 import getDownloadsPerPackage from '../../scraper_use_cases/add_downloads_to_table.mjs';
 
@@ -70,7 +68,7 @@ export default async function makeProjectTable() {
 
   const FILE_CONTENT = await readFile('./src/persistent_ids.json', 'utf8');
   const persistentIds = JSON.parse(FILE_CONTENT);
-  persistentIds.tool = tableObject.length;
+  persistentIds.project += tableObject.length;
   const TO_JSON = JSON.stringify(persistentIds, null, 2);
   await writeFile('./src/persistent_ids.json', TO_JSON);
 

@@ -19,7 +19,7 @@ export default async function makeToolTable() {
 
   const FILE_CONTENT = await readFile('./src/persistent_ids.json', 'utf8');
   const persistentIds = JSON.parse(FILE_CONTENT);
-  persistentIds.tool = allRecord.length;
+  persistentIds.tool += allRecord.length;
   const TO_JSON = JSON.stringify(persistentIds, null, 2);
   await writeFile('./src/persistent_ids.json', TO_JSON);
 
