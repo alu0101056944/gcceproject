@@ -23,8 +23,9 @@ export default async function makeMarketTable() {
 
   persistentIds.market = 0;
   for (const _ of markets) {
+    persistentIds.market++;
     table.push({
-      market_id: ++persistentIds.market,
+      market_id: persistentIds.market,
     });
   }
 

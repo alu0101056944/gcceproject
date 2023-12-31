@@ -1,7 +1,10 @@
 {
   "employee": 20,
-  "tool": 20,
-  "date": 0,
+  "tool": 0,
+  "date": {
+    "id": 0,
+    "lastUpdateDate": "0000-00-00"
+  },
   "community": 1,
   "company": 1,
   "project": 1,

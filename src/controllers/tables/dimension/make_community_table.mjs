@@ -7,7 +7,7 @@
 
 'use strict';
 
-import { readFile, writeFile } from 'fs/promises'
+import { readFile, writeFile } from 'fs/promises';
 
 export default async function makeCommunityTable() {
   const records = [
