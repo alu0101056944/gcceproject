@@ -9,6 +9,7 @@
 'use strict';
 
 import NamesToURLScraper from './scrapers/names-to-urls-scraper.mjs';
+import util from 'util';
 
 /**
  * @param {array} allRepository where each entry is an object with
@@ -30,15 +31,16 @@ export default async function fetchAllCommitAmount(allRepoInfo) {
         },
         async ({ page, request, log, outputObject }) => {
           log.info('GithubInfoScraper visited ' + request.url);
-          const commitAmountLocator = page.locator('span.d-none.d-sm-inline')
-              .locator('strong');
-          const allcommitLocator = await commitAmountLocator.all();
+          const commitTextRegExp = /(\d+?\,\d+?)\s*Commits/i;
+          const commitAmountLocator = page.getByRole('link')
+              .getByText(commitTextRegExp);
 
           const AMOUNT_OF_COMMITS_STRING =
-              await ((allcommitLocator[1]).textContent());
-          const AMOUNT_OF_COMMITS_PROCESSED =
-              AMOUNT_OF_COMMITS_STRING.trim().replace(/,/g, '');
-          const AMOUNT_OF_COMMITS = parseInt(AMOUNT_OF_COMMITS_PROCESSED);
+              (await commitAmountLocator.textContent())
+              .match(commitTextRegExp)[1]
+              .trim()
+              .replace(/,/g, '');
+          const AMOUNT_OF_COMMITS = parseInt(AMOUNT_OF_COMMITS_STRING);
 
           outputObject[request.label] = AMOUNT_OF_COMMITS;
         },
