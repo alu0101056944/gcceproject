@@ -19,3 +19,7 @@ A business intelligence tool to help select tools for a project as a hyphotetica
 There is a [src/persistent_ids.json](./src/persistent_ids.json) that keeps track of how many records have been created for each dimension. The objective is to not have duplicated id's, even tho I will probably just use the project names as primary keys after orchestration.
 
 Although for the manual tables like community, market, employee then the persistent id's will remain the same over each run.
+
+## References
+
+ - [Locate parent in playwright](https://playwrightsolutions.com/how-do-you-locate-the-parent-of-an-element-with-playwright/)

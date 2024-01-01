@@ -1,6 +1,7 @@
 /**
  * @author Marcos Barrios
  * @since 30_10_2023
+ * 
  */
 
 'use strict';
@@ -36,7 +37,7 @@ export default async function addInfo() {
 
           if (!outputObject[request.label]) {
             outputObject[request.label] = {}
-          } 
+          }
           outputObject[request.label].commits = AMOUNT_OF_COMMITS;
         },
       );
