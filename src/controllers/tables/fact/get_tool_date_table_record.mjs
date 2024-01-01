@@ -17,9 +17,18 @@
  *
  */
 
+import getInfo from '../../scraper_use_cases/get_repository_info.mjs';
+
 export default async function getToolDateRecord(toolTable, idOfToday) {
+  const allPartialURL =
+      toolTable.map(tool => `${tool.author_company}/${tool.name}`);
+  const allRepoInfo = await getInfo(allPartialURL);
+
   for (const record of toolTable) {
-    // version (string)
+    const record = {
+      version: allRepoInfo.version,
+      
+    }
     // level of interest (int)
     // change_type (string)
   }
