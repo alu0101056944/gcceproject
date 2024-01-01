@@ -3,7 +3,7 @@
  * @since 06_12_2023
  * @desc Make tool-date table.
  *
- * Because the i don't know how many dates are there in the database then manage
+ * Because the I don't know how many dates are there in the database then manage
  *   the date persistent id on the file. Just make sure to assign a unique id anyways.
  *
  * This should be relative, run it once a day and get the version info
@@ -18,6 +18,8 @@
  */
 
 import getInfo from '../../scraper_use_cases/get_repository_info.mjs';
+
+import GoogleTrendsScraper from '../../../routes/scrapers/google-trends-scraper.mjs';
 
 import { compare } from 'compare-versions';
 
@@ -68,22 +70,37 @@ function toChangeType(allVersion) {
   return changeType;
 }
 
+/**
+ * @param {string} name github repository name
+ */
+async function getLevelOfInterest(name) {
+  const scraper = new GoogleTrendsScraper([name]);
+  const levelOfInterest = await scraper.run();
+}
+
 export default async function getToolDateRecord(toolTable, idOfToday) {
   const allPartialURL =
       toolTable.map(tool => `${tool.author_company}/${tool.name}`);
   const allRepoInfo = await getInfo(allPartialURL);
 
+  const allDateToolRecord = [];
+
   for (const record of toolTable) {
-    const PARTIAL_URL = `${record.author_company}/${record.name}`;
-    const scraper = new latestFiveVersionsScraper([PARTIAL_URL]);
-    const latestVersions = (await scraper.run())[PARTIAL_URL];
-    const record = {
-      version: allRepoInfo.version,
-      
-    }
-    // level of interest (int)
-    // change_type (string)
+    const PARTIAL_GITHUB_URL = `${record.author_company}/${record.name}`;
+
+    const scraper = new latestFiveVersionsScraper([PARTIAL_GITHUB_URL]);
+    const latestVersions = (await scraper.run())[PARTIAL_GITHUB_URL];
+
+    allDateToolRecord.push({
+      tool_id: record.tool_id,
+      date_id: idOfToday,
+      version: allRepoInfo[PARTIAL_GITHUB_URL].version,
+      interest_levels: getLevelOfInterest(record.name),
+      change_type: toChangeType(latestVersions),
+    });
   }
+
+  return allDateToolRecord;
 }
 
 (async () => {
