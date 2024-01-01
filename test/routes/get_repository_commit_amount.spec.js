@@ -5,7 +5,7 @@ import { test, expect } from '@playwright/test';
 
 import fetchAllCommitAmount from '../../src/routes/get_repository_commit_amount.mjs';
 
-test('Result is correct; Everything is a number', async () => {
+test('Can get the commit amount', async () => {
   const allRepoInfo = [
       {
         authorCompany: 'facebook',
