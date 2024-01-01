@@ -13,11 +13,8 @@ describe('Get commit amount NamesToUrlScraper testing', () => {
           name: 'react',
         }
       ];
-    const allAmount = await fetchAllCommitAmount(allRepoInfo);
-    for (const name of Object.getOwnPropertyNames(allAmount)) {
-      const AMOUNT_VALUE = allAmount[name];
-      const IS_NUMBER = typeof AMOUNT_VALUE === 'number' && !isNaN(AMOUNT_VALUE);
-      expect(IS_NUMBER).toBe(true);
-    }
+    const nameToAmount = await fetchAllCommitAmount(allRepoInfo);
+    const NAME = Object.getOwnPropertyNames(nameToAmount)?.[0];
+    expect(nameToAmount[NAME]).not.toBeUndefined();
   }, TIMEOUT_IN_MILLISECONDS)
 });

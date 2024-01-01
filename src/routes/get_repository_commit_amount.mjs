@@ -24,7 +24,7 @@ export default async function fetchAllCommitAmount(allRepoInfo) {
 
   const scraperRepositoryInfo = new NamesToURLScraper(
         {
-          allPartialURL,
+          names: allPartialURL,
           preUrl: URL_PREFIX,
           postUrl: URL_POSTFIX,
         },
@@ -35,7 +35,7 @@ export default async function fetchAllCommitAmount(allRepoInfo) {
           const allcommitLocator = await commitAmountLocator.all();
 
           const AMOUNT_OF_COMMITS_STRING =
-              await allcommitLocator[1].textContent();
+              await ((allcommitLocator[1]).textContent());
           const AMOUNT_OF_COMMITS_PROCESSED =
               AMOUNT_OF_COMMITS_STRING.trim().replace(/,/g, '');
           const AMOUNT_OF_COMMITS = parseInt(AMOUNT_OF_COMMITS_PROCESSED);
