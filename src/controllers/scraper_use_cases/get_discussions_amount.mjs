@@ -34,7 +34,6 @@ export default async function countDiscussionAmount(allToolNames) {
     async ({ page, request, infiniteScroll, log, outputObject }) => {
       log.info('RedditDiscussionsScraper visited ' + request.url);
 
-      // await new Promise((resolve)=> setTimeout(resolve, 300000));
       const publication = page.locator('post-consume-tracker');
       let allPublications = await publication.all();
       await infiniteScroll({

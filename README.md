@@ -8,6 +8,7 @@ A business intelligence tool to help select tools for a project as a hyphotetica
 
 ## TODO
 
+ - at [src\controllers\tables\fact\make_community_tool_date_table.mjs](src\controllers\tables\fact\make_community_tool_date_table.mjs) rank is tempirarily NULL. Think about how to calculate a rank.
  - Make paralel runs on insert table with a `Promise.all`.
  - at [src\controllers\tables\dimension\make_project_table.mjs](src\controllers\tables\dimension\make_project_table.mjs) think about the logic for when project names are not github project names.
  - at [src\routes\scrapers\github-explore-scraper.mjs](src\routes\scrapers\github-explore-scraper.mjs) find out why sometimes headerInfo[i].type throws errors, it's a race condition.
