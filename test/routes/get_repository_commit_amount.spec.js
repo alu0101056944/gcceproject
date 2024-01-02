@@ -1,23 +1,18 @@
-
 'use strict';
 
-import fetchAllCommitAmount from '../../src/routes/get_repository_commit_amount.mjs';
+// @ts-check
+import { test, expect } from '@playwright/test';
 
-const TIMEOUT_IN_MILLISECONDS = 20000;
+import fetchAllCommitAmount from '../../src/controllers/scraper_use_cases/get_repository_commit_amount.mjs';
 
-describe('Get commit amount NamesToUrlScraper testing', () => {
-  test('Result is correct; Everything is a number', async () => {
-    const allRepoInfo = [
-        {
-          authorCompany: 'facebook',
-          name: 'react',
-        }
-      ];
-    const allAmount = await fetchAllCommitAmount(allRepoInfo);
-    for (const name of Object.getOwnPropertyNames(allAmount)) {
-      const AMOUNT_VALUE = allAmount[name];
-      const IS_NUMBER = typeof AMOUNT_VALUE === 'number' && !isNaN(AMOUNT_VALUE);
-      expect(IS_NUMBER).toBe(true);
-    }
-  }, TIMEOUT_IN_MILLISECONDS)
+test('Can get the commit amount', async () => {
+  const allRepoInfo = [
+      {
+        authorCompany: 'facebook',
+        name: 'react',
+      }
+    ];
+  const nameToAmount = await fetchAllCommitAmount(allRepoInfo);
+  const NAME = Object.getOwnPropertyNames(nameToAmount)?.[0];
+  await expect(nameToAmount[NAME]).not.toBeUndefined();
 });

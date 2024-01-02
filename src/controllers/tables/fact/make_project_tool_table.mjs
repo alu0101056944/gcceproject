@@ -41,5 +41,3 @@ export default async function makeProjectToolTable(toolTable/*, projectTable*/) 
 
   return table;
 }
-  
-// makeProjectToolTable().then((data) => console.log(inspect(data)));

@@ -9,8 +9,6 @@
 
 import { PlaywrightCrawler, log } from 'crawlee';
 
-import playwright from 'playwright';
-
 import { readFile } from 'fs/promises';
 
 export default class GoogleTrendsScraper {

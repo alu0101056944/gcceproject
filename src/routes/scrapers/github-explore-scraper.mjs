@@ -68,11 +68,9 @@ export default class GithubExploreScraper {
           typesPerRepo.length + ' headersInfoLength=' + headersInfo.length);
       typesPerRepo.forEach((type, i) => headersInfo[i].type = type);
       this.#outputObject = headersInfo;
-
     } catch (error) {
       console.error('github explore error: ' + error);
     }
- 
   };
 
   async #extractAmountOfResults(page) {
