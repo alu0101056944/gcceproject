@@ -7,6 +7,8 @@
 
 'use strict';
 
+import NamesToURLScraper from "../../routes/scrapers/names-to-urls-scraper.mjs";
+
 /**
  * @param {array} allPartialURL each element is expected to be a string in
  *    <organization>/<repoName> format, for example: facebook/react for

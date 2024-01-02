@@ -8,7 +8,7 @@ import fetchAllCommitAmount from '../../src/controllers/scraper_use_cases/get_re
 test('Can get the commit amount', async () => {
   const allRepoInfo = [
       {
-        authorCompany: 'facebook',
+        author_company: 'facebook',
         name: 'react',
       }
     ];

@@ -66,7 +66,5 @@ export default async function countDiscussionAmount(allToolNames) {
   );
   scraperDiscussions.create();
   const output = await scraperDiscussions.run();
-  console.log(inspect(output));
+  return output;
 }
-
-countDiscussionAmount();
