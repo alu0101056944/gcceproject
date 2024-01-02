@@ -82,6 +82,7 @@ function toChangeType(allVersion) {
 async function getLevelOfInterest(name) {
   const scraper = new GoogleTrendsScraper([name]);
   const levelOfInterest = await scraper.run();
+  return levelOfInterest;
 }
 
 export default async function getToolDateRecord(toolTable, idOfToday) {

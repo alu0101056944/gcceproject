@@ -28,4 +28,5 @@ test('Results are valid', async () => {
       'same'
     ]
     .includes(allDateRecord[0].change_type)).toBe(true);
+  await expect(allDateRecord[0].interest_levels).not.toBeUndefined();
 });
