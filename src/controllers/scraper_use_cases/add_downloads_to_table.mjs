@@ -27,35 +27,35 @@ export default async function getDownloadsPerPackage(packageNames) {
   const URL_PREFIX = 'https://pypistats.org/packages/';
   const URL_POSTFIX = '';
   const scraperPython = new NamesToURLScraper(
-        {
-          names: packageNames,
-          preUrl: URL_PREFIX,
-          postUrl: URL_POSTFIX,
-        },
-        async ({ page, request, log, outputObject }) => {
-          log.info('PythonScraper visited ' + request.url);
+    {
+      names: packageNames,
+      preUrl: URL_PREFIX,
+      postUrl: URL_POSTFIX,
+    },
+    async ({ page, request, log, outputObject }) => {
+      log.info('PythonScraper visited ' + request.url);
 
-          try {
-            const containsSearchResultsStrings = page.getByText('Search results');
-            const paragraphWithDownloads = page.getByText('Downloads last week:');
-              
-            const eitherTextcontentOrUndefined = await Promise.any([
-                    containsSearchResultsStrings.waitFor(),
-                    paragraphWithDownloads.textContent(),
-                  ]);
-            if (eitherTextcontentOrUndefined) {
-              const DOWNLOADS_LAST_WEEK_STRING =
-                  /Downloads\slast\sweek:\s(\d+(,?\d+)*)+/
-                    .exec(eitherTextcontentOrUndefined)[1];
-              const DOWNLOADS_LAST_WEEK =
-                  parseInt(DOWNLOADS_LAST_WEEK_STRING.replace(/,/g, ''));
-              outputObject[request.label] = DOWNLOADS_LAST_WEEK;
-            }
-          } catch (error) {
-            log.error('Python scraper error: ' + error);
-          }
-        },
-      );
+      try {
+        const containsSearchResultsStrings = page.getByText('Search results');
+        const paragraphWithDownloads = page.getByText('Downloads last week:');
+          
+        const eitherTextcontentOrUndefined = await Promise.any([
+                containsSearchResultsStrings.waitFor(),
+                paragraphWithDownloads.textContent(),
+              ]);
+        if (eitherTextcontentOrUndefined) {
+          const DOWNLOADS_LAST_WEEK_STRING =
+              /Downloads\slast\sweek:\s(\d+(,?\d+)*)+/
+                .exec(eitherTextcontentOrUndefined)[1];
+          const DOWNLOADS_LAST_WEEK =
+              parseInt(DOWNLOADS_LAST_WEEK_STRING.replace(/,/g, ''));
+          outputObject[request.label] = DOWNLOADS_LAST_WEEK;
+        }
+      } catch (error) {
+        log.error('Python scraper error: ' + error);
+      }
+    },
+  );
   scraperPython.create([500]);
   const allPythonPackageDownloads = await scraperPython.run();
 
@@ -75,5 +75,3 @@ export default async function getDownloadsPerPackage(packageNames) {
 
   return packageDownloads;
 }
-
-// getDownloadsPerPackage(['react', 'ant-design-vue']);

@@ -19,7 +19,7 @@ import util from 'util';
  */
 export default async function fetchAllCommitAmount(allRepoInfo) {
   const allPartialURL =
-      allRepoInfo.map(info => `${info.authorCompany}/${info.name}`);
+      allRepoInfo.map(info => `${info.author_company}/${info.name}`);
   const URL_PREFIX = 'https://github.com/';
   const URL_POSTFIX = '';
 
