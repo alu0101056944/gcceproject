@@ -3,7 +3,7 @@
 // @ts-check
 import { test, expect } from '@playwright/test';
 
-import fetchAllCommitAmount from '../../src/routes/get_repository_commit_amount.mjs';
+import fetchAllCommitAmount from '../../src/controllers/scraper_use_cases/get_repository_commit_amount.mjs';
 
 test('Can get the commit amount', async () => {
   const allRepoInfo = [

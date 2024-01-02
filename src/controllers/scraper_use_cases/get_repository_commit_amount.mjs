@@ -8,7 +8,7 @@
 
 'use strict';
 
-import NamesToURLScraper from './scrapers/names-to-urls-scraper.mjs';
+import NamesToURLScraper from '../../routes/scrapers/names-to-urls-scraper.mjs';
 import util from 'util';
 
 /**

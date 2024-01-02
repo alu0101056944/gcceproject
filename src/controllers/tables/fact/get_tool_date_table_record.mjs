@@ -20,12 +20,18 @@
 import getInfo from '../../scraper_use_cases/get_repository_info.mjs';
 
 import GoogleTrendsScraper from '../../../routes/scrapers/google-trends-scraper.mjs';
+import getAllLatestVersionChanges from '../../scraper_use_cases/get_latest_five_version_changes';
 
 import { compare } from 'compare-versions';
 
 function toChangeType(allVersion) {
-  const checkSemantic = (version) => version.match(/(\d+?)\.(\d+?)\.(\d+?)/);
-  const allSemantic = allVersion.filter(checkSemantic);
+  const semanticRegExp = /(\d+?)\.(\d+?)\.(\d+?)/;
+  const allSemantic = allVersion
+      .filter(version => version.match(semanticRegExp))
+      .map(version => {
+        const regExpResult = version.match(semanticRegExp);
+        return `${regExpResult[1]}.${regExpResult[2]}.${regExpResult[3]}`;
+      });
   if (allSemantic.length === 0) {
     return 'non-semantic';
   }
@@ -57,7 +63,7 @@ function toChangeType(allVersion) {
 
   let changeType = 'major';
 
-  const allChangeType = ['major', 'minor', 'path'];
+  const allChangeType = ['major', 'minor', 'patch'];
   for (let i = 0; i < 3; i++) { // [major|minor|patch]
     changeType = allChangeType[i];
     const relevantNumbers = allNumbers.map(numbers => numbers[i]);
@@ -88,8 +94,9 @@ export default async function getToolDateRecord(toolTable, idOfToday) {
   for (const record of toolTable) {
     const PARTIAL_GITHUB_URL = `${record.author_company}/${record.name}`;
 
-    const scraper = new latestFiveVersionsScraper([PARTIAL_GITHUB_URL]);
-    const latestVersions = (await scraper.run())[PARTIAL_GITHUB_URL];
+    const partialURLToAllVersion =
+        await getAllLatestVersionChanges([PARTIAL_GITHUB_URL]);
+    const latestVersions = partialURLToAllVersion[PARTIAL_GITHUB_URL];
 
     allDateToolRecord.push({
       tool_id: record.tool_id,
@@ -102,7 +109,3 @@ export default async function getToolDateRecord(toolTable, idOfToday) {
 
   return allDateToolRecord;
 }
-
-(async () => {
-  await makeToolDateTable();
-})();

@@ -19,15 +19,16 @@ export default async function getInfo(allRepository) {
     },
     async ({ page, request, log, outputObject }) => {
       log.info('GithubInfoScraper visited ' + request.url);
-      const commitsLocator = page.locator('span.d-none.d-sm-inline')
-          page.locator('strong');
-      const allcommitsLocator = await commitsLocator.all();
+      const commitTextRegExp = /(\d+?\,\d+?)\s*Commits/i;
+      const commitAmountLocator = page.getByRole('link')
+          .getByText(commitTextRegExp);
 
       const AMOUNT_OF_COMMITS_STRING =
-          await allcommitsLocator[1].textContent();
-      const AMOUNT_OF_COMMITS_PROCESSED = AMOUNT_OF_COMMITS_STRING.trim()
+          (await commitAmountLocator.textContent())
+          .match(commitTextRegExp)[1]
+          .trim()
           .replace(/,/g, '');
-      const AMOUNT_OF_COMMITS = parseInt(AMOUNT_OF_COMMITS_PROCESSED);
+      const AMOUNT_OF_COMMITS = parseInt(AMOUNT_OF_COMMITS_STRING);
 
       outputObject[request.label] ??= {};
       outputObject[request.label].commits = AMOUNT_OF_COMMITS;
