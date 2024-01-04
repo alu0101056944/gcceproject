@@ -13,54 +13,59 @@
 import { inspect } from 'util';
 import NamesToURLScraper from '../../routes/scrapers/names-to-urls-scraper.mjs';
 
-export default async function getStocks() {
-  const allCompanyNames = [
-    'microsoft',
-    'facebook',
-    'random stuff'
-  ];
-
+/**
+ * 
+ * @param {string} allCompanyName strings of company optionally including spaces.
+ *    Ex: 'microsoft', 'bluehole studio'
+ */
+export default async function getStocks(allCompanyName) {
   const URL_PREFIX = 'https://www.google.com/search?q=';
   const URL_POSTFIX = '+stock';
   const spacesToPlus = (name) => name.replace(/\s/g, '+');
   const scraperStocks = new NamesToURLScraper(
-        {
-          names: allCompanyNames,
-          preUrl: URL_PREFIX,
-          postUrl: URL_POSTFIX,
-          doNameProcessing: true,
-          processingFunction: spacesToPlus
-        },
-        async ({ page, request, log, outputObject }) => {
-          log.info('Google search stocks scraper visited ' + request.url);
+    {
+      names: allCompanyName,
+      preUrl: URL_PREFIX,
+      postUrl: URL_POSTFIX,
+      doNameProcessing: true,
+      processingFunction: spacesToPlus
+    },
+    async ({ page, request, log, outputObject }) => {
+      log.info('Google search stocks scraper visited ' + request.url);
 
-          const deltaContainer = page.locator('.WlRRw.IsqQVc.fw-price-up');
+      await page.waitForLoadState();
 
-          // I use all() so that it just executes if at least one is found
-          const allDeltaContainer = await deltaContainer.all();
-          if (allDeltaContainer.length > 0) {
-            // await page.waitForNavigation();
-            // const fiveDaysFilterButton =
-            //     page.locator('div.QiGJYb.luQogd.fw-ch-sel');
-            // await fiveDaysFilterButton.click({
-            //   timeout: 2000,
-            //   force: true,
-            // });
+      const deltaContainer = page.locator('span.IsqQVc.fw-price-up');
 
-            const ALL_TEXT = await deltaContainer.textContent();
-            const ALL_TEXT_PROCESSED = ALL_TEXT.trim();
-            const DELTA_REG_EXP = /[+-](\d+(,?\d+)*)\s/;
-            const execResult = DELTA_REG_EXP.exec(ALL_TEXT_PROCESSED);
-            const DELTA = parseInt(execResult[1]);
+      let foundOneValidDelta = false;
+      const allDeltaContainer = await deltaContainer.all();
+      for (const locator of allDeltaContainer) {
+        const WHOLE_TEXT = await locator.textContent();
+        const WHOLE_TEXT_PROCESSED = WHOLE_TEXT.trim();
 
-            const unprocessName = (name) => name.replace(/\+/g, ' ');
-            outputObject[unprocessName(request.label)] = DELTA;
+        const DELTA_REG_EXP = /[-+](\d+(,?\d+)*)\s/;      
+        const execResult = DELTA_REG_EXP.exec(WHOLE_TEXT_PROCESSED);
+        if (execResult) {
+          if (foundOneValidDelta) {
+            throw new Error('Something is wrong wrong: found two valid deltas.');
           }
-        },
-      );
-  scraperStocks.create();
-  const output = await scraperStocks.run();
-  console.log(inspect(output));
-}
 
-// getStocks();
+          const DELTA = parseFloat(execResult[1].replace(/,/g, '.'));
+
+          // Because there is name processing in place for the partial url
+          const toUnprocessedName = (name) => name.replace(/\+/g, ' ');
+          outputObject[toUnprocessedName(request.label)] = DELTA;
+          foundOneValidDelta = true;
+        }
+      }
+
+      if (!foundOneValidDelta) {
+        const toUnprocessedName = (name) => name.replace(/\+/g, ' ');
+        outputObject[toUnprocessedName(request.label)] = null;
+      }
+    },
+  );
+  scraperStocks.create();
+  const companyNameToDelta = await scraperStocks.run();
+  return companyNameToDelta;
+}
