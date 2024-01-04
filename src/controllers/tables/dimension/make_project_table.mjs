@@ -10,9 +10,7 @@
 import makeToolsTableWithoutId from '../../scraper_use_cases/make_tools_from_github_explore.mjs';
 import getDownloadsPerPackage from '../../scraper_use_cases/add_downloads_to_table.mjs';
 
-import { inspect } from 'util';
 import GithubRepositoryScraper from '../../../routes/scrapers/github-repository-scraper.mjs';
-import GoogleTrendsScraper from '../../../routes/scrapers/google-trends-scraper.mjs';
 
 // Update README.md when deciding what to do with all projects are github projects issue
 export default async function makeProjectTable() {
@@ -56,11 +54,7 @@ export default async function makeProjectTable() {
         record.contributors = allAmountOfContributors[i];
       });
 
-  const scraperOfTrends = new GoogleTrendsScraper(projectNames);
-  const interestPerProject = await scraperOfTrends.run();
-  tableObject.forEach((record) => {
-        record.searches = interestPerProject[record.name];
-      });
+  tableObject.forEach((record) => record.searches = null);
 
   // I just kept author_company for the github repository access, it does not
   // belong to the table.
@@ -74,5 +68,3 @@ export default async function makeProjectTable() {
 
   return tableObject;
 }
-
-// console.log(inspect(await makeProjectTable()));

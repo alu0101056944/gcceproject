@@ -11,7 +11,6 @@ import { readFile, writeFile } from 'fs/promises';
 
 import CompaniesmarketcapScraper from "../../../routes/scrapers/companiesmarketcap-scraper.mjs";
 import CompaniesmarketcapProfileScraper from '../../../routes/scrapers/companiesmarketcap-profile-scraper.mjs';
-import GoogleTrendsScraper from '../../../routes/scrapers/google-trends-scraper.mjs';
 
 export default async function makeCompanyTable(toolTable) {
   const scraperOfAmountOfEmployees = new CompaniesmarketcapScraper();
@@ -30,10 +29,6 @@ export default async function makeCompanyTable(toolTable) {
   const scraperOfProfiles = new CompaniesmarketcapProfileScraper(allCompanyName);
   const authorCompanyToType = toSpacelessKeys(await scraperOfProfiles.run());
 
-  // allCompanyName.unshift('foo'); first search always fails so add arbitrary
-  const scraperOfTrend = new GoogleTrendsScraper(allCompanyName);
-  const authorCompanyToInterest = toSpacelessKeys(await scraperOfTrend.run());
-
   const allRecord = new Array(toolTable.length)
   for (let i = 0; i < toolTable.length; i++) {
     const AUTHOR_COMPANY = toolTable[i].author_company;
@@ -42,7 +37,7 @@ export default async function makeCompanyTable(toolTable) {
       name: AUTHOR_COMPANY,
       employee_amount: authorCompanyToAmount[AUTHOR_COMPANY] ?? null,
       type: authorCompanyToType[AUTHOR_COMPANY] ?? null,
-      amount_of_searches: authorCompanyToInterest[AUTHOR_COMPANY] ?? null
+      amount_of_searches: null,
     }
     allRecord.push(record);
   }
