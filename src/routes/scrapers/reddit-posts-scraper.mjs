@@ -9,18 +9,24 @@
 
 import { PlaywrightCrawler, log } from 'crawlee';
 
+import Sentiment from 'sentiment';
+
 /**
  * Scraper for {@link https://www.reddit.com/r/programming/search/?q=react&restrict_sr=1&sort=new}
  */
 export default class RedditPostsScrapper {
   /** @private @constant  */
   #scraper = undefined;
-  #companiesInfo = undefined;
   #outputObject = undefined;
-  #urlsInfo = undefined;
+  #firstURL = undefined;
+  #hasVisitedFirstPage = undefined;
+  #sentimentAnalyzer = undefined;
 
-  constructor() {
-    this.#companiesInfo = {};
+  constructor(firstURL) {
+    this.#outputObject = [];
+    this.#firstURL = firstURL;
+    this.#hasVisitedFirstPage = false;
+    this.#sentimentAnalyzer = new Sentiment();
 
     const requestHandler = this.#myHandler.bind(this);
     this.#scraper = new PlaywrightCrawler({
@@ -41,31 +47,53 @@ export default class RedditPostsScrapper {
     });
   }
 
-  async #myHandler({ page, request, enqueueLinks }) {
+  async #myHandler({ page, request, enqueueLinks, infiniteScroll }) {
     log.info('RedditPostsScrapper visited page: ' + request.url);
 
     await page.waitForLoadState();
 
-    /** SEPARATE INTO TWO SCRAPPERS DUE TO ALL PAGES HAVING /r/.../comments/ */
+    if (!this.#hasVisitedFirstPage) {
+      const publication = page.locator('post-consume-tracker');
+      let allPublications = await publication.all();
 
-    // const publication = page.locator('post-consume-tracker');
-    // let allPublications = await publication.all();
-    // await infiniteScroll({
-    //   stopScrollCallback: async () => {
-    //     allPublications = await publication.all();
-    //     return allPublications.length > 20;
-    //   }
-    // });
+      await infiniteScroll({
+        stopScrollCallback: async () => {
+          allPublications = await publication.all();
+          return allPublications.length > 20;
+        }
+      });
 
-    await enqueueLinks({ regexps: [/\/r\/\w+?\/comments\//] });
+      await enqueueLinks({ regexps: [/\/r\/\w+?\/comments\//] });
+      this.#hasVisitedFirstPage = true;
+    } else {
+      const shreddingCommentLocator = page.locator('shreddit-comment')
+          .filter({ has: page.locator('p') }).locator('p');
+      const allComment = await shreddingCommentLocator.all();
+
+      const allCommentText = [];
+      for await (const commentText of allComment.map(l => l.textContent())) {
+        allCommentText.push(commentText.trim());
+      }
+
+      const allSentiment =
+          allCommentText.map(t => this.#sentimentAnalyzer.analyze(t));
+
+      const TOTAL_SENTIMENT = allSentiment
+          .reduce((acc, sent) => acc + sent.score, 0);
+      if (TOTAL_SENTIMENT > 0) {
+        const MEAN_SENTIMENT = allSentiment
+        .map((sent) => sent.score / TOTAL_SENTIMENT)
+        .reduce((acc, sent) => acc + sent, 0);
+
+        this.#outputObject.push(MEAN_SENTIMENT);
+      } else {
+        this.#outputObject.push(0);
+      }
+    }
   };
 
-  getOutputObject() {
-    return this.#outputObject;
-  }
-
   async run() {
-    await this.#scraper.run(this.#urlsInfo);
+    await this.#scraper.run([this.#firstURL]);
     return this.#outputObject;
   }
 }
