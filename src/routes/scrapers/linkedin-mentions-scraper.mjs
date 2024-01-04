@@ -9,6 +9,7 @@
 'use strict';
 
 import { PlaywrightCrawler, log } from 'crawlee';
+import playwright from 'playwright';
 
 /**
  * Scraper for {@link https://www.linkedin.com/jobs/search?keywords=software%20engineer}
@@ -17,11 +18,14 @@ export default class LinkedinMentionsScraper {
   /** @private @constant  */
   #scraper = undefined;
   #outputObject = undefined;
-  #toolNames = undefined;
+  #allToolName = undefined;
 
-  constructor(toolNames) {
+  constructor(allToolName) {
     this.#outputObject = {};
-    this.#toolNames = toolNames;
+    this.#allToolName = allToolName;
+    for (const toolName of allToolName) {
+      this.#outputObject[toolName] ??= 0;
+    }
 
     const requestHandler = this.#myHandler.bind(this);
     this.#scraper = new PlaywrightCrawler({
@@ -42,8 +46,11 @@ export default class LinkedinMentionsScraper {
   }
 
   async #myHandler({ page, request, infiniteScroll }) {
-    log.info('Linkedin software engineer search: ' + request.url);
+    log.info('Linkedin software engineer mention count scraper has visited: ' +
+        request.url);
 
+    await page.waitForLoadState();
+    
     const publication = page.locator('.base-card');
     let allPublications = await publication.all();
     await infiniteScroll({
@@ -66,32 +73,31 @@ export default class LinkedinMentionsScraper {
         const attemptClick = async () => {
           await showMoreButton.click({ timeout: 2000 });
 
-          const descriptionLocator =
-              page.locator('.show-more-less-html__markup.relative.overflow-hidden');
+          const descriptionLocator = page
+              .locator('.show-more-less-html__markup.relative.overflow-hidden');
           const DESCRIPTION_STRING = await descriptionLocator.textContent();
           const DESCRIPTION_STRING_PROCESSED = DESCRIPTION_STRING.trim();
 
-          for (const name of this.#toolNames) {
-            const nameRegExp = new RegExp(name, 'gi');
+          for (const toolName of this.#allToolName) {
+            const nameRegExp = new RegExp(toolName, 'gi');
             let execResult;
             while (execResult = nameRegExp.exec(DESCRIPTION_STRING_PROCESSED)) {
-              if (!this.#outputObject[name]) {
-                this.#outputObject[name] = 0;
-              }
-              this.#outputObject[name]++;
+              this.#outputObject[toolName]++;
             }
           }
         }
 
         try {
           await attemptClick();
-        } catch (timeoutError) {
-          log.info('Linkedin timeout while waiting for description to load.');
+        } catch (error) {
+          if (error instanceof playwright.errors.TimeoutError) {
+            log.info('Linkedin timeout while waiting for description to load.');
 
-          // try again
-          await allPublications[0].click({ timeout: 2000 });
-          await attemptClick();
-          await new Promise((resolve) => setTimeout(resolve, 500));
+            // try again
+            await allPublications[0].click({ timeout: 2000 });
+            await attemptClick();
+            await new Promise((resolve) => setTimeout(resolve, 500));
+          }
         }
       } else {
         log.info('Did not find show button');
