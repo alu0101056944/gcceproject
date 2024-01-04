@@ -9,63 +9,38 @@
 
 import { readFile, writeFile } from 'fs/promises'
 
-import makeToolsTableWithoutIdFromGithubExploreScraper from '../../scraper_use_cases/make_tools_from_github_explore.mjs';
+import makeToolsTableWithoutId from '../../scraper_use_cases/make_tools_from_github_explore.mjs';
 
 import CompaniesmarketcapScraper from "../../../routes/scrapers/companiesmarketcap-scraper.mjs";
 import CompaniesmarketcapProfileScraper from '../../../routes/scrapers/companiesmarketcap-profile-scraper.mjs';
 import GoogleTrendsScraper from '../../../routes/scrapers/google-trends-scraper.mjs';
 
-export default async function makeCompanyTable() {
-  const specializations = [
-    'frontend',
-    // 'backend',
-    // 'embedded',
-    // 'devops',
-  ];
-  const { allRecord } = (await makeToolsTableWithoutIdFromGithubExploreScraper(specializations));
-  let companyId = 1;
-  console.log('typeof allRecord: ' + typeof allRecord); // for debuging
-  console.log('typeof : ' + typeof allRecord.forEach);
-  allRecord.forEach(record => {
-        record.company_id = companyId++
-        record.name = record.author_company;
-        delete record.author_company;
-        delete record.type;
-        delete record.specialization;
-      });
+export default async function makeCompanyTable(toolTable) {
+  const scraperOfAmountOfEmployees = new CompaniesmarketcapScraper();
+  scraperOfAmountOfEmployees.setMaxAmountfPageSurfs(1);
+  const authorCompanyToEmployeeAmount = await scraperOfAmountOfEmployees.run();
 
-  const scraperEmployees = new CompaniesmarketcapScraper();
-  scraperEmployees.setMaxAmountfPageSurfs(1);
-  await scraperEmployees.run();
-  const amountsOfEmployeesPerCompany = scraperEmployees.getOutputObject();
-  allRecord.forEach(record => {
-    if (amountsOfEmployeesPerCompany[record.name]) {
-      record.employee_amount = amountsOfEmployeesPerCompany[record.name]; 
-    } else {
-      record.employee_amount = null;
-    }
-  });
+  const allCompanyName = Object.getOwnPropertyNames(authorCompanyToEmployeeAmount);
 
-  const companyNames = Object.getOwnPropertyNames(amountsOfEmployeesPerCompany);
+  /** WIP */
 
-  const scraperOfProfiles = new CompaniesmarketcapProfileScraper(companyNames);
-  await scraperOfProfiles.run();
-  const typePerCompany = scraperOfProfiles.getOutputObject();
-  Object.getOwnPropertyNames(typePerCompany)
+  const scraperOfProfiles = new CompaniesmarketcapProfileScraper(allCompanyName);
+  const authorCompanyToType = await scraperOfProfiles.run();
+  Object.getOwnPropertyNames(authorCompanyToType)
       .forEach(nameWithSpaces => {
         const NAME_WITHOUT_SPACES = nameWithSpaces.replace(/\s/g, '');
-        typePerCompany[NAME_WITHOUT_SPACES] = typePerCompany[nameWithSpaces];
+        authorCompanyToType[NAME_WITHOUT_SPACES] = authorCompanyToType[nameWithSpaces];
       });
   allRecord.forEach(record => {
-    if (typePerCompany[record.name]) {
-      record.type = typePerCompany[record.name]; 
+    if (authorCompanyToType[record.name]) {
+      record.type = authorCompanyToType[record.name]; 
     } else {
       record.type = null;
     }
   });
 
-  companyNames.unshift('foo'); // first search always fails so add arbitrary
-  const scraperTrends = new GoogleTrendsScraper(companyNames);
+  allCompanyName.unshift('foo'); // first search always fails so add arbitrary
+  const scraperTrends = new GoogleTrendsScraper(allCompanyName);
   let interestPerCompany;
   try {
     interestPerCompany = await scraperTrends.run();
@@ -95,6 +70,15 @@ export default async function makeCompanyTable() {
     // temporal solution to always getting 429 on Google trends
     // record.amount_of_searches = 0;
   });
+
+  const allRecord = new Array(toolTable.length)
+  for (const [index, toolRecord] of toolTable.entries()) {
+    const record = {
+      company_id: index + 1,
+      name: toolTable[index].author_company,
+      employee_amount: authorCompanyToEmployeeAmount[record.name] ?? null,
+    }
+  }
 
   const FILE_CONTENT = await readFile('./src/persistent_ids.json', 'utf8');
   const persistentIds = JSON.parse(FILE_CONTENT);

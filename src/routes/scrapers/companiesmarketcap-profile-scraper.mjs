@@ -70,11 +70,8 @@ export default class CompaniesmarketcapProfileScraper {
     this.#outputObject[GITHUB_COMPATIBLE_NAME] = categories.shift() ?? null;
   };
 
-  getOutputObject() {
-    return this.#outputObject;
-  }
-
   async run() {
     await this.#scraper.run(this.#companiesInfo);
+    return this.#outputObject
   }
 }

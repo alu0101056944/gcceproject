@@ -99,12 +99,9 @@ export default class CompaniesmarketcapScraper {
     this.#maxPageSurfs = newMaxAmountOfPageSurfs;
   }
 
-  getOutputObject() {
-    return this.#outputObject;
-  }
-
   async run() {
     const URL = 'https://companiesmarketcap.com/largest-companies-by-number-of-employees/';
     await this.#scraper.run([URL]);
+    return this.#outputObject;
   }
 }

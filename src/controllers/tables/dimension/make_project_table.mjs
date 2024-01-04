@@ -7,7 +7,7 @@
 
 'use strict';
 
-import makeToolsTableWithoutIdFromGithubExploreScraper from '../../scraper_use_cases/make_tools_from_github_explore.mjs';
+import makeToolsTableWithoutId from '../../scraper_use_cases/make_tools_from_github_explore.mjs';
 import getDownloadsPerPackage from '../../scraper_use_cases/add_downloads_to_table.mjs';
 
 import { inspect } from 'util';
@@ -22,7 +22,7 @@ export default async function makeProjectTable() {
     // 'embedded',
     // 'devops',
   ];
-  const { tableObject } = await makeToolsTableWithoutIdFromGithubExploreScraper(specializations);
+  const { tableObject } = await makeToolsTableWithoutId(specializations);
   let projectId = 1;
   tableObject.forEach(
         record => {

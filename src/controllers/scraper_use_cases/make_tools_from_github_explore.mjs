@@ -15,7 +15,7 @@ import GithubExploreScraper from "../../routes/scrapers/github-explore-scraper.m
 //   max: 20
 // });
 
-export default async function makeToolsTableWithoutIdFromGithubExploreScraper(allSpecialization) {
+export default async function makeToolsTableWithoutId(allSpecialization) {
   const allRecord = [];
   const repoNameToURL = {};
   for (const specialization of allSpecialization) {
