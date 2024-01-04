@@ -7,7 +7,7 @@
 
 'use strict';
 
-import { readFile, writeFile } from 'fs/promises'
+import { readFile, writeFile } from 'fs/promises';
 
 export default async function makeMarketTable() {
   const table = [];
@@ -34,5 +34,3 @@ export default async function makeMarketTable() {
 
   return table;
 }
-
-// makeMarketTable().then((data) => console.log(inspect(data)));

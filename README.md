@@ -8,6 +8,7 @@ A business intelligence tool to help select tools for a project as a hyphotetica
 
 ## TODO
 
+ - at [src\controllers\tables\fact\make_market_date_table.mjs](src\controllers\tables\fact\make_market_date_table.mjs) differentiate between all markets because right know all markets get the same `amount_of_offers_attribute`.
  - at [src\controllers\tables\fact\make_community_tool_date_table.mjs](src\controllers\tables\fact\make_community_tool_date_table.mjs) rank is tempirarily NULL. Think about how to calculate a rank.
  - Make paralel runs on insert table with a `Promise.all`.
  - at [src\controllers\tables\dimension\make_project_table.mjs](src\controllers\tables\dimension\make_project_table.mjs) think about the logic for when project names are not github project names.
