@@ -22,10 +22,13 @@ export default class LinkedinMentionsScraper {
   constructor(toolNames) {
     this.#outputObject = {};
     this.#toolNames = toolNames;
+    for (const toolName of this.#toolNames) {
+      this.#outputObject[toolName] = 0;
+    }
 
     const requestHandler = this.#myHandler.bind(this);
     this.#scraper = new PlaywrightCrawler({
-      headless: true,
+      headless: false,
       navigationTimeoutSecs: 100000,
       requestHandlerTimeoutSecs: 100000,
       browserPoolOptions: {
@@ -53,6 +56,7 @@ export default class LinkedinMentionsScraper {
       }
     });
 
+    let timeoutAttemptAmount = 0;
     for (const publication of allPublications) {
       await publication.click();
       // await page.waitForTimeout(3000000);
@@ -75,9 +79,6 @@ export default class LinkedinMentionsScraper {
             const nameRegExp = new RegExp(name, 'gi');
             let execResult;
             while (execResult = nameRegExp.exec(DESCRIPTION_STRING_PROCESSED)) {
-              if (!this.#outputObject[name]) {
-                this.#outputObject[name] = 0;
-              }
               this.#outputObject[name]++;
             }
           }
@@ -91,7 +92,8 @@ export default class LinkedinMentionsScraper {
           // try again
           await allPublications[0].click({ timeout: 2000 });
           await attemptClick();
-          await new Promise((resolve) => setTimeout(resolve, 500));
+          await new Promise((resolve) => setTimeout(resolve, 500 * timeoutAttemptAmount));
+          ++timeoutAttemptAmount;
         }
       } else {
         log.info('Did not find show button');

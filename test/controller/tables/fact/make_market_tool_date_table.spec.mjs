@@ -5,7 +5,15 @@ import { test, expect } from '@playwright/test';
 
 import makeMarketToolDateTable from '../../../../src/controllers/tables/fact/make_market_tool_date_table.mjs';
 
+import { inspect } from 'util';
+
 test('Able to make market-tool-date table', async () => {
+  test.setTimeout(7200000)
+  const marketTable = [
+    { market_id: 1 },
+    { market_id: 2 },
+    { market_id: 3 }
+  ];
   const toolTable = [
     {
       "name": "react",
@@ -22,45 +30,16 @@ test('Able to make market-tool-date table', async () => {
       "tool_id": 2
     },
   ];
-  const projectTable = [
-    {
-      project_id: 1,
-      project_name: 'react',
-      downloads: 233238,
-      contributors: 122,
-      searches: 82,
-    },
-    {
-      project_id: 2,
-      project_name: 'vue',
-      downloads: 129323,
-      contributors: 83,
-      searches: 79,
-    },
-  ];
-  const companyTable = [
-    {
-      company_id: 1,
-      name: 'facebook',
-      employee_amount: 78,
-      amount_of_searches: 99,
-      type: 'foo',
-    },
-    {
-      company_id: 2,
-      name: 'vuejs',
-      employee_amount: 12,
-      amount_of_searches: 44,
-      type: 'bar',
-    }
-  ];
-
-  const allRecord = await makeToolProjectCompanyTable(toolTable, projectTable,
-      companyTable);
-  await expect(allRecord.length).not.toBe(0);
+  const allRecord = await makeMarketToolDateTable(marketTable, toolTable, 5);
+  await expect(allRecord.length).toBe(2);
+  console.log(inspect(allRecord, {depth: null}));
   for (const [index, record] of allRecord.entries()) {
+    await expect(record.market_id).toBe(1);
     await expect(record.tool_id).toBe(index + 1);
-    await expect(record.project_id).toBe(index + 1);
-    await expect(record.company_id).toBe(index + 1);
+    await expect(record.date_id).toBe(5);
+    await expect(record.amount_of_mentions).not.toBeUndefined();
+    console.log('reached amount of mentions not be undefned');
+    await expect(record.amount_of_mentions).not.toBeNaN();
+    console.log('reached amount of mentions not be nan');
   }
 });
