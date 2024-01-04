@@ -7,9 +7,7 @@
 
 'use strict';
 
-import { readFile, writeFile } from 'fs/promises'
-
-import makeToolsTableWithoutId from '../../scraper_use_cases/make_tools_from_github_explore.mjs';
+import { readFile, writeFile } from 'fs/promises';
 
 import CompaniesmarketcapScraper from "../../../routes/scrapers/companiesmarketcap-scraper.mjs";
 import CompaniesmarketcapProfileScraper from '../../../routes/scrapers/companiesmarketcap-profile-scraper.mjs';
@@ -18,66 +16,35 @@ import GoogleTrendsScraper from '../../../routes/scrapers/google-trends-scraper.
 export default async function makeCompanyTable(toolTable) {
   const scraperOfAmountOfEmployees = new CompaniesmarketcapScraper();
   scraperOfAmountOfEmployees.setMaxAmountfPageSurfs(1);
-  const authorCompanyToEmployeeAmount = await scraperOfAmountOfEmployees.run();
+  const authorCompanyToAmount = await scraperOfAmountOfEmployees.run();
 
-  const allCompanyName = Object.getOwnPropertyNames(authorCompanyToEmployeeAmount);
+  const allCompanyName = Object.getOwnPropertyNames(authorCompanyToAmount);
 
-  /** WIP */
+  const toSpacelessKeys = (object) => (
+    Object.fromEntries(
+      Object.entries(object)
+      .map(([key, value]) => [key.replace(/\s/g, ''), value])
+    )
+  );
 
   const scraperOfProfiles = new CompaniesmarketcapProfileScraper(allCompanyName);
-  const authorCompanyToType = await scraperOfProfiles.run();
-  Object.getOwnPropertyNames(authorCompanyToType)
-      .forEach(nameWithSpaces => {
-        const NAME_WITHOUT_SPACES = nameWithSpaces.replace(/\s/g, '');
-        authorCompanyToType[NAME_WITHOUT_SPACES] = authorCompanyToType[nameWithSpaces];
-      });
-  allRecord.forEach(record => {
-    if (authorCompanyToType[record.name]) {
-      record.type = authorCompanyToType[record.name]; 
-    } else {
-      record.type = null;
-    }
-  });
+  const authorCompanyToType = toSpacelessKeys(await scraperOfProfiles.run());
 
-  allCompanyName.unshift('foo'); // first search always fails so add arbitrary
-  const scraperTrends = new GoogleTrendsScraper(allCompanyName);
-  let interestPerCompany;
-  try {
-    interestPerCompany = await scraperTrends.run();
-  } catch (error) {
-    console.log('An error has taken place on the run() of the google trends' +
-        'scraper' + error.message);
-    interestPerCompany = {};
-  }
-
-  // // do not wait for this
-  // writeFile('./iterests' + JSON.stringify(interestPerCompany, null, 2));
-
-  const nameKeys = Object.getOwnPropertyNames(interestPerCompany);
-  for (const companyNameWithSpaces of nameKeys) {
-    const COMPANY_NAME_WITHOUT_SPACES = companyNameWithSpaces.replace(/\s/g, '');
-    if (allRecord[COMPANY_NAME_WITHOUT_SPACES]) {
-      allRecord[COMPANY_NAME_WITHOUT_SPACES].amount_of_searches =
-          interestPerCompany[companyNameWithSpaces];
-    }
-  }
-
-  allRecord.forEach(record => {
-    if (!record.amount_of_searches) {
-      record.amount_of_searches = null;
-    }
-
-    // temporal solution to always getting 429 on Google trends
-    // record.amount_of_searches = 0;
-  });
+  // allCompanyName.unshift('foo'); first search always fails so add arbitrary
+  const scraperOfTrend = new GoogleTrendsScraper(allCompanyName);
+  const authorCompanyToInterest = toSpacelessKeys(await scraperOfTrend.run());
 
   const allRecord = new Array(toolTable.length)
-  for (const [index, toolRecord] of toolTable.entries()) {
+  for (let i = 0; i < toolTable.length; i++) {
+    const AUTHOR_COMPANY = toolTable[i].author_company;
     const record = {
-      company_id: index + 1,
-      name: toolTable[index].author_company,
-      employee_amount: authorCompanyToEmployeeAmount[record.name] ?? null,
+      company_id: i + 1,
+      name: AUTHOR_COMPANY,
+      employee_amount: authorCompanyToAmount[AUTHOR_COMPANY] ?? null,
+      type: authorCompanyToType[AUTHOR_COMPANY] ?? null,
+      amount_of_searches: authorCompanyToInterest[AUTHOR_COMPANY] ?? null
     }
+    allRecord.push(record);
   }
 
   const FILE_CONTENT = await readFile('./src/persistent_ids.json', 'utf8');
@@ -88,5 +55,3 @@ export default async function makeCompanyTable(toolTable) {
 
   return allRecord;
 }
-
-// makeCompanyTable().then((data) => console.log('Make company output object: ' + inspect(data)));

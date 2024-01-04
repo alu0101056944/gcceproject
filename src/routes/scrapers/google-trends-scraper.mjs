@@ -7,7 +7,7 @@
 
 'use strict';
 
-import { PlaywrightCrawler, log } from 'crawlee';
+import { PlaywrightCrawler } from 'crawlee';
 
 import { readFile } from 'fs/promises';
 
@@ -36,10 +36,10 @@ export default class GoogleTrendsScraper {
     this.#scraper = new PlaywrightCrawler({
       headless: false,
       navigationTimeoutSecs: undefined,
-      requestHandlerTimeoutSecs: 5,
+      requestHandlerTimeoutSecs: 100000,
       browserPoolOptions: {
         closeInactiveBrowserAfterSecs: 300,
-        operationTimeoutSecs: 7,
+        operationTimeoutSecs: 10,
       },
       requestHandler,
       retryOnBlocked: true,
@@ -51,7 +51,7 @@ export default class GoogleTrendsScraper {
    * @todo Make it faster. For 20000 searches at 3 seconds per search
    *    it takes 111 minutes for completion. Update README.md when done ******
    */
-  async #myHandler({ page, request, response }) {
+  async #myHandler({ page, request, response, log }) {
     log.info('GoogleTrendsScraper visited page: ' + request.url +
         ` (has visited ${this.#amountOfVisited++} pages)`);
 
@@ -91,8 +91,11 @@ export default class GoogleTrendsScraper {
 
         this.#interestsPerTerm[request.label] =
             arrayOfInterests.reduce((acc, current) => acc + current, 0);
+        
       } catch (error) {
+        this.#interestsPerTerm[request.label] ??= null;
         info.error('GoogleTrendsScraper could not get interest.');
+        console.log('executed catch');
       }
     }
 
