@@ -1,6 +1,6 @@
 {
   "name": "gcceproject",
-  "version": "0.38.0",
+  "version": "0.39.0",
   "description": "A business intelligence tool for tool selection of a hypothetical consulting IT firm.",
   "main": "./index.mjs",
   "scripts": {
@@ -15,7 +15,8 @@
     "compare-versions": "^6.1.0",
     "crawlee": "^3.5.8",
     "pg-promise": "^11.5.4",
-    "playwright": "^1.39.0"
+    "playwright": "^1.39.0",
+    "sentiment": "^5.0.2"
   },
   "devDependencies": {
     "@playwright/test": "^1.39.0",

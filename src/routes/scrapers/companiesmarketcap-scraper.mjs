@@ -15,14 +15,14 @@ import { PlaywrightCrawler, log } from 'crawlee';
 export default class CompaniesmarketcapScraper {
   /** @private @constant  */
   #scraper = undefined;
-  #companiesInfo = undefined;
+  #outputObject = undefined;
 
   /** @private */
   #maxPageSurfs = undefined;
   #currentAmountOfPagesSurfed = undefined;
 
   constructor() {
-    this.#companiesInfo = {};
+    this.#outputObject = {};
     this.#maxPageSurfs = Infinity;
     this.#currentAmountOfPagesSurfed = 0;
 
@@ -62,11 +62,11 @@ export default class CompaniesmarketcapScraper {
       const AMOUNT_OF_EMPLOYEES_STRING = await allTdRightLocators[2].textContent();
       const IS_COMMA_SEPARATED_NUMBER_REG_EXP = /\d+,?\d+/
       if (IS_COMMA_SEPARATED_NUMBER_REG_EXP.test(AMOUNT_OF_EMPLOYEES_STRING)) {
-        this.#companiesInfo[PROCESSED_COMPANY_NAME] = parseInt(
+        this.#outputObject[PROCESSED_COMPANY_NAME] = parseInt(
           AMOUNT_OF_EMPLOYEES_STRING.replace(/,/g, '').trim()
         );
       } else {
-        this.#companiesInfo[PROCESSED_COMPANY_NAME] = null;
+        this.#outputObject[PROCESSED_COMPANY_NAME] = null;
       }
     }
     if (this.#currentAmountOfPagesSurfed < this.#maxPageSurfs) {
@@ -100,7 +100,7 @@ export default class CompaniesmarketcapScraper {
   }
 
   getOutputObject() {
-    return this.#companiesInfo;
+    return this.#outputObject;
   }
 
   async run() {
