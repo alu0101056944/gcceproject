@@ -15,7 +15,8 @@
     "compare-versions": "^6.1.0",
     "crawlee": "^3.5.8",
     "pg-promise": "^11.5.4",
-    "playwright": "^1.39.0"
+    "playwright": "^1.39.0",
+    "sentiment": "^5.0.2"
   },
   "devDependencies": {
     "@playwright/test": "^1.39.0",
