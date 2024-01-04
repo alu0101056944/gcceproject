@@ -49,13 +49,22 @@ export default class CompaniesmarketcapScraper {
     log.info('CompaniesmarketcapScraper visited page: ' + request.url);
     this.#currentAmountOfPagesSurfed++;
 
-    const rowLocator = page.locator('tbody').locator('tr');
+    await page.waitForLoadState();
+
+    const privacyButtonLocator = await page.getByRole('button')
+        .filter({ hasText: 'Agree'});
+    await privacyButtonLocator.click();
+
+    const rowLocator = page.locator('tbody').locator('tr')
+        .filter({ has: page.locator('td.name-td') });
     const rowsOfCompany = await rowLocator.all();
     for (const row of rowsOfCompany) {
       const companyNameLocator = row.locator('.company-name');
       const COMPANY_NAME = await companyNameLocator.textContent();
       const PROCESSED_COMPANY_NAME =
           COMPANY_NAME.replace(/\(.*\)/g, '').trim().toLowerCase();
+
+      log.info('CompaniesmarketcapScraper process ' + PROCESSED_COMPANY_NAME);
 
       const tdRightLocator = row.locator('td');
       const allTdRightLocators = await tdRightLocator.all();
@@ -70,6 +79,7 @@ export default class CompaniesmarketcapScraper {
       }
     }
     if (this.#currentAmountOfPagesSurfed < this.#maxPageSurfs) {
+      log.info('CompaniesmarketcapScraper enqueue more links');
       await enqueueLinks({
         regexps: [/largest-companies-by-number-of-employees\/page\/\d+\/$/],
         transformRequestFunction(nextRequest) {
@@ -84,6 +94,7 @@ export default class CompaniesmarketcapScraper {
               execResultB.groups.page ? parseInt(execResultB.groups.currentpage) : 1;
 
           if (POTENTIAL_PAGE_NUMBER < CURRENT_PAGE_NUMBER) {
+            log.info('CompaniesmarketcapScraper to pass to next page');
             return false;
           }
           return nextRequest;
@@ -99,12 +110,9 @@ export default class CompaniesmarketcapScraper {
     this.#maxPageSurfs = newMaxAmountOfPageSurfs;
   }
 
-  getOutputObject() {
-    return this.#outputObject;
-  }
-
   async run() {
     const URL = 'https://companiesmarketcap.com/largest-companies-by-number-of-employees/';
     await this.#scraper.run([URL]);
+    return this.#outputObject;
   }
 }

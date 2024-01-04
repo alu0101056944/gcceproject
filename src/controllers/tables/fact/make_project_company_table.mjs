@@ -6,7 +6,7 @@
 
 'use strict';
 
-import makeToolsTableWithoutIdFromGithubExploreScraper from '../../scraper_use_cases/make_tools_from_github_explore.mjs'
+import makeToolsTableWithoutId from '../../scraper_use_cases/make_tools_from_github_explore.mjs'
 
 // Update README.md if changed to scraper usage instead of api calls.
 async function fetchContributorAmount(authorCompany, repoName) {
@@ -45,8 +45,7 @@ async function fetchInfoUsingScraper() {
     // 'embedded',
     // 'devops',
   ];
-  const { repoNameToURL } =
-      await makeToolsTableWithoutIdFromGithubExploreScraper(specializations);
+  const { repoNameToURL } = await makeToolsTableWithoutId(specializations);
 
   const allRelation = [];
   const allUniqueRepoName = new Set();

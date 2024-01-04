@@ -1,1 +1,10 @@
-[]
+[
+  null,
+  {
+    "company_id": 1,
+    "name": "facebook",
+    "employee_amount": null,
+    "type": null,
+    "amount_of_searches": null
+  }
+]

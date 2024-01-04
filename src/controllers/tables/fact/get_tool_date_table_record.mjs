@@ -19,7 +19,6 @@
 
 import getInfo from '../../scraper_use_cases/get_repository_info.mjs';
 
-import GoogleTrendsScraper from '../../../routes/scrapers/google-trends-scraper.mjs';
 import getAllLatestVersionChanges from '../../scraper_use_cases/get_latest_five_version_changes';
 
 import { compare } from 'compare-versions';
@@ -76,15 +75,6 @@ function toChangeType(allVersion) {
   return changeType;
 }
 
-/**
- * @param {string} name github repository name
- */
-async function getLevelOfInterest(name) {
-  const scraper = new GoogleTrendsScraper([name]);
-  const levelOfInterest = await scraper.run();
-  return levelOfInterest;
-}
-
 export default async function getToolDateRecord(toolTable, idOfToday) {
   const allPartialURL =
       toolTable.map(tool => `${tool.author_company}/${tool.name}`);
@@ -103,7 +93,7 @@ export default async function getToolDateRecord(toolTable, idOfToday) {
       tool_id: record.tool_id,
       date_id: idOfToday,
       version: allRepoInfo[PARTIAL_GITHUB_URL].version,
-      interest_levels: getLevelOfInterest(record.name),
+      interest_levels: null,
       change_type: toChangeType(latestVersions),
     });
   }
