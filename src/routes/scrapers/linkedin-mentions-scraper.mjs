@@ -23,13 +23,13 @@ export default class LinkedinMentionsScraper {
   constructor(allToolName) {
     this.#outputObject = {};
     this.#allToolName = allToolName;
-    for (const toolName of allToolName) {
-      this.#outputObject[toolName] ??= 0;
+    for (const toolName of this.#allToolName) {
+      this.#outputObject[toolName] = 0;
     }
 
     const requestHandler = this.#myHandler.bind(this);
     this.#scraper = new PlaywrightCrawler({
-      headless: true,
+      headless: false,
       navigationTimeoutSecs: 100000,
       requestHandlerTimeoutSecs: 100000,
       browserPoolOptions: {
@@ -60,6 +60,7 @@ export default class LinkedinMentionsScraper {
       }
     });
 
+    let timeoutAttemptAmount = 0;
     for (const publication of allPublications) {
       await publication.click();
       // await page.waitForTimeout(3000000);
@@ -96,7 +97,8 @@ export default class LinkedinMentionsScraper {
             // try again
             await allPublications[0].click({ timeout: 2000 });
             await attemptClick();
-            await new Promise((resolve) => setTimeout(resolve, 500));
+            await new Promise((resolve) => setTimeout(resolve, 500 * timeoutAttemptAmount));
+            ++timeoutAttemptAmount;
           }
         }
       } else {
