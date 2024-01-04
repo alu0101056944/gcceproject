@@ -12,6 +12,10 @@ import getAmountOfOffers from "../../scraper_use_cases/get_market_offers.mjs";
 export default async function makeMarketDateTable(marketTable, idOfToday) {
   const allRecord = [];
 
+  const allSearchTerm = [
+    'Software engineer',
+  ];
+
   const objectWithCountProperty = await getAmountOfOffers(allSearchTerm);
   for (const marketRecord of marketTable) {
     const record = {
