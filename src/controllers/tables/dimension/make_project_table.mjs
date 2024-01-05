@@ -7,37 +7,18 @@
 
 'use strict';
 
-import makeToolsTableWithoutId from '../../scraper_use_cases/make_tools_from_github_explore.mjs';
 import getDownloadsPerPackage from '../../scraper_use_cases/add_downloads_to_table.mjs';
 
 import GithubRepositoryScraper from '../../../routes/scrapers/github-repository-scraper.mjs';
 
-// Update README.md when deciding what to do with all projects are github projects issue
-export default async function makeProjectTable() {
-  const specializations = [
-    'frontend',
-    // 'backend',
-    // 'embedded',
-    // 'devops',
-  ];
-  const { tableObject } = await makeToolsTableWithoutId(specializations);
-  let projectId = 1;
-  tableObject.forEach(
-        record => {
-          record.project_id = projectId++;
-          delete record.specialization;
-          delete record.type;
-        }
-      );
+// Update README.md when deciding what to do with the all projects are github
+// projects issue
+export default async function makeProjectTable(toolTable) {
+  const allProjectName = toolTable.map(record => record.name);
 
-  const projectNames = tableObject.map(record => record.name);
+  const projectNameToDownloads = await getDownloadsPerPackage(allProjectName);
 
-  const downloadsPerPackage = await getDownloadsPerPackage(projectNames);
-  tableObject.forEach((record, i) => {
-        record.downloads = downloadsPerPackage[record.name]
-      });
-
-  const urlsOfRepositories = tableObject.map(record => {
+  const allRepoURL = toolTable.map(record => {
         let AUTHOR_NAME = record.author_company;
         let PROJECT_NAME = record.name;
         if (/\s/.test(AUTHOR_NAME)) {
@@ -48,23 +29,27 @@ export default async function makeProjectTable() {
         }
         return `https://github.com/${AUTHOR_NAME}/${PROJECT_NAME}`;
       });
-  const scraperOfGithubRepos = new GithubRepositoryScraper(urlsOfRepositories);
+  const scraperOfGithubRepos = new GithubRepositoryScraper(allRepoURL);
   const allAmountOfContributors = await scraperOfGithubRepos.run();
-  tableObject.forEach((record, i) => {
-        record.contributors = allAmountOfContributors[i];
-      });
 
-  tableObject.forEach((record) => record.searches = null);
-
-  // I just kept author_company for the github repository access, it does not
-  // belong to the table.
-  tableObject.forEach(record => delete record.author_company);
+  const allRecord = [];
+  for (let i = 0; i < toolTable.length; i++) {
+    const PROJECT_NAME = toolTable[i].name;
+    const record = {
+      project_id: i + 1,
+      project_name: PROJECT_NAME,
+      downloads: projectNameToDownloads[PROJECT_NAME],
+      contributors: allAmountOfContributors[i],
+      searches: null,
+    }
+    allRecord.push(record);
+  }
 
   const FILE_CONTENT = await readFile('./src/persistent_ids.json', 'utf8');
   const persistentIds = JSON.parse(FILE_CONTENT);
-  persistentIds.project += tableObject.length;
+  persistentIds.project += allRecord.length;
   const TO_JSON = JSON.stringify(persistentIds, null, 2);
   await writeFile('./src/persistent_ids.json', TO_JSON);
 
-  return tableObject;
+  return allRecord;
 }

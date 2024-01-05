@@ -17,10 +17,6 @@ import countDiscussionAmount from '../../scraper_use_cases/get_discussions_amoun
 import fetchAllCommitAmount from '../../scraper_use_cases/get_repository_commit_amount.mjs';
 import getAllIssueAmountsObject from '../../scraper_use_cases/get_issues_of_repo.mjs';
 
-// amount_of_bugs_reported integer,
-// amount_of_bugs_solved integer,
-// amount_of_changes_commited integer,
-// amount_of_discussions integer
 async function getAllToolInfoFromGithub(toolTable) {
   const allToolInfo = [];
 
@@ -41,7 +37,7 @@ async function getAllToolInfoFromGithub(toolTable) {
         ' Something is off');
   }
 
-  for (const [index, toolRecord] of toolTable.entries()) {
+  for (const toolRecord of toolTable) {
     const PARTIAL_URL = `${toolRecord.author_company}/${toolRecord.name}`;
     const record = {
       community_id: 1, // github's id in the make community table file

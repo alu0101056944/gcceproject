@@ -19,7 +19,7 @@
 
 import getInfo from '../../scraper_use_cases/get_repository_info.mjs';
 
-import getAllLatestVersionChanges from '../../scraper_use_cases/get_latest_five_version_changes';
+import getAllLatestVersionChanges from '../../scraper_use_cases/get_latest_five_version_changes.js';
 
 import { compare } from 'compare-versions';
 
