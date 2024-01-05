@@ -95,7 +95,7 @@ export default async function getToolDateRecord(toolTable, idOfToday) {
       date_id: idOfToday,
       version: allRepoInfo[PARTIAL_GITHUB_URL]?.version ?? null,
       interest_levels: null,
-      change_type: toChangeType(latestVersions),
+      change_type: latestVersions ? toChangeType(latestVersions) : null,
     });
   }
 
