@@ -2,6 +2,8 @@ import { test, expect } from '@playwright/test';
 
 import EndpointWriter from '../../src/controllers/endpoint_writer.mjs';
 
+import { readFile, writeFile } from 'fs/promises';
+
 test('Valid dependency trees do not throw', async () => {
   const dependencyTree = {
     tableName: 'employee',
@@ -212,7 +214,138 @@ test('Dependency tree without duplicated table names doesn\'t throw', async () =
         dependencies: [],
       }
     ]
-  }
+  };
   await expect(() => new EndpointWriter(dependencyTree)).not.toThrow();
 });
 
+test('write() properly changes persistent ids1', async () => {
+  const dependencyTree = {
+    tableName: 'project',
+    resolver: (toolTable, latestId) => {
+      return [
+        {
+          employee_id: latestId + 1,
+          name: toolTable.name,
+          downloads: 4323,
+        }
+      ];
+    },
+    dependencies: [
+      {
+        tableName: 'tool',
+        resolver: (latestId) => {
+          return [
+            {
+              tool_id: 1,
+              name: 'gatsby',
+              searches: 17
+            }
+          ];
+        },
+        dependencies: [],
+      }
+    ]
+  };
+  const SAVE_FILE = await readFile('./src/persistent_ids.json', 'utf-8');
+  const saveFile = JSON.parse(SAVE_FILE);
+  const writer = new EndpointWriter(dependencyTree);
+  await writer.write();
+  const NEW_CONTENT = await readFile('./src/persistent_ids.json', 'utf-8');
+  const newContent = JSON.parse(NEW_CONTENT);
+  await writeFile('./src/persistent_ids.json', SAVE_FILE);
+  await expect(newContent.tool - saveFile.tool).toBe(1);
+});
+
+test('write() properly changes persistent ids2', async () => {
+  const dependencyTree = {
+    tableName: 'project',
+    resolver: (toolTable, latestId) => {
+      return [{
+        employee_id: latestId + 1,
+        name: toolTable.name,
+        downloads: 4323,
+      }]
+    },
+    dependencies: [
+      {
+        tableName: 'tool',
+        resolver: (latestId) => {
+          return [{
+            tool_id: 1,
+            name: 'gatsby',
+            searches: 17
+          }]
+        },
+        dependencies: [],
+      }
+    ]
+  };
+  const SAVE_FILE = await readFile('./src/persistent_ids.json', 'utf-8');
+  const saveFile = JSON.parse(SAVE_FILE);
+  const writer = new EndpointWriter(dependencyTree);
+  await writer.write();
+  const NEW_CONTENT = await readFile('./src/persistent_ids.json', 'utf-8');
+  const newContent = JSON.parse(NEW_CONTENT);
+  await writeFile('./src/persistent_ids.json', SAVE_FILE);
+  await expect(newContent.project - saveFile.project).toBe(1);
+});
+
+test('Dependency tree is solved correctly1', async () => {
+  const dependencyTree = {
+    tableName: 'project',
+    resolver: (toolTable, latestId) => {
+      return [{
+        employee_id: latestId + 1,
+        name: toolTable.name,
+        downloads: 4323,
+      }];
+    },
+    dependencies: [
+      {
+        tableName: 'tool',
+        resolver: (latestId) => {
+          return [{
+            tool_id: 1,
+            name: 'gatsby',
+            searches: 17
+          }];
+        },
+        dependencies: [],
+      }
+    ]
+  };
+  const writer = new EndpointWriter(dependencyTree);
+  await writer.write();
+  const toolTable = writer.getTable('tool');
+  await expect(toolTable[0].searches).toBe(17);
+});
+
+test('Dependency tree is solved correctly2', async () => {
+  const dependencyTree = {
+    tableName: 'project',
+    resolver: (toolTable, latestId) => {
+      return [{
+        employee_id: latestId + 1,
+        name: toolTable.name,
+        downloads: 4323,
+      }]
+    },
+    dependencies: [
+      {
+        tableName: 'tool',
+        resolver: (latestId) => {
+          return [{
+            tool_id: 1,
+            name: 'gatsby',
+            searches: 17
+          }]
+        },
+        dependencies: [],
+      }
+    ]
+  };
+  const writer = new EndpointWriter(dependencyTree);
+  await writer.write();
+  const projectTable = writer.getTable('project');
+  await expect(projectTable[0].downloads).toBe(4323);
+});

@@ -135,25 +135,44 @@ export default class EndpointWriter {
   async write() {
     const FILE_CONTENT = await readFile('./src/persistent_ids.json', 'utf8');
     const dimensionToId = JSON.parse(FILE_CONTENT);
-
-    dimensionToId.employee = 20;
-
-    const TO_JSON = JSON.stringify(dimensionToId, null, 2);
-    await writeFile('./src/persistent_ids.json', TO_JSON);
+    for (const key of Object.keys(dimensionToId)) {
+      if (key !== 'date') {
+        dimensionToId[key] ??= 0;
+      }
+    }
 
     const solve = async (node) => {
+      const LATEST_ID = dimensionToId[node.tableName];
       if (node.dependencies.length === 0) {
-        const table = await node.resolver();
+        const table = await node.resolver(LATEST_ID);
+
         this.#tables[node.tableName] = table;
+        dimensionToId[node.tableName] += table.length;
+        return table;
       } else {
         const args = [];
         for (const child of node.dependencies) {
           const allRecord = await solve(child);
           args.push(allRecord);
         }
-        const table = await node.resolver(...args);
+        const table = await node.resolver(...args, LATEST_ID);
+
         this.#tables[node.tableName] = table;
+        dimensionToId[node.tableName] += table.length;
+        return table;
       }
     };
+    await solve(this.#dependencyTree);
+
+    const TO_JSON = JSON.stringify(dimensionToId, null, 2);
+    await writeFile('./src/persistent_ids.json', TO_JSON);
+    console.log('EndpointWriter sucessful src/persistent_ids.json write.');
+  }
+
+  getTable(tableName) {
+    if (!this.#tables[tableName]) {
+      throw new Error('Tried to getTable a table that is not stored.');
+    }
+    return this.#tables[tableName];
   }
 }
