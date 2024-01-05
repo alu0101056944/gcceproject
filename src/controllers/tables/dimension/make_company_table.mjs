@@ -29,7 +29,7 @@ export default async function makeCompanyTable(toolTable) {
   const scraperOfProfiles = new CompaniesmarketcapProfileScraper(allCompanyName);
   const authorCompanyToType = toSpacelessKeys(await scraperOfProfiles.run());
 
-  const allRecord = new Array(toolTable.length)
+  const allRecord = [];
   for (let i = 0; i < toolTable.length; i++) {
     const AUTHOR_COMPANY = toolTable[i].author_company;
     const record = {
