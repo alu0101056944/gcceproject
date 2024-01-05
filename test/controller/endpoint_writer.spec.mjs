@@ -18,7 +18,7 @@ test('Valid dependency trees do not throw', async () => {
 });
 
 test('Valid dependency trees do not throw2', async () => {
-  const dependencyTree2 = {
+  const dependencyTree = {
     tableName: 'project',
     resolver: (toolTable, latestId) => {
       return {
@@ -42,26 +42,26 @@ test('Valid dependency trees do not throw2', async () => {
     ]
   }
 
-  await expect(() => new EndpointWriter(dependencyTree2)).not.toThrow();
+  await expect(() => new EndpointWriter(dependencyTree)).not.toThrow();
 });
 
 test('Bad dependency trees do throw1', async () => {
-  const dependencyTree0 = {};
-  await expect(() => new EndpointWriter(dependencyTree0)).toThrow();
+  const dependencyTree = {};
+  await expect(() => new EndpointWriter(dependencyTree)).toThrow();
 });
 
 test('Bad dependency trees do throw2', async () => {
-  const dependencyTree1 = {
+  const dependencyTree = {
     tableName: 'employee',
     dependencies: [],
   };
   
-  await expect(() => new EndpointWriter(dependencyTree1)).toThrow();
+  await expect(() => new EndpointWriter(dependencyTree)).toThrow();
 });
 
 test('Bad dependency trees do throw3', async () => {
 
-  const dependencyTree2 = {
+  const dependencyTree = {
     tableName: 'employee',
     resolver: () => {
       return {
@@ -71,12 +71,12 @@ test('Bad dependency trees do throw3', async () => {
     },
   };
 
-  await expect(() => new EndpointWriter(dependencyTree2)).toThrow();
+  await expect(() => new EndpointWriter(dependencyTree)).toThrow();
 });
 
 test('Bad dependency trees do throw4', async () => {
 
-  const dependencyTree3 = {
+  const dependencyTree = {
     resolver: () => {
       return {
         employee_id: 1,
@@ -86,11 +86,11 @@ test('Bad dependency trees do throw4', async () => {
     dependencies: [],
   };
 
-  await expect(() => new EndpointWriter(dependencyTree3)).toThrow();
+  await expect(() => new EndpointWriter(dependencyTree)).toThrow();
 });
 
 test('Bad dependency trees do throw5', async () => {
-  const dependencyTree4 = {
+  const dependencyTree = {
     tableName: 'project',
     resolver: (toolTable, latestId) => {
       return {
@@ -113,11 +113,11 @@ test('Bad dependency trees do throw5', async () => {
     ]
   }
 
-  await expect(() => new EndpointWriter(dependencyTree4)).toThrow();
+  await expect(() => new EndpointWriter(dependencyTree)).toThrow();
 });
 
 test('Bad dependency trees do throw6', async () => {
-  const dependencyTree5 = {
+  const dependencyTree = {
     tableName: 'project',
     resolver: (toolTable, latestId) => {
       return {
@@ -133,11 +133,11 @@ test('Bad dependency trees do throw6', async () => {
       }
     ]
   }
-  await expect(() => new EndpointWriter(dependencyTree5)).toThrow();
+  await expect(() => new EndpointWriter(dependencyTree)).toThrow();
 });
 
 test('Bad dependency trees do throw7', async () => {
-  const dependencyTree6 = {
+  const dependencyTree = {
     tableName: 'project',
     resolver: (toolTable, latestId) => {
       return {
@@ -160,5 +160,59 @@ test('Bad dependency trees do throw7', async () => {
     ]
   }
 
-  await expect(() => new EndpointWriter(dependencyTree6)).toThrow();
+  await expect(() => new EndpointWriter(dependencyTree)).toThrow();
 });
+
+test('Dependency tree with duplicated table names results in error', async () => {
+  const dependencyTree = {
+    tableName: 'project',
+    resolver: (toolTable, latestId) => {
+      return {
+        employee_id: latestId + 1,
+        name: toolTable.name,
+        downloads: 4323,
+      }
+    },
+    dependencies: [
+      {
+        tableName: 'project',
+        resolver: () => {
+          return {
+            tool_id: 1,
+            name: 'gatsby',
+            searches: 17
+          }
+        },
+      }
+    ]
+  }
+  await expect(() => new EndpointWriter(dependencyTree)).toThrow();
+});
+
+test('Dependency tree without duplicated table names doesn\'t throw', async () => {
+  const dependencyTree = {
+    tableName: 'project',
+    resolver: (toolTable, latestId) => {
+      return {
+        employee_id: latestId + 1,
+        name: toolTable.name,
+        downloads: 4323,
+      }
+    },
+    dependencies: [
+      {
+        tableName: 'tool',
+        resolver: () => {
+          return {
+            tool_id: 1,
+            name: 'gatsby',
+            searches: 17
+          }
+        },
+        dependencies: [],
+      }
+    ]
+  }
+  await expect(() => new EndpointWriter(dependencyTree)).not.toThrow();
+});
+
