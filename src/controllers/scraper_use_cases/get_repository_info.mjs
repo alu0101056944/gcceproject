@@ -23,7 +23,7 @@ export default async function getInfo(allPartialURL) {
 
       outputObject[request.label] ??= { commits: null, version: null };
 
-      const commitTextRegExp = /(\d+?\,?\d+?)\s*Commits/i;
+      const commitTextRegExp = /((\d+?),?)+\s*Commits/i;
       const commitAmountLocator = page.getByRole('link')
           .getByText(commitTextRegExp);
 

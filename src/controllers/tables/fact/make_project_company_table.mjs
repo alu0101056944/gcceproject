@@ -6,8 +6,6 @@
 
 'use strict';
 
-import makeToolsTableWithoutId from '../../scraper_use_cases/make_tools_from_github_explore.mjs'
-
 // Update README.md if changed to scraper usage instead of api calls.
 async function fetchContributorAmount(authorCompany, repoName) {
   async function* fetchContributors() {
@@ -38,58 +36,17 @@ async function fetchContributorAmount(authorCompany, repoName) {
   return count === 0 ? null : count;
 }
 
-async function fetchInfoUsingScraper() {
-  const specializations = [
-    'frontend',
-    // 'backend',
-    // 'embedded',
-    // 'devops',
-  ];
-  const { repoNameToURL } = await makeToolsTableWithoutId(specializations);
-
-  const allRelation = [];
-  const allUniqueRepoName = new Set();
-  const allUniqueAuthorCompany = new Set();
-  for (const url of Object.getOwnPropertyNames(repoNameToURL)) {
-    const [ _, AUTHOR_COMPANY, NAME ] = /github.com\/(.*?)\/(.*?)\//.exec(url);
-    allRelation.push({
-          authorCompany: AUTHOR_COMPANY,
-          name: NAME,
-        });
-    allUniqueRepoName.add(NAME);
-    allUniqueAuthorCompany.add(AUTHOR_COMPANY);
-  }
-
-  return { allRelation, allUniqueRepoName, allUniqueAuthorCompany };
-}
-
-// assumes companyTable names are github compatible names (without spaces)
-export default async function makeProjectCompanyTable(companyTable, projectTable) {
-  const {
-        allRelation,
-        allUniqueRepoName,
-        allUniqueAuthorCompany
-      } = await fetchInfoUsingScraper();
-
-  const authorCompanyToId = {};
-  for (const companyRecord of companyTable) {
-    if (allUniqueAuthorCompany.has(companyRecord.name)) {
-      authorCompanyToId[companyRecord.name] = companyRecord.name;
-    } else {
-      authorCompanyToId[companyRecord.name] = null;
-    }
-  }
-
-  const repoNameToId = {};
-  for (const projectRecord of projectTable) {
-    if (allUniqueRepoName.has(projectRecord.project_name)) {
-      repoNameToId[projectRecord.project_name] = projectRecord.project_id;
-    } else {
-      repoNameToId[projectRecord.project_name] = null;
-    }
-  }
-
+/**
+ * 
+ * @param {array} companyTable of company record objects
+ * @param {array} projectTable of project record objects
+ * @param {array} allRelation of objects with author_company and name
+ *    properties that relate one company (author_company) to one project (name).
+ */
+export default async function makeProjectCompanyTable(companyTable, projectTable,
+    allRelation) {
   const projectCompanyTable = [];
+
   for (let i = 0; i < allRelation.length; i++) {
     const REPO_NAME = allRelation[i].name;
     const AUTHOR_COMPANY = allRelation[i].authorCompany;
