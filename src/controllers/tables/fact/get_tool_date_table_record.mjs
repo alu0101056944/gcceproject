@@ -89,10 +89,11 @@ export default async function getToolDateRecord(toolTable, idOfToday) {
         await getAllLatestVersionChanges([PARTIAL_GITHUB_URL]);
     const latestVersions = partialURLToAllVersion[PARTIAL_GITHUB_URL];
 
+    console.log(PARTIAL_GITHUB_URL);
     allDateToolRecord.push({
       tool_id: record.tool_id,
       date_id: idOfToday,
-      version: allRepoInfo[PARTIAL_GITHUB_URL].version,
+      version: allRepoInfo[PARTIAL_GITHUB_URL]?.version ?? null,
       interest_levels: null,
       change_type: toChangeType(latestVersions),
     });

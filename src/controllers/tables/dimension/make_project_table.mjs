@@ -7,6 +7,8 @@
 
 'use strict';
 
+import { readFile, writeFile } from 'fs/promises';
+
 import getDownloadsPerPackage from '../../scraper_use_cases/add_downloads_to_table.mjs';
 
 import GithubRepositoryScraper from '../../../routes/scrapers/github-repository-scraper.mjs';

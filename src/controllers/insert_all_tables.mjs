@@ -23,6 +23,7 @@ import makeMarketToolDateTable from './tables/fact/make_market_tool_date_table.m
 import makeProjectCompanyTable from './tables/fact/make_project_company_table.mjs';
 import makeProjectToolTable from './tables/fact/make_project_tool_table.mjs';
 import makeToolProjectCompanyTable from './tables/fact/make_tool_project_company_table.mjs';
+import getToolDateRecord from './tables/fact/get_tool_date_table_record.mjs';
 
 export default async function insertAllTables() {
   const toolTable = await makeToolTable();
@@ -49,7 +50,7 @@ export default async function insertAllTables() {
 
   await new Promise(resolve => setTimeout(resolve, 1000));
 
-  const projectTable = await makeProjectTable();
+  const projectTable = await makeProjectTable(toolTable);
   await writeFile('outputTables/projectTable.json',
       JSON.stringify(projectTable, null, 2));
 
@@ -68,7 +69,7 @@ export default async function insertAllTables() {
   await new Promise(resolve => setTimeout(resolve, 1000));
 
   const communityToolDateTable =
-      await makeCommunityToolDateTable(companyTable, dateRecordOfToday.date_id);
+      await makeCommunityToolDateTable(toolTable, dateRecordOfToday.date_id);
   await writeFile('outputTables/communityToolDateTable.json',
       JSON.stringify(communityToolDateTable, null, 2));
 
@@ -126,6 +127,11 @@ export default async function insertAllTables() {
       await makeToolProjectCompanyTable(toolTable, projectTable, companyTable);
   await writeFile('outputTables/toolProjectCompanyTable.json',
       JSON.stringify(toolProjectCompanyTable, null, 2));
+  
+  const toolDateRecord =
+      await getToolDateRecord(toolTable, dateRecordOfToday.date_id);
+  await writeFile('outputTables/toolDateRecord.json',
+      JSON.stringify(toolDateRecord, null, 2));
 }
 
 insertAllTables();

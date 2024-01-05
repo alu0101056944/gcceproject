@@ -39,13 +39,14 @@ async function getAllToolInfoFromGithub(toolTable) {
 
   for (const toolRecord of toolTable) {
     const PARTIAL_URL = `${toolRecord.author_company}/${toolRecord.name}`;
+    const REPO_NAME = PARTIAL_URL.split('/')[1];
     const record = {
       community_id: 1, // github's id in the make community table file
       tool_id: toolRecord.tool_id,
       amount_of_bugs_reported: partialURLToAmountsObject[PARTIAL_URL].total,
       amount_of_bugs_solved: partialURLToAmountsObject[PARTIAL_URL].closed,
       amount_of_changes_commited: partialURLToCommitAmount[PARTIAL_URL],
-      amount_of_discussions: partialURLToDiscussionAmount[PARTIAL_URL],
+      amount_of_discussions: partialURLToDiscussionAmount[REPO_NAME],
     }
     allToolInfo.push(record);
   }
@@ -67,7 +68,7 @@ export default async function makeCommunityToolTable(toolTable, communityTable) 
 
   for (const community of communityTable) {
     const allInfoAtCommunity = await nameToAllInfo[community.name](toolTable);
-    allInfoAtCommunity.concat(allInfoAtCommunity);
+    allInfoAtCommunity.forEach(record => allRecord.push(record));
   }
 
   return allRecord;
