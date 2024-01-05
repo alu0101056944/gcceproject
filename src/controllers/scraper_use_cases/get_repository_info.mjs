@@ -8,18 +8,22 @@
 
 import NamesToURLScraper from '../../routes/scrapers/names-to-urls-scraper.mjs';
 
-export default async function getInfo(allRepository) {
+export default async function getInfo(allPartialURL) {
   const URL_PREFIX = 'https://github.com/';
   const URL_POSTFIX = '';
   const scraperRepositoryInfo = new NamesToURLScraper(
     {
-      names: allRepository,
+      names: allPartialURL,
       preUrl: URL_PREFIX,
       postUrl: URL_POSTFIX,
     },
     async ({ page, request, log, outputObject }) => {
       log.info('GithubInfoScraper visited ' + request.url);
-      const commitTextRegExp = /(\d+?\,\d+?)\s*Commits/i;
+      page.setDefaultTimeout(3000);
+
+      outputObject[request.label] ??= { commits: null, version: null };
+
+      const commitTextRegExp = /(\d+?\,?\d+?)\s*Commits/i;
       const commitAmountLocator = page.getByRole('link')
           .getByText(commitTextRegExp);
 
@@ -29,8 +33,6 @@ export default async function getInfo(allRepository) {
           .trim()
           .replace(/,/g, '');
       const AMOUNT_OF_COMMITS = parseInt(AMOUNT_OF_COMMITS_STRING);
-
-      outputObject[request.label] ??= {};
       outputObject[request.label].commits = AMOUNT_OF_COMMITS;
 
       const authorCompanyAndName = request.label.split('/');
