@@ -31,7 +31,7 @@ export default async function fetchAllCommitAmount(allRepoInfo) {
     },
     async ({ page, request, log, outputObject }) => {
       log.info('GithubInfoScraper visited ' + request.url);
-      const commitTextRegExp = /(\d+?\,\d+?)\s*Commits/i;
+      const commitTextRegExp = /(\d+?\,?\d+?)\s*Commits/i;
       const commitAmountLocator = page.getByRole('link')
           .getByText(commitTextRegExp);
 

@@ -53,14 +53,14 @@
     "date_id": 1,
     "version": null,
     "interest_levels": null,
-    "change_type": "non-semantic"
+    "change_type": "same"
   },
   {
     "tool_id": 9,
     "date_id": 1,
     "version": null,
     "interest_levels": null,
-    "change_type": "same"
+    "change_type": "non-semantic"
   },
   {
     "tool_id": 10,
@@ -81,21 +81,21 @@
     "date_id": 1,
     "version": null,
     "interest_levels": null,
-    "change_type": "non-semantic"
+    "change_type": "patch"
   },
   {
     "tool_id": 13,
     "date_id": 1,
     "version": null,
     "interest_levels": null,
-    "change_type": "non-semantic"
+    "change_type": "patch"
   },
   {
     "tool_id": 14,
     "date_id": 1,
     "version": null,
     "interest_levels": null,
-    "change_type": "patch"
+    "change_type": "non-semantic"
   },
   {
     "tool_id": 15,
@@ -109,14 +109,14 @@
     "date_id": 1,
     "version": null,
     "interest_levels": null,
-    "change_type": "patch"
+    "change_type": "non-semantic"
   },
   {
     "tool_id": 17,
     "date_id": 1,
     "version": null,
     "interest_levels": null,
-    "change_type": "non-semantic"
+    "change_type": "patch"
   },
   {
     "tool_id": 18,
@@ -137,6 +137,6 @@
     "date_id": 1,
     "version": null,
     "interest_levels": null,
-    "change_type": "patch"
+    "change_type": "non-semantic"
   }
 ]
