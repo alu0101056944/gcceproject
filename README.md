@@ -8,6 +8,7 @@ A business intelligence tool to help select tools for a project as a hyphotetica
 
 ## TODO
  - at [src\controllers\tables\fact\make_market_tool_date_table.mjs](src\controllers\tables\fact\make_market_tool_date_table.mjs) differentiate between markets.
+ - at [src/controllers/tables/fact/make_community_tool_table.mjs](src/controllers/tables/fact/make_community_tool_table.mjs) solve race condition into fetchAllCommitAmount.
  - at [src\controllers\tables\fact\make_market_date_table.mjs](src\controllers\tables\fact\make_market_date_table.mjs) differentiate between all markets because right know all markets get the same `amount_of_offers_attribute`.
  - at [src\controllers\tables\fact\make_community_tool_date_table.mjs](src\controllers\tables\fact\make_community_tool_date_table.mjs) rank is tempirarily NULL. Think about how to calculate a rank.
  - Make paralel runs on insert table with a `Promise.all`.

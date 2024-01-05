@@ -17,10 +17,6 @@ import countDiscussionAmount from '../../scraper_use_cases/get_discussions_amoun
 import fetchAllCommitAmount from '../../scraper_use_cases/get_repository_commit_amount.mjs';
 import getAllIssueAmountsObject from '../../scraper_use_cases/get_issues_of_repo.mjs';
 
-// amount_of_bugs_reported integer,
-// amount_of_bugs_solved integer,
-// amount_of_changes_commited integer,
-// amount_of_discussions integer
 async function getAllToolInfoFromGithub(toolTable) {
   const allToolInfo = [];
 
@@ -28,7 +24,12 @@ async function getAllToolInfoFromGithub(toolTable) {
       toolTable.map(tool => `${tool.author_company}/${tool.name}`);
   const partialURLToAmountsObject =
       await getAllIssueAmountsObject(allPartialURL);
-  const partialURLToCommitAmount = await fetchAllCommitAmount(toolTable);
+  
+  // temporal fix to a race condition into fetchAllCommitAmount.
+  // **** Update README.md when solved.
+  await new Promise(resolve => setTimeout(2000, resolve));
+
+  const partialURLToCommitAmount = await fetchAllCommitAmount(allPartialURL);
   const partialURLToDiscussionAmount =
       await countDiscussionAmount(toolTable.map(tool => tool.name));
 
@@ -38,18 +39,23 @@ async function getAllToolInfoFromGithub(toolTable) {
       hasUnexpectedLength(partialURLToDiscussionAmount) ||
       hasUnexpectedLength(partialURLToCommitAmount)) {
     throw new Error('There is disparity between partial results and toolTable.' +
-        ' Something is off');
+        ' Something is off ' + '(' +
+        Object.keys(partialURLToAmountsObject).length + ',' +
+        Object.keys(partialURLToDiscussionAmount).length + ',' +
+        Object.keys(partialURLToCommitAmount).length + ')' +
+        ' toolTable.length: ' + toolTable.length);
   }
 
-  for (const [index, toolRecord] of toolTable.entries()) {
+  for (const toolRecord of toolTable) {
     const PARTIAL_URL = `${toolRecord.author_company}/${toolRecord.name}`;
+    const REPO_NAME = PARTIAL_URL.split('/')[1];
     const record = {
       community_id: 1, // github's id in the make community table file
       tool_id: toolRecord.tool_id,
       amount_of_bugs_reported: partialURLToAmountsObject[PARTIAL_URL].total,
       amount_of_bugs_solved: partialURLToAmountsObject[PARTIAL_URL].closed,
       amount_of_changes_commited: partialURLToCommitAmount[PARTIAL_URL],
-      amount_of_discussions: partialURLToDiscussionAmount[PARTIAL_URL],
+      amount_of_discussions: partialURLToDiscussionAmount[REPO_NAME],
     }
     allToolInfo.push(record);
   }
@@ -70,8 +76,8 @@ export default async function makeCommunityToolTable(toolTable, communityTable) 
   const allRecord = [];
 
   for (const community of communityTable) {
-    const allInfoAtCommunity = await nameToAllInfo[community.name](toolTable);
-    allInfoAtCommunity.concat(allInfoAtCommunity);
+    const allInfoAtCommunity = await (nameToAllInfo[community.name](toolTable));
+    allInfoAtCommunity.forEach(record => allRecord.push(record));
   }
 
   return allRecord;

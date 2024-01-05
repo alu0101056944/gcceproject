@@ -19,7 +19,7 @@
 
 import getInfo from '../../scraper_use_cases/get_repository_info.mjs';
 
-import getAllLatestVersionChanges from '../../scraper_use_cases/get_latest_five_version_changes';
+import getAllLatestVersionChanges from '../../scraper_use_cases/get_latest_five_version_changes.js';
 
 import { compare } from 'compare-versions';
 
@@ -89,12 +89,13 @@ export default async function getToolDateRecord(toolTable, idOfToday) {
         await getAllLatestVersionChanges([PARTIAL_GITHUB_URL]);
     const latestVersions = partialURLToAllVersion[PARTIAL_GITHUB_URL];
 
+    console.log(PARTIAL_GITHUB_URL);
     allDateToolRecord.push({
       tool_id: record.tool_id,
       date_id: idOfToday,
-      version: allRepoInfo[PARTIAL_GITHUB_URL].version,
+      version: allRepoInfo[PARTIAL_GITHUB_URL]?.version ?? null,
       interest_levels: null,
-      change_type: toChangeType(latestVersions),
+      change_type: latestVersions ? toChangeType(latestVersions) : null,
     });
   }
 

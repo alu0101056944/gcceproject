@@ -31,5 +31,3 @@ export default async function makeEmployeeToolTable(amountOfTools) {
 
   return table;
 }
-  
-// makeEmployeeToolTable(8).then((data) => console.log(inspect(data)));

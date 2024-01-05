@@ -6,154 +6,257 @@
 
 import { writeFile } from 'fs/promises';
 
-// import pgPromise from 'pg-promise';
-
 import makeEmployeeTable from './tables/dimension/make_employee_table.mjs';
 import makeToolTable from './tables/dimension/make_tool_table.mjs';
 import makeCommunityTable from './tables/dimension/make_community_table.mjs';
 import makeCompanyTable from './tables/dimension/make_company_table.mjs';
 import makeProjectTable from './tables/dimension/make_project_table.mjs';
 import makeMarketTable from './tables/dimension/make_market_table.mjs';
+import getNewDateRecord from './tables/dimension/get_date_table_record.mjs';
 
-import makeProjectCompany from './tables/fact/make_project_company_table.mjs';
-
-import getNewDateRecord from './get_date_record.mjs';
+import makeCommunityToolDateTable from './tables/fact/get_tool_date_table_record.mjs';
+import makeCommunityToolTable from './tables/fact/make_community_tool_table.mjs';
+import makeCompanyDate from './tables/fact/make_company_date_table.mjs';
+import makeEmployeeToolTable from './tables/fact/make_employee_tool_table.mjs';
+import makeMarketDateTable from './tables/fact/make_market_date_table.mjs';
+import makeMarketToolDateTable from './tables/fact/make_market_tool_date_table.mjs';
+import makeProjectCompanyTable from './tables/fact/make_project_company_table.mjs';
+import makeProjectToolTable from './tables/fact/make_project_tool_table.mjs';
+import makeToolProjectCompanyTable from './tables/fact/make_tool_project_company_table.mjs';
+import getToolDateRecord from './tables/fact/get_tool_date_table_record.mjs';
 
 export default async function insertAllTables() {
-  // const pgp = pgPromise();
-  // const db = pgp({
-  //   connectionString: 'postgres://postgres:454565@localhost:5432/raw_database',
-  //   max: 20
-  // });
+  let toolTable;
+  try {
+    console.log('Calculating toolTable');
+    toolTable = await makeToolTable();
+  } catch (error) {
+    console.error('There was an error while calculating toolTable' + error);
+    toolTable = [];
+  }
+  await writeFile('outputTables/toolTable.json',
+        JSON.stringify(toolTable, null, 2));
 
-  // await db.none('DELETE FROM $1:raw', ['company']);
-  const employeeTable = await makeEmployeeTable();
-  // const insertEmployeeTable =
-  //     pgp.helpers.insert(
-  //         employeeTable,
-  //         [
-  //           'employee_id',
-  //           'name',
-  //           'title',
-  //           'department'
-  //         ],
-  //         'employee'
-  //       );
-  await writeFile('outputTables/employeeTable.json', JSON.stringify(employeeTable, null, 2));
+  await new Promise(resolve => setTimeout(resolve, 1000));
 
-  // to avoid problems inbetween scraper starts
-  await new Promise(resolve => setTimeout(resolve, 4000));
+  let companyTable;
+  try {
+    console.log('Calculating companyTable');
+    companyTable = await makeCompanyTable(toolTable);
+  } catch (error) {
+    console.error('There was an error while calculating companyTable' + error);
+    companyTable = [];
+  }
+  await writeFile('outputTables/companyTable.json',
+        JSON.stringify(companyTable, null, 2));
 
-  const toolTable = await makeToolTable();
-  // const insertToolTable =
-  //     pgp.helpers.insert(
-  //         toolTable,
-  //         [
-  //           'tool_id',
-  //           'name',
-  //           'author_company',
-  //           'type',
-  //           'specialization'
-  //         ],
-  //         'tool'
-  //       );
-  await writeFile('outputTables/toolTable.json', JSON.stringify(toolTable, null, 2));
+  await new Promise(resolve => setTimeout(resolve, 1000));
 
-  // to avoid problems inbetween scraper starts
-  await new Promise(resolve => setTimeout(resolve, 4000));
+  let employeeTable;
+  try {
+    console.log('Calculating employeeTable');
+    employeeTable = await makeEmployeeTable();
+  } catch (error) {
+    console.error('There was an error while calculating employeeTable' + error);
+    employeeTable = [];
+  }
+  await writeFile('outputTables/employeeTable.json',
+        JSON.stringify(employeeTable, null, 2));
 
-  const communityTable = await makeCommunityTable();
-  // const insertCommunityTable =
-  //     pgp.helpers.insert(
-  //         communityTable,
-  //         [
-  //           'community_id',
-  //           'name',
-  //           'type'
-  //         ],
-  //         'community'
-  //       );
-  await writeFile('outputTables/communityTable.json', JSON.stringify(communityTable, null, 2));
+  await new Promise(resolve => setTimeout(resolve, 1000));
 
-  // to avoid problems inbetween scraper starts
-  await new Promise(resolve => setTimeout(resolve, 4000));
+  let communityTable;
+  try {
+    console.log('Calculating communityTable');
+    communityTable = await makeCommunityTable();
+  } catch (error) {
+    console.error('There was an error while calculating communityTable' + error);
+    communityTable = [];
+  }
+  await writeFile('outputTables/communityTable.json',
+        JSON.stringify(communityTable, null, 2));
 
-  const companyTable = await makeCompanyTable();
-  // console.log(inspect(companyTable));
-  // const insertCompanyTable =
-  //     pgp.helpers.insert(
-  //         companyTable,
-  //         [
-  //           'company_id',
-  //           'name',
-  //           'employee_amount',
-  //           'amount_of_searches',
-  //           'type'
-  //         ],
-  //         'company'
-  //       );
-  await writeFile('outputTables/companyTable.json', JSON.stringify(companyTable, null, 2));
+  await new Promise(resolve => setTimeout(resolve, 1000));
 
-  // to avoid problems inbetween scraper starts
-  await new Promise(resolve => setTimeout(resolve, 4000));
+  let projectTable;
+  try {
+    console.log('Calculating projectTable');
+    projectTable = await makeProjectTable(toolTable);
+  } catch (error) {
+    console.error('There was an error while calculating projectTable' + error);
+    projectTable = [];
+  }
+  await writeFile('outputTables/projectTable.json',
+        JSON.stringify(projectTable, null, 2));
 
-  const projectTable = await makeProjectTable();
-  // const insertProjectTable =
-  //     pgp.helpers.insert(
-  //         projectTable,
-  //         [
-  //           'project_id',
-  //           'project_name',
-  //           'downloads',
-  //           'contributors',
-  //           'searches'
-  //         ],
-  //         'project'
-  //       );
-  await writeFile('outputTables/projectTable.json', JSON.stringify(projectTable, null, 2));
+  await new Promise(resolve => setTimeout(resolve, 1000));
 
-  // generate new date entry per day
-  // const lastDateFromTable = new Date(); // @todo assign actual value
-  // if (new Date().getDay() < lastDayDate.getDay()) {
-  //   const newDateRecord = getNewDateRecord();
-  //   const insertNewDate =
-  //       pgp.helpers.insert(['date_id', 'date'], 'date');
-  //   await ddb.none(insertNewDate);
-  // }
+  let marketTable;
+  try {
+    console.log('Calculating marketTable');
+    marketTable = await makeMarketTable();
+  } catch (error) {
+    console.error('There was an error while calculating marketTable' + error);
+    marketTable = [];
+  }
+  await writeFile('outputTables/marketTable.json',
+        JSON.stringify(marketTable, null, 2));
 
-  // to avoid problems inbetween scraper starts
-  await new Promise(resolve => setTimeout(resolve, 4000));
+  await new Promise(resolve => setTimeout(resolve, 1000));
 
-  const projectCompanyTable =
-      await makeProjectCompany(companyTable, projectTable);
-  // const insertProjectCompanyTable =
-  //     pgp.helpers.insert(
-  //         projectTable,
-  //         [
-  //           'project_id',
-  //           'company_id',
-  //           'budget',
-  //           'amount_of_employees_assigned'
-  //         ],
-  //         'project_company'
-  //       );
-  await writeFile('outputTables/projectCompanyTable.json', JSON.stringify(projectCompanyTable, null, 2));
+  let dateRecordOfToday;
+  try {
+    console.log("Writing today's date record");
+    dateRecordOfToday = await getNewDateRecord();
+  } catch (error) {
+    console.error('There was an error while calculating today\'s record' + error);
+    dateRecordOfToday = [];
+  }
+  await writeFile('outputTables/dateRecordOfToday.json',
+        JSON.stringify(dateRecordOfToday, null, 2));
 
-  // to avoid problems inbetween scraper starts
-  await new Promise(resolve => setTimeout(resolve, 4000));
+  await new Promise(resolve => setTimeout(resolve, 1000));
 
-  // const marketTable = await makeMarketTable();
-  // const insertMarketTable =
-  //     pgp.helpers.insert(marketTable, ['market_id'], 'market');
+  let communityToolDateTable;
+  try {
+    console.log('Calculating communityToolDateTable');
+    communityToolDateTable =
+        await makeCommunityToolDateTable(toolTable, dateRecordOfToday.date_id);
+  } catch (error) {
+    communityToolDateTable = [];
+    console.error('There was an error while calculating communityToolDateTable' + error);
+  }
+  await writeFile('outputTables/communityToolDateTable.json',
+    JSON.stringify(communityToolDateTable, null, 2));
 
-  // try {
-  //   // await db.none(insertEmployeeTable);
-  //   // await db.none(insertToolTable);
-  //   // await db.none(insertCommunityTable);
-  //   await db.none(insertCompanyTable);
-  //   // await db.none(insertProjectTable);
-  //   // await db.none(insertMarketTable);
-  // } catch (error) {
-  //   console.error('Error when inserting a table: ' + error);
-  // }
+  await new Promise(resolve => setTimeout(resolve, 1000));
+
+  let communityToolTable;
+  try {
+    console.log('Calculating communityToolTable');
+    communityToolTable =
+        await makeCommunityToolTable(toolTable, communityTable);
+  } catch (error) {
+    communityToolTable = [];
+    console.error('There was an error while calculating communityToolTable' + error);
+  }
+  await writeFile('outputTables/communityToolTable.json',
+      JSON.stringify(communityToolTable, null, 2));
+
+
+  await new Promise(resolve => setTimeout(resolve, 1000));
+
+  let companyDateTable;
+  try {
+    console.log('Calculating companyDateTable');
+    companyDateTable =
+        await makeCompanyDate(companyTable, dateRecordOfToday.date_id);
+  } catch (error) {
+    companyDateTable = [];
+    console.error('There was an error while calculating companyDateTable' + error);
+  }
+  await writeFile('outputTables/companyDateTable.json',
+    JSON.stringify(companyDateTable, null, 2));
+
+
+  await new Promise(resolve => setTimeout(resolve, 1000));
+
+  let employeeToolTable;
+  try {
+    console.log('Calculating employeeToolTable');
+    employeeToolTable = await makeEmployeeToolTable(toolTable.length);
+  } catch (error) {
+    console.error('There was an error while calculating employeeToolTable' + error);
+    employeeToolTable = [];
+  }
+  await writeFile('outputTables/employeeToolTable.json',
+        JSON.stringify(employeeToolTable, null, 2));
+
+  await new Promise(resolve => setTimeout(resolve, 1000));
+
+  let marketDateTable;
+  try {
+    console.log('Calculating marketDateTable');
+    marketDateTable =
+        await makeMarketDateTable(marketTable, dateRecordOfToday.date_id);
+  } catch (error) {
+    marketDateTable = [];
+    console.error('There was an error while calculating marketDateTable' + error);
+  }
+  await writeFile('outputTables/marketDateTable.json',
+    JSON.stringify(marketDateTable, null, 2));
+
+
+  await new Promise(resolve => setTimeout(resolve, 1000));
+
+  let marketToolDateTable;
+  try {
+    console.log('Calculating marketToolDateTable');
+    marketToolDateTable =
+        await makeMarketToolDateTable(marketTable, toolTable,
+          dateRecordOfToday.date_id);
+  } catch (error) {
+    marketToolDateTable = [];
+    console.error('There was an error while writing marketToolDateTable' + error);
+  }
+  await writeFile('outputTables/marketToolDateTable.json',
+      JSON.stringify(marketToolDateTable, null, 2));
+
+  await new Promise(resolve => setTimeout(resolve, 1000));
+
+  let projectCompanyTable;
+  try {
+    console.log('Calculating projectCompanyTable');
+    projectCompanyTable =
+        await makeProjectCompanyTable(companyTable, projectTable);
+  } catch (error) {
+    projectCompanyTable = [];
+    console.error('There was an error while calculating projectCompanyTable' + error);
+  }
+  await writeFile('outputTables/projectCompanyTable.json',
+    JSON.stringify(projectCompanyTable, null, 2));
+
+
+  await new Promise(resolve => setTimeout(resolve, 1000));
+
+  let projectToolTable;
+  try {
+    console.log('Calculating projectToolTable');
+    projectToolTable = await makeProjectToolTable(toolTable);
+  } catch (error) {
+    console.error('There was an error while calculating projectToolTable' + error);
+    projectToolTable = [];
+  }
+  await writeFile('outputTables/projectToolTable.json',
+        JSON.stringify(projectToolTable, null, 2));
+
+  await new Promise(resolve => setTimeout(resolve, 1000));
+
+  let toolProjectCompanyTable;
+  try {
+    console.log('Calculating toolProjectCompanyTable');
+    toolProjectCompanyTable =
+      await makeToolProjectCompanyTable(toolTable, projectTable, companyTable);
+  } catch (error) {
+    toolProjectCompanyTable = [];
+    console.error('There was an error while calculating toolProjectCompanyTable' + error);
+  }
+  await writeFile('outputTables/toolProjectCompanyTable.json',
+    JSON.stringify(toolProjectCompanyTable, null, 2));
+
+  await new Promise(resolve => setTimeout(resolve, 1000));
+
+  let toolDateTable;
+  try {
+    console.log('Calculating toolDateTable');
+    toolDateTable =
+        await getToolDateRecord(toolTable, dateRecordOfToday.date_id);
+  } catch (error) {
+    toolDateTable = [];
+    console.error('There was an error while calculating toolDateTable' + error);
+  }
+  await writeFile('outputTables/toolDateTable.json',
+      JSON.stringify(toolDateTable, null, 2));
 }
+
+insertAllTables();

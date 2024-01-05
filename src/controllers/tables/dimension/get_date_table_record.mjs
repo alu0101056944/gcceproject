@@ -54,5 +54,3 @@ export default async function getNewDateRecord() {
   await writePersistentIds();
   return dateRecord;
 }
-
-console.log((await getNewDateRecord()));
