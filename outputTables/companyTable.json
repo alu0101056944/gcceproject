@@ -838,5 +838,11 @@
     "employee_amount": null,
     "type": null,
     "amount_of_searches": null
+  },
+  {
+    "employee_id": 2,
+    "name": "foo",
+    "downloads": 9174,
+    "some_tool": 17
   }
 ]

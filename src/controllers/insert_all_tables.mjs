@@ -26,32 +26,6 @@ import makeToolProjectCompanyTable from './tables/fact/make_tool_project_company
 import getToolDateRecord from './tables/fact/get_tool_date_table_record.mjs';
 
 export default async function insertAllTables() {
-  let toolTable;
-  try {
-    console.log('Calculating toolTable');
-    toolTable = await makeToolTable();
-  } catch (error) {
-    console.error('There was an error while calculating toolTable' + error);
-    toolTable = [];
-  }
-  await writeFile('outputTables/toolTable.json',
-        JSON.stringify(toolTable, null, 2));
-
-  await new Promise(resolve => setTimeout(resolve, 1000));
-
-  let companyTable;
-  try {
-    console.log('Calculating companyTable');
-    companyTable = await makeCompanyTable(toolTable);
-  } catch (error) {
-    console.error('There was an error while calculating companyTable' + error);
-    companyTable = [];
-  }
-  await writeFile('outputTables/companyTable.json',
-        JSON.stringify(companyTable, null, 2));
-
-  await new Promise(resolve => setTimeout(resolve, 1000));
-
   let employeeTable;
   try {
     console.log('Calculating employeeTable');
@@ -77,17 +51,6 @@ export default async function insertAllTables() {
         JSON.stringify(communityTable, null, 2));
 
   await new Promise(resolve => setTimeout(resolve, 1000));
-
-  let projectTable;
-  try {
-    console.log('Calculating projectTable');
-    projectTable = await makeProjectTable(toolTable);
-  } catch (error) {
-    console.error('There was an error while calculating projectTable' + error);
-    projectTable = [];
-  }
-  await writeFile('outputTables/projectTable.json',
-        JSON.stringify(projectTable, null, 2));
 
   await new Promise(resolve => setTimeout(resolve, 1000));
 

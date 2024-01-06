@@ -16,7 +16,7 @@ test('Valid dependency trees do not throw', async () => {
     dependencies: [],
   };
   
-  await expect(() => new EndpointWriter([dependencyTree])).not.toThrow();
+  await expect(() => new EndpointWriter([dependencyTree], false)).not.toThrow();
 });
 
 test('Valid dependency trees do not throw2', async () => {
@@ -44,12 +44,12 @@ test('Valid dependency trees do not throw2', async () => {
     ]
   }
 
-  await expect(() => new EndpointWriter([dependencyTree])).not.toThrow();
+  await expect(() => new EndpointWriter([dependencyTree], false)).not.toThrow();
 });
 
 test('Bad dependency trees do throw1', async () => {
   const dependencyTree = {};
-  await expect(() => new EndpointWriter([dependencyTree])).toThrow();
+  await expect(() => new EndpointWriter([dependencyTree], false)).toThrow();
 });
 
 test('Bad dependency trees do throw2', async () => {
@@ -58,7 +58,7 @@ test('Bad dependency trees do throw2', async () => {
     dependencies: [],
   };
   
-  await expect(() => new EndpointWriter([dependencyTree])).toThrow();
+  await expect(() => new EndpointWriter([dependencyTree], false)).toThrow();
 });
 
 test('Bad dependency trees do throw3', async () => {
@@ -73,7 +73,7 @@ test('Bad dependency trees do throw3', async () => {
     },
   };
 
-  await expect(() => new EndpointWriter([dependencyTree])).toThrow();
+  await expect(() => new EndpointWriter([dependencyTree], false)).toThrow();
 });
 
 test('Bad dependency trees do throw4', async () => {
@@ -88,7 +88,7 @@ test('Bad dependency trees do throw4', async () => {
     dependencies: [],
   };
 
-  await expect(() => new EndpointWriter([dependencyTree])).toThrow();
+  await expect(() => new EndpointWriter([dependencyTree], false)).toThrow();
 });
 
 test('Bad dependency trees do throw5', async () => {
@@ -115,7 +115,7 @@ test('Bad dependency trees do throw5', async () => {
     ]
   }
 
-  await expect(() => new EndpointWriter([dependencyTree])).toThrow();
+  await expect(() => new EndpointWriter([dependencyTree], false)).toThrow();
 });
 
 test('Bad dependency trees do throw6', async () => {
@@ -135,7 +135,7 @@ test('Bad dependency trees do throw6', async () => {
       }
     ]
   }
-  await expect(() => new EndpointWriter([dependencyTree])).toThrow();
+  await expect(() => new EndpointWriter([dependencyTree], false)).toThrow();
 });
 
 test('Bad dependency trees do throw7', async () => {
@@ -162,7 +162,7 @@ test('Bad dependency trees do throw7', async () => {
     ]
   }
 
-  await expect(() => new EndpointWriter([dependencyTree])).toThrow();
+  await expect(() => new EndpointWriter([dependencyTree], false)).toThrow();
 });
 
 test('Dependency tree with duplicated table names results in error', async () => {
@@ -188,7 +188,7 @@ test('Dependency tree with duplicated table names results in error', async () =>
       }
     ]
   }
-  await expect(() => new EndpointWriter([dependencyTree])).toThrow();
+  await expect(() => new EndpointWriter([dependencyTree], false)).toThrow();
 });
 
 test('Dependency tree without duplicated table names doesn\'t throw', async () => {
@@ -215,10 +215,10 @@ test('Dependency tree without duplicated table names doesn\'t throw', async () =
       }
     ]
   };
-  await expect(() => new EndpointWriter([dependencyTree])).not.toThrow();
+  await expect(() => new EndpointWriter([dependencyTree], false)).not.toThrow();
 });
 
-test('write() properly changes persistent ids1', async () => {
+test('parse() properly changes persistent ids1', async () => {
   const dependencyTree = {
     tableName: 'project',
     resolver: (toolTable, latestId) => {
@@ -274,17 +274,26 @@ test('write() properly changes persistent ids1', async () => {
       }
     ]
   };
-  const SAVE_FILE = await readFile('./src/persistent_ids.json', 'utf-8');
-  const saveFile = JSON.parse(SAVE_FILE);
+
+  const SAVE_TOOL = await readFile('./src/persistent_ids.json', 'utf-8');
+  const SAVE_PROJECT = await readFile('./src/persistent_ids.json', 'utf-8');
+  const SAVE_PERSISTENT = await readFile('./src/persistent_ids.json', 'utf-8');
+  const savePersistent = JSON.parse(SAVE_PERSISTENT);
+
   const writer = new EndpointWriter([dependencyTree, dependencyTree2]);
-  await writer.write();
-  const NEW_CONTENT = await readFile('./src/persistent_ids.json', 'utf-8');
-  const newContent = JSON.parse(NEW_CONTENT);
-  await writeFile('./src/persistent_ids.json', SAVE_FILE);
-  await expect(newContent.tool - saveFile.tool).toBe(2);
+  await writer.parse();
+
+  const NEW_PERSISTENT = await readFile('./src/persistent_ids.json', 'utf-8');
+  const newPersistent = JSON.parse(NEW_PERSISTENT);
+
+  await writeFile('./src/persistent_ids.json', SAVE_PERSISTENT);
+  await writeFile('./src/persistent_ids.json', SAVE_TOOL);
+  await writeFile('./src/persistent_ids.json', SAVE_PROJECT);
+
+  await expect(newPersistent.tool - savePersistent.tool).toBe(2);
 });
 
-test('write() properly changes persistent ids2', async () => {
+test('parse() properly changes persistent ids2', async () => {
   const dependencyTree = {
     tableName: 'project',
     resolver: (toolTable, latestId) => {
@@ -337,14 +346,22 @@ test('write() properly changes persistent ids2', async () => {
     ]
   };
 
-  const SAVE_FILE = await readFile('./src/persistent_ids.json', 'utf-8');
-  const saveFile = JSON.parse(SAVE_FILE);
+  const SAVE_TOOL = await readFile('./src/persistent_ids.json', 'utf-8');
+  const SAVE_PROJECT = await readFile('./src/persistent_ids.json', 'utf-8');
+  const SAVE_PERSISTENT = await readFile('./src/persistent_ids.json', 'utf-8');
+  const savePersistent = JSON.parse(SAVE_PERSISTENT);
+
   const writer = new EndpointWriter([dependencyTree, dependencyTree2]);
-  await writer.write();
-  const NEW_CONTENT = await readFile('./src/persistent_ids.json', 'utf-8');
-  const newContent = JSON.parse(NEW_CONTENT);
-  await writeFile('./src/persistent_ids.json', SAVE_FILE);
-  await expect(newContent.project - saveFile.project).toBe(2);
+  await writer.parse();
+
+  const NEW_PERSISTENT = await readFile('./src/persistent_ids.json', 'utf-8');
+  const newPersistent = JSON.parse(NEW_PERSISTENT);
+
+  await writeFile('./src/persistent_ids.json', SAVE_PERSISTENT);
+  await writeFile('./src/persistent_ids.json', SAVE_PROJECT);
+  await writeFile('./src/persistent_ids.json', SAVE_TOOL);
+
+  await expect(newPersistent.project - savePersistent.project).toBe(2);
 });
 
 test('Dependency tree is solved correctly1', async () => {
@@ -400,13 +417,17 @@ test('Dependency tree is solved correctly1', async () => {
     ]
   };
 
-  const SAVE_FILE = await readFile('./src/persistent_ids.json', 'utf-8');
+  const SAVE_TOOL = await readFile('./src/persistent_ids.json', 'utf-8');
+  const SAVE_PROJECT = await readFile('./src/persistent_ids.json', 'utf-8');
+  const SAVE_PERSISTENT = await readFile('./src/persistent_ids.json', 'utf-8');
 
   const writer = new EndpointWriter([dependencyTree, dependencyTree2]);
-  await writer.write();
+  await writer.parse();
   const toolTable = writer.getTable('tool');
 
-  await writeFile('./src/persistent_ids.json', SAVE_FILE);
+  await writeFile('./src/persistent_ids.json', SAVE_PERSISTENT);
+  await writeFile('./src/persistent_ids.json', SAVE_PROJECT);
+  await writeFile('./src/persistent_ids.json', SAVE_TOOL);
 
   await expect(toolTable[0].searches).toBe(17);
   await expect(toolTable[1].searches).toBe(8);
@@ -465,13 +486,17 @@ test('Dependency tree is solved correctly2', async () => {
     ]
   };
 
-  const SAVE_FILE = await readFile('./src/persistent_ids.json', 'utf-8');
+  const SAVE_TOOL = await readFile('./src/persistent_ids.json', 'utf-8');
+  const SAVE_PROJECT = await readFile('./src/persistent_ids.json', 'utf-8');
+  const SAVE_PERSISTENT = await readFile('./src/persistent_ids.json', 'utf-8');
 
   const writer = new EndpointWriter([dependencyTree, dependencyTree2]);
-  await writer.write();
+  await writer.parse();
   const projectTable = writer.getTable('project');
 
-  await writeFile('./src/persistent_ids.json', SAVE_FILE);
+  await writeFile('./src/persistent_ids.json', SAVE_PERSISTENT);
+  await writeFile('./src/persistent_ids.json', SAVE_PROJECT);
+  await writeFile('./src/persistent_ids.json', SAVE_TOOL);
 
   await expect(projectTable[0].downloads).toBe(4323);
   await expect(projectTable[1].downloads).toBe(9174);
@@ -521,13 +546,17 @@ test('Nodes of type useTable work properly', async () => {
     ]
   };
 
-  const SAVE_FILE = await readFile('./src/persistent_ids.json', 'utf-8');
+  const SAVE_TOOL = await readFile('./src/persistent_ids.json', 'utf-8');
+  const SAVE_PROJECT = await readFile('./src/persistent_ids.json', 'utf-8');
+  const SAVE_PERSISTENT = await readFile('./src/persistent_ids.json', 'utf-8');
 
   const writer = new EndpointWriter([dependencyTree, dependencyTree2]);
-  await writer.write();
+  await writer.parse();
   const companyTable = writer.getTable('company');
 
-  await writeFile('./src/persistent_ids.json', SAVE_FILE);
+  await writeFile('./src/persistent_ids.json', SAVE_PERSISTENT);
+  await writeFile('./src/persistent_ids.json', SAVE_PROJECT);
+  await writeFile('./src/persistent_ids.json', SAVE_TOOL);
 
   await expect(companyTable[0].some_tool).toBe(17);
 });

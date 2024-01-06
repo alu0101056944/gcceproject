@@ -11,7 +11,7 @@ import makeCompanyTable from './tables/dimension/make_company_table.mjs';
 import makeProjectTable from './tables/dimension/make_project_table.mjs';
 import makeToolTable from './tables/dimension/make_tool_table.mjs';
 
-async function writeRecordsFromGithub() {
+async function getDependencyTreeForGithubRecords() {
   const allDependencyTree = [
     {
       tableName: 'project',
@@ -32,40 +32,18 @@ async function writeRecordsFromGithub() {
         },
       ],
     },
-    // { *** Need to extend endpoint writer with a new type of node that reuses tables
-    //   tableName: 'company',
-    //   resolver: async (toolTable, latestId) => {
-    //     const table = await makeCompanyTable(toolTable, latestId);
-    //     await new Promise(resolve => setTimeout(resolve, 1000));
-    //     return table;
-    //   },
-    //   dependencies: [
-    //     {
-    //       tableName: 'tool',
-    //       resolver: async (latestId) => {
-    //         const table = await makeToolTable(latestId);
-    //         await new Promise(resolve => setTimeout(resolve, 1000));
-    //         return table;
-    //       },
-    //       dependencies: [],
-    //     },
-    //   ],
-    // },
+    {
+      tableName: 'company',
+      resolver: async (toolTable, latestId) => {
+        const table = await makeCompanyTable(toolTable, latestId);
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        return table;
+      },
+      dependencies: [ { useTable: 'tool' } ],
+    },
   ];
 
-  await new Promise(resolve => setTimeout(resolve, 1000));
-
-  let projectTable;
-  try {
-    console.log('Calculating projectTable');
-    projectTable = await makeProjectTable(toolTable);
-  } catch (error) {
-    console.error('There was an error while calculating projectTable' + error);
-    projectTable = [];
-  }
-  await writeFile('outputTables/projectTable.json',
-        JSON.stringify(projectTable, null, 2));
-
+  return allDependencyTree
 }
 
 export default async function endpoint() {
