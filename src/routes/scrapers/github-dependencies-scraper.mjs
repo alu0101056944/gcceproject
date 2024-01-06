@@ -25,16 +25,16 @@ export default class GithubDependenciesScraper {
   #outputLength = undefined;
 
   /**
-   * @param {object} repositoryInfo with name of repository and author of the
+   * @param {object} allRepoInfo with name of repository and author of the
    *    repository.
    */
-  constructor(repositoryInfo) {
+  constructor(allRepoInfo) {
     this.#outputObject = {};
     this.#maxPageSurfs = Infinity;
     this.#currentAmountOfPagesSurfed = 0;
     this.#outputLength = 0;
 
-    this.#urlsInfo = repositoryInfo.map((info) => {
+    this.#urlsInfo = allRepoInfo.map((info) => {
       this.#outputObject[info.name] = new Map();
 
       return {

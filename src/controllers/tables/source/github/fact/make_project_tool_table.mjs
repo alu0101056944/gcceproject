@@ -14,30 +14,37 @@ import GithubDependenciesScraper from "../../../../../routes/scrapers/github-dep
 //  * @param {array} projectTable ready for database insertion
  */
 export default async function makeProjectToolTable(toolTable/*, projectTable*/) {
-  const table = [];
+  console.log('Calculating projectToolTable');
 
-  // For now I just check if the dependency is in the tool table.
-  // if it's not then nothing.
+  const allRecord = [];
 
-  const scraperOfDependencies = new GithubDependenciesScraper(toolTable);
-  scraperOfDependencies.setOutputLength(20);
-  scraperOfDependencies.setMaxAmountOfPageSurfs(20);
-  const dependenciesPerTool = await scraperOfDependencies.run();
+  try {
+    // For now I just check if the dependency is in the tool table.
+    // if it's not then nothing.
 
-  for (const toolInfo of toolTable) {
-    for (const [index, dependency] of dependenciesPerTool[toolInfo.name].entries()) {
+    const scraperOfDependencies = new GithubDependenciesScraper(toolTable);
+    scraperOfDependencies.setOutputLength(20);
+    scraperOfDependencies.setMaxAmountOfPageSurfs(4);
+    const toolNameToDependencyNameSet = await scraperOfDependencies.run();
 
-      // Check if dependency is a stored tool
-      for (const toolInfo2 of toolTable) {
-        if (toolInfo.name === dependency) {
-          table.push({
-            project_id: toolInfo.tool_id, // just for now because all projects are tools temporarily
-            tool_id: toolInfo2.tool_id,
-          });
+    for (const toolRecord of toolTable) {
+      for (const [index, dependency] of toolNameToDependencyNameSet[toolRecord.name].entries()) {
+  
+        // Check if dependency is a stored tool
+        for (const toolRecord of toolTable) {
+          if (toolInfo.name === dependency) {
+            allRecord.push({
+              project_id: toolInfo.tool_id, // just for now because all projects are tools temporarily
+              tool_id: toolRecord.tool_id,
+            });
+          }
         }
       }
     }
+  } catch (error) {
+    console.error('There was an error while calculating ' + 
+        'projectToolTable' + error);
   }
 
-  return table;
+  return allRecord;
 }

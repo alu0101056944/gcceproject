@@ -39,18 +39,20 @@ const nameToAllInfo = {
   'github': getAllToolInfoFromGithub,
 }
 
-export default async function makeCommunityToolDateTable(communityTable,
-    toolTable, idOfToday) {
-  if (Object.getOwnPropertyNames(nameToAllInfo).length !== communityTable.length) {
-    throw new Error('There are communities without URL function associated. ' +
-        'Please, add one.');
-  }
+// originally this was going to be a single file for all communities
+// thus this file structure.
+// @todo May generate duplicates if called more than once. **Update README.md on change**
+export default async function makeCommunityToolDateTable(toolTable, idOfToday) {
+  console.log('Calculating communityToolDateTable');
+
   const allRecord = [];
 
-  for (const community of communityTable) {
-    const allInfoAtCommunity =
-        await nameToAllInfo[community.name](toolTable, idOfToday);
+  try {
+    const allInfoAtCommunity = await nameToAllInfo['github'](toolTable, idOfToday);
     allInfoAtCommunity.forEach(record => allRecord.push(record));
+  } catch (error) {
+    console.error('There was an error while calculating ' + 
+        'communityToolDateTable' + error);
   }
 
   return allRecord;

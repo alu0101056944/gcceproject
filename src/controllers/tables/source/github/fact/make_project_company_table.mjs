@@ -43,30 +43,47 @@ async function fetchContributorAmount(authorCompany, repoName) {
  * @param {array} allRelation of objects with author_company and name
  *    properties that relate one company (author_company) to one project (name).
  */
-export default async function makeProjectCompanyTable(companyTable, projectTable,
-    allRelation) {
-  const projectCompanyTable = [];
+export default async function makeProjectCompanyTable(toolTable,
+    projectTable, companyTable) {
 
-  for (let i = 0; i < allRelation.length; i++) {
-    const REPO_NAME = allRelation[i].name;
-    const AUTHOR_COMPANY = allRelation[i].authorCompany;
+  console.log('Calculating projectCompanyTable');
 
-    const PROJECT_CONTRIBUTOR_AMOUNT =
-        fetchContributorAmount(AUTHOR_COMPANY, REPO_NAME);
+  const allRecord = [];
 
-    const AVERAGE_INCOME_PER_HOUR = 37;
-    const ARBITRARY_PROJECT_DURATION_IN_YEARS = 5;
-    const BUDGET_ESTIMATED =
-        PROJECT_CONTRIBUTOR_AMOUNT * AVERAGE_INCOME_PER_HOUR *
-        ARBITRARY_PROJECT_DURATION_IN_YEARS;
+  try {
+    if (toolTable.length !== projectTable.length ||
+        toolTable.length !== companyTable.length ||
+        projectTable.length !== companyTable.length) {
+      throw new Error('All lengths should be the same. ' +
+          'toolTable.length: ' + toolTable.length + ', ' +
+          'projectTable.length: ' + projectTable.length + ', ' +
+          'companyTable.length: ' + companyTable.length);
+    }
 
-    projectCompanyTable.push({
-      project_id: repoNameToId[REPO_NAME],
-      company_id: authorCompanyToId[AUTHOR_COMPANY],
-      budget: BUDGET_ESTIMATED,
-      amount_of_employees_assigned: PROJECT_CONTRIBUTOR_AMOUNT,
-    });
+    for (let i = 0; i < toolTable.length; i++) {
+      const REPO_NAME = toolTable[i].name;
+      const AUTHOR_COMPANY = toolTable[i].author_company;
+
+      const PROJECT_CONTRIBUTOR_AMOUNT =
+          fetchContributorAmount(AUTHOR_COMPANY, REPO_NAME);
+
+      const AVERAGE_INCOME_PER_HOUR = 37;
+      const ARBITRARY_PROJECT_DURATION_IN_YEARS = 5;
+      const BUDGET_ESTIMATED =
+          PROJECT_CONTRIBUTOR_AMOUNT * AVERAGE_INCOME_PER_HOUR *
+          ARBITRARY_PROJECT_DURATION_IN_YEARS;
+
+      allRecord.push({
+        project_id: projectTable[i].project_id,
+        company_id: companyTable[i].company_id,
+        budget: BUDGET_ESTIMATED,
+        amount_of_employees_assigned: PROJECT_CONTRIBUTOR_AMOUNT,
+      });
+    }
+  } catch (error) {
+    console.error('There was an error while calculating ' + 
+        'projectCompanyTable' + error);
   }
 
-  return projectCompanyTable;
+  return allRecord;
 };

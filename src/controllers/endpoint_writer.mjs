@@ -214,6 +214,7 @@ export default class EndpointWriter {
         if (node.dependencies.length === 0) {
           const table = await node.resolver(LATEST_ID);
           merge(node.tableName, table);
+          tableNameToId[node.tableName] ??= 0;
           tableNameToId[node.tableName] += table.length;
           if (this.#enableFileWrite) {
             await appendToTableFile(node.tableName, table);
@@ -227,6 +228,7 @@ export default class EndpointWriter {
           }
           const table = await node.resolver(...args, LATEST_ID);
           merge(node.tableName, table);
+          tableNameToId[node.tableName] ??= 0;
           tableNameToId[node.tableName] += table.length;
           if (this.#enableFileWrite) {
             await appendToTableFile(node.tableName, table);
