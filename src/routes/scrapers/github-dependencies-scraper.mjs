@@ -25,17 +25,17 @@ export default class GithubDependenciesScraper {
   #outputLength = undefined;
 
   /**
-   * @param {object} repositoryInfo with name of repository and author of the
+   * @param {object} allRepoInfo with name of repository and author of the
    *    repository.
    */
-  constructor(repositoryInfo) {
+  constructor(allRepoInfo) {
     this.#outputObject = {};
     this.#maxPageSurfs = Infinity;
     this.#currentAmountOfPagesSurfed = 0;
     this.#outputLength = 0;
 
-    this.#urlsInfo = repositoryInfo.map((info) => {
-      this.#outputObject[info.name] = new Map();
+    this.#urlsInfo = allRepoInfo.map((info) => {
+      this.#outputObject[info.name] = new Set();
 
       return {
         url: `https://github.com/${info.author_company}/${info.name}`
@@ -64,6 +64,8 @@ export default class GithubDependenciesScraper {
   }
 
   async #myHandler({ page, request }) {
+    log.info('GithubDependenciesScraper visited page: ' + request.url);
+
     const REPO_NAME = /^.+?\/(.+?)$/m.exec(request.label)[1];
 
     const iterationAction = async () => {
@@ -73,7 +75,7 @@ export default class GithubDependenciesScraper {
       for (const row of allRows) {
         const linkWithName = row.locator('a.h4');
         const DEPENDENCY_NAME = (await linkWithName.textContent()).trim();
-        this.#outputObject[REPO_NAME].set(DEPENDENCY_NAME, true);
+        this.#outputObject[REPO_NAME].add(DEPENDENCY_NAME);
       }
     }
 
@@ -82,7 +84,7 @@ export default class GithubDependenciesScraper {
           this.#currentAmountOfPagesSurfed < this.#maxPageSurfs
           || this.#maxPageSurfs === 0) {
       const NEXT_URL = await buttonNextPage.getAttribute('href');
-      log.info('GithubDependenciesScraper visited page: ' + NEXT_URL);
+      log.info('GithubDependenciesScraper surfed to page: ' + NEXT_URL);
 
       await iterationAction();
       await expect(buttonNextPage).toBeEnabled({ timeout: 5000 });
@@ -109,11 +111,11 @@ export default class GithubDependenciesScraper {
       await this.#scraper.run(this.#urlsInfo.slice(0, this.#outputLength));
 
       const newOutput = {};
-      const repositoryNames = Object.getOwnPropertyNames(this.#outputObject);
+      const allRepoName = Object.getOwnPropertyNames(this.#outputObject);
       const NON_INDEX_OUT_OF_BOUNDS_SIZE =
-          Math.min(repositoryNames.length, this.#outputLength);
+          Math.min(allRepoName.length, this.#outputLength);
       for (let i = 0; i < NON_INDEX_OUT_OF_BOUNDS_SIZE; i++) {
-        newOutput[repositoryNames[i]] = this.#outputObject[repositoryNames[i]];
+        newOutput[allRepoName[i]] = this.#outputObject[allRepoName[i]];
       }
       return newOutput;
     }

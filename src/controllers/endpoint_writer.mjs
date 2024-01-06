@@ -50,11 +50,14 @@
  *   ]
  * }
  * 
+ * There is also a useTable node.
+ * 
+ * See endpoint_writer spec for more examples.
  */
 
 'use strict';
 
-import { readFile, writeFile } from 'fs/promises'
+import { readFile, writeFile } from 'fs/promises';
 
 /**
  * @desc Write to the outputTables/ directory.
@@ -149,10 +152,10 @@ export default class EndpointWriter {
 
   async parse() {
     const FILE_CONTENT = await readFile('./src/persistent_ids.json', 'utf8');
-    const dimensionToId = JSON.parse(FILE_CONTENT);
-    for (const key of Object.keys(dimensionToId)) {
+    const tableNameToId = JSON.parse(FILE_CONTENT);
+    for (const key of Object.keys(tableNameToId)) {
       if (key !== 'date') {
-        dimensionToId[key] ??= 0;
+        tableNameToId[key] ??= 0;
       }
     }
 
@@ -207,11 +210,12 @@ export default class EndpointWriter {
         }
         return tableNameToTableMerged[node.useTable];
       } else if (node.tableName) {
-        const LATEST_ID = dimensionToId[node.tableName];
+        const LATEST_ID = tableNameToId[node.tableName];
         if (node.dependencies.length === 0) {
           const table = await node.resolver(LATEST_ID);
           merge(node.tableName, table);
-          dimensionToId[node.tableName] += table.length;
+          tableNameToId[node.tableName] ??= 0;
+          tableNameToId[node.tableName] += table.length;
           if (this.#enableFileWrite) {
             await appendToTableFile(node.tableName, table);
           }
@@ -224,7 +228,8 @@ export default class EndpointWriter {
           }
           const table = await node.resolver(...args, LATEST_ID);
           merge(node.tableName, table);
-          dimensionToId[node.tableName] += table.length;
+          tableNameToId[node.tableName] ??= 0;
+          tableNameToId[node.tableName] += table.length;
           if (this.#enableFileWrite) {
             await appendToTableFile(node.tableName, table);
           }
@@ -241,7 +246,7 @@ export default class EndpointWriter {
     this.#tableNameToTable = tableNameToTableMerged;
 
     if (this.#enableFileWrite) {
-      const TO_JSON = JSON.stringify(dimensionToId, null, 2);
+      const TO_JSON = JSON.stringify(tableNameToId, null, 2);
       await writeFile('./src/persistent_ids.json', TO_JSON);
       console.log('EndpointWriter sucessful src/persistent_ids.json write.');
     }

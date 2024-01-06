@@ -7,30 +7,24 @@
 
 'use strict';
 
-import { readFile, writeFile } from 'fs/promises';
-
 export default async function makeMarketTable() {
-  const table = [];
+  const allRecord = [];
 
-  const markets = [
+  const allMarket = [
     'europe',
     'united states',
     'asia',
   ];
 
-  const FILE_CONTENT = await readFile('./src/persistent_ids.json', 'utf8');
-  const persistentIds = JSON.parse(FILE_CONTENT);
+  allRecord.push({
+    market_id: 1,
+  });
+  allRecord.push({
+    market_id: 2,
+  });
+  allRecord.push({
+    market_id: 3,
+  });
 
-  persistentIds.market = 0;
-  for (const _ of markets) {
-    persistentIds.market++;
-    table.push({
-      market_id: persistentIds.market,
-    });
-  }
-
-  const TO_JSON = JSON.stringify(persistentIds, null, 2);
-  await writeFile('./src/persistent_ids.json', TO_JSON);
-
-  return table;
+  return allRecord;
 }

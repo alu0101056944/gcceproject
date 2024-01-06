@@ -12,24 +12,18 @@
 
 'use strict';
 
-import { readFile, writeFile } from 'fs/promises';
-
 export default async function makeCommunityTable() {
-  const records = [
+  console.log('Calculating communityTable');
+
+  const allRecord = [];
+
+  allRecord.push([
     {
       community_id: 1,
       name: 'github',
       type: 'Open Source Hosting',
     },
-  ];
+  ]);
 
-  const FILE_CONTENT = await readFile('./src/persistent_ids.json', 'utf8');
-  const persistentIds = JSON.parse(FILE_CONTENT);
-  persistentIds.community = 1;
-  const TO_JSON = JSON.stringify(persistentIds, null, 2);
-  await writeFile('./src/persistent_ids.json', TO_JSON);
-
-  return records;
+  return allRecord;
 }
-
-// makeCommunityTable().then((data) => console.log(data));
