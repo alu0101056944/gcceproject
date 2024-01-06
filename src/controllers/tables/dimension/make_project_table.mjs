@@ -17,7 +17,6 @@ import GithubRepositoryScraper from '../../../routes/scrapers/github-repository-
 // projects issue
 export default async function makeProjectTable(toolTable) {
   const allProjectName = toolTable.map(record => record.name);
-
   const projectNameToDownloads = await getDownloadsPerPackage(allProjectName);
 
   const allRepoURL = toolTable.map(record => {
@@ -32,7 +31,7 @@ export default async function makeProjectTable(toolTable) {
         return `https://github.com/${AUTHOR_NAME}/${PROJECT_NAME}`;
       });
   const scraperOfGithubRepos = new GithubRepositoryScraper(allRepoURL);
-  const allAmountOfContributors = await scraperOfGithubRepos.run();
+  const allAmountOfContributor = await scraperOfGithubRepos.run();
 
   const allRecord = [];
   for (let i = 0; i < toolTable.length; i++) {
@@ -41,7 +40,7 @@ export default async function makeProjectTable(toolTable) {
       project_id: i + 1,
       project_name: PROJECT_NAME,
       downloads: projectNameToDownloads[PROJECT_NAME],
-      contributors: allAmountOfContributors[i],
+      contributors: allAmountOfContributor[i],
       searches: null,
     }
     allRecord.push(record);
