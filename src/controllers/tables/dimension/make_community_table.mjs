@@ -13,15 +13,21 @@
 'use strict';
 
 export default async function makeCommunityTable() {
+  console.log('Calculating communityTable');
+
   const allRecord = [];
 
-  allRecord.push([
-    {
-      community_id: 1,
-      name: 'github',
-      type: 'Open Source Hosting',
-    },
-  ]);
+  try {
+    allRecord.push([
+      {
+        community_id: 1,
+        name: 'github',
+        type: 'Open Source Hosting',
+      },
+    ]);
+  } catch (error) {
+    console.error('There was an error while calculating communityTable' + error);
+  }
 
   return allRecord;
 }

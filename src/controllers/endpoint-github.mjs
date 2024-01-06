@@ -2,10 +2,12 @@
  * @author Marcos Barrios
  * @since 06_01_2024
  * @description Meant to allow different sources of records for the same
- *    tables throuh the EndpointWriter class.
+ *    tables throuh the EndpointWriter class. This one handles the github source.
  */
 
 'use strict';
+
+import EndpointWriter from './endpoint_writer.mjs';
 
 import makeCompanyTable from './tables/source/github/dimension/make_company_table.mjs';
 import makeProjectTable from './tables/source/github/dimension/make_project_table.mjs';
@@ -119,7 +121,10 @@ async function getDependencyTreeForGithubRecords() {
   return allDependencyTree;
 }
 
-export default async function endpoint() {
-  // make sure this is executed after community table has been created.
-  // make sure that today date record .json is generated before executing this.
+// make sure this is executed after community table has been created.
+// make sure that today date record .json is generated before executing this.
+export default async function endpointGithub() {
+  const allDependencyTree = await getDependencyTreeForGithubRecords();
+  const writer = new EndpointWriter(allDependencyTree)
+  await writer.parse();
 }
