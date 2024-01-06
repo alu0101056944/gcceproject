@@ -155,17 +155,21 @@ export default class EndpointWriter {
     }
 
     const allTableMerged = {};
+
+    const merge = (tableName, table) => {
+      if (!allTableMerged[tableName]) {
+        allTableMerged[tableName] = table;
+      } else {
+        allTableMerged[tableName] =
+            allTableMerged[tableName].concat(table);
+      }
+    }
+
     const solve = async (node) => {
       const LATEST_ID = dimensionToId[node.tableName];
       if (node.dependencies.length === 0) {
         const table = await node.resolver(LATEST_ID);
-
-        if (!allTableMerged[node.tableName]) {
-          allTableMerged[node.tableName] = table;
-        } else {
-          allTableMerged[node.tableName] =
-              allTableMerged[node.tableName].concat(table);
-        }
+        merge(node.tableName, table);
         dimensionToId[node.tableName] += table.length;
         return table;
       } else {
@@ -175,13 +179,7 @@ export default class EndpointWriter {
           args.push(allRecord);
         }
         const table = await node.resolver(...args, LATEST_ID);
-
-        if (!allTableMerged[node.tableName]) {
-          allTableMerged[node.tableName] = table;
-        } else {
-          allTableMerged[node.tableName] =
-              allTableMerged[node.tableName].concat(table);
-        }
+        merge(node.tableName, table);
         dimensionToId[node.tableName] += table.length;
         return table;
       }
