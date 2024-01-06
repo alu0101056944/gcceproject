@@ -143,8 +143,6 @@ async function getDependencyTreeForGithubRecords() {
 
 // make sure this is executed after community table has been created.
 export default async function endpointGithub() {
-  await makeTodayDateRecord(); // this updates today's date_id in persistent_ids.json
-
   const allDependencyTree = await getDependencyTreeForGithubRecords();
   const writer = new EndpointWriter(allDependencyTree)
   await writer.parse();

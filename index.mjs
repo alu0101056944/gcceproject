@@ -9,6 +9,7 @@ import endpointManual from "./src/controllers/endpoint-manual.mjs";
 import endpointGithub from "./src/controllers/endpoint-github.mjs";
 import endpointLinkedin from "./src/controllers/endpoint-linkedin.mjs";
 import endpointAfterall from "./src/controllers/endpoint-afterall.mjs";
+import makeTodayDateRecord from "./src/controllers/tables/dimension/make_today_date_record.mjs";
 
 import { readFile, writeFile } from 'fs/promises';
 import { copy, emptyDir } from 'fs-extra';
@@ -55,6 +56,10 @@ async function main() {
   console.log()
   console.log('Starting program:');
   console.log()
+
+  const todayRecord = await makeTodayDateRecord();
+  await writeFile('outputTables/todayDateTable.json',
+      JSON.stringify([todayRecord], null, 2));
 
   await endpointManual();
   // await endpointGithub();

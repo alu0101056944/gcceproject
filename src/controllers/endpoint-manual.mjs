@@ -53,8 +53,6 @@ async function getDependencyTreeFromManual() {
 }
 
 export default async function endpointManual() {
-  await makeTodayDateRecord(); // this updates today's date_id in persistent_ids.json
-
   const allDependencyTree = await getDependencyTreeFromManual();
   const writer = new EndpointWriter(allDependencyTree)
   await writer.parse();
