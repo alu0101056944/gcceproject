@@ -36,13 +36,6 @@ async function fetchContributorAmount(authorCompany, repoName) {
   return count === 0 ? null : count;
 }
 
-/**
- * 
- * @param {array} companyTable of company record objects
- * @param {array} projectTable of project record objects
- * @param {array} allRelation of objects with author_company and name
- *    properties that relate one company (author_company) to one project (name).
- */
 export default async function makeProjectCompanyTable(toolTable,
     projectTable, companyTable) {
 
