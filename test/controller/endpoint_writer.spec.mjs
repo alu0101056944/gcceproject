@@ -16,7 +16,7 @@ test('Valid dependency trees do not throw', async () => {
     dependencies: [],
   };
   
-  await expect(() => new EndpointWriter(dependencyTree)).not.toThrow();
+  await expect(() => new EndpointWriter([dependencyTree])).not.toThrow();
 });
 
 test('Valid dependency trees do not throw2', async () => {
@@ -44,12 +44,12 @@ test('Valid dependency trees do not throw2', async () => {
     ]
   }
 
-  await expect(() => new EndpointWriter(dependencyTree)).not.toThrow();
+  await expect(() => new EndpointWriter([dependencyTree])).not.toThrow();
 });
 
 test('Bad dependency trees do throw1', async () => {
   const dependencyTree = {};
-  await expect(() => new EndpointWriter(dependencyTree)).toThrow();
+  await expect(() => new EndpointWriter([dependencyTree])).toThrow();
 });
 
 test('Bad dependency trees do throw2', async () => {
@@ -58,7 +58,7 @@ test('Bad dependency trees do throw2', async () => {
     dependencies: [],
   };
   
-  await expect(() => new EndpointWriter(dependencyTree)).toThrow();
+  await expect(() => new EndpointWriter([dependencyTree])).toThrow();
 });
 
 test('Bad dependency trees do throw3', async () => {
@@ -73,7 +73,7 @@ test('Bad dependency trees do throw3', async () => {
     },
   };
 
-  await expect(() => new EndpointWriter(dependencyTree)).toThrow();
+  await expect(() => new EndpointWriter([dependencyTree])).toThrow();
 });
 
 test('Bad dependency trees do throw4', async () => {
@@ -88,7 +88,7 @@ test('Bad dependency trees do throw4', async () => {
     dependencies: [],
   };
 
-  await expect(() => new EndpointWriter(dependencyTree)).toThrow();
+  await expect(() => new EndpointWriter([dependencyTree])).toThrow();
 });
 
 test('Bad dependency trees do throw5', async () => {
@@ -115,7 +115,7 @@ test('Bad dependency trees do throw5', async () => {
     ]
   }
 
-  await expect(() => new EndpointWriter(dependencyTree)).toThrow();
+  await expect(() => new EndpointWriter([dependencyTree])).toThrow();
 });
 
 test('Bad dependency trees do throw6', async () => {
@@ -135,7 +135,7 @@ test('Bad dependency trees do throw6', async () => {
       }
     ]
   }
-  await expect(() => new EndpointWriter(dependencyTree)).toThrow();
+  await expect(() => new EndpointWriter([dependencyTree])).toThrow();
 });
 
 test('Bad dependency trees do throw7', async () => {
@@ -162,7 +162,7 @@ test('Bad dependency trees do throw7', async () => {
     ]
   }
 
-  await expect(() => new EndpointWriter(dependencyTree)).toThrow();
+  await expect(() => new EndpointWriter([dependencyTree])).toThrow();
 });
 
 test('Dependency tree with duplicated table names results in error', async () => {
@@ -188,7 +188,7 @@ test('Dependency tree with duplicated table names results in error', async () =>
       }
     ]
   }
-  await expect(() => new EndpointWriter(dependencyTree)).toThrow();
+  await expect(() => new EndpointWriter([dependencyTree])).toThrow();
 });
 
 test('Dependency tree without duplicated table names doesn\'t throw', async () => {
@@ -215,7 +215,7 @@ test('Dependency tree without duplicated table names doesn\'t throw', async () =
       }
     ]
   };
-  await expect(() => new EndpointWriter(dependencyTree)).not.toThrow();
+  await expect(() => new EndpointWriter([dependencyTree])).not.toThrow();
 });
 
 test('write() properly changes persistent ids1', async () => {
@@ -236,9 +236,37 @@ test('write() properly changes persistent ids1', async () => {
         resolver: (latestId) => {
           return [
             {
-              tool_id: 1,
+              tool_id: latestId + 1,
               name: 'gatsby',
-              searches: 17
+              searches: 17,
+            }
+          ];
+        },
+        dependencies: [],
+      }
+    ]
+  };
+
+  const dependencyTree2 = {
+    tableName: 'project',
+    resolver: (toolTable, latestId) => {
+      return [
+        {
+          employee_id: latestId + 1,
+          name: toolTable.name,
+          downloads: 14243,
+        }
+      ];
+    },
+    dependencies: [
+      {
+        tableName: 'tool',
+        resolver: (latestId) => {
+          return [
+            {
+              tool_id: latestId + 1,
+              name: 'vue',
+              searches: 8,
             }
           ];
         },
@@ -248,12 +276,12 @@ test('write() properly changes persistent ids1', async () => {
   };
   const SAVE_FILE = await readFile('./src/persistent_ids.json', 'utf-8');
   const saveFile = JSON.parse(SAVE_FILE);
-  const writer = new EndpointWriter(dependencyTree);
+  const writer = new EndpointWriter([dependencyTree, dependencyTree2]);
   await writer.write();
   const NEW_CONTENT = await readFile('./src/persistent_ids.json', 'utf-8');
   const newContent = JSON.parse(NEW_CONTENT);
   await writeFile('./src/persistent_ids.json', SAVE_FILE);
-  await expect(newContent.tool - saveFile.tool).toBe(1);
+  await expect(newContent.tool - saveFile.tool).toBe(2);
 });
 
 test('write() properly changes persistent ids2', async () => {
@@ -280,14 +308,43 @@ test('write() properly changes persistent ids2', async () => {
       }
     ]
   };
+
+  const dependencyTree2 = {
+    tableName: 'project',
+    resolver: (toolTable, latestId) => {
+      return [
+        {
+          employee_id: latestId + 1,
+          name: 'foo',
+          downloads: 9174,
+        }
+      ];
+    },
+    dependencies: [
+      {
+        tableName: 'tool',
+        resolver: (latestId) => {
+          return [
+            {
+              tool_id: latestId + 1,
+              name: 'vue',
+              searches: 8,
+            }
+          ];
+        },
+        dependencies: [],
+      }
+    ]
+  };
+
   const SAVE_FILE = await readFile('./src/persistent_ids.json', 'utf-8');
   const saveFile = JSON.parse(SAVE_FILE);
-  const writer = new EndpointWriter(dependencyTree);
+  const writer = new EndpointWriter([dependencyTree, dependencyTree2]);
   await writer.write();
   const NEW_CONTENT = await readFile('./src/persistent_ids.json', 'utf-8');
   const newContent = JSON.parse(NEW_CONTENT);
   await writeFile('./src/persistent_ids.json', SAVE_FILE);
-  await expect(newContent.project - saveFile.project).toBe(1);
+  await expect(newContent.project - saveFile.project).toBe(2);
 });
 
 test('Dependency tree is solved correctly1', async () => {
@@ -305,7 +362,7 @@ test('Dependency tree is solved correctly1', async () => {
         tableName: 'tool',
         resolver: (latestId) => {
           return [{
-            tool_id: 1,
+            tool_id: latestId + 1,
             name: 'gatsby',
             searches: 17
           }];
@@ -314,10 +371,40 @@ test('Dependency tree is solved correctly1', async () => {
       }
     ]
   };
-  const writer = new EndpointWriter(dependencyTree);
+
+  const dependencyTree2 = {
+    tableName: 'project',
+    resolver: (toolTable, latestId) => {
+      return [
+        {
+          employee_id: latestId + 1,
+          name: 'foo',
+          downloads: 9174,
+        }
+      ];
+    },
+    dependencies: [
+      {
+        tableName: 'tool',
+        resolver: (latestId) => {
+          return [
+            {
+              tool_id: latestId + 1,
+              name: 'vue',
+              searches: 8,
+            }
+          ];
+        },
+        dependencies: [],
+      }
+    ]
+  };
+
+  const writer = new EndpointWriter([dependencyTree, dependencyTree2]);
   await writer.write();
   const toolTable = writer.getTable('tool');
   await expect(toolTable[0].searches).toBe(17);
+  await expect(toolTable[1].searches).toBe(8);
 });
 
 test('Dependency tree is solved correctly2', async () => {
@@ -335,7 +422,7 @@ test('Dependency tree is solved correctly2', async () => {
         tableName: 'tool',
         resolver: (latestId) => {
           return [{
-            tool_id: 1,
+            tool_id: latestId + 1,
             name: 'gatsby',
             searches: 17
           }]
@@ -344,8 +431,38 @@ test('Dependency tree is solved correctly2', async () => {
       }
     ]
   };
-  const writer = new EndpointWriter(dependencyTree);
+
+  const dependencyTree2 = {
+    tableName: 'project',
+    resolver: (toolTable, latestId) => {
+      return [
+        {
+          employee_id: latestId + 1,
+          name: 'foo',
+          downloads: 9174,
+        }
+      ];
+    },
+    dependencies: [
+      {
+        tableName: 'tool',
+        resolver: (latestId) => {
+          return [
+            {
+              tool_id: latestId + 1,
+              name: 'vue',
+              searches: 8,
+            }
+          ];
+        },
+        dependencies: [],
+      }
+    ]
+  };
+
+  const writer = new EndpointWriter([dependencyTree, dependencyTree2]);
   await writer.write();
   const projectTable = writer.getTable('project');
   await expect(projectTable[0].downloads).toBe(4323);
+  await expect(projectTable[1].downloads).toBe(9174);
 });
