@@ -32,18 +32,26 @@ async function writeRecordsFromGithub() {
         },
       ],
     },
+    // { *** Need to extend endpoint writer with a new type of node that reuses tables
+    //   tableName: 'company',
+    //   resolver: async (toolTable, latestId) => {
+    //     const table = await makeCompanyTable(toolTable, latestId);
+    //     await new Promise(resolve => setTimeout(resolve, 1000));
+    //     return table;
+    //   },
+    //   dependencies: [
+    //     {
+    //       tableName: 'tool',
+    //       resolver: async (latestId) => {
+    //         const table = await makeToolTable(latestId);
+    //         await new Promise(resolve => setTimeout(resolve, 1000));
+    //         return table;
+    //       },
+    //       dependencies: [],
+    //     },
+    //   ],
+    // },
   ];
-
-  let companyTable;
-  try {
-    console.log('Calculating companyTable');
-    companyTable = await makeCompanyTable(toolTable);
-  } catch (error) {
-    console.error('There was an error while calculating companyTable' + error);
-    companyTable = [];
-  }
-  await writeFile('outputTables/companyTable.json',
-        JSON.stringify(companyTable, null, 2));
 
   await new Promise(resolve => setTimeout(resolve, 1000));
 
