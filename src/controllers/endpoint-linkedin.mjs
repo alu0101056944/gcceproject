@@ -56,7 +56,7 @@ async function getDependencyTreeForLinkedinRecords() {
 }
 
 // make sure this is executed after community table has been created.
-export default async function endpointGithub() {
+export default async function endpointLinkedin() {
   await makeTodayDateRecord(); // this updates today's date_id in persistent_ids.json
 
   const allDependencyTree = await getDependencyTreeForLinkedinRecords();

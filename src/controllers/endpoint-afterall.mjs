@@ -51,7 +51,7 @@ async function getDependencyTreeAfterAll() {
   return allDependencyTree;
 }
 
-export default async function endpointManual() {
+export default async function endpointAfterall() {
   await makeTodayDateRecord(); // this updates today's date_id in persistent_ids.json
 
   const allDependencyTree = await getDependencyTreeAfterAll();
