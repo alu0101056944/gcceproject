@@ -37,7 +37,5 @@ export default async function makeToolTable(latestId) {
     console.error('There was an error while calculating toolTable' + error);
   }
 
-  await new Promise(resolve => setTimeout(resolve, 1000));
-
   return allRecord;
 }

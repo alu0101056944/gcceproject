@@ -14,9 +14,23 @@ import makeToolTable from './tables/dimension/make_tool_table.mjs';
 async function writeRecordsFromGithub() {
   const allDependencyTree = [
     {
-      tableName: 'tool',
-      resolver: makeToolTable,
-      dependencies: [],
+      tableName: 'project',
+      resolver: async (toolTable, latestId) => {
+        const table = await makeProjectTable(toolTable, latestId);
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        return table;
+      },
+      dependencies: [
+        {
+          tableName: 'tool',
+          resolver: async (latestId) => {
+            const table = await makeToolTable(latestId);
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            return table;
+          },
+          dependencies: [],
+        },
+      ],
     },
   ];
 
