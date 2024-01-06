@@ -64,12 +64,13 @@ export default class EndpointWriter {
   #allDependencyTree = undefined;
   #tableNameToTable = undefined;
   #nodeTypes = undefined;
+  #enableFileWrite = undefined;
 
   /**
    * @param {object} allDependencyTree an array of dependency trees in which each
    *    node represents a table.
    */
-  constructor(allDependencyTree) {
+  constructor(allDependencyTree, enableFileWrite = true) {
     if (!Array.isArray(allDependencyTree)) {
       throw new Error('EndpointWriter constructor axpected an array as arg.');
     }
@@ -96,9 +97,9 @@ export default class EndpointWriter {
     for (const dependencyTree of allDependencyTree) {
       this.#throwIfInvalidDependencyTree(dependencyTree);
     }
-    
     this.#allDependencyTree = allDependencyTree;
     this.#tableNameToTable = {};
+    this.#enableFileWrite = enableFileWrite;
   }
 
   #throwIfInvalidDependencyTree(dependencyNode) {
@@ -146,7 +147,7 @@ export default class EndpointWriter {
     }
   }
 
-  async write() {
+  async parse() {
     const FILE_CONTENT = await readFile('./src/persistent_ids.json', 'utf8');
     const dimensionToId = JSON.parse(FILE_CONTENT);
     for (const key of Object.keys(dimensionToId)) {
@@ -156,6 +157,36 @@ export default class EndpointWriter {
     }
 
     const tableNameToTableMerged = {};
+
+    const appendToTableFile = async (tableName, table) => {
+      const FILE_PATH = `outputTables/${tableName}Table.json`;
+
+      let fileContent = '[]';
+      try {
+        fileContent = await readFile(FILE_PATH, 'utf8');
+        if (fileContent.length === 0) {
+          fileContent = '[]';
+        }
+      } catch (error) {
+        if (error.code === 'ENOENT') {
+          console.log(
+            'Could not read output ' + tableName + ' table, continuing by' +
+            ' assuming that the table is empty.');
+        } else {
+          throw error;
+        }
+      }
+
+      const oldTable = JSON.parse(fileContent);
+      if (!Array.isArray(oldTable)) {
+        throw new Error('Expected output table root to be an array.');
+      }
+      for (let i = 0; i < table.length; i++) {
+        oldTable.push(table[i]);
+      }
+
+      await writeFile(FILE_PATH, JSON.stringify(oldTable, null, 2));
+    }
 
     const merge = (tableName, table) => {
       if (!tableNameToTableMerged[tableName]) {
@@ -181,6 +212,9 @@ export default class EndpointWriter {
           const table = await node.resolver(LATEST_ID);
           merge(node.tableName, table);
           dimensionToId[node.tableName] += table.length;
+          if (this.#enableFileWrite) {
+            await appendToTableFile(node.tableName, table);
+          }
           return table;
         } else {
           const args = [];
@@ -191,11 +225,14 @@ export default class EndpointWriter {
           const table = await node.resolver(...args, LATEST_ID);
           merge(node.tableName, table);
           dimensionToId[node.tableName] += table.length;
+          if (this.#enableFileWrite) {
+            await appendToTableFile(node.tableName, table);
+          }
           return table;
         }
       }
       throw new Error('Traversed a node whose logic has not been programmed ' +
-          ' at Endpoint_writer write()\'s solve function. Something is off.');
+          ' at Endpoint_writer parse()\'s solve function. Something is off.');
     };
 
     for (let i = 0; i < this.#allDependencyTree.length; i++) {
@@ -203,9 +240,11 @@ export default class EndpointWriter {
     }
     this.#tableNameToTable = tableNameToTableMerged;
 
-    const TO_JSON = JSON.stringify(dimensionToId, null, 2);
-    await writeFile('./src/persistent_ids.json', TO_JSON);
-    console.log('EndpointWriter sucessful src/persistent_ids.json write.');
+    if (this.#enableFileWrite) {
+      const TO_JSON = JSON.stringify(dimensionToId, null, 2);
+      await writeFile('./src/persistent_ids.json', TO_JSON);
+      console.log('EndpointWriter sucessful src/persistent_ids.json write.');
+    }
   }
 
   getTable(tableName) {
@@ -213,19 +252,5 @@ export default class EndpointWriter {
       throw new Error('Tried to getTable a table that is not stored.');
     }
     return this.#tableNameToTable[tableName];
-  }
-
-  async writeAllOutputTables() {
-    for (const tableName of Object.keys(this.#tableNameToTable)) {
-        await writeFile(`outputTables/${tableName}.json`,
-            JSON.stringify(this.#tableNameToTable[tableName], null, 2));
-        console.log(`Sucesful write of outputTables/${tableName}.json`);
-    }
-  }
-
-  async writeOutputTable(tableName) {
-    await writeFile(`outputTables/${tableName}.json`,
-        JSON.stringify(this.#tableNameToTable[tableName], null, 2));
-    console.log(`Sucesful write of outputTables/${tableName}.json`);
   }
 }
