@@ -75,12 +75,22 @@ export default class EndpointWriter {
     }
     this.#nodeTypes = {
       tableNode: {
-        tableName: 'string',
+        tableName: function isValidString(name) {
+          if (typeof name === 'string' && name.length > 0) {
+            return true;
+          }
+          return false;
+        },
         resolver: 'function',
         dependencies: Array.isArray,
       },
       reuseTableNode: {
-        useTable: 'string',
+        useTable: function isValidString(name) {
+          if (typeof name === 'string' && name.length > 0) {
+            return true;
+          }
+          return false;
+        },
       }
     };
     for (const dependencyTree of allDependencyTree) {
@@ -99,7 +109,7 @@ export default class EndpointWriter {
             const allKeyOfType = Object.keys(propertyNameToTypeDescriptor);
             const allKeyOfNode = Object.keys(node);
             const hasAllKey =
-                allKeyOfNode.every(key => allKeyOfType.includes(key));
+                allKeyOfType.every(key => allKeyOfNode.includes(key));
 
             const isProperlyTyped =
                 Object.entries(propertyNameToTypeDescriptor)
@@ -124,23 +134,6 @@ export default class EndpointWriter {
         throw new Error('There is a node in the dependency tree whose' +
             ' definition matches more than one node type. It must match' +
             ' only one.');
-      }
-
-      if (typeof node.resolver !== 'function') {
-        throw new Error('There is a node in the dependency tree whose resolver' +
-          ' is not a function.');
-      }
-      if (!Array.isArray(node.dependencies)) {
-        throw new Error('There is a node in the dependency tree whose' +
-        ' dependencies is not an array.');
-      }
-      if (typeof node.tableName !== 'string') {
-        throw new Error('There is a node in the dependency tree whose' +
-            ' tableName is not an string.');
-      }
-      if (node.tableName.length === 0) {
-        throw new Error('There is a node in the dependency tree whose' +
-            ' tableName is an empty string.');
       }
     }
 
@@ -174,23 +167,35 @@ export default class EndpointWriter {
     }
 
     const solve = async (node) => {
-      const LATEST_ID = dimensionToId[node.tableName];
-      if (node.dependencies.length === 0) {
-        const table = await node.resolver(LATEST_ID);
-        merge(node.tableName, table);
-        dimensionToId[node.tableName] += table.length;
-        return table;
-      } else {
-        const args = [];
-        for (const child of node.dependencies) {
-          const allRecord = await solve(child);
-          args.push(allRecord);
+      if (node.useTable) {
+        if (!tableNameToTableMerged[node.useTable]) {
+          throw new Error('Bad dependency tree execution sequence; attempted ' +
+              'to get a table that has not been created yet through a useTable' +
+              ' node. Dependency trees are solved in FIFO order array wise and' +
+              ' preorder traversal tree wise.');
         }
-        const table = await node.resolver(...args, LATEST_ID);
-        merge(node.tableName, table);
-        dimensionToId[node.tableName] += table.length;
-        return table;
+        return tableNameToTableMerged[node.useTable];
+      } else if (node.tableName) {
+        const LATEST_ID = dimensionToId[node.tableName];
+        if (node.dependencies.length === 0) {
+          const table = await node.resolver(LATEST_ID);
+          merge(node.tableName, table);
+          dimensionToId[node.tableName] += table.length;
+          return table;
+        } else {
+          const args = [];
+          for (const child of node.dependencies) {
+            const allRecord = await solve(child);
+            args.push(allRecord);
+          }
+          const table = await node.resolver(...args, LATEST_ID);
+          merge(node.tableName, table);
+          dimensionToId[node.tableName] += table.length;
+          return table;
+        }
       }
+      throw new Error('Traversed a node whose logic has not been programmed ' +
+          ' at Endpoint_writer write()\'s solve function. Something is off.');
     };
 
     for (let i = 0; i < this.#allDependencyTree.length; i++) {
