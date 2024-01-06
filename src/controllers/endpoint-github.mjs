@@ -54,7 +54,11 @@ async function getDependencyTreeForGithubRecords() {
     {
       tableName: 'communityToolDate',
       resolver: async (toolTable, latestId) => {
-        const table = await makeCommunityToolDateTable(toolTable, latestId);
+        const FILE_CONTENT =
+            await readFile('outputTables/communityTable.json', 'utf8');
+        const communityTable = JSON.parse(FILE_CONTENT)
+        const table = await makeCommunityToolDateTable(toolTable, communityTable,
+            latestId);
         await new Promise(resolve => setTimeout(resolve, 1000));
         return table;
       },
@@ -122,8 +126,9 @@ async function getDependencyTreeForGithubRecords() {
 }
 
 // make sure this is executed after community table has been created.
-// make sure that today date record .json is generated before executing this.
 export default async function endpointGithub() {
+  await makeTodayDateRecord(); // this updates today's date_id in persistent_ids.json
+
   const allDependencyTree = await getDependencyTreeForGithubRecords();
   const writer = new EndpointWriter(allDependencyTree)
   await writer.parse();

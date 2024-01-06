@@ -11,7 +11,7 @@ import getAllToolSentiment from "../../../../scraper_use_cases/get_tool_sentimen
 
 // tool_score
 // rank = NULL due to not having a rank at hand *** UPDATE README.MD REQUIRED ***
-async function getAllToolInfoFromGithub(toolTable, idOfToday) {
+async function getAllToolInfoFromGithub(toolTable, githubId, idOfToday) {
   const allToolInfo = [];
 
   const allTotalSentiment = await getAllToolSentiment(toolTable);
@@ -23,7 +23,7 @@ async function getAllToolInfoFromGithub(toolTable, idOfToday) {
 
   for (const [index, toolRecord] of toolTable.entries()) {
     const record = {
-      community_id: 1, // github's id in the make community table file
+      community_id: githubId,
       tool_id: toolRecord.tool_id,
       date_id: idOfToday,
       tool_score: allTotalSentiment[index],
@@ -42,13 +42,17 @@ const nameToAllInfo = {
 // originally this was going to be a single file for all communities
 // thus this file structure.
 // @todo May generate duplicates if called more than once. **Update README.md on change**
-export default async function makeCommunityToolDateTable(toolTable, idOfToday) {
+export default async function makeCommunityToolDateTable(toolTable, communityTable,
+    idOfToday) {
   console.log('Calculating communityToolDateTable');
 
   const allRecord = [];
 
   try {
-    const allInfoAtCommunity = await nameToAllInfo['github'](toolTable, idOfToday);
+    const GITHUB_ID = communityTable.find(record => record.name === 'github')
+        .community_id;
+    const allInfoAtCommunity =
+        await nameToAllInfo['github'](toolTable, GITHUB_ID, idOfToday);
     allInfoAtCommunity.forEach(record => allRecord.push(record));
   } catch (error) {
     console.error('There was an error while calculating ' + 
