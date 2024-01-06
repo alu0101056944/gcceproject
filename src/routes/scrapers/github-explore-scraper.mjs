@@ -22,7 +22,7 @@ export default class GithubExploreScraper {
   constructor(url) {
     this.#url = url;
     this.#outputObject = {};
-    this.#maximumAmountOfClicks = 20;
+    this.#maximumAmountOfClicks = 3;
 
     const requestHandler = this.#myHandler.bind(this);
     this.#scraper = new PlaywrightCrawler({

@@ -62,7 +62,8 @@ import { readFile, writeFile } from 'fs/promises'
 export default class EndpointWriter {
   /** @const @private */
   #allDependencyTree = undefined;
-  #allTable = undefined;
+  #tableNameToTable = undefined;
+  #nodeTypes = undefined;
 
   /**
    * @param {object} allDependencyTree an array of dependency trees in which each
@@ -72,77 +73,77 @@ export default class EndpointWriter {
     if (!Array.isArray(allDependencyTree)) {
       throw new Error('EndpointWriter constructor axpected an array as arg.');
     }
-    for (const dependencyTree of allDependencyTree) {
-      this.#validateTableNames(dependencyTree);
-      if (!this.#isValidDependencyTree(dependencyTree, [])) {
-        throw Error('Found an invalid dependency tree, check the documentation');
+    this.#nodeTypes = {
+      tableNode: {
+        tableName: function isValidString(name) {
+          if (typeof name === 'string' && name.length > 0) {
+            return true;
+          }
+          return false;
+        },
+        resolver: 'function',
+        dependencies: Array.isArray,
+      },
+      reuseTableNode: {
+        useTable: function isValidString(name) {
+          if (typeof name === 'string' && name.length > 0) {
+            return true;
+          }
+          return false;
+        },
       }
+    };
+    for (const dependencyTree of allDependencyTree) {
+      this.#throwIfInvalidDependencyTree(dependencyTree);
     }
     
     this.#allDependencyTree = allDependencyTree;
-    this.#allTable = {};
+    this.#tableNameToTable = {};
   }
 
-  #validateTableNames(dependencyNode) {
-    const validateTableNamesRecursive = (dependencyNode, tableNameSet) => {
-      if (dependencyNode.tableName === 'date') {
-        throw new Error('Date table is not allowed to be modified through ' +
-            ' the EndpointWriter due to it having a special persistent_id.json' +
-            ' structure.');
-      }
-      if (tableNameSet.has(dependencyNode.tableName)) {
-        throw new Error('There are duplicate table names in a dependency tree: ' +
-            dependencyNode.tableName);
-      }
-      tableNameSet.add(dependencyNode.tableName);
-      if (dependencyNode.dependencies.length > 0) {
-        for (const child of dependencyNode.dependencies) {
-          validateTableNamesRecursive(child, tableNameSet);
-        }
-      }
-    };
-    validateTableNamesRecursive(dependencyNode, new Set());
-  }
+  #throwIfInvalidDependencyTree(dependencyNode) {
+    const throwIfInvalidNode = (node) => {
+      const allNodeTypeMatch =
+          Object.values(this.#nodeTypes)
+          .filter(propertyNameToTypeDescriptor => {
+            const allKeyOfType = Object.keys(propertyNameToTypeDescriptor);
+            const allKeyOfNode = Object.keys(node);
+            const hasAllKey =
+                allKeyOfType.every(key => allKeyOfNode.includes(key));
 
-  #isValidDependencyTree(dependencyNode) {
-    const isValidNode = (node) => {
-      const allKey = Object.keys(node);
-      const hasValidKeys =
-          allKey.includes('tableName') &&
-          allKey.includes('resolver') &&
-          allKey.includes('dependencies');
-      if (!hasValidKeys) {
-        return false;
+            const isProperlyTyped =
+                Object.entries(propertyNameToTypeDescriptor)
+                .filter(([propertyName, typeDescriptor]) => {
+                  if (typeof typeDescriptor === 'string') {
+                    return typeof node[propertyName] === typeof typeDescriptor;
+                  } else if (typeof typeDescriptor === 'function') {
+                    return typeDescriptor(node[propertyName]);
+                  } else {
+                    throw new Error('Invalid type for property of node type, ' +
+                        'something is wrong in the node type definitions.');
+                  }
+                });
+
+            return hasAllKey && isProperlyTyped;
+          });
+      if (allNodeTypeMatch.length === 0) {
+        throw new Error('There is a node in the dependency tree that doesn\'t ' +
+            'match any node type exactly.');
       }
-      if (typeof node.resolver !== 'function') {
-        return false;
+      if (allNodeTypeMatch.length > 1) {
+        throw new Error('There is a node in the dependency tree whose' +
+            ' definition matches more than one node type. It must match' +
+            ' only one.');
       }
-      if (!Array.isArray(node.dependencies)) {
-        return false;
-      }
-      if (typeof node.tableName !== 'string') {
-        return false
-      }
-      if (node.tableName.length === 0) {
-        return false;
-      }
-      return true;
     }
 
-    if (isValidNode(dependencyNode)) {
-      if (dependencyNode.dependencies.length === 0) {
-        return true;
-      } else {
-        let amountOfValidChildren = 0;
-        for (const child of dependencyNode.dependencies) {
-          if (this.#isValidDependencyTree(child)) {
-            ++amountOfValidChildren;
-          }
-        }
-        return amountOfValidChildren === dependencyNode.dependencies.length;
+    if (dependencyNode.dependencies.length === 0) {
+      throwIfInvalidNode(dependencyNode);
+    } else {
+      for (const child of dependencyNode.dependencies) {
+        throwIfInvalidNode(child);
       }
     }
-    return false;
   }
 
   async write() {
@@ -154,43 +155,53 @@ export default class EndpointWriter {
       }
     }
 
-    const allTableMerged = {};
-    const solve = async (node) => {
-      const LATEST_ID = dimensionToId[node.tableName];
-      if (node.dependencies.length === 0) {
-        const table = await node.resolver(LATEST_ID);
+    const tableNameToTableMerged = {};
 
-        if (!allTableMerged[node.tableName]) {
-          allTableMerged[node.tableName] = table;
-        } else {
-          allTableMerged[node.tableName] =
-              allTableMerged[node.tableName].concat(table);
-        }
-        dimensionToId[node.tableName] += table.length;
-        return table;
+    const merge = (tableName, table) => {
+      if (!tableNameToTableMerged[tableName]) {
+        tableNameToTableMerged[tableName] = table;
       } else {
-        const args = [];
-        for (const child of node.dependencies) {
-          const allRecord = await solve(child);
-          args.push(allRecord);
-        }
-        const table = await node.resolver(...args, LATEST_ID);
-
-        if (!allTableMerged[node.tableName]) {
-          allTableMerged[node.tableName] = table;
-        } else {
-          allTableMerged[node.tableName] =
-              allTableMerged[node.tableName].concat(table);
-        }
-        dimensionToId[node.tableName] += table.length;
-        return table;
+        tableNameToTableMerged[tableName] =
+            tableNameToTableMerged[tableName].concat(table);
       }
+    }
+
+    const solve = async (node) => {
+      if (node.useTable) {
+        if (!tableNameToTableMerged[node.useTable]) {
+          throw new Error('Bad dependency tree execution sequence; attempted ' +
+              'to get a table that has not been created yet through a useTable' +
+              ' node. Dependency trees are solved in FIFO order array wise and' +
+              ' preorder traversal tree wise.');
+        }
+        return tableNameToTableMerged[node.useTable];
+      } else if (node.tableName) {
+        const LATEST_ID = dimensionToId[node.tableName];
+        if (node.dependencies.length === 0) {
+          const table = await node.resolver(LATEST_ID);
+          merge(node.tableName, table);
+          dimensionToId[node.tableName] += table.length;
+          return table;
+        } else {
+          const args = [];
+          for (const child of node.dependencies) {
+            const allRecord = await solve(child);
+            args.push(allRecord);
+          }
+          const table = await node.resolver(...args, LATEST_ID);
+          merge(node.tableName, table);
+          dimensionToId[node.tableName] += table.length;
+          return table;
+        }
+      }
+      throw new Error('Traversed a node whose logic has not been programmed ' +
+          ' at Endpoint_writer write()\'s solve function. Something is off.');
     };
 
     for (let i = 0; i < this.#allDependencyTree.length; i++) {
       await (solve(this.#allDependencyTree[i]));
     }
-    this.#allTable = allTableMerged;
+    this.#tableNameToTable = tableNameToTableMerged;
 
     const TO_JSON = JSON.stringify(dimensionToId, null, 2);
     await writeFile('./src/persistent_ids.json', TO_JSON);
@@ -198,9 +209,23 @@ export default class EndpointWriter {
   }
 
   getTable(tableName) {
-    if (!this.#allTable[tableName]) {
+    if (!this.#tableNameToTable[tableName]) {
       throw new Error('Tried to getTable a table that is not stored.');
     }
-    return this.#allTable[tableName];
+    return this.#tableNameToTable[tableName];
+  }
+
+  async writeAllOutputTables() {
+    for (const tableName of Object.keys(this.#tableNameToTable)) {
+        await writeFile(`outputTables/${tableName}.json`,
+            JSON.stringify(this.#tableNameToTable[tableName], null, 2));
+        console.log(`Sucesful write of outputTables/${tableName}.json`);
+    }
+  }
+
+  async writeOutputTable(tableName) {
+    await writeFile(`outputTables/${tableName}.json`,
+        JSON.stringify(this.#tableNameToTable[tableName], null, 2));
+    console.log(`Sucesful write of outputTables/${tableName}.json`);
   }
 }

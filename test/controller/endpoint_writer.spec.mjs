@@ -400,9 +400,14 @@ test('Dependency tree is solved correctly1', async () => {
     ]
   };
 
+  const SAVE_FILE = await readFile('./src/persistent_ids.json', 'utf-8');
+
   const writer = new EndpointWriter([dependencyTree, dependencyTree2]);
   await writer.write();
   const toolTable = writer.getTable('tool');
+
+  await writeFile('./src/persistent_ids.json', SAVE_FILE);
+
   await expect(toolTable[0].searches).toBe(17);
   await expect(toolTable[1].searches).toBe(8);
 });
@@ -460,9 +465,69 @@ test('Dependency tree is solved correctly2', async () => {
     ]
   };
 
+  const SAVE_FILE = await readFile('./src/persistent_ids.json', 'utf-8');
+
   const writer = new EndpointWriter([dependencyTree, dependencyTree2]);
   await writer.write();
   const projectTable = writer.getTable('project');
+
+  await writeFile('./src/persistent_ids.json', SAVE_FILE);
+
   await expect(projectTable[0].downloads).toBe(4323);
   await expect(projectTable[1].downloads).toBe(9174);
+});
+
+test('Nodes of type useTable work properly', async () => {
+  const dependencyTree = {
+    tableName: 'project',
+    resolver: (toolTable, latestId) => {
+      return [{
+        employee_id: latestId + 1,
+        name: toolTable.name,
+        downloads: 4323,
+      }]
+    },
+    dependencies: [
+      {
+        tableName: 'tool',
+        resolver: (latestId) => {
+          return [{
+            tool_id: latestId + 1,
+            name: 'gatsby',
+            searches: 17
+          }]
+        },
+        dependencies: [],
+      }
+    ]
+  };
+
+  const dependencyTree2 = {
+    tableName: 'company',
+    resolver: (toolTable, latestId) => {
+      return [
+        {
+          employee_id: latestId + 1,
+          name: 'foo',
+          downloads: 9174,
+          some_tool: toolTable[0].searches,
+        }
+      ];
+    },
+    dependencies: [
+      {
+        useTable: 'tool',
+      }
+    ]
+  };
+
+  const SAVE_FILE = await readFile('./src/persistent_ids.json', 'utf-8');
+
+  const writer = new EndpointWriter([dependencyTree, dependencyTree2]);
+  await writer.write();
+  const companyTable = writer.getTable('company');
+
+  await writeFile('./src/persistent_ids.json', SAVE_FILE);
+
+  await expect(companyTable[0].some_tool).toBe(17);
 });
