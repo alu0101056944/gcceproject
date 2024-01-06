@@ -7,22 +7,37 @@
 
 'use strict';
 
-import { readFile, writeFile } from 'fs/promises'
+import { writeFile } from 'fs/promises'
 
-import makeToolsTableWithoutId from '../../scraper_use_cases/make_tools_from_github_explore.mjs';
+import GithubExploreScraper from '../../../routes/scrapers/github-explore-scraper.mjs';
 
-export default async function makeToolTable() {
-  const { allRecord } = await makeToolsTableWithoutId(['frontend']);
-  let toolId = 1;
-  allRecord.forEach(record => record.tool_id = toolId++);
+export default async function makeToolTable(latestId) {
+  console.log('Calculating toolTable');
 
-  const FILE_CONTENT = await readFile('./src/persistent_ids.json', 'utf8');
-  const persistentIds = JSON.parse(FILE_CONTENT);
-  persistentIds.tool += allRecord.length;
-  const TO_JSON = JSON.stringify(persistentIds, null, 2);
-  await writeFile('./src/persistent_ids.json', TO_JSON);
+  const allRecord = [];
+
+  try {
+    for (const specialization of allSpecialization) {
+      const scraper = new GithubExploreScraper(`https://github.com/topics/${specialization}`);
+      const allRepoInfo = await scraper.run();
+      allRepoInfo.forEach(info => {
+        ++latestId;
+        allRecord.push(
+          {
+            tool_id: latestId,
+            name: info.name,
+            author_company: info.author_company,
+            specialization,
+            type: info.type,
+          }
+        )
+      });
+    }
+  } catch (error) {
+    console.error('There was an error while calculating toolTable' + error);
+  }
+
+  await new Promise(resolve => setTimeout(resolve, 1000));
 
   return allRecord;
 }
-
-// makeToolTable().then((data) => console.log(inspect(data)));

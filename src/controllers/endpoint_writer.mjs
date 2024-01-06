@@ -62,7 +62,7 @@ import { readFile, writeFile } from 'fs/promises'
 export default class EndpointWriter {
   /** @const @private */
   #allDependencyTree = undefined;
-  #allTable = undefined;
+  #tableNameToTable = undefined;
 
   /**
    * @param {object} allDependencyTree an array of dependency trees in which each
@@ -80,7 +80,7 @@ export default class EndpointWriter {
     }
     
     this.#allDependencyTree = allDependencyTree;
-    this.#allTable = {};
+    this.#tableNameToTable = {};
   }
 
   #validateTableNames(dependencyNode) {
@@ -154,14 +154,14 @@ export default class EndpointWriter {
       }
     }
 
-    const allTableMerged = {};
+    const tableNameToTableMerged = {};
 
     const merge = (tableName, table) => {
-      if (!allTableMerged[tableName]) {
-        allTableMerged[tableName] = table;
+      if (!tableNameToTableMerged[tableName]) {
+        tableNameToTableMerged[tableName] = table;
       } else {
-        allTableMerged[tableName] =
-            allTableMerged[tableName].concat(table);
+        tableNameToTableMerged[tableName] =
+            tableNameToTableMerged[tableName].concat(table);
       }
     }
 
@@ -188,7 +188,7 @@ export default class EndpointWriter {
     for (let i = 0; i < this.#allDependencyTree.length; i++) {
       await (solve(this.#allDependencyTree[i]));
     }
-    this.#allTable = allTableMerged;
+    this.#tableNameToTable = tableNameToTableMerged;
 
     const TO_JSON = JSON.stringify(dimensionToId, null, 2);
     await writeFile('./src/persistent_ids.json', TO_JSON);
@@ -196,9 +196,23 @@ export default class EndpointWriter {
   }
 
   getTable(tableName) {
-    if (!this.#allTable[tableName]) {
+    if (!this.#tableNameToTable[tableName]) {
       throw new Error('Tried to getTable a table that is not stored.');
     }
-    return this.#allTable[tableName];
+    return this.#tableNameToTable[tableName];
+  }
+
+  async writeAllOutputTables() {
+    for (const tableName of Object.keys(this.#tableNameToTable)) {
+        await writeFile(`outputTables/${tableName}.json`,
+            JSON.stringify(this.#tableNameToTable[tableName], null, 2));
+        console.log(`Sucesful write of outputTables/${tableName}.json`);
+    }
+  }
+
+  async writeOutputTable(tableName) {
+    await writeFile(`outputTables/${tableName}.json`,
+        JSON.stringify(this.#tableNameToTable[tableName], null, 2));
+    console.log(`Sucesful write of outputTables/${tableName}.json`);
   }
 }
