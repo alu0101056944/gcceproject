@@ -63,6 +63,7 @@ export default class EndpointWriter {
   /** @const @private */
   #allDependencyTree = undefined;
   #tableNameToTable = undefined;
+  #nodeTypes = undefined;
 
   /**
    * @param {object} allDependencyTree an array of dependency trees in which each
@@ -72,77 +73,84 @@ export default class EndpointWriter {
     if (!Array.isArray(allDependencyTree)) {
       throw new Error('EndpointWriter constructor axpected an array as arg.');
     }
-    for (const dependencyTree of allDependencyTree) {
-      this.#validateTableNames(dependencyTree);
-      if (!this.#isValidDependencyTree(dependencyTree, [])) {
-        throw Error('Found an invalid dependency tree, check the documentation');
+    this.#nodeTypes = {
+      tableNode: {
+        tableName: 'string',
+        resolver: 'function',
+        dependencies: Array.isArray,
+      },
+      reuseTableNode: {
+        useTable: 'string',
       }
+    };
+    for (const dependencyTree of allDependencyTree) {
+      this.#throwIfInvalidDependencyTree(dependencyTree);
     }
     
     this.#allDependencyTree = allDependencyTree;
     this.#tableNameToTable = {};
   }
 
-  #validateTableNames(dependencyNode) {
-    const validateTableNamesRecursive = (dependencyNode, tableNameSet) => {
-      if (dependencyNode.tableName === 'date') {
-        throw new Error('Date table is not allowed to be modified through ' +
-            ' the EndpointWriter due to it having a special persistent_id.json' +
-            ' structure.');
-      }
-      if (tableNameSet.has(dependencyNode.tableName)) {
-        throw new Error('There are duplicate table names in a dependency tree: ' +
-            dependencyNode.tableName);
-      }
-      tableNameSet.add(dependencyNode.tableName);
-      if (dependencyNode.dependencies.length > 0) {
-        for (const child of dependencyNode.dependencies) {
-          validateTableNamesRecursive(child, tableNameSet);
-        }
-      }
-    };
-    validateTableNamesRecursive(dependencyNode, new Set());
-  }
+  #throwIfInvalidDependencyTree(dependencyNode) {
+    const throwIfInvalidNode = (node) => {
+      const allNodeTypeMatch =
+          Object.values(this.#nodeTypes)
+          .filter(propertyNameToTypeDescriptor => {
+            const allKeyOfType = Object.keys(propertyNameToTypeDescriptor);
+            const allKeyOfNode = Object.keys(node);
+            const hasAllKey =
+                allKeyOfNode.every(key => allKeyOfType.includes(key));
 
-  #isValidDependencyTree(dependencyNode) {
-    const isValidNode = (node) => {
-      const allKey = Object.keys(node);
-      const hasValidKeys =
-          allKey.includes('tableName') &&
-          allKey.includes('resolver') &&
-          allKey.includes('dependencies');
-      if (!hasValidKeys) {
-        return false;
+            const isProperlyTyped =
+                Object.entries(propertyNameToTypeDescriptor)
+                .filter(([propertyName, typeDescriptor]) => {
+                  if (typeof typeDescriptor === 'string') {
+                    return typeof node[propertyName] === typeof typeDescriptor;
+                  } else if (typeof typeDescriptor === 'function') {
+                    return typeDescriptor(node[propertyName]);
+                  } else {
+                    throw new Error('Invalid type for property of node type, ' +
+                        'something is wrong in the node type definitions.');
+                  }
+                });
+
+            return hasAllKey && isProperlyTyped;
+          });
+      if (allNodeTypeMatch.length === 0) {
+        throw new Error('There is a node in the dependency tree that doesn\'t ' +
+            'match any node type exactly.');
       }
+      if (allNodeTypeMatch.length > 1) {
+        throw new Error('There is a node in the dependency tree whose' +
+            ' definition matches more than one node type. It must match' +
+            ' only one.');
+      }
+
       if (typeof node.resolver !== 'function') {
-        return false;
+        throw new Error('There is a node in the dependency tree whose resolver' +
+          ' is not a function.');
       }
       if (!Array.isArray(node.dependencies)) {
-        return false;
+        throw new Error('There is a node in the dependency tree whose' +
+        ' dependencies is not an array.');
       }
       if (typeof node.tableName !== 'string') {
-        return false
+        throw new Error('There is a node in the dependency tree whose' +
+            ' tableName is not an string.');
       }
       if (node.tableName.length === 0) {
-        return false;
+        throw new Error('There is a node in the dependency tree whose' +
+            ' tableName is an empty string.');
       }
-      return true;
     }
 
-    if (isValidNode(dependencyNode)) {
-      if (dependencyNode.dependencies.length === 0) {
-        return true;
-      } else {
-        let amountOfValidChildren = 0;
-        for (const child of dependencyNode.dependencies) {
-          if (this.#isValidDependencyTree(child)) {
-            ++amountOfValidChildren;
-          }
-        }
-        return amountOfValidChildren === dependencyNode.dependencies.length;
+    if (dependencyNode.dependencies.length === 0) {
+      throwIfInvalidNode(dependencyNode);
+    } else {
+      for (const child of dependencyNode.dependencies) {
+        throwIfInvalidNode(child);
       }
     }
-    return false;
   }
 
   async write() {
