@@ -74,8 +74,8 @@ export default async function makeProjectCompanyTable(toolTable,
       });
     }
   } catch (error) {
-    console.error('There was an error while calculating ' + 
-        'projectCompanyTable' + error);
+    console.error('There was an error while calculating projectCompanyTable' +
+        error);
   }
 
   return allRecord;

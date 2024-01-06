@@ -75,28 +75,33 @@ function toChangeType(allVersion) {
 }
 
 export default async function makeToolDateTable(toolTable, idOfToday) {
-  const allPartialURL =
-      toolTable.map(tool => `${tool.author_company}/${tool.name}`);
-  const allRepoInfo = await getInfo(allPartialURL);
+  console.log('Calculating toolDateTable');
 
-  const allDateToolRecord = [];
+  const allRecord = [];
 
-  for (const record of toolTable) {
-    const PARTIAL_GITHUB_URL = `${record.author_company}/${record.name}`;
+  try {
+    const allPartialURL =
+        toolTable.map(tool => `${tool.author_company}/${tool.name}`);
+    const allRepoInfo = await getInfo(allPartialURL);
 
-    const partialURLToAllVersion =
-        await getAllLatestVersionChanges([PARTIAL_GITHUB_URL]);
-    const latestVersions = partialURLToAllVersion[PARTIAL_GITHUB_URL];
+    for (const record of toolTable) {
+      const PARTIAL_GITHUB_URL = `${record.author_company}/${record.name}`;
 
-    console.log(PARTIAL_GITHUB_URL);
-    allDateToolRecord.push({
-      tool_id: record.tool_id,
-      date_id: idOfToday,
-      version: allRepoInfo[PARTIAL_GITHUB_URL]?.version ?? null,
-      interest_levels: null,
-      change_type: latestVersions ? toChangeType(latestVersions) : null,
-    });
+      const partialURLToAllVersion =
+          await getAllLatestVersionChanges([PARTIAL_GITHUB_URL]);
+      const latestVersions = partialURLToAllVersion[PARTIAL_GITHUB_URL];
+
+      allRecord.push({
+        tool_id: record.tool_id,
+        date_id: idOfToday,
+        version: allRepoInfo[PARTIAL_GITHUB_URL]?.version ?? null,
+        interest_levels: null,
+        change_type: latestVersions ? toChangeType(latestVersions) : null,
+      });
+    }
+  } catch (error) {
+    console.error('There was an error while calculating toolDateTable' + error);
   }
-
-  return allDateToolRecord;
+  
+  return allRecord;
 }

@@ -32,8 +32,8 @@ export default async function makeProjectToolTable(toolTable, projectTable) {
       }
     }
   } catch (error) {
-    console.error('There was an error while calculating ' + 
-        'projectToolTable' + error);
+    console.error('There was an error while calculating projectToolTable' +
+        error);
   }
 
   return allRecord;

@@ -10,10 +10,12 @@
 import makeCompanyTable from './tables/source/github/dimension/make_company_table.mjs';
 import makeProjectTable from './tables/source/github/dimension/make_project_table.mjs';
 import makeToolTable from './tables/source/github/dimension/make_tool_table.mjs';
+
 import makeCommunityToolDateTable from './tables/source/github/fact/make_community_tool_date_table.mjs';
 import makeCommunityToolTable from './tables/source/github/fact/make_community_tool_table.mjs';
 import makeProjectCompanyTable from './tables/source/github/fact/make_project_company_table.mjs';
 import makeProjectToolTable from './tables/source/github/fact/make_project_tool_table.mjs';
+import makeToolDateTable from './tables/source/github/fact/make_tool_date_table.mjs';
 
 async function getDependencyTreeForGithubRecords() {
   const allDependencyTree = [
@@ -98,7 +100,20 @@ async function getDependencyTreeForGithubRecords() {
         { useTable: 'project' },
       ],
     },
-    
+
+    {
+      tableName: 'toolDate',
+      resolver: async (toolTable) => {
+        const FILE_CONTENT =
+            await readFile('outputTables/dateRecordOfToday.json', 'utf8');
+        const todayDateTable = JSON.parse(FILE_CONTENT);
+        const TODAY_ID = todayDateTable[0].date_id;
+        const table = await makeToolDateTable(toolTable, TODAY_ID);
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        return table;
+      },
+      dependencies: [ { useTable: 'tool' } ],
+    },
   ];
 
   return allDependencyTree;
