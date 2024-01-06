@@ -2,15 +2,15 @@
  * @author Marcos Barrios
  * @since 30_10_2023
  * @description Make employee table.
- * 
+ *
  */
 
 'use strict';
 
-import { readFile, writeFile } from 'fs/promises'
-
 export default async function makeEmployeeTable() {
-  const records = [
+  console.log('Calculating employeeTable');
+
+  const allRecord = [
       {
         employee_id: 1,
         name: 'John Smith',
@@ -133,11 +133,5 @@ export default async function makeEmployeeTable() {
       }
   ];
 
-  const FILE_CONTENT = await readFile('./src/persistent_ids.json', 'utf8');
-  const persistentIds = JSON.parse(FILE_CONTENT);
-  persistentIds.employee = 20;
-  const TO_JSON = JSON.stringify(persistentIds, null, 2);
-  await writeFile('./src/persistent_ids.json', TO_JSON);
-
-  return records;
+  return allRecord;
 }

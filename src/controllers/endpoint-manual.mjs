@@ -11,6 +11,8 @@ import EndpointWriter from './endpoint_writer.mjs';
 
 import makeCommunityTable from './tables/dimension/make_community_table.mjs';
 import makeEmployeeTable from './tables/dimension/make_employee_table.mjs';
+import makeMarketTable from './tables/dimension/make_market_table.mjs';
+import makeTodayDateRecord from './tables/dimension/make_today_date_record.mjs';
 
 async function getDependencyTreeFromManual() {
   const allDependencyTree = [
@@ -23,7 +25,26 @@ async function getDependencyTreeFromManual() {
       },
       dependencies: [],
     },
-    
+
+    {
+      tableName: 'employee',
+      resolver: async () => {
+        const table = await makeEmployeeTable();
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        return table;
+      },
+      dependencies: [],
+    },
+
+    {
+      tableName: 'market',
+      resolver: async () => {
+        const table = await makeMarketTable();
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        return table;
+      },
+      dependencies: [],
+    },
 
   ];
 
@@ -31,6 +52,8 @@ async function getDependencyTreeFromManual() {
 }
 
 export default async function endpointManual() {
+  await makeTodayDateRecord(); // this updates today's date_id in persistent_ids.json
+
   const allDependencyTree = await getDependencyTreeFromManual();
   const writer = new EndpointWriter(allDependencyTree)
   await writer.parse();

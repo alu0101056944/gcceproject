@@ -17,17 +17,13 @@ export default async function makeCommunityTable() {
 
   const allRecord = [];
 
-  try {
-    allRecord.push([
-      {
-        community_id: 1,
-        name: 'github',
-        type: 'Open Source Hosting',
-      },
-    ]);
-  } catch (error) {
-    console.error('There was an error while calculating communityTable' + error);
-  }
+  allRecord.push([
+    {
+      community_id: 1,
+      name: 'github',
+      type: 'Open Source Hosting',
+    },
+  ]);
 
   return allRecord;
 }
