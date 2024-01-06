@@ -18,6 +18,7 @@ import makeCommunityToolTable from './tables/source/github/fact/make_community_t
 import makeProjectCompanyTable from './tables/source/github/fact/make_project_company_table.mjs';
 import makeProjectToolTable from './tables/source/github/fact/make_project_tool_table.mjs';
 import makeToolDateTable from './tables/source/github/fact/make_tool_date_table.mjs';
+import makeToolProjectCompanyTable from './tables/source/github/fact/make_tool_project_company_table.mjs';
 
 async function getDependencyTreeForGithubRecords() {
   const allDependencyTree = [
@@ -119,6 +120,21 @@ async function getDependencyTreeForGithubRecords() {
         return table;
       },
       dependencies: [ { useTable: 'tool' } ],
+    },
+
+    {
+      tableName: 'toolProjectCompany',
+      resolver: async (toolTable, projectTable, companyTable) => {
+        const table = await makeToolProjectCompanyTable(toolTable,
+            projectTable, companyTable);
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        return table;
+      },
+      dependencies: [
+        { useTable: 'tool' },
+        { useTable: 'project' },
+        { useTable: 'company' },
+      ],
     },
   ];
 

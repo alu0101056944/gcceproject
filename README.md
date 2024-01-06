@@ -10,7 +10,6 @@ A business intelligence tool to help select tools for a project as a hyphotetica
 
  - at [src\controllers\tables\source\github\fact\make_project_tool_table.mjs](src\controllers\tables\source\github\fact\make_project_tool_table.mjs) Update make project tool table's outputLength 
  - at [src\controllers\tables\source\github\fact\make_community_tool_date_table.mjs](src\controllers\tables\source\github\fact\make_community_tool_date_table.mjs) make sure on orchestration that duplicates are handled properly.
- - at [src\controllers\tables\fact\make_tool_project_company_table.mjs](src\controllers\tables\fact\make_tool_project_company_table.mjs) reimplement for github source records as it is very inefficient right now. It tries to recover previously had information by just checking everything.
  - Make sure that relation information is not lost; if i want to generate a tool and a project and a company per github repository, then have it as a branch and add to the actual final tool, project, company tables. Have these tables be an endpoint.
  - at [src/controllers/tables/fact/make_community_tool_table.mjs](src/controllers/tables/fact/make_community_tool_table.mjs) solve race condition into fetchAllCommitAmount.
  - at [src\controllers\tables\fact\make_market_date_table.mjs](src\controllers\tables\fact\make_market_date_table.mjs) differentiate between all markets because right know all markets get the same `amount_of_offers_attribute`.
