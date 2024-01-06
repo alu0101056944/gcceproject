@@ -9,7 +9,7 @@
 
 import LinkedinMentionsScraper from "../../../../../routes/scrapers/linkedin-mentions-scraper.mjs";
 
-export default async function makeMarketToolDateTable(marketTable, toolTable,
+export default async function makeMarketToolDateTable(idOfEurope, toolTable,
     idOfToday) {
   const allRecord = [];
 
@@ -17,7 +17,7 @@ export default async function makeMarketToolDateTable(marketTable, toolTable,
   const scraper = new LinkedinMentionsScraper(allToolName);
   const toolNameToMentionAmount = await scraper.run();
 
-  const MARKET_ID = 1; // Update README.md when differentiating markets.
+  const MARKET_ID = idOfEurope; // Update README.md when differentiating markets.
   for (const toolRecord of toolTable) {
     const record = {
       market_id: MARKET_ID,
