@@ -7,7 +7,7 @@
 
 'use strict';
 
-import getAllToolSentiment from "../../scraper_use_cases/get_tool_sentiment.mjs";
+import getAllToolSentiment from "../../../../scraper_use_cases/get_tool_sentiment.mjs";
 
 // tool_score
 // rank = NULL due to not having a rank at hand *** UPDATE README.MD REQUIRED ***

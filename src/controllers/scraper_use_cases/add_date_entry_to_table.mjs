@@ -9,13 +9,15 @@
 import { readFileSync, writeFileSync } from 'fs';
 
 import pgPromise from 'pg-promise';
-const pgp = pgPromise();
-const db = pgp({
-  connectionString: 'postgres://postgres:foo@localhost:5432/raw_database',
-  max: 20
-});
 
 export default function addDateEntry() {
+
+  const pgp = pgPromise();
+  const db = pgp({
+    connectionString: 'postgres://postgres:foo@localhost:5432/raw_database',
+    max: 20
+  });
+
   try {
     const PERSISTENT_OBJECT_CONTENT =
         readFileSync('./src/persistent_ids.json', 'utf-8');

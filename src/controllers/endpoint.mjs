@@ -7,9 +7,9 @@
 
 'use strict';
 
-import makeCompanyTable from './tables/dimension/github/make_company_table.mjs';
-import makeProjectTable from './tables/dimension/github/make_project_table.mjs';
-import makeToolTable from './tables/dimension/github/make_tool_table.mjs';
+import makeCompanyTable from './tables/source/github/dimension/make_company_table.mjs';
+import makeProjectTable from './tables/source/github/dimension/make_project_table.mjs';
+import makeToolTable from './tables/source/github/dimension/make_tool_table.mjs';
 
 async function getDependencyTreeForGithubRecords() {
   const allDependencyTree = [

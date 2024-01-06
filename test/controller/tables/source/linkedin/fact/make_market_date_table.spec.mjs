@@ -3,7 +3,7 @@
 // @ts-check
 import { test, expect } from '@playwright/test';
 
-import makeMarketDateTable from '../../../../src/controllers/tables/fact/make_market_date_table.mjs';
+import makeMarketDateTable from '../../../../../../src/controllers/tables/source/linkedin/fact/make_market_date_table.mjs';
 
 test('Able to make market-date table', async () => {
   const marketTable = [

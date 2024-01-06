@@ -7,7 +7,7 @@
 
 'use strict';
 
-import LinkedinMentionsScraper from "../../../routes/scrapers/linkedin-mentions-scraper.mjs";
+import LinkedinMentionsScraper from "../../../../../routes/scrapers/linkedin-mentions-scraper.mjs";
 
 export default async function makeMarketToolDateTable(marketTable, toolTable,
     idOfToday) {

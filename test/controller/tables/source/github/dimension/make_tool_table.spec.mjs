@@ -3,9 +3,7 @@
 // @ts-check
 import { test, expect } from '@playwright/test';
 
-import { writeFile } from 'fs/promises';
-
-import makeToolTable from '../../../../../src/controllers/tables/dimension/github/make_tool_table.mjs';
+import makeToolTable from '../../../../../../src/controllers/tables/source/github/dimension/make_tool_table.mjs';
 
 test('Valid data is obtained from make tool table.', async () => {
   test.setTimeout(7200000);

@@ -7,7 +7,7 @@
 
 'use strict';
 
-import GithubDependenciesScraper from "../../../routes/scrapers/github-dependencies-scraper.mjs";
+import GithubDependenciesScraper from "../../../../../routes/scrapers/github-dependencies-scraper.mjs";
 
 /**
  * @param {array} toolTable ready for database insertion

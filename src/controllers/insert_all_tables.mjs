@@ -7,23 +7,20 @@
 import { writeFile } from 'fs/promises';
 
 import makeEmployeeTable from './tables/dimension/make_employee_table.mjs';
-import makeToolTable from './tables/dimension/github/make_tool_table.mjs';
 import makeCommunityTable from './tables/dimension/make_community_table.mjs';
-import makeCompanyTable from './tables/dimension/github/make_company_table.mjs';
-import makeProjectTable from './tables/dimension/github/make_project_table.mjs';
 import makeMarketTable from './tables/dimension/make_market_table.mjs';
-import getNewDateRecord from './tables/dimension/get_date_table_record.mjs';
+import makeTodayDateRecord from './tables/dimension/make_today_date_record.mjs';
 
-import makeCommunityToolDateTable from './tables/fact/get_tool_date_table_record.mjs';
-import makeCommunityToolTable from './tables/fact/make_community_tool_table.mjs';
+import makeCommunityToolDateTable from './tables/source/github/fact/make_tool_date_table.mjs';
+import makeCommunityToolTable from './tables/source/github/fact/make_community_tool_table.mjs';
 import makeCompanyDate from './tables/fact/make_company_date_table.mjs';
 import makeEmployeeToolTable from './tables/fact/make_employee_tool_table.mjs';
-import makeMarketDateTable from './tables/fact/make_market_date_table.mjs';
-import makeMarketToolDateTable from './tables/fact/make_market_tool_date_table.mjs';
-import makeProjectCompanyTable from './tables/fact/make_project_company_table.mjs';
-import makeProjectToolTable from './tables/fact/make_project_tool_table.mjs';
+import makeMarketDateTable from './tables/source/linkedin/fact/make_market_date_table.mjs';
+import makeMarketToolDateTable from './tables/source/linkedin/fact/make_market_tool_date_table.mjs';
+import makeProjectCompanyTable from './tables/source/github/fact/make_project_company_table.mjs';
+import makeProjectToolTable from './tables/source/github/fact/make_project_tool_table.mjs';
 import makeToolProjectCompanyTable from './tables/fact/make_tool_project_company_table.mjs';
-import getToolDateRecord from './tables/fact/get_tool_date_table_record.mjs';
+import makeToolDateTable from './tables/source/github/fact/make_tool_date_table.mjs';
 
 export default async function insertAllTables() {
   let employeeTable;
@@ -70,7 +67,7 @@ export default async function insertAllTables() {
   let dateRecordOfToday;
   try {
     console.log("Writing today's date record");
-    dateRecordOfToday = await getNewDateRecord();
+    dateRecordOfToday = await makeTodayDateRecord();
   } catch (error) {
     console.error('There was an error while calculating today\'s record' + error);
     dateRecordOfToday = [];
@@ -213,7 +210,7 @@ export default async function insertAllTables() {
   try {
     console.log('Calculating toolDateTable');
     toolDateTable =
-        await getToolDateRecord(toolTable, dateRecordOfToday.date_id);
+        await makeToolDateTable(toolTable, dateRecordOfToday.date_id);
   } catch (error) {
     toolDateTable = [];
     console.error('There was an error while calculating toolDateTable' + error);

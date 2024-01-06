@@ -3,7 +3,7 @@
 // @ts-check
 import { test, expect } from '@playwright/test';
 
-import makeCommunityToolTable from '../../../../src/controllers/tables/fact/make_community_tool_table.mjs';
+import makeCommunityToolTable from '../../../../../../src/controllers/tables/source/github/fact/make_community_tool_table.mjs';
 
 test('Able to make community-tool table', async () => {
   const toolTable = [

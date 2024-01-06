@@ -24,7 +24,7 @@ export default async function makeEmployeeToolTable(amountOfTools) {
       table.push({
         employee_id: i,
         tool_id: j,
-        years_of_experience: getRandomInt(1, 10),
+        years_of_experience: getRandomInt(0, 10),
       });
     }
   }

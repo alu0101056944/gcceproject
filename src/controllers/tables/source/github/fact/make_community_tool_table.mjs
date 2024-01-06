@@ -13,9 +13,9 @@
 
 'use strict';
 
-import countDiscussionAmount from '../../scraper_use_cases/get_discussions_amount.mjs';
-import fetchAllCommitAmount from '../../scraper_use_cases/get_repository_commit_amount.mjs';
-import getAllIssueAmountsObject from '../../scraper_use_cases/get_issues_of_repo.mjs';
+import countDiscussionAmount from '../../../../scraper_use_cases/get_discussions_amount.mjs';
+import fetchAllCommitAmount from '../../../../scraper_use_cases/get_repository_commit_amount.mjs';
+import getAllIssueAmountsObject from '../../../../scraper_use_cases/get_issues_of_repo.mjs';
 
 async function getAllToolInfoFromGithub(toolTable) {
   const allToolInfo = [];

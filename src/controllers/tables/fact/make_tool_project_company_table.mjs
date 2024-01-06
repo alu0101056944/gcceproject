@@ -5,6 +5,9 @@
  * 
  */
 
+/** @todo: Reimplement this to use the source github records for efficiency. 
+ *      *UPDATE readme.md when done.
+ */
 export default function makeToolProjectCompanyTable(toolTable,
     projectTable, companyTable) {
   const allRecord = [];

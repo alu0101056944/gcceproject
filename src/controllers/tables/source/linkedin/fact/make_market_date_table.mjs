@@ -7,7 +7,7 @@
 
 'use strict';
 
-import getAmountOfOffers from "../../scraper_use_cases/get_market_offers.mjs";
+import getAmountOfOffers from "../../../../scraper_use_cases/get_market_offers.mjs";
 
 export default async function makeMarketDateTable(marketTable, idOfToday) {
   const allRecord = [];

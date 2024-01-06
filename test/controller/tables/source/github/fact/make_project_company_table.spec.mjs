@@ -3,9 +3,9 @@
 // @ts-check
 import { test, expect } from '@playwright/test';
 
-import makeCompanyTable from "../../../../src/controllers/tables/dimension/make_company_table.mjs";
-import makeProjectTable from "../../../../src/controllers/tables/dimension/make_project_table.mjs";
-import makeProjectCompanyTable from "../../../../src/controllers/tables/fact/make_project_company_table.mjs";
+import makeCompanyTable from '../../../../../../src/controllers/tables/source/github/dimension/make_company_table.mjs';
+import makeProjectTable from '../../../../../../src/controllers/tables/source/github/dimension/make_project_table.mjs';
+import makeProjectCompanyTable from '../../../../../../src/controllers/tables/source/github/fact/make_project_company_table.mjs';
 
 test('Creation is correct', async () => {
   const doMake = async () => {

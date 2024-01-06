@@ -3,9 +3,10 @@
 // @ts-check
 import { test, expect } from '@playwright/test';
 
-import makeMarketToolDateTable from '../../../../src/controllers/tables/fact/make_market_tool_date_table.mjs';
-
 import { inspect } from 'util';
+
+import makeMarketToolDateTable from '../../../../../../src/controllers/tables/source/linkedin/fact/make_market_tool_date_table.mjs';
+
 
 test('Able to make market-tool-date table', async () => {
   test.setTimeout(7200000)

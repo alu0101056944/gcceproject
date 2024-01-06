@@ -3,7 +3,7 @@
 // @ts-check
 import { test, expect } from '@playwright/test';
 
-import getToolDateRecord from "../../../../src/controllers/tables/fact/get_tool_date_table_record.mjs";
+import makeToolDateTable from '../../../../../../src/controllers/tables/source/github/fact/make_tool_date_table.mjs';
 
 test('Results are valid', async () => {
   const toolTable = [
@@ -15,7 +15,7 @@ test('Results are valid', async () => {
       "tool_id": 2
     },
   ]
-  const allDateRecord = await getToolDateRecord(toolTable, 1);
+  const allDateRecord = await makeToolDateTable(toolTable, 1);
   await expect(allDateRecord[0].tool_id).toEqual(2);
   await expect(allDateRecord[0].date_id).toEqual(1);
   await expect(allDateRecord[0].version).not.toBeUndefined();

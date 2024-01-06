@@ -9,7 +9,7 @@
 
 import { readFile, writeFile } from 'fs/promises'
 
-export default async function getNewDateRecord() {
+export default async function makeTodayDateRecord() {
   const FILE_CONTENT = await readFile('./src/persistent_ids.json', 'utf8');
   const persistentIds = JSON.parse(FILE_CONTENT);
 

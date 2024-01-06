@@ -3,7 +3,7 @@
 // @ts-check
 import { test, expect } from '@playwright/test';
 
-import makeCommunityToolDateTable from '../../../../src/controllers/tables/fact/make_community_tool_date_table.mjs';
+import makeCommunityToolDateTable from '../../../../../../src/controllers/tables/source/github/fact/make_community_tool_date_table.mjs';
 
 test('Able to make community-tool-date table', async () => {
   test.setTimeout(7200000)

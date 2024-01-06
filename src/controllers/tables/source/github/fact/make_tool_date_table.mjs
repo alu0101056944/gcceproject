@@ -17,9 +17,8 @@
  *
  */
 
-import getInfo from '../../scraper_use_cases/get_repository_info.mjs';
-
-import getAllLatestVersionChanges from '../../scraper_use_cases/get_latest_five_version_changes.js';
+import getInfo from '../../../../scraper_use_cases/get_repository_info.mjs';
+import getAllLatestVersionChanges from '../../../../scraper_use_cases/get_latest_five_version_changes.js';
 
 import { compare } from 'compare-versions';
 
@@ -75,7 +74,7 @@ function toChangeType(allVersion) {
   return changeType;
 }
 
-export default async function getToolDateRecord(toolTable, idOfToday) {
+export default async function makeToolDateTable(toolTable, idOfToday) {
   const allPartialURL =
       toolTable.map(tool => `${tool.author_company}/${tool.name}`);
   const allRepoInfo = await getInfo(allPartialURL);
