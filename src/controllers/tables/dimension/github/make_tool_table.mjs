@@ -9,12 +9,16 @@
 
 import { writeFile } from 'fs/promises'
 
-import GithubExploreScraper from '../../../routes/scrapers/github-explore-scraper.mjs';
+import GithubExploreScraper from '../../../../routes/scrapers/github-explore-scraper.mjs';
 
 export default async function makeToolTable(latestId) {
   console.log('Calculating toolTable');
 
   const allRecord = [];
+
+  const allSpecialization = [
+    'frontend',
+  ];
 
   try {
     for (const specialization of allSpecialization) {

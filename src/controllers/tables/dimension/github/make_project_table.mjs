@@ -9,9 +9,9 @@
 
 import { readFile, writeFile } from 'fs/promises';
 
-import GithubRepositoryScraper from '../../../routes/scrapers/github-repository-scraper.mjs';
+import GithubRepositoryScraper from '../../../../routes/scrapers/github-repository-scraper.mjs';
 
-import getDownloadsPerPackage from '../../scraper_use_cases/add_downloads_to_table.mjs';
+import getDownloadsPerPackage from '../../../scraper_use_cases/add_downloads_to_table.mjs';
 
 // Based on github repositories
 export default async function makeProjectTable(toolTable, latestId) {

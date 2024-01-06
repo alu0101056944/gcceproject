@@ -7,8 +7,8 @@
 
 'use strict';
 
-import CompaniesmarketcapScraper from "../../../routes/scrapers/companiesmarketcap-scraper.mjs";
-import CompaniesmarketcapProfileScraper from '../../../routes/scrapers/companiesmarketcap-profile-scraper.mjs';
+import CompaniesmarketcapScraper from "../../../../routes/scrapers/companiesmarketcap-scraper.mjs";
+import CompaniesmarketcapProfileScraper from '../../../../routes/scrapers/companiesmarketcap-profile-scraper.mjs';
 
 export default async function makeCompanyTable(toolTable, latestId) {
   console.log('Calculating companyTable');

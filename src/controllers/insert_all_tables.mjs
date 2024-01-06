@@ -7,10 +7,10 @@
 import { writeFile } from 'fs/promises';
 
 import makeEmployeeTable from './tables/dimension/make_employee_table.mjs';
-import makeToolTable from './tables/dimension/make_tool_table.mjs';
+import makeToolTable from './tables/dimension/github/make_tool_table.mjs';
 import makeCommunityTable from './tables/dimension/make_community_table.mjs';
-import makeCompanyTable from './tables/dimension/make_company_table.mjs';
-import makeProjectTable from './tables/dimension/make_project_table.mjs';
+import makeCompanyTable from './tables/dimension/github/make_company_table.mjs';
+import makeProjectTable from './tables/dimension/github/make_project_table.mjs';
 import makeMarketTable from './tables/dimension/make_market_table.mjs';
 import getNewDateRecord from './tables/dimension/get_date_table_record.mjs';
 

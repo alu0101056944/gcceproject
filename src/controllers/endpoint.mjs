@@ -7,9 +7,9 @@
 
 'use strict';
 
-import makeCompanyTable from './tables/dimension/make_company_table.mjs';
-import makeProjectTable from './tables/dimension/make_project_table.mjs';
-import makeToolTable from './tables/dimension/make_tool_table.mjs';
+import makeCompanyTable from './tables/dimension/github/make_company_table.mjs';
+import makeProjectTable from './tables/dimension/github/make_project_table.mjs';
+import makeToolTable from './tables/dimension/github/make_tool_table.mjs';
 
 async function getDependencyTreeForGithubRecords() {
   const allDependencyTree = [
@@ -43,7 +43,7 @@ async function getDependencyTreeForGithubRecords() {
     },
   ];
 
-  return allDependencyTree
+  return allDependencyTree;
 }
 
 export default async function endpoint() {
