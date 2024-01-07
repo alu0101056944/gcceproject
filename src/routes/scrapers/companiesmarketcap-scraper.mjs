@@ -70,7 +70,7 @@ export default class CompaniesmarketcapScraper {
       const tdRightLocator = row.locator('td');
       const allTdRightLocators = await tdRightLocator.all();
       const AMOUNT_OF_EMPLOYEES_STRING = await allTdRightLocators[2].textContent();
-      const IS_COMMA_SEPARATED_NUMBER_REG_EXP = /\d+,?\d+/
+      const IS_COMMA_SEPARATED_NUMBER_REG_EXP = /\d+,?\d+/;
       if (IS_COMMA_SEPARATED_NUMBER_REG_EXP.test(AMOUNT_OF_EMPLOYEES_STRING)) {
         this.#outputObject[PROCESSED_COMPANY_NAME] = parseInt(
           AMOUNT_OF_EMPLOYEES_STRING.replace(/,/g, '').trim()

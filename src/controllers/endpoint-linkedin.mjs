@@ -18,7 +18,7 @@ async function getDependencyTreeForLinkedinRecords() {
       tableName: 'marketDate',
       resolver: async () => {
         const FILE_CONTENT =
-            await readFile('outputTables/dateRecordOfToday.json', 'utf8');
+            await readFile('outputTables/todayDateTable.json', 'utf8');
         const todayDateTable = JSON.parse(FILE_CONTENT);
         const TODAY_ID = todayDateTable[0].date_id;
 
@@ -34,7 +34,7 @@ async function getDependencyTreeForLinkedinRecords() {
       tableName: 'marketToolDate',
       resolver: async () => {
         const FILE_CONTENT =
-            await readFile('outputTables/dateRecordOfToday.json', 'utf8');
+            await readFile('outputTables/todayDateTable.json', 'utf8');
         const todayDateTable = JSON.parse(FILE_CONTENT);
         const TODAY_ID = todayDateTable[0].date_id;
 

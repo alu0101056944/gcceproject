@@ -9,6 +9,8 @@
 
 import EndpointWriter from './endpoint_writer.mjs';
 
+import { readFile } from 'fs/promises';
+
 import makeCompanyTable from './tables/source/github/dimension/make_company_table.mjs';
 import makeProjectTable from './tables/source/github/dimension/make_project_table.mjs';
 import makeToolTable from './tables/source/github/dimension/make_tool_table.mjs';
@@ -70,7 +72,7 @@ async function getDependencyTreeForGithubRecords() {
       tableName: 'communityTool',
       resolver: async (toolTable) => {
         const FILE_CONTENT =
-            await readFile('outputTables/dateRecordOfToday.json', 'utf8');
+            await readFile('outputTables/todayDateTable.json', 'utf8');
         const todayDateTable = JSON.parse(FILE_CONTENT);
         const TODAY_ID = todayDateTable[0].date_id;
         const table = await makeCommunityToolTable(toolTable, TODAY_ID);
@@ -112,7 +114,7 @@ async function getDependencyTreeForGithubRecords() {
       tableName: 'toolDate',
       resolver: async (toolTable) => {
         const FILE_CONTENT =
-            await readFile('outputTables/dateRecordOfToday.json', 'utf8');
+            await readFile('outputTables/todayDateTable.json', 'utf8');
         const todayDateTable = JSON.parse(FILE_CONTENT);
         const TODAY_ID = todayDateTable[0].date_id;
         const table = await makeToolDateTable(toolTable, TODAY_ID);

@@ -54,8 +54,8 @@ async function getAllToolInfoFromGithub(toolTable) {
       tool_id: toolRecord.tool_id,
       amount_of_bugs_reported: partialURLToAmountsObject[PARTIAL_URL].total,
       amount_of_bugs_solved: partialURLToAmountsObject[PARTIAL_URL].closed,
-      amount_of_changes_commited: partialURLToCommitAmount[PARTIAL_URL],
-      amount_of_discussions: partialURLToDiscussionAmount[REPO_NAME],
+      amount_of_changes_commited: partialURLToCommitAmount?.[PARTIAL_URL] ?? null,
+      amount_of_discussions: partialURLToDiscussionAmount?.[REPO_NAME] ?? null,
     }
     allToolInfo.push(record);
   }

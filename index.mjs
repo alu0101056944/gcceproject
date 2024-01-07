@@ -53,16 +53,16 @@ async function main() {
     console.error(error);
   }
 
-  console.log()
+  console.log();
   console.log('Starting program:');
-  console.log()
+  console.log();
 
   const todayRecord = await makeTodayDateRecord();
   await writeFile('outputTables/todayDateTable.json',
       JSON.stringify([todayRecord], null, 2));
 
   await endpointManual();
-  // await endpointGithub();
+  await endpointGithub();
   // await endpointLinkedin();
   // await endpointAfterall();
 }

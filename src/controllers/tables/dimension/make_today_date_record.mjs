@@ -17,7 +17,6 @@ export default async function makeTodayDateRecord() {
   if (!LAST_UPDATE_DATE) {
     throw new Error("Persistent id's date is structured incorrectly.");
   }
-  console.log(LAST_UPDATE_DATE.match(/\d\d\d\d-\d\d-\d\d/));
   if (!LAST_UPDATE_DATE.match(/\d\d\d\d-\d\d-\d\d/)) {
     throw new Error("Persistent id date's lastUpdateDate has incorrect format.");
   }
