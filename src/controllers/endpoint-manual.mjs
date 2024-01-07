@@ -9,8 +9,6 @@
 
 import EndpointWriter from './endpoint_writer.mjs';
 
-import makeTodayDateRecord from './tables/dimension/make_today_date_record.mjs';
-
 import makeCommunityTable from './tables/dimension/make_community_table.mjs';
 import makeEmployeeTable from './tables/dimension/make_employee_table.mjs';
 import makeMarketTable from './tables/dimension/make_market_table.mjs';
@@ -53,8 +51,6 @@ async function getDependencyTreeFromManual() {
 }
 
 export default async function endpointManual() {
-  await makeTodayDateRecord(); // this updates today's date_id in persistent_ids.json
-
   const allDependencyTree = await getDependencyTreeFromManual();
   const writer = new EndpointWriter(allDependencyTree)
   await writer.parse();

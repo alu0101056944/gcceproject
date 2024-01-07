@@ -17,13 +17,13 @@ export default async function makeCommunityTable() {
 
   const allRecord = [];
 
-  allRecord.push([
+  allRecord.push(
     {
       community_id: 1,
       name: 'github',
       type: 'Open Source Hosting',
     },
-  ]);
+  );
 
   return allRecord;
 }

@@ -9,6 +9,8 @@
 
 import EndpointWriter from './endpoint_writer.mjs';
 
+import { readFile } from 'fs/promises';
+
 import makeMarketDateTable from './tables/source/linkedin/fact/make_market_date_table.mjs';
 import makeMarketToolDateTable from './tables/source/linkedin/fact/make_market_tool_date_table.mjs';
 
@@ -18,7 +20,7 @@ async function getDependencyTreeForLinkedinRecords() {
       tableName: 'marketDate',
       resolver: async () => {
         const FILE_CONTENT =
-            await readFile('outputTables/dateRecordOfToday.json', 'utf8');
+            await readFile('outputTables/todayDateTable.json', 'utf8');
         const todayDateTable = JSON.parse(FILE_CONTENT);
         const TODAY_ID = todayDateTable[0].date_id;
 
@@ -34,7 +36,7 @@ async function getDependencyTreeForLinkedinRecords() {
       tableName: 'marketToolDate',
       resolver: async () => {
         const FILE_CONTENT =
-            await readFile('outputTables/dateRecordOfToday.json', 'utf8');
+            await readFile('outputTables/todayDateTable.json', 'utf8');
         const todayDateTable = JSON.parse(FILE_CONTENT);
         const TODAY_ID = todayDateTable[0].date_id;
 
@@ -57,8 +59,6 @@ async function getDependencyTreeForLinkedinRecords() {
 
 // make sure this is executed after community table has been created.
 export default async function endpointLinkedin() {
-  await makeTodayDateRecord(); // this updates today's date_id in persistent_ids.json
-
   const allDependencyTree = await getDependencyTreeForLinkedinRecords();
   const writer = new EndpointWriter(allDependencyTree)
   await writer.parse();

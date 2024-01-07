@@ -1,12 +1,22 @@
 {
-  "employee": 80,
-  "tool": 8,
+  "employee": 300,
+  "tool": 148,
   "date": {
-    "id": 2,
-    "lastUpdateDate": "2024-01-06T00:00:00.000Z"
+    "id": 3,
+    "lastUpdateDate": "2024-01-07T00:00:00.000Z"
   },
-  "community": 4,
-  "company": 1,
-  "project": 8,
-  "market": 12
+  "community": 15,
+  "company": 141,
+  "project": 148,
+  "market": 45,
+  "communityToolDate": 140,
+  "communityTool": 0,
+  "projectCompany": 140,
+  "projectTool": 0,
+  "toolDate": 140,
+  "toolProjectCompany": 140,
+  "marketDate": 4,
+  "marketToolDate": 100,
+  "companyDate": 40,
+  "employeeTool": 800
 }

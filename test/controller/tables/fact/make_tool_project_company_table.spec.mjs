@@ -3,7 +3,7 @@
 // @ts-check
 import { test, expect } from '@playwright/test';
 
-import makeToolProjectCompanyTable from '../../../../src/controllers/tables/fact/make_tool_project_company_table.mjs';
+import makeToolProjectCompanyTable from '../../../../src/controllers/tables/source/github/fact/make_tool_project_company_table.mjs';
 
 test('Able to make tool-project-company table', async () => {
   const toolTable = [

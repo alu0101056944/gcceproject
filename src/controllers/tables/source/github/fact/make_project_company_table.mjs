@@ -58,7 +58,7 @@ export default async function makeProjectCompanyTable(toolTable,
       const AUTHOR_COMPANY = toolTable[i].author_company;
 
       const PROJECT_CONTRIBUTOR_AMOUNT =
-          fetchContributorAmount(AUTHOR_COMPANY, REPO_NAME);
+          await fetchContributorAmount(AUTHOR_COMPANY, REPO_NAME);
 
       const AVERAGE_INCOME_PER_HOUR = 37;
       const ARBITRARY_PROJECT_DURATION_IN_YEARS = 5;

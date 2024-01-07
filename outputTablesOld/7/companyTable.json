@@ -1,0 +1,142 @@
+[
+  {
+    "company_id": 2,
+    "name": "facebook",
+    "employee_amount": null,
+    "type": null,
+    "amount_of_searches": null
+  },
+  {
+    "company_id": 3,
+    "name": "vuejs",
+    "employee_amount": null,
+    "type": null,
+    "amount_of_searches": null
+  },
+  {
+    "company_id": 4,
+    "name": "thedaviddias",
+    "employee_amount": null,
+    "type": null,
+    "amount_of_searches": null
+  },
+  {
+    "company_id": 5,
+    "name": "vitejs",
+    "employee_amount": null,
+    "type": null,
+    "amount_of_searches": null
+  },
+  {
+    "company_id": 6,
+    "name": "ionic-team",
+    "employee_amount": null,
+    "type": null,
+    "amount_of_searches": null
+  },
+  {
+    "company_id": 7,
+    "name": "dypsilon",
+    "employee_amount": null,
+    "type": null,
+    "amount_of_searches": null
+  },
+  {
+    "company_id": 8,
+    "name": "LeCoupa",
+    "employee_amount": null,
+    "type": null,
+    "amount_of_searches": null
+  },
+  {
+    "company_id": 9,
+    "name": "xitu",
+    "employee_amount": null,
+    "type": null,
+    "amount_of_searches": null
+  },
+  {
+    "company_id": 10,
+    "name": "StanGirard",
+    "employee_amount": null,
+    "type": null,
+    "amount_of_searches": null
+  },
+  {
+    "company_id": 11,
+    "name": "ascoders",
+    "employee_amount": null,
+    "type": null,
+    "amount_of_searches": null
+  },
+  {
+    "company_id": 12,
+    "name": "GitHubDaily",
+    "employee_amount": null,
+    "type": null,
+    "amount_of_searches": null
+  },
+  {
+    "company_id": 13,
+    "name": "expo",
+    "employee_amount": null,
+    "type": null,
+    "amount_of_searches": null
+  },
+  {
+    "company_id": 14,
+    "name": "haizlin",
+    "employee_amount": null,
+    "type": null,
+    "amount_of_searches": null
+  },
+  {
+    "company_id": 15,
+    "name": "iview",
+    "employee_amount": null,
+    "type": null,
+    "amount_of_searches": null
+  },
+  {
+    "company_id": 16,
+    "name": "vueComponent",
+    "employee_amount": null,
+    "type": null,
+    "amount_of_searches": null
+  },
+  {
+    "company_id": 17,
+    "name": "NaiboWang",
+    "employee_amount": null,
+    "type": null,
+    "amount_of_searches": null
+  },
+  {
+    "company_id": 18,
+    "name": "mouredev",
+    "employee_amount": null,
+    "type": null,
+    "amount_of_searches": null
+  },
+  {
+    "company_id": 19,
+    "name": "nhn",
+    "employee_amount": null,
+    "type": null,
+    "amount_of_searches": null
+  },
+  {
+    "company_id": 20,
+    "name": "thedaviddias",
+    "employee_amount": null,
+    "type": null,
+    "amount_of_searches": null
+  },
+  {
+    "company_id": 21,
+    "name": "baidu",
+    "employee_amount": null,
+    "type": null,
+    "amount_of_searches": null
+  }
+]

@@ -1,0 +1,142 @@
+[
+  {
+    "tool_id": 89,
+    "name": "react",
+    "author_company": "facebook",
+    "specialization": "frontend",
+    "type": "ui"
+  },
+  {
+    "tool_id": 90,
+    "name": "vue",
+    "author_company": "vuejs",
+    "specialization": "frontend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 91,
+    "name": "Front-End-Checklist",
+    "author_company": "thedaviddias",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 92,
+    "name": "vite",
+    "author_company": "vitejs",
+    "specialization": "frontend",
+    "type": "build-tool"
+  },
+  {
+    "tool_id": 93,
+    "name": "ionic-framework",
+    "author_company": "ionic-team",
+    "specialization": "frontend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 94,
+    "name": "frontend-dev-bookmarks",
+    "author_company": "dypsilon",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 95,
+    "name": "awesome-cheatsheets",
+    "author_company": "LeCoupa",
+    "specialization": "frontend",
+    "type": "language"
+  },
+  {
+    "tool_id": 96,
+    "name": "gold-miner",
+    "author_company": "xitu",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 97,
+    "name": "quivr",
+    "author_company": "StanGirard",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 98,
+    "name": "weekly",
+    "author_company": "ascoders",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 99,
+    "name": "GitHubDaily",
+    "author_company": "GitHubDaily",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 100,
+    "name": "expo",
+    "author_company": "expo",
+    "specialization": "frontend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 101,
+    "name": "fe-interview",
+    "author_company": "haizlin",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 102,
+    "name": "iview",
+    "author_company": "iview",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 103,
+    "name": "ant-design-vue",
+    "author_company": "vueComponent",
+    "specialization": "frontend",
+    "type": "ui"
+  },
+  {
+    "tool_id": 104,
+    "name": "EasySpider",
+    "author_company": "NaiboWang",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 105,
+    "name": "Hello-Python",
+    "author_company": "mouredev",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 106,
+    "name": "tui.editor",
+    "author_company": "nhn",
+    "specialization": "frontend",
+    "type": "editor"
+  },
+  {
+    "tool_id": 107,
+    "name": "Front-End-Performance-Checklist",
+    "author_company": "thedaviddias",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 108,
+    "name": "amis",
+    "author_company": "baidu",
+    "specialization": "frontend",
+    "type": null
+  }
+]

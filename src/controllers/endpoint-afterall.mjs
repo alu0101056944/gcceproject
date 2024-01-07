@@ -9,6 +9,8 @@
 
 import EndpointWriter from './endpoint_writer.mjs';
 
+import { readFile } from 'fs/promises';
+
 import makeCompanyDate from './tables/fact/make_company_date_table.mjs';
 import makeEmployeeToolTable from './tables/fact/make_employee_tool_table.mjs';
 
@@ -18,7 +20,7 @@ async function getDependencyTreeAfterAll() {
       tableName: 'companyDate',
       resolver: async () => {
         const FILE_CONTENT =
-            await readFile('outputTables/dateRecordOfToday.json', 'utf8');
+            await readFile('outputTables/todayDateTable.json', 'utf8');
         const todayDateTable = JSON.parse(FILE_CONTENT);
         const TODAY_ID = todayDateTable[0].date_id;
 
@@ -52,8 +54,6 @@ async function getDependencyTreeAfterAll() {
 }
 
 export default async function endpointAfterall() {
-  await makeTodayDateRecord(); // this updates today's date_id in persistent_ids.json
-
   const allDependencyTree = await getDependencyTreeAfterAll();
   const writer = new EndpointWriter(allDependencyTree)
   await writer.parse();

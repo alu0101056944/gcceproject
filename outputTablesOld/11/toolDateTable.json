@@ -1,0 +1,142 @@
+[
+  {
+    "tool_id": 89,
+    "date_id": 3,
+    "version": null,
+    "interest_levels": null,
+    "change_type": "patch"
+  },
+  {
+    "tool_id": 90,
+    "date_id": 3,
+    "version": null,
+    "interest_levels": null,
+    "change_type": "same"
+  },
+  {
+    "tool_id": 91,
+    "date_id": 3,
+    "version": null,
+    "interest_levels": null,
+    "change_type": "non-semantic"
+  },
+  {
+    "tool_id": 92,
+    "date_id": 3,
+    "version": null,
+    "interest_levels": null,
+    "change_type": "patch"
+  },
+  {
+    "tool_id": 93,
+    "date_id": 3,
+    "version": null,
+    "interest_levels": null,
+    "change_type": "non-semantic"
+  },
+  {
+    "tool_id": 94,
+    "date_id": 3,
+    "version": null,
+    "interest_levels": null,
+    "change_type": "non-semantic"
+  },
+  {
+    "tool_id": 95,
+    "date_id": 3,
+    "version": null,
+    "interest_levels": null,
+    "change_type": "non-semantic"
+  },
+  {
+    "tool_id": 96,
+    "date_id": 3,
+    "version": null,
+    "interest_levels": null,
+    "change_type": "non-semantic"
+  },
+  {
+    "tool_id": 97,
+    "date_id": 3,
+    "version": null,
+    "interest_levels": null,
+    "change_type": "same"
+  },
+  {
+    "tool_id": 98,
+    "date_id": 3,
+    "version": null,
+    "interest_levels": null,
+    "change_type": "non-semantic"
+  },
+  {
+    "tool_id": 99,
+    "date_id": 3,
+    "version": null,
+    "interest_levels": null,
+    "change_type": "non-semantic"
+  },
+  {
+    "tool_id": 100,
+    "date_id": 3,
+    "version": null,
+    "interest_levels": null,
+    "change_type": "non-semantic"
+  },
+  {
+    "tool_id": 101,
+    "date_id": 3,
+    "version": null,
+    "interest_levels": null,
+    "change_type": "non-semantic"
+  },
+  {
+    "tool_id": 102,
+    "date_id": 3,
+    "version": null,
+    "interest_levels": null,
+    "change_type": "patch"
+  },
+  {
+    "tool_id": 103,
+    "date_id": 3,
+    "version": null,
+    "interest_levels": null,
+    "change_type": "non-semantic"
+  },
+  {
+    "tool_id": 104,
+    "date_id": 3,
+    "version": null,
+    "interest_levels": null,
+    "change_type": "patch"
+  },
+  {
+    "tool_id": 105,
+    "date_id": 3,
+    "version": null,
+    "interest_levels": null,
+    "change_type": "non-semantic"
+  },
+  {
+    "tool_id": 106,
+    "date_id": 3,
+    "version": null,
+    "interest_levels": null,
+    "change_type": "non-semantic"
+  },
+  {
+    "tool_id": 107,
+    "date_id": 3,
+    "version": null,
+    "interest_levels": null,
+    "change_type": "non-semantic"
+  },
+  {
+    "tool_id": 108,
+    "date_id": 3,
+    "version": null,
+    "interest_levels": null,
+    "change_type": "patch"
+  }
+]
