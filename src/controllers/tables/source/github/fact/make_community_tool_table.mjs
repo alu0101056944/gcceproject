@@ -14,8 +14,35 @@
 'use strict';
 
 import countDiscussionAmount from '../../../../scraper_use_cases/get_discussions_amount.mjs';
-import fetchAllCommitAmount from '../../../../scraper_use_cases/get_repository_commit_amount.mjs';
 import getAllIssueAmountsObject from '../../../../scraper_use_cases/get_issues_of_repo.mjs';
+
+async function getCommitAmount(partialURL) {
+  const authorAndRepoName = partialURL.split('/');
+  const AUTHOR_COMPANY = authorAndRepoName[0];
+  const REPO_NAME = authorAndRepoName[1];
+  const URL =
+      `https://api.github.com/repos/${AUTHOR_COMPANY}/${REPO_NAME}/commits?per_page=1&page=1`;
+  const response = await fetch(URL, {
+    headers: {
+      'User-Agent': 'Our script',
+      Authorization: `Bearer ${process.env.GITHUB_TOKEN}`
+    }
+  });
+  
+  const NEXT_AND_LAST_TEXT = response.headers.get('Link');
+  /**
+   * Example:
+   * '
+   * <https://api.github.com/repositories/10270250/commits?per_page=1&page=2>; rel="next",
+   * <https://api.github.com/repositories/10270250/commits?per_page=1&page=16134>; rel="last"
+   * '
+   */
+
+  const LAST_URL_REG_EXP = /<([^\s]+?page=(\d+))>; rel="last"/;
+  const regExpResult = LAST_URL_REG_EXP.exec(NEXT_AND_LAST_TEXT);
+  const COMMIT_AMOUNT = regExpResult[2];
+  return parseInt(COMMIT_AMOUNT);
+}
 
 async function getAllToolInfoFromGithub(toolTable) {
   const allToolInfo = [];
@@ -27,9 +54,13 @@ async function getAllToolInfoFromGithub(toolTable) {
   
   // temporal fix to a race condition into fetchAllCommitAmount.
   // **** Update README.md when solved.
-  await new Promise(resolve => setTimeout(2000, resolve));
+  await new Promise(resolve => setTimeout(resolve, 2000));
 
-  const partialURLToCommitAmount = await fetchAllCommitAmount(allPartialURL);
+  const partialURLToCommitAmount = {};
+  for (const partialURL of allPartialURL) {
+    partialURLToCommitAmount[partialURL] = await getCommitAmount(partialURL);
+  }
+
   const partialURLToDiscussionAmount =
       await countDiscussionAmount(toolTable.map(tool => tool.name));
 
