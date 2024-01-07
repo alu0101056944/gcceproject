@@ -9,6 +9,8 @@
 
 import EndpointWriter from './endpoint_writer.mjs';
 
+import { readFile } from 'fs/promises';
+
 import makeMarketDateTable from './tables/source/linkedin/fact/make_market_date_table.mjs';
 import makeMarketToolDateTable from './tables/source/linkedin/fact/make_market_tool_date_table.mjs';
 

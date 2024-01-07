@@ -44,11 +44,7 @@ export default async function getStocks(allCompanyName) {
 
         const DELTA_REG_EXP = /[-+](\d+(,?\d+)*)\s/;      
         const execResult = DELTA_REG_EXP.exec(WHOLE_TEXT_PROCESSED);
-        if (execResult) {
-          if (foundOneValidDelta) {
-            throw new Error('Something is wrong wrong: found two valid deltas.');
-          }
-
+        if (execResult && !foundOneValidDelta) {
           const DELTA = parseFloat(execResult[1].replace(/,/g, '.'));
 
           // Because there is name processing in place for the partial url

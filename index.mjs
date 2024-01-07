@@ -61,10 +61,11 @@ async function main() {
   await writeFile('outputTables/todayDateTable.json',
       JSON.stringify([todayRecord], null, 2));
 
+  // IMPORTANT: order matters here due to table dependencies
   await endpointManual();
   await endpointGithub();
-  // await endpointLinkedin();
-  // await endpointAfterall();
+  await endpointLinkedin();
+  await endpointAfterall();
 }
 
 main();

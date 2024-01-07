@@ -59,8 +59,6 @@ export default class LinkedinMentionsScraper {
     let timeoutAttemptAmount = 0;
     for (const publication of allPublications) {
       await publication.click();
-      // await page.waitForTimeout(3000000);
-      // await new Promise((resolve) => setTimeout(resolve, 2000));
 
       const showMoreButton = page
           .locator('button.show-more-less-html__button.show-more-less-button' +
@@ -98,7 +96,6 @@ export default class LinkedinMentionsScraper {
       } else {
         log.info('Did not find show button');
       }
-      // await new Promise((resolve) => setTimeout(resolve, 3000));
     }
   }
 

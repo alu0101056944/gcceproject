@@ -1,0 +1,142 @@
+[
+  {
+    "company_id": 122,
+    "date_id": 3,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": 4.83
+  },
+  {
+    "company_id": 123,
+    "date_id": 3,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 124,
+    "date_id": 3,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 125,
+    "date_id": 3,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 126,
+    "date_id": 3,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 127,
+    "date_id": 3,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 128,
+    "date_id": 3,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 129,
+    "date_id": 3,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 130,
+    "date_id": 3,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 131,
+    "date_id": 3,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 132,
+    "date_id": 3,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 133,
+    "date_id": 3,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 134,
+    "date_id": 3,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 135,
+    "date_id": 3,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 136,
+    "date_id": 3,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 137,
+    "date_id": 3,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 138,
+    "date_id": 3,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 139,
+    "date_id": 3,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 140,
+    "date_id": 3,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 141,
+    "date_id": 3,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": 0.6
+  }
+]

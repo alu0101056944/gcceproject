@@ -57,11 +57,16 @@ async function getDependencyTreeForGithubRecords() {
     {
       tableName: 'communityToolDate',
       resolver: async (toolTable, latestId) => {
+        const TODAY_DATE_TABLE =
+        await readFile('outputTables/todayDateTable.json', 'utf8');
+        const todayDateTable = JSON.parse(TODAY_DATE_TABLE);
+        const TODAY_ID = todayDateTable[0].date_id;
+
         const FILE_CONTENT =
             await readFile('outputTables/communityTable.json', 'utf8');
         const communityTable = JSON.parse(FILE_CONTENT)
         const table = await makeCommunityToolDateTable(toolTable, communityTable,
-            latestId);
+            TODAY_ID);
         await new Promise(resolve => setTimeout(resolve, 1000));
         return table;
       },
@@ -71,11 +76,7 @@ async function getDependencyTreeForGithubRecords() {
     {
       tableName: 'communityTool',
       resolver: async (toolTable) => {
-        const FILE_CONTENT =
-            await readFile('outputTables/todayDateTable.json', 'utf8');
-        const todayDateTable = JSON.parse(FILE_CONTENT);
-        const TODAY_ID = todayDateTable[0].date_id;
-        const table = await makeCommunityToolTable(toolTable, TODAY_ID);
+        const table = await makeCommunityToolTable(toolTable);
         await new Promise(resolve => setTimeout(resolve, 1000));
         return table;
       },

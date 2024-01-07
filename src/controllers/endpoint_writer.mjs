@@ -1,18 +1,15 @@
 /**
  * @author Marcos Barrios
  * @since 05_01_2024
- * @description Owns the persistent ids file and allows multiple record sources
- *    to be merged into an endpoint array while keeping the ids unique.
+ * @description Owns the persistent_ids.json file and allows multiple record
+ *    sources to be merged into a single object that has all the tables while
+ *    managing the persistent ids.
  *
  * The idea is to allow table functions to have as parameter other tables. To
- *  do that a dependency tree must be passed. Each node represents a table and
- *  it is an object with "resolver", "tableName" and "dependencies" properties.
+ *  do that a dependency tree must be created. Each node represents a table and,
+ *  depending on the node type, it can create a table or use an already created
+ *  table.
  *
- * The return value of the dependencies are available to the parents. Each
- *   is available as parameter in the same order. A last parameter will be added
- *   representing the latest persistent id for the table, so the name of the node
- *   must be a valid registered table's name.
- * 
  * Dependency tree examples:
  *
  * const someTree = {
@@ -50,14 +47,14 @@
  *   ]
  * }
  * 
- * There is also a useTable node.
+ * As mentioned, there is also a useTable node type.
  * 
- * See endpoint_writer spec for more examples.
+ * See EndpointWriter's unit test for more use examples.
  */
 
 'use strict';
 
-import { readFile, writeFile } from 'fs/promises'
+import { readFile, writeFile } from 'fs/promises';
 
 /**
  * @desc Write to the outputTables/ directory.
@@ -115,20 +112,24 @@ export default class EndpointWriter {
             const hasAllKey =
                 allKeyOfType.every(key => allKeyOfNode.includes(key));
 
-            const isProperlyTyped =
-                Object.entries(propertyNameToTypeDescriptor)
+            const allTypeEntry = Object.entries(propertyNameToTypeDescriptor);
+            const allTypeEntryMatched =
+                allTypeEntry
                 .filter(([propertyName, typeDescriptor]) => {
                   if (typeof typeDescriptor === 'string') {
-                    return typeof node[propertyName] === typeof typeDescriptor;
+                    return typeof node[propertyName] === typeDescriptor;
                   } else if (typeof typeDescriptor === 'function') {
                     return typeDescriptor(node[propertyName]);
                   } else {
                     throw new Error('Invalid type for property of node type, ' +
-                        'something is wrong in the node type definitions.');
+                        'something is wrong in the node type definitions. ' +
+                        ' A type descriptor is not string or function.');
                   }
                 });
+            const IS_PROPERLY_TYPED =
+                allTypeEntryMatched.length === allTypeEntry.length;
 
-            return hasAllKey && isProperlyTyped;
+            return hasAllKey && IS_PROPERLY_TYPED;
           });
       if (allNodeTypeMatch.length === 0) {
         throw new Error('There is a node in the dependency tree that doesn\'t ' +

@@ -9,8 +9,6 @@
 
 import 'dotenv/config'; // to load into process.env the keys at .env
 
-import GithubDependenciesScraper from "../../../../../routes/scrapers/github-dependencies-scraper.mjs";
-
 async function fetchDependencies(authorCompany, repoName) {
   const repoNameToDependenciesSet = {};
 
