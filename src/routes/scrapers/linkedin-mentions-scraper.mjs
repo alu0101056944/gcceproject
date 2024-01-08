@@ -52,7 +52,7 @@ export default class LinkedinMentionsScraper {
     await infiniteScroll({
       stopScrollCallback: async () => {
         allPublications = await publication.all();
-        return allPublications.length > 20;
+        return allPublications.length > 200;
       }
     });
 

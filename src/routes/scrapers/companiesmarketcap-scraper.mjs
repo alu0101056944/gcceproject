@@ -24,7 +24,6 @@ export default class CompaniesmarketcapScraper {
   constructor() {
     this.#outputObject = {};
     // this.#maxPageSurfs = Infinity;
-    this.#maxPageSurfs = 1;
     this.#currentAmountOfPagesSurfed = 0;
 
     const requestHandler = this.#myHandler.bind(this);

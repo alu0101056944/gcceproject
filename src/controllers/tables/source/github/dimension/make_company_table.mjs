@@ -17,7 +17,6 @@ export default async function makeCompanyTable(toolTable, latestId) {
 
   try {
     const scraperOfAmountOfEmployees = new CompaniesmarketcapScraper();
-    scraperOfAmountOfEmployees.setMaxAmountfPageSurfs(1);
     const authorCompanyToAmount = await scraperOfAmountOfEmployees.run();
 
     const allCompanyName = Object.getOwnPropertyNames(authorCompanyToAmount);

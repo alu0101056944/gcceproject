@@ -18,6 +18,16 @@ export default async function makeToolTable(latestId) {
 
   const allSpecialization = [
     'frontend',
+    'backend',
+    'devops',
+    'testing',
+    'security',
+    'machine-learning',
+    'data-science',
+    'mobile-apps',
+    'embedded',
+    'ui-ux',
+    'react',
   ];
 
   try {

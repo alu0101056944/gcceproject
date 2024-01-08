@@ -22,14 +22,7 @@ test('Able to make community-tool table', async () => {
       "tool_id": 2
     },
   ];
-  const communityTable = [
-    {
-      community_id: 1,
-      name: 'github',
-      type: 'Open Source Hosting',
-    },
-  ];
-  const allRecord = await makeCommunityToolTable(toolTable, communityTable);
+  const allRecord = await makeCommunityToolTable(toolTable, 1);
   await expect(allRecord.length).not.toBe(0);
   for (const [index, record] of allRecord.entries()) {
     await expect(record.tool_id).toBe(index + 1);

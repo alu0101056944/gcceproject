@@ -44,49 +44,57 @@ async function getCommitAmount(partialURL) {
   return parseInt(COMMIT_AMOUNT);
 }
 
-async function getAllToolInfoFromGithub(toolTable) {
+async function getAllToolInfoFromGithub(toolTable, idOfGithubCommunity) {
   const allToolInfo = [];
 
   const allPartialURL =
       toolTable.map(tool => `${tool.author_company}/${tool.name}`);
   const partialURLToAmountsObject =
       await getAllIssueAmountsObject(allPartialURL);
-  
-  // temporal fix to a race condition into fetchAllCommitAmount.
-  // **** Update README.md when solved.
-  await new Promise(resolve => setTimeout(resolve, 2000));
 
   const partialURLToCommitAmount = {};
   for (const partialURL of allPartialURL) {
     partialURLToCommitAmount[partialURL] = await getCommitAmount(partialURL);
   }
 
-  const partialURLToDiscussionAmount =
+  const repoNameToDiscussionAmount =
       await countDiscussionAmount(toolTable.map(tool => tool.name));
 
   const hasUnexpectedLength =
     (obj) => Object.getOwnPropertyNames(obj).length !== toolTable.length;
-  if (hasUnexpectedLength(partialURLToAmountsObject) ||
-      hasUnexpectedLength(partialURLToDiscussionAmount) ||
-      hasUnexpectedLength(partialURLToCommitAmount)) {
-    throw new Error('There is disparity between partial results and toolTable.' +
-        ' Something is off ' + '(' +
-        Object.keys(partialURLToAmountsObject).length + ',' +
-        Object.keys(partialURLToDiscussionAmount).length + ',' +
-        Object.keys(partialURLToCommitAmount).length + ')' +
-        ' toolTable.length: ' + toolTable.length);
+  if (hasUnexpectedLength(partialURLToAmountsObject)) {
+    console.log('Detected length discrepancy between toolTable and ' +
+        'partialURLToAmountsObject');
+    for (const partialURL of allPartialURL) {
+      partialURLToAmountsObject[partialURL] ??= null;
+    }
+  }
+  if (hasUnexpectedLength(repoNameToDiscussionAmount)) {
+    console.log('Detected length discrepancy between toolTable and ' +
+        'repoNameToDiscussionAmount');
+    for (const partialURL of allPartialURL) {
+      const REPO_NAME = partialURL.split('/')[1];
+      repoNameToDiscussionAmount[REPO_NAME] ??= null;
+    }
+  }
+  if (hasUnexpectedLength(partialURLToCommitAmount)) {
+    console.log('Detected length discrepancy between toolTable and ' +
+        'partialURLToCommitAmount');
+    for (const partialURL of allPartialURL) {
+      partialURLToCommitAmount[partialURL] ??= null;
+    }
   }
 
   for (const toolRecord of toolTable) {
     const PARTIAL_URL = `${toolRecord.author_company}/${toolRecord.name}`;
     const REPO_NAME = PARTIAL_URL.split('/')[1];
     const record = {
-      community_id: 1, // github's id in the make community table file
+      community_id: idOfGithubCommunity,
       tool_id: toolRecord.tool_id,
       amount_of_bugs_reported: partialURLToAmountsObject[PARTIAL_URL].total,
       amount_of_bugs_solved: partialURLToAmountsObject[PARTIAL_URL].closed,
       amount_of_changes_commited: partialURLToCommitAmount?.[PARTIAL_URL] ?? null,
-      amount_of_discussions: partialURLToDiscussionAmount?.[REPO_NAME] ?? null,
+      amount_of_discussions: repoNameToDiscussionAmount?.[REPO_NAME] ?? null,
     }
     allToolInfo.push(record);
   }
@@ -100,13 +108,15 @@ const nameToAllInfo = {
 
 // originally this was going to be a single file for all communities
 // thus this file structure.
-export default async function makeCommunityToolTable(toolTable) {
+export default async function makeCommunityToolTable(toolTable,
+      idOfGithubCommunity) {
   console.log('Calculating communityToolTable');
 
   const allRecord = [];
 
   try {
-    const allInfoAtCommunity = await (nameToAllInfo['github'](toolTable));
+    const allInfoAtCommunity =
+        await (nameToAllInfo['github'](toolTable, idOfGithubCommunity));
     allInfoAtCommunity.forEach(record => allRecord.push(record));
   } catch (error) {
     console.error('There was an error while calculating ' + 
