@@ -17,7 +17,6 @@
  *
  */
 
-import getInfo from '../../../../scraper_use_cases/get_repository_info.mjs';
 import getAllLatestVersionChanges from '../../../../scraper_use_cases/get_latest_five_version_changes.js';
 
 import { compare } from 'compare-versions';
@@ -87,7 +86,6 @@ export default async function makeToolDateTable(toolTable, idOfToday) {
   try {
     const allPartialURL =
         toolTable.map(tool => `${tool.author_company}/${tool.name}`);
-    const partialURLToInfo = await getInfo(allPartialURL);
 
     for (const record of toolTable) {
       const PARTIAL_GITHUB_URL = `${record.author_company}/${record.name}`;
@@ -99,7 +97,7 @@ export default async function makeToolDateTable(toolTable, idOfToday) {
       allRecord.push({
         tool_id: record.tool_id,
         date_id: idOfToday,
-        version: allLatestVersion[0] ?? null,
+        version: allLatestVersion?.[0] ?? null,
         interest_levels: null,
         change_type: toChangeType(allLatestVersion) ?? null,
       });

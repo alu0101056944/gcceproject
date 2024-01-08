@@ -24,7 +24,7 @@ export default async function getAllLatestVersionChanges(allRepository) {
         }
         const HREF_STRING = await ((allLinkLocator[i]).getAttribute('href'));
         let execResult;
-        if (execResult = /\/(\w+?)\/(\w+?)\/releases\/tag\/(.+)/.exec(HREF_STRING)) {
+        if (execResult = /\/(.+?)\/(.+?)\/releases\/tag\/(.+)/.exec(HREF_STRING)) {
           const RELEASE_VERSION = execResult[3];
           outputObject[request.label].push(RELEASE_VERSION);
           count++;
