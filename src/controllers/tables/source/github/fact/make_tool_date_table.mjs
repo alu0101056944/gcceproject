@@ -23,8 +23,13 @@ import getAllLatestVersionChanges from '../../../../scraper_use_cases/get_latest
 import { compare } from 'compare-versions';
 
 function toChangeType(allVersion) {
+  if (allVersion.length === 0) {
+    return null;
+  }
+
   const semanticRegExp = /(\d+?)\.(\d+?)\.(\d+?)/;
-  const allSemantic = allVersion
+  const allSemantic =
+      allVersion
       .filter(version => version.match(semanticRegExp))
       .map(version => {
         const regExpResult = version.match(semanticRegExp);
@@ -82,21 +87,21 @@ export default async function makeToolDateTable(toolTable, idOfToday) {
   try {
     const allPartialURL =
         toolTable.map(tool => `${tool.author_company}/${tool.name}`);
-    const allRepoInfo = await getInfo(allPartialURL);
+    const partialURLToInfo = await getInfo(allPartialURL);
 
     for (const record of toolTable) {
       const PARTIAL_GITHUB_URL = `${record.author_company}/${record.name}`;
 
       const partialURLToAllVersion =
           await getAllLatestVersionChanges([PARTIAL_GITHUB_URL]);
-      const latestVersions = partialURLToAllVersion[PARTIAL_GITHUB_URL];
+      const allLatestVersion = partialURLToAllVersion[PARTIAL_GITHUB_URL];
 
       allRecord.push({
         tool_id: record.tool_id,
         date_id: idOfToday,
-        version: allRepoInfo[PARTIAL_GITHUB_URL]?.version ?? null,
+        version: allLatestVersion[0] ?? null,
         interest_levels: null,
-        change_type: latestVersions ? toChangeType(latestVersions) : null,
+        change_type: toChangeType(allLatestVersion) ?? null,
       });
     }
   } catch (error) {

@@ -20,7 +20,7 @@ export default async function makeCommunityTable() {
   allRecord.push(
     {
       community_id: 1,
-      name: 'github',
+      name: 'github', // update endpoint github communityTable's name if changed.
       type: 'Open Source Hosting',
     },
   );

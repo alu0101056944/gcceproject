@@ -19,7 +19,9 @@ export default async function getInfo(allPartialURL) {
     },
     async ({ page, request, log, outputObject }) => {
       log.info('GithubInfoScraper visited ' + request.url);
-      page.setDefaultTimeout(3000);
+      page.setDefaultTimeout(7000);
+
+      await page.waitForLoadState();
 
       outputObject[request.label] ??= { commits: null, version: null };
 
