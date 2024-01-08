@@ -66,7 +66,11 @@ async function getAllToolInfoFromGithub(toolTable, idOfGithubCommunity) {
     console.log('Detected length discrepancy between toolTable and ' +
         'partialURLToAmountsObject');
     for (const partialURL of allPartialURL) {
-      partialURLToAmountsObject[partialURL] ??= null;
+      partialURLToAmountsObject[partialURL] ??= {
+        open: null,
+        closed: null,
+        total: null,
+      };
     }
   }
   if (hasUnexpectedLength(repoNameToDiscussionAmount)) {
@@ -91,8 +95,8 @@ async function getAllToolInfoFromGithub(toolTable, idOfGithubCommunity) {
     const record = {
       community_id: idOfGithubCommunity,
       tool_id: toolRecord.tool_id,
-      amount_of_bugs_reported: partialURLToAmountsObject[PARTIAL_URL].total,
-      amount_of_bugs_solved: partialURLToAmountsObject[PARTIAL_URL].closed,
+      amount_of_bugs_reported: partialURLToAmountsObject[PARTIAL_URL]?.total ?? null,
+      amount_of_bugs_solved: partialURLToAmountsObject[PARTIAL_URL]?.closed ?? null,
       amount_of_changes_commited: partialURLToCommitAmount?.[PARTIAL_URL] ?? null,
       amount_of_discussions: repoNameToDiscussionAmount?.[REPO_NAME] ?? null,
     }
