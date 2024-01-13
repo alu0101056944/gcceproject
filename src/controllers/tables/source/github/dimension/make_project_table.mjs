@@ -43,7 +43,7 @@ export default async function makeProjectTable(toolTable, latestId) {
       const record = {
         project_id: latestId,
         project_name: PROJECT_NAME,
-        downloads: projectNameToDownloads[PROJECT_NAME],
+        downloads: projectNameToDownloads[PROJECT_NAME] ?? null,
         contributors: allAmountOfContributor[i],
         searches: null,
       }
