@@ -1,22 +1,22 @@
 {
-  "employee": 340,
-  "tool": 1728,
+  "employee": 440,
+  "tool": 2648,
   "date": {
-    "id": 4,
-    "lastUpdateDate": "2024-01-08T00:00:00.000Z"
+    "id": 7,
+    "lastUpdateDate": "2024-01-13T00:00:00.000Z"
   },
-  "community": 17,
-  "company": 1721,
-  "project": 1728,
-  "market": 51,
-  "communityToolDate": 1720,
-  "communityTool": 0,
-  "projectCompany": 1720,
+  "community": 22,
+  "company": 2641,
+  "project": 2648,
+  "market": 66,
+  "communityToolDate": 2640,
+  "communityTool": 920,
+  "projectCompany": 2640,
   "projectTool": 0,
-  "toolDate": 1382,
-  "toolProjectCompany": 1720,
-  "marketDate": 4,
-  "marketToolDate": 100,
-  "companyDate": 40,
-  "employeeTool": 800
+  "toolDate": 1564,
+  "toolProjectCompany": 2640,
+  "marketDate": 5,
+  "marketToolDate": 1020,
+  "companyDate": 1460,
+  "employeeTool": 29200
 }

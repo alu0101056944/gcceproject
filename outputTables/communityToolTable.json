@@ -1,1 +1,7362 @@
-[]
+[
+  {
+    "community_id": 1,
+    "tool_id": 1729,
+    "amount_of_bugs_reported": 12640,
+    "amount_of_bugs_solved": 11480,
+    "amount_of_changes_commited": 16149,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1730,
+    "amount_of_bugs_reported": 10011,
+    "amount_of_bugs_solved": 9655,
+    "amount_of_changes_commited": 3590,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1731,
+    "amount_of_bugs_reported": 144,
+    "amount_of_bugs_solved": 144,
+    "amount_of_changes_commited": 700,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1732,
+    "amount_of_bugs_reported": 6585,
+    "amount_of_bugs_solved": 6214,
+    "amount_of_changes_commited": 6413,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1733,
+    "amount_of_bugs_reported": 21401,
+    "amount_of_bugs_solved": 21029,
+    "amount_of_changes_commited": 13433,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1734,
+    "amount_of_bugs_reported": 102,
+    "amount_of_bugs_solved": 82,
+    "amount_of_changes_commited": 390,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1735,
+    "amount_of_bugs_reported": 72,
+    "amount_of_bugs_solved": 46,
+    "amount_of_changes_commited": 745,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1736,
+    "amount_of_bugs_reported": 5587,
+    "amount_of_bugs_solved": 5582,
+    "amount_of_changes_commited": 11472,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1737,
+    "amount_of_bugs_reported": 1021,
+    "amount_of_bugs_solved": 964,
+    "amount_of_changes_commited": 1230,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1738,
+    "amount_of_bugs_reported": 360,
+    "amount_of_bugs_solved": 358,
+    "amount_of_changes_commited": 984,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1739,
+    "amount_of_bugs_reported": 370,
+    "amount_of_bugs_solved": 164,
+    "amount_of_changes_commited": 91,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1740,
+    "amount_of_bugs_reported": 12670,
+    "amount_of_bugs_solved": 12283,
+    "amount_of_changes_commited": 20499,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1741,
+    "amount_of_bugs_reported": 5626,
+    "amount_of_bugs_solved": 25,
+    "amount_of_changes_commited": 1771,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1742,
+    "amount_of_bugs_reported": 5587,
+    "amount_of_bugs_solved": 4474,
+    "amount_of_changes_commited": 3031,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1743,
+    "amount_of_bugs_reported": 5366,
+    "amount_of_bugs_solved": 5168,
+    "amount_of_changes_commited": 5179,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1744,
+    "amount_of_bugs_reported": 241,
+    "amount_of_bugs_solved": 233,
+    "amount_of_changes_commited": 462,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1745,
+    "amount_of_bugs_reported": 16,
+    "amount_of_bugs_solved": 4,
+    "amount_of_changes_commited": 51,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1746,
+    "amount_of_bugs_reported": 1559,
+    "amount_of_bugs_solved": 1067,
+    "amount_of_changes_commited": 361,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1747,
+    "amount_of_bugs_reported": 33,
+    "amount_of_bugs_solved": 32,
+    "amount_of_changes_commited": 218,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1748,
+    "amount_of_bugs_reported": 4260,
+    "amount_of_bugs_solved": 3368,
+    "amount_of_changes_commited": 13099,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1749,
+    "amount_of_bugs_reported": 382,
+    "amount_of_bugs_solved": 209,
+    "amount_of_changes_commited": 165,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1750,
+    "amount_of_bugs_reported": 1037,
+    "amount_of_bugs_solved": 984,
+    "amount_of_changes_commited": 4906,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1751,
+    "amount_of_bugs_reported": 593,
+    "amount_of_bugs_solved": 477,
+    "amount_of_changes_commited": 1728,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1752,
+    "amount_of_bugs_reported": 410,
+    "amount_of_bugs_solved": 337,
+    "amount_of_changes_commited": 1174,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1753,
+    "amount_of_bugs_reported": 790,
+    "amount_of_bugs_solved": 620,
+    "amount_of_changes_commited": 3064,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1754,
+    "amount_of_bugs_reported": 317,
+    "amount_of_bugs_solved": 172,
+    "amount_of_changes_commited": 437,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1755,
+    "amount_of_bugs_reported": 241,
+    "amount_of_bugs_solved": 216,
+    "amount_of_changes_commited": 215,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1756,
+    "amount_of_bugs_reported": 11,
+    "amount_of_bugs_solved": 7,
+    "amount_of_changes_commited": 34,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1757,
+    "amount_of_bugs_reported": 85,
+    "amount_of_bugs_solved": 77,
+    "amount_of_changes_commited": 323,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1758,
+    "amount_of_bugs_reported": 22,
+    "amount_of_bugs_solved": 21,
+    "amount_of_changes_commited": 463,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1759,
+    "amount_of_bugs_reported": 4826,
+    "amount_of_bugs_solved": 4031,
+    "amount_of_changes_commited": 2572,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1760,
+    "amount_of_bugs_reported": 72,
+    "amount_of_bugs_solved": 27,
+    "amount_of_changes_commited": 52,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1761,
+    "amount_of_bugs_reported": 178,
+    "amount_of_bugs_solved": 152,
+    "amount_of_changes_commited": 268,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1762,
+    "amount_of_bugs_reported": 23,
+    "amount_of_bugs_solved": 23,
+    "amount_of_changes_commited": 638,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1763,
+    "amount_of_bugs_reported": 266,
+    "amount_of_bugs_solved": 258,
+    "amount_of_changes_commited": 2902,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1764,
+    "amount_of_bugs_reported": 280,
+    "amount_of_bugs_solved": 111,
+    "amount_of_changes_commited": 557,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1765,
+    "amount_of_bugs_reported": 39,
+    "amount_of_bugs_solved": 12,
+    "amount_of_changes_commited": 451,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1766,
+    "amount_of_bugs_reported": 1780,
+    "amount_of_bugs_solved": 1746,
+    "amount_of_changes_commited": 3395,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1767,
+    "amount_of_bugs_reported": 932,
+    "amount_of_bugs_solved": 894,
+    "amount_of_changes_commited": 6795,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1768,
+    "amount_of_bugs_reported": 469,
+    "amount_of_bugs_solved": 387,
+    "amount_of_changes_commited": 665,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1769,
+    "amount_of_bugs_reported": 1189,
+    "amount_of_bugs_solved": 43,
+    "amount_of_changes_commited": 390,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1770,
+    "amount_of_bugs_reported": 16,
+    "amount_of_bugs_solved": 14,
+    "amount_of_changes_commited": 371,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1771,
+    "amount_of_bugs_reported": 692,
+    "amount_of_bugs_solved": 674,
+    "amount_of_changes_commited": 5026,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1772,
+    "amount_of_bugs_reported": 226,
+    "amount_of_bugs_solved": 135,
+    "amount_of_changes_commited": 5908,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1773,
+    "amount_of_bugs_reported": 699,
+    "amount_of_bugs_solved": 556,
+    "amount_of_changes_commited": 3516,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1774,
+    "amount_of_bugs_reported": 147,
+    "amount_of_bugs_solved": 72,
+    "amount_of_changes_commited": 314,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1775,
+    "amount_of_bugs_reported": 448,
+    "amount_of_bugs_solved": 294,
+    "amount_of_changes_commited": 958,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1776,
+    "amount_of_bugs_reported": 72,
+    "amount_of_bugs_solved": 4,
+    "amount_of_changes_commited": 45,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1777,
+    "amount_of_bugs_reported": 135,
+    "amount_of_bugs_solved": 64,
+    "amount_of_changes_commited": 918,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1778,
+    "amount_of_bugs_reported": 1878,
+    "amount_of_bugs_solved": 1874,
+    "amount_of_changes_commited": 1574,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1779,
+    "amount_of_bugs_reported": 46,
+    "amount_of_bugs_solved": 20,
+    "amount_of_changes_commited": 262,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1780,
+    "amount_of_bugs_reported": 2335,
+    "amount_of_bugs_solved": 1849,
+    "amount_of_changes_commited": 6346,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1781,
+    "amount_of_bugs_reported": 6,
+    "amount_of_bugs_solved": 6,
+    "amount_of_changes_commited": 27,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1782,
+    "amount_of_bugs_reported": 16,
+    "amount_of_bugs_solved": 4,
+    "amount_of_changes_commited": 40,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1783,
+    "amount_of_bugs_reported": 387,
+    "amount_of_bugs_solved": 332,
+    "amount_of_changes_commited": 1550,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1784,
+    "amount_of_bugs_reported": 457,
+    "amount_of_bugs_solved": 451,
+    "amount_of_changes_commited": 2638,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1785,
+    "amount_of_bugs_reported": 120,
+    "amount_of_bugs_solved": 100,
+    "amount_of_changes_commited": 243,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1786,
+    "amount_of_bugs_reported": 13,
+    "amount_of_bugs_solved": 7,
+    "amount_of_changes_commited": 478,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1787,
+    "amount_of_bugs_reported": 71,
+    "amount_of_bugs_solved": 69,
+    "amount_of_changes_commited": 2355,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1788,
+    "amount_of_bugs_reported": 528,
+    "amount_of_bugs_solved": 528,
+    "amount_of_changes_commited": 100,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1789,
+    "amount_of_bugs_reported": 25,
+    "amount_of_bugs_solved": 22,
+    "amount_of_changes_commited": 122,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1790,
+    "amount_of_bugs_reported": 5,
+    "amount_of_bugs_solved": 5,
+    "amount_of_changes_commited": 222,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1791,
+    "amount_of_bugs_reported": 2,
+    "amount_of_bugs_solved": 2,
+    "amount_of_changes_commited": 209,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1792,
+    "amount_of_bugs_reported": 43,
+    "amount_of_bugs_solved": 28,
+    "amount_of_changes_commited": 241,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1793,
+    "amount_of_bugs_reported": 8,
+    "amount_of_bugs_solved": 1,
+    "amount_of_changes_commited": 1,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1794,
+    "amount_of_bugs_reported": 29,
+    "amount_of_bugs_solved": 7,
+    "amount_of_changes_commited": 28,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1795,
+    "amount_of_bugs_reported": 294,
+    "amount_of_bugs_solved": 198,
+    "amount_of_changes_commited": 1957,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1796,
+    "amount_of_bugs_reported": 249,
+    "amount_of_bugs_solved": 226,
+    "amount_of_changes_commited": 559,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1797,
+    "amount_of_bugs_reported": 16,
+    "amount_of_bugs_solved": 13,
+    "amount_of_changes_commited": 223,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1798,
+    "amount_of_bugs_reported": 77,
+    "amount_of_bugs_solved": 47,
+    "amount_of_changes_commited": 4163,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1799,
+    "amount_of_bugs_reported": 329,
+    "amount_of_bugs_solved": 230,
+    "amount_of_changes_commited": 207,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1800,
+    "amount_of_bugs_reported": 13,
+    "amount_of_bugs_solved": 13,
+    "amount_of_changes_commited": 483,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1801,
+    "amount_of_bugs_reported": 3,
+    "amount_of_bugs_solved": 1,
+    "amount_of_changes_commited": 24,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1802,
+    "amount_of_bugs_reported": 6965,
+    "amount_of_bugs_solved": 6616,
+    "amount_of_changes_commited": 12645,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1803,
+    "amount_of_bugs_reported": 9,
+    "amount_of_bugs_solved": 4,
+    "amount_of_changes_commited": 39,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1804,
+    "amount_of_bugs_reported": 3,
+    "amount_of_bugs_solved": 2,
+    "amount_of_changes_commited": 19,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1805,
+    "amount_of_bugs_reported": 94,
+    "amount_of_bugs_solved": 89,
+    "amount_of_changes_commited": 541,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1806,
+    "amount_of_bugs_reported": 323,
+    "amount_of_bugs_solved": 284,
+    "amount_of_changes_commited": 948,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1807,
+    "amount_of_bugs_reported": 438,
+    "amount_of_bugs_solved": 432,
+    "amount_of_changes_commited": 899,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1808,
+    "amount_of_bugs_reported": 10,
+    "amount_of_bugs_solved": 8,
+    "amount_of_changes_commited": 160,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1809,
+    "amount_of_bugs_reported": 44,
+    "amount_of_bugs_solved": 2,
+    "amount_of_changes_commited": 1176,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1810,
+    "amount_of_bugs_reported": 276,
+    "amount_of_bugs_solved": 211,
+    "amount_of_changes_commited": 604,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1811,
+    "amount_of_bugs_reported": 146,
+    "amount_of_bugs_solved": 138,
+    "amount_of_changes_commited": 887,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1812,
+    "amount_of_bugs_reported": 85,
+    "amount_of_bugs_solved": 2,
+    "amount_of_changes_commited": 166,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1813,
+    "amount_of_bugs_reported": 207,
+    "amount_of_bugs_solved": 203,
+    "amount_of_changes_commited": 7756,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1814,
+    "amount_of_bugs_reported": 139,
+    "amount_of_bugs_solved": 135,
+    "amount_of_changes_commited": 174,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1815,
+    "amount_of_bugs_reported": 1,
+    "amount_of_bugs_solved": 0,
+    "amount_of_changes_commited": 44,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1816,
+    "amount_of_bugs_reported": 10,
+    "amount_of_bugs_solved": 4,
+    "amount_of_changes_commited": 55,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1817,
+    "amount_of_bugs_reported": 162,
+    "amount_of_bugs_solved": 106,
+    "amount_of_changes_commited": 324,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1818,
+    "amount_of_bugs_reported": 3200,
+    "amount_of_bugs_solved": 2831,
+    "amount_of_changes_commited": 12010,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1819,
+    "amount_of_bugs_reported": 32,
+    "amount_of_bugs_solved": 17,
+    "amount_of_changes_commited": 42,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1820,
+    "amount_of_bugs_reported": 1000,
+    "amount_of_bugs_solved": 171,
+    "amount_of_changes_commited": 3348,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1821,
+    "amount_of_bugs_reported": 63,
+    "amount_of_bugs_solved": 63,
+    "amount_of_changes_commited": 5052,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1822,
+    "amount_of_bugs_reported": 0,
+    "amount_of_bugs_solved": 0,
+    "amount_of_changes_commited": 123,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1823,
+    "amount_of_bugs_reported": 36,
+    "amount_of_bugs_solved": 9,
+    "amount_of_changes_commited": 90,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1824,
+    "amount_of_bugs_reported": 12,
+    "amount_of_bugs_solved": 12,
+    "amount_of_changes_commited": 204,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1825,
+    "amount_of_bugs_reported": 4,
+    "amount_of_bugs_solved": 1,
+    "amount_of_changes_commited": 69,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1826,
+    "amount_of_bugs_reported": 17,
+    "amount_of_bugs_solved": 13,
+    "amount_of_changes_commited": 1733,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1827,
+    "amount_of_bugs_reported": 11,
+    "amount_of_bugs_solved": 8,
+    "amount_of_changes_commited": 349,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1828,
+    "amount_of_bugs_reported": 149,
+    "amount_of_bugs_solved": 149,
+    "amount_of_changes_commited": 4194,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1829,
+    "amount_of_bugs_reported": 260,
+    "amount_of_bugs_solved": 220,
+    "amount_of_changes_commited": 197,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1830,
+    "amount_of_bugs_reported": 87,
+    "amount_of_bugs_solved": 50,
+    "amount_of_changes_commited": 270,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1831,
+    "amount_of_bugs_reported": 199,
+    "amount_of_bugs_solved": 171,
+    "amount_of_changes_commited": 519,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1832,
+    "amount_of_bugs_reported": 42,
+    "amount_of_bugs_solved": 6,
+    "amount_of_changes_commited": 37,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1833,
+    "amount_of_bugs_reported": 98,
+    "amount_of_bugs_solved": 61,
+    "amount_of_changes_commited": 906,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1834,
+    "amount_of_bugs_reported": 36,
+    "amount_of_bugs_solved": 35,
+    "amount_of_changes_commited": 621,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1835,
+    "amount_of_bugs_reported": 4,
+    "amount_of_bugs_solved": 4,
+    "amount_of_changes_commited": 170,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1836,
+    "amount_of_bugs_reported": 89,
+    "amount_of_bugs_solved": 49,
+    "amount_of_changes_commited": 1369,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1837,
+    "amount_of_bugs_reported": 103,
+    "amount_of_bugs_solved": 62,
+    "amount_of_changes_commited": 755,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1838,
+    "amount_of_bugs_reported": 26,
+    "amount_of_bugs_solved": 16,
+    "amount_of_changes_commited": 1803,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1839,
+    "amount_of_bugs_reported": 1600,
+    "amount_of_bugs_solved": 148,
+    "amount_of_changes_commited": 2713,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1840,
+    "amount_of_bugs_reported": 21,
+    "amount_of_bugs_solved": 14,
+    "amount_of_changes_commited": 183,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1841,
+    "amount_of_bugs_reported": 104,
+    "amount_of_bugs_solved": 94,
+    "amount_of_changes_commited": 502,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1842,
+    "amount_of_bugs_reported": 494,
+    "amount_of_bugs_solved": 417,
+    "amount_of_changes_commited": 771,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1843,
+    "amount_of_bugs_reported": 5,
+    "amount_of_bugs_solved": 5,
+    "amount_of_changes_commited": 130,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1844,
+    "amount_of_bugs_reported": 9,
+    "amount_of_bugs_solved": 7,
+    "amount_of_changes_commited": 267,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1845,
+    "amount_of_bugs_reported": 55,
+    "amount_of_bugs_solved": 52,
+    "amount_of_changes_commited": 858,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1846,
+    "amount_of_bugs_reported": 406,
+    "amount_of_bugs_solved": 292,
+    "amount_of_changes_commited": 303,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1847,
+    "amount_of_bugs_reported": 36,
+    "amount_of_bugs_solved": 11,
+    "amount_of_changes_commited": 26,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1848,
+    "amount_of_bugs_reported": 5,
+    "amount_of_bugs_solved": 3,
+    "amount_of_changes_commited": 157,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1849,
+    "amount_of_bugs_reported": 62,
+    "amount_of_bugs_solved": 59,
+    "amount_of_changes_commited": 492,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1850,
+    "amount_of_bugs_reported": 29,
+    "amount_of_bugs_solved": 27,
+    "amount_of_changes_commited": 265,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1851,
+    "amount_of_bugs_reported": 69,
+    "amount_of_bugs_solved": 13,
+    "amount_of_changes_commited": 59,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1852,
+    "amount_of_bugs_reported": 0,
+    "amount_of_bugs_solved": 0,
+    "amount_of_changes_commited": 501,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1853,
+    "amount_of_bugs_reported": 77,
+    "amount_of_bugs_solved": 52,
+    "amount_of_changes_commited": 1084,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1854,
+    "amount_of_bugs_reported": 1661,
+    "amount_of_bugs_solved": 1413,
+    "amount_of_changes_commited": 6581,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1855,
+    "amount_of_bugs_reported": 0,
+    "amount_of_bugs_solved": 0,
+    "amount_of_changes_commited": 17,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1856,
+    "amount_of_bugs_reported": 128,
+    "amount_of_bugs_solved": 103,
+    "amount_of_changes_commited": 117,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1857,
+    "amount_of_bugs_reported": 1,
+    "amount_of_bugs_solved": 1,
+    "amount_of_changes_commited": 51,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1858,
+    "amount_of_bugs_reported": 22,
+    "amount_of_bugs_solved": 17,
+    "amount_of_changes_commited": 96,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1859,
+    "amount_of_bugs_reported": 139,
+    "amount_of_bugs_solved": 108,
+    "amount_of_changes_commited": 367,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1860,
+    "amount_of_bugs_reported": 55,
+    "amount_of_bugs_solved": 55,
+    "amount_of_changes_commited": 983,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1861,
+    "amount_of_bugs_reported": 113,
+    "amount_of_bugs_solved": 110,
+    "amount_of_changes_commited": 1064,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1862,
+    "amount_of_bugs_reported": 217,
+    "amount_of_bugs_solved": 118,
+    "amount_of_changes_commited": 83,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1863,
+    "amount_of_bugs_reported": 37,
+    "amount_of_bugs_solved": 31,
+    "amount_of_changes_commited": 3138,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1864,
+    "amount_of_bugs_reported": 37,
+    "amount_of_bugs_solved": 3,
+    "amount_of_changes_commited": 20,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1865,
+    "amount_of_bugs_reported": 347,
+    "amount_of_bugs_solved": 275,
+    "amount_of_changes_commited": 212,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1866,
+    "amount_of_bugs_reported": 253,
+    "amount_of_bugs_solved": 221,
+    "amount_of_changes_commited": 619,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1867,
+    "amount_of_bugs_reported": 74,
+    "amount_of_bugs_solved": 59,
+    "amount_of_changes_commited": 267,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1868,
+    "amount_of_bugs_reported": 14,
+    "amount_of_bugs_solved": 12,
+    "amount_of_changes_commited": 406,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1869,
+    "amount_of_bugs_reported": 165,
+    "amount_of_bugs_solved": 157,
+    "amount_of_changes_commited": 652,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1870,
+    "amount_of_bugs_reported": 28,
+    "amount_of_bugs_solved": 14,
+    "amount_of_changes_commited": 86,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1871,
+    "amount_of_bugs_reported": 352,
+    "amount_of_bugs_solved": 342,
+    "amount_of_changes_commited": 3535,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1872,
+    "amount_of_bugs_reported": 1,
+    "amount_of_bugs_solved": 0,
+    "amount_of_changes_commited": 12,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1873,
+    "amount_of_bugs_reported": 3,
+    "amount_of_bugs_solved": 1,
+    "amount_of_changes_commited": 180,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1874,
+    "amount_of_bugs_reported": 6,
+    "amount_of_bugs_solved": 2,
+    "amount_of_changes_commited": 164,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1875,
+    "amount_of_bugs_reported": 5,
+    "amount_of_bugs_solved": 2,
+    "amount_of_changes_commited": 237,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1876,
+    "amount_of_bugs_reported": 141,
+    "amount_of_bugs_solved": 126,
+    "amount_of_changes_commited": 277,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1877,
+    "amount_of_bugs_reported": 9,
+    "amount_of_bugs_solved": 6,
+    "amount_of_changes_commited": 77,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1878,
+    "amount_of_bugs_reported": 238,
+    "amount_of_bugs_solved": 195,
+    "amount_of_changes_commited": 892,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1879,
+    "amount_of_bugs_reported": 58,
+    "amount_of_bugs_solved": 8,
+    "amount_of_changes_commited": 77,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1880,
+    "amount_of_bugs_reported": 104,
+    "amount_of_bugs_solved": 69,
+    "amount_of_changes_commited": 201,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1881,
+    "amount_of_bugs_reported": 310,
+    "amount_of_bugs_solved": 186,
+    "amount_of_changes_commited": 1834,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1882,
+    "amount_of_bugs_reported": 27,
+    "amount_of_bugs_solved": 7,
+    "amount_of_changes_commited": 4,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1883,
+    "amount_of_bugs_reported": 115,
+    "amount_of_bugs_solved": 85,
+    "amount_of_changes_commited": 892,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1884,
+    "amount_of_bugs_reported": 24,
+    "amount_of_bugs_solved": 24,
+    "amount_of_changes_commited": 595,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1885,
+    "amount_of_bugs_reported": 517,
+    "amount_of_bugs_solved": 412,
+    "amount_of_changes_commited": 9320,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1886,
+    "amount_of_bugs_reported": 44,
+    "amount_of_bugs_solved": 39,
+    "amount_of_changes_commited": 422,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1887,
+    "amount_of_bugs_reported": 19,
+    "amount_of_bugs_solved": 10,
+    "amount_of_changes_commited": 116,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1888,
+    "amount_of_bugs_reported": 4,
+    "amount_of_bugs_solved": 3,
+    "amount_of_changes_commited": 182,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1889,
+    "amount_of_bugs_reported": 98,
+    "amount_of_bugs_solved": 69,
+    "amount_of_changes_commited": 84,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1890,
+    "amount_of_bugs_reported": 5,
+    "amount_of_bugs_solved": 4,
+    "amount_of_changes_commited": 113,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1891,
+    "amount_of_bugs_reported": 5,
+    "amount_of_bugs_solved": 5,
+    "amount_of_changes_commited": 1078,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1892,
+    "amount_of_bugs_reported": 82,
+    "amount_of_bugs_solved": 59,
+    "amount_of_changes_commited": 814,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1893,
+    "amount_of_bugs_reported": 6,
+    "amount_of_bugs_solved": 5,
+    "amount_of_changes_commited": 98,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1894,
+    "amount_of_bugs_reported": 327,
+    "amount_of_bugs_solved": 225,
+    "amount_of_changes_commited": 798,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1895,
+    "amount_of_bugs_reported": 70,
+    "amount_of_bugs_solved": 68,
+    "amount_of_changes_commited": 167,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1896,
+    "amount_of_bugs_reported": 1,
+    "amount_of_bugs_solved": 0,
+    "amount_of_changes_commited": 61,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1897,
+    "amount_of_bugs_reported": 16,
+    "amount_of_bugs_solved": 14,
+    "amount_of_changes_commited": 40,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1898,
+    "amount_of_bugs_reported": 5,
+    "amount_of_bugs_solved": 2,
+    "amount_of_changes_commited": 101,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1899,
+    "amount_of_bugs_reported": 461,
+    "amount_of_bugs_solved": 439,
+    "amount_of_changes_commited": 2174,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1900,
+    "amount_of_bugs_reported": 9,
+    "amount_of_bugs_solved": 9,
+    "amount_of_changes_commited": 59,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1901,
+    "amount_of_bugs_reported": 2,
+    "amount_of_bugs_solved": 2,
+    "amount_of_changes_commited": 148,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1902,
+    "amount_of_bugs_reported": 4,
+    "amount_of_bugs_solved": 4,
+    "amount_of_changes_commited": 179,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1903,
+    "amount_of_bugs_reported": 10,
+    "amount_of_bugs_solved": 6,
+    "amount_of_changes_commited": 99,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1904,
+    "amount_of_bugs_reported": 333,
+    "amount_of_bugs_solved": 218,
+    "amount_of_changes_commited": 587,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1905,
+    "amount_of_bugs_reported": 1,
+    "amount_of_bugs_solved": 1,
+    "amount_of_changes_commited": 97,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1906,
+    "amount_of_bugs_reported": 785,
+    "amount_of_bugs_solved": 661,
+    "amount_of_changes_commited": 757,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1907,
+    "amount_of_bugs_reported": 4,
+    "amount_of_bugs_solved": 3,
+    "amount_of_changes_commited": 224,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1908,
+    "amount_of_bugs_reported": 115,
+    "amount_of_bugs_solved": 111,
+    "amount_of_changes_commited": 1228,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1909,
+    "amount_of_bugs_reported": 87,
+    "amount_of_bugs_solved": 71,
+    "amount_of_changes_commited": 1176,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1910,
+    "amount_of_bugs_reported": 3262,
+    "amount_of_bugs_solved": 2605,
+    "amount_of_changes_commited": 18363,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1911,
+    "amount_of_bugs_reported": 72,
+    "amount_of_bugs_solved": 46,
+    "amount_of_changes_commited": 745,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1912,
+    "amount_of_bugs_reported": 1121,
+    "amount_of_bugs_solved": 1086,
+    "amount_of_changes_commited": 1226,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1913,
+    "amount_of_bugs_reported": 370,
+    "amount_of_bugs_solved": 164,
+    "amount_of_changes_commited": 91,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1914,
+    "amount_of_bugs_reported": 4453,
+    "amount_of_bugs_solved": 4082,
+    "amount_of_changes_commited": 4333,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1915,
+    "amount_of_bugs_reported": 260,
+    "amount_of_bugs_solved": 202,
+    "amount_of_changes_commited": 718,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1916,
+    "amount_of_bugs_reported": 16,
+    "amount_of_bugs_solved": 4,
+    "amount_of_changes_commited": 51,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1917,
+    "amount_of_bugs_reported": 382,
+    "amount_of_bugs_solved": 209,
+    "amount_of_changes_commited": 165,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1918,
+    "amount_of_bugs_reported": 3421,
+    "amount_of_bugs_solved": 3417,
+    "amount_of_changes_commited": 5968,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1919,
+    "amount_of_bugs_reported": 52,
+    "amount_of_bugs_solved": 50,
+    "amount_of_changes_commited": 503,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1920,
+    "amount_of_bugs_reported": 511,
+    "amount_of_bugs_solved": 421,
+    "amount_of_changes_commited": 1550,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1921,
+    "amount_of_bugs_reported": 748,
+    "amount_of_bugs_solved": 678,
+    "amount_of_changes_commited": 5829,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1922,
+    "amount_of_bugs_reported": 52,
+    "amount_of_bugs_solved": 13,
+    "amount_of_changes_commited": 181,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1923,
+    "amount_of_bugs_reported": 10266,
+    "amount_of_bugs_solved": 10234,
+    "amount_of_changes_commited": 72,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1924,
+    "amount_of_bugs_reported": 16,
+    "amount_of_bugs_solved": 14,
+    "amount_of_changes_commited": 371,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1925,
+    "amount_of_bugs_reported": 4,
+    "amount_of_bugs_solved": 3,
+    "amount_of_changes_commited": 14,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1926,
+    "amount_of_bugs_reported": 381,
+    "amount_of_bugs_solved": 338,
+    "amount_of_changes_commited": 4254,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1927,
+    "amount_of_bugs_reported": 1132,
+    "amount_of_bugs_solved": 875,
+    "amount_of_changes_commited": 2572,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1928,
+    "amount_of_bugs_reported": 16,
+    "amount_of_bugs_solved": 4,
+    "amount_of_changes_commited": 40,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1929,
+    "amount_of_bugs_reported": 449,
+    "amount_of_bugs_solved": 416,
+    "amount_of_changes_commited": 1425,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1930,
+    "amount_of_bugs_reported": 2681,
+    "amount_of_bugs_solved": 2446,
+    "amount_of_changes_commited": 34921,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1931,
+    "amount_of_bugs_reported": 141,
+    "amount_of_bugs_solved": 103,
+    "amount_of_changes_commited": 1056,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1932,
+    "amount_of_bugs_reported": 3155,
+    "amount_of_bugs_solved": 2761,
+    "amount_of_changes_commited": 6549,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1933,
+    "amount_of_bugs_reported": 15,
+    "amount_of_bugs_solved": 3,
+    "amount_of_changes_commited": 309,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1934,
+    "amount_of_bugs_reported": 29,
+    "amount_of_bugs_solved": 7,
+    "amount_of_changes_commited": 28,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1935,
+    "amount_of_bugs_reported": 249,
+    "amount_of_bugs_solved": 226,
+    "amount_of_changes_commited": 559,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1936,
+    "amount_of_bugs_reported": 25,
+    "amount_of_bugs_solved": 17,
+    "amount_of_changes_commited": 130,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1937,
+    "amount_of_bugs_reported": 72,
+    "amount_of_bugs_solved": 50,
+    "amount_of_changes_commited": 750,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1938,
+    "amount_of_bugs_reported": 11,
+    "amount_of_bugs_solved": 0,
+    "amount_of_changes_commited": 36,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1939,
+    "amount_of_bugs_reported": 349,
+    "amount_of_bugs_solved": 223,
+    "amount_of_changes_commited": 500,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1940,
+    "amount_of_bugs_reported": 701,
+    "amount_of_bugs_solved": 561,
+    "amount_of_changes_commited": 1282,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1941,
+    "amount_of_bugs_reported": 75,
+    "amount_of_bugs_solved": 38,
+    "amount_of_changes_commited": 1132,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1942,
+    "amount_of_bugs_reported": 2479,
+    "amount_of_bugs_solved": 2415,
+    "amount_of_changes_commited": 8611,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1943,
+    "amount_of_bugs_reported": 1,
+    "amount_of_bugs_solved": 0,
+    "amount_of_changes_commited": 44,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1944,
+    "amount_of_bugs_reported": 120,
+    "amount_of_bugs_solved": 50,
+    "amount_of_changes_commited": 222,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1945,
+    "amount_of_bugs_reported": 405,
+    "amount_of_bugs_solved": 178,
+    "amount_of_changes_commited": 9645,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1946,
+    "amount_of_bugs_reported": 173,
+    "amount_of_bugs_solved": 167,
+    "amount_of_changes_commited": 1692,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1947,
+    "amount_of_bugs_reported": 36,
+    "amount_of_bugs_solved": 9,
+    "amount_of_changes_commited": 90,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1948,
+    "amount_of_bugs_reported": 12,
+    "amount_of_bugs_solved": 12,
+    "amount_of_changes_commited": 204,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1949,
+    "amount_of_bugs_reported": 23,
+    "amount_of_bugs_solved": 23,
+    "amount_of_changes_commited": 297,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1950,
+    "amount_of_bugs_reported": 77,
+    "amount_of_bugs_solved": 50,
+    "amount_of_changes_commited": 264,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1951,
+    "amount_of_bugs_reported": 36,
+    "amount_of_bugs_solved": 35,
+    "amount_of_changes_commited": 621,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1952,
+    "amount_of_bugs_reported": 4,
+    "amount_of_bugs_solved": 4,
+    "amount_of_changes_commited": 170,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1953,
+    "amount_of_bugs_reported": 26,
+    "amount_of_bugs_solved": 16,
+    "amount_of_changes_commited": 1803,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1954,
+    "amount_of_bugs_reported": 11042,
+    "amount_of_bugs_solved": 9014,
+    "amount_of_changes_commited": 37015,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1955,
+    "amount_of_bugs_reported": 1,
+    "amount_of_bugs_solved": 0,
+    "amount_of_changes_commited": 29,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1956,
+    "amount_of_bugs_reported": 2,
+    "amount_of_bugs_solved": 1,
+    "amount_of_changes_commited": 57,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1957,
+    "amount_of_bugs_reported": 104,
+    "amount_of_bugs_solved": 94,
+    "amount_of_changes_commited": 502,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1958,
+    "amount_of_bugs_reported": 224,
+    "amount_of_bugs_solved": 194,
+    "amount_of_changes_commited": 744,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1959,
+    "amount_of_bugs_reported": 13,
+    "amount_of_bugs_solved": 11,
+    "amount_of_changes_commited": 700,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1960,
+    "amount_of_bugs_reported": 55,
+    "amount_of_bugs_solved": 52,
+    "amount_of_changes_commited": 858,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1961,
+    "amount_of_bugs_reported": 29,
+    "amount_of_bugs_solved": 27,
+    "amount_of_changes_commited": 265,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1962,
+    "amount_of_bugs_reported": 254,
+    "amount_of_bugs_solved": 163,
+    "amount_of_changes_commited": 277,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1963,
+    "amount_of_bugs_reported": 69,
+    "amount_of_bugs_solved": 13,
+    "amount_of_changes_commited": 59,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1964,
+    "amount_of_bugs_reported": 28,
+    "amount_of_bugs_solved": 3,
+    "amount_of_changes_commited": 7,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1965,
+    "amount_of_bugs_reported": 1,
+    "amount_of_bugs_solved": 1,
+    "amount_of_changes_commited": 51,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1966,
+    "amount_of_bugs_reported": 8,
+    "amount_of_bugs_solved": 3,
+    "amount_of_changes_commited": 26,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1967,
+    "amount_of_bugs_reported": 55,
+    "amount_of_bugs_solved": 38,
+    "amount_of_changes_commited": 321,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1968,
+    "amount_of_bugs_reported": 263,
+    "amount_of_bugs_solved": 193,
+    "amount_of_changes_commited": 918,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1969,
+    "amount_of_bugs_reported": 46,
+    "amount_of_bugs_solved": 43,
+    "amount_of_changes_commited": 2123,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1970,
+    "amount_of_bugs_reported": 518,
+    "amount_of_bugs_solved": 362,
+    "amount_of_changes_commited": 1750,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1971,
+    "amount_of_bugs_reported": 83,
+    "amount_of_bugs_solved": 77,
+    "amount_of_changes_commited": 1631,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1972,
+    "amount_of_bugs_reported": 6,
+    "amount_of_bugs_solved": 2,
+    "amount_of_changes_commited": 164,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1973,
+    "amount_of_bugs_reported": 2,
+    "amount_of_bugs_solved": 1,
+    "amount_of_changes_commited": 165,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1974,
+    "amount_of_bugs_reported": 3,
+    "amount_of_bugs_solved": 2,
+    "amount_of_changes_commited": 20,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1975,
+    "amount_of_bugs_reported": 326,
+    "amount_of_bugs_solved": 326,
+    "amount_of_changes_commited": 334,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1976,
+    "amount_of_bugs_reported": 64,
+    "amount_of_bugs_solved": 61,
+    "amount_of_changes_commited": 1087,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1977,
+    "amount_of_bugs_reported": 671,
+    "amount_of_bugs_solved": 663,
+    "amount_of_changes_commited": 7620,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1978,
+    "amount_of_bugs_reported": 48,
+    "amount_of_bugs_solved": 35,
+    "amount_of_changes_commited": 115,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1979,
+    "amount_of_bugs_reported": 115,
+    "amount_of_bugs_solved": 85,
+    "amount_of_changes_commited": 892,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1980,
+    "amount_of_bugs_reported": 24,
+    "amount_of_bugs_solved": 24,
+    "amount_of_changes_commited": 595,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1981,
+    "amount_of_bugs_reported": 81,
+    "amount_of_bugs_solved": 61,
+    "amount_of_changes_commited": 747,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1982,
+    "amount_of_bugs_reported": 5,
+    "amount_of_bugs_solved": 5,
+    "amount_of_changes_commited": 1078,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1983,
+    "amount_of_bugs_reported": 1,
+    "amount_of_bugs_solved": 1,
+    "amount_of_changes_commited": 55,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1984,
+    "amount_of_bugs_reported": 390,
+    "amount_of_bugs_solved": 301,
+    "amount_of_changes_commited": 407,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1985,
+    "amount_of_bugs_reported": 8,
+    "amount_of_bugs_solved": 6,
+    "amount_of_changes_commited": 203,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1986,
+    "amount_of_bugs_reported": 26,
+    "amount_of_bugs_solved": 10,
+    "amount_of_changes_commited": 86,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1987,
+    "amount_of_bugs_reported": 159,
+    "amount_of_bugs_solved": 153,
+    "amount_of_changes_commited": 581,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1988,
+    "amount_of_bugs_reported": 16,
+    "amount_of_bugs_solved": 14,
+    "amount_of_changes_commited": 40,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1989,
+    "amount_of_bugs_reported": 8,
+    "amount_of_bugs_solved": 7,
+    "amount_of_changes_commited": 148,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1990,
+    "amount_of_bugs_reported": 2,
+    "amount_of_bugs_solved": 2,
+    "amount_of_changes_commited": 148,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1991,
+    "amount_of_bugs_reported": 5,
+    "amount_of_bugs_solved": 5,
+    "amount_of_changes_commited": 242,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1992,
+    "amount_of_bugs_reported": 436,
+    "amount_of_bugs_solved": 226,
+    "amount_of_changes_commited": 2806,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1993,
+    "amount_of_bugs_reported": 86,
+    "amount_of_bugs_solved": 83,
+    "amount_of_changes_commited": 316,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1994,
+    "amount_of_bugs_reported": 20,
+    "amount_of_bugs_solved": 20,
+    "amount_of_changes_commited": 37,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1995,
+    "amount_of_bugs_reported": 2195,
+    "amount_of_bugs_solved": 1989,
+    "amount_of_changes_commited": 37203,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1996,
+    "amount_of_bugs_reported": 25,
+    "amount_of_bugs_solved": 17,
+    "amount_of_changes_commited": 504,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1997,
+    "amount_of_bugs_reported": 4284,
+    "amount_of_bugs_solved": 3586,
+    "amount_of_changes_commited": 39339,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1998,
+    "amount_of_bugs_reported": 295,
+    "amount_of_bugs_solved": 229,
+    "amount_of_changes_commited": 915,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 1999,
+    "amount_of_bugs_reported": 8,
+    "amount_of_bugs_solved": 8,
+    "amount_of_changes_commited": 379,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2000,
+    "amount_of_bugs_reported": 14,
+    "amount_of_bugs_solved": 14,
+    "amount_of_changes_commited": 251,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2001,
+    "amount_of_bugs_reported": 25,
+    "amount_of_bugs_solved": 13,
+    "amount_of_changes_commited": 104,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2002,
+    "amount_of_bugs_reported": 21,
+    "amount_of_bugs_solved": 9,
+    "amount_of_changes_commited": 193,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2003,
+    "amount_of_bugs_reported": 109,
+    "amount_of_bugs_solved": 98,
+    "amount_of_changes_commited": 1317,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2004,
+    "amount_of_bugs_reported": 24,
+    "amount_of_bugs_solved": 13,
+    "amount_of_changes_commited": 37,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2005,
+    "amount_of_bugs_reported": 29,
+    "amount_of_bugs_solved": 16,
+    "amount_of_changes_commited": 134,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2006,
+    "amount_of_bugs_reported": 5,
+    "amount_of_bugs_solved": 4,
+    "amount_of_changes_commited": 322,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2007,
+    "amount_of_bugs_reported": 21,
+    "amount_of_bugs_solved": 16,
+    "amount_of_changes_commited": 388,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2008,
+    "amount_of_bugs_reported": 685,
+    "amount_of_bugs_solved": 678,
+    "amount_of_changes_commited": 2920,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2009,
+    "amount_of_bugs_reported": 6,
+    "amount_of_bugs_solved": 4,
+    "amount_of_changes_commited": 449,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2010,
+    "amount_of_bugs_reported": 93,
+    "amount_of_bugs_solved": 89,
+    "amount_of_changes_commited": 1094,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2011,
+    "amount_of_bugs_reported": 484,
+    "amount_of_bugs_solved": 463,
+    "amount_of_changes_commited": 15140,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2012,
+    "amount_of_bugs_reported": 3,
+    "amount_of_bugs_solved": 2,
+    "amount_of_changes_commited": 31,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2013,
+    "amount_of_bugs_reported": 146,
+    "amount_of_bugs_solved": 111,
+    "amount_of_changes_commited": 2990,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2014,
+    "amount_of_bugs_reported": 1,
+    "amount_of_bugs_solved": 1,
+    "amount_of_changes_commited": 159,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2015,
+    "amount_of_bugs_reported": 208,
+    "amount_of_bugs_solved": 172,
+    "amount_of_changes_commited": 440,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2016,
+    "amount_of_bugs_reported": 1,
+    "amount_of_bugs_solved": 1,
+    "amount_of_changes_commited": 1844,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2017,
+    "amount_of_bugs_reported": 14,
+    "amount_of_bugs_solved": 5,
+    "amount_of_changes_commited": 317,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2018,
+    "amount_of_bugs_reported": 60,
+    "amount_of_bugs_solved": 57,
+    "amount_of_changes_commited": 851,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2019,
+    "amount_of_bugs_reported": 21,
+    "amount_of_bugs_solved": 21,
+    "amount_of_changes_commited": 207,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2020,
+    "amount_of_bugs_reported": 60,
+    "amount_of_bugs_solved": 44,
+    "amount_of_changes_commited": 282,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2021,
+    "amount_of_bugs_reported": 772,
+    "amount_of_bugs_solved": 686,
+    "amount_of_changes_commited": 941,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2022,
+    "amount_of_bugs_reported": 18,
+    "amount_of_bugs_solved": 12,
+    "amount_of_changes_commited": 188,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2023,
+    "amount_of_bugs_reported": 68,
+    "amount_of_bugs_solved": 43,
+    "amount_of_changes_commited": 168,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2024,
+    "amount_of_bugs_reported": 419,
+    "amount_of_bugs_solved": 398,
+    "amount_of_changes_commited": 2106,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2025,
+    "amount_of_bugs_reported": null,
+    "amount_of_bugs_solved": null,
+    "amount_of_changes_commited": 151,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2026,
+    "amount_of_bugs_reported": 14,
+    "amount_of_bugs_solved": 2,
+    "amount_of_changes_commited": 2833,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2027,
+    "amount_of_bugs_reported": 158,
+    "amount_of_bugs_solved": 119,
+    "amount_of_changes_commited": 489,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2028,
+    "amount_of_bugs_reported": 11,
+    "amount_of_bugs_solved": 9,
+    "amount_of_changes_commited": 74,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2029,
+    "amount_of_bugs_reported": 4,
+    "amount_of_bugs_solved": 2,
+    "amount_of_changes_commited": 35,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2030,
+    "amount_of_bugs_reported": 50,
+    "amount_of_bugs_solved": 33,
+    "amount_of_changes_commited": 345,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2031,
+    "amount_of_bugs_reported": 36,
+    "amount_of_bugs_solved": 33,
+    "amount_of_changes_commited": 1192,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2032,
+    "amount_of_bugs_reported": 11,
+    "amount_of_bugs_solved": 11,
+    "amount_of_changes_commited": 46,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2033,
+    "amount_of_bugs_reported": 103,
+    "amount_of_bugs_solved": 103,
+    "amount_of_changes_commited": 22,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2034,
+    "amount_of_bugs_reported": 7,
+    "amount_of_bugs_solved": 6,
+    "amount_of_changes_commited": 113,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2035,
+    "amount_of_bugs_reported": 1,
+    "amount_of_bugs_solved": 0,
+    "amount_of_changes_commited": 40,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2036,
+    "amount_of_bugs_reported": 21,
+    "amount_of_bugs_solved": 7,
+    "amount_of_changes_commited": 128,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2037,
+    "amount_of_bugs_reported": 0,
+    "amount_of_bugs_solved": 0,
+    "amount_of_changes_commited": 34,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2038,
+    "amount_of_bugs_reported": 69,
+    "amount_of_bugs_solved": 66,
+    "amount_of_changes_commited": 1824,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2039,
+    "amount_of_bugs_reported": 22,
+    "amount_of_bugs_solved": 16,
+    "amount_of_changes_commited": 1562,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2040,
+    "amount_of_bugs_reported": 32,
+    "amount_of_bugs_solved": 15,
+    "amount_of_changes_commited": 136,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2041,
+    "amount_of_bugs_reported": 114,
+    "amount_of_bugs_solved": 88,
+    "amount_of_changes_commited": 3399,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2042,
+    "amount_of_bugs_reported": 1,
+    "amount_of_bugs_solved": 0,
+    "amount_of_changes_commited": 82,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2043,
+    "amount_of_bugs_reported": 17,
+    "amount_of_bugs_solved": 10,
+    "amount_of_changes_commited": 18942,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2044,
+    "amount_of_bugs_reported": 16,
+    "amount_of_bugs_solved": 16,
+    "amount_of_changes_commited": 409,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2045,
+    "amount_of_bugs_reported": 20,
+    "amount_of_bugs_solved": 12,
+    "amount_of_changes_commited": 381,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2046,
+    "amount_of_bugs_reported": 48,
+    "amount_of_bugs_solved": 0,
+    "amount_of_changes_commited": 83,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2047,
+    "amount_of_bugs_reported": 2,
+    "amount_of_bugs_solved": 2,
+    "amount_of_changes_commited": 236,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2048,
+    "amount_of_bugs_reported": 172,
+    "amount_of_bugs_solved": 157,
+    "amount_of_changes_commited": 863,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2049,
+    "amount_of_bugs_reported": 5,
+    "amount_of_bugs_solved": 3,
+    "amount_of_changes_commited": 96,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2050,
+    "amount_of_bugs_reported": 104,
+    "amount_of_bugs_solved": 97,
+    "amount_of_changes_commited": 733,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2051,
+    "amount_of_bugs_reported": 80,
+    "amount_of_bugs_solved": 68,
+    "amount_of_changes_commited": 1192,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2052,
+    "amount_of_bugs_reported": 40,
+    "amount_of_bugs_solved": 38,
+    "amount_of_changes_commited": 4658,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2053,
+    "amount_of_bugs_reported": 102,
+    "amount_of_bugs_solved": 101,
+    "amount_of_changes_commited": 228,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2054,
+    "amount_of_bugs_reported": 15,
+    "amount_of_bugs_solved": 13,
+    "amount_of_changes_commited": 369,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2055,
+    "amount_of_bugs_reported": 2,
+    "amount_of_bugs_solved": 1,
+    "amount_of_changes_commited": 160,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2056,
+    "amount_of_bugs_reported": 10,
+    "amount_of_bugs_solved": 4,
+    "amount_of_changes_commited": 58,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2057,
+    "amount_of_bugs_reported": 2,
+    "amount_of_bugs_solved": 0,
+    "amount_of_changes_commited": 2,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2058,
+    "amount_of_bugs_reported": 58,
+    "amount_of_bugs_solved": 49,
+    "amount_of_changes_commited": 398,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2059,
+    "amount_of_bugs_reported": 42,
+    "amount_of_bugs_solved": 36,
+    "amount_of_changes_commited": 71,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2060,
+    "amount_of_bugs_reported": 6,
+    "amount_of_bugs_solved": 6,
+    "amount_of_changes_commited": 44,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2061,
+    "amount_of_bugs_reported": 915,
+    "amount_of_bugs_solved": 898,
+    "amount_of_changes_commited": 54,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2062,
+    "amount_of_bugs_reported": 9,
+    "amount_of_bugs_solved": 6,
+    "amount_of_changes_commited": 182,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2063,
+    "amount_of_bugs_reported": 11,
+    "amount_of_bugs_solved": 10,
+    "amount_of_changes_commited": 246,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2064,
+    "amount_of_bugs_reported": 117,
+    "amount_of_bugs_solved": 116,
+    "amount_of_changes_commited": 118,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2065,
+    "amount_of_bugs_reported": 30,
+    "amount_of_bugs_solved": 25,
+    "amount_of_changes_commited": 77,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2066,
+    "amount_of_bugs_reported": 118,
+    "amount_of_bugs_solved": 106,
+    "amount_of_changes_commited": 333,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2067,
+    "amount_of_bugs_reported": 135,
+    "amount_of_bugs_solved": 89,
+    "amount_of_changes_commited": 1275,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2068,
+    "amount_of_bugs_reported": 148,
+    "amount_of_bugs_solved": 141,
+    "amount_of_changes_commited": 341,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2069,
+    "amount_of_bugs_reported": 148,
+    "amount_of_bugs_solved": 141,
+    "amount_of_changes_commited": 341,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2070,
+    "amount_of_bugs_reported": 196,
+    "amount_of_bugs_solved": 176,
+    "amount_of_changes_commited": 829,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2071,
+    "amount_of_bugs_reported": 191,
+    "amount_of_bugs_solved": 129,
+    "amount_of_changes_commited": 1313,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2072,
+    "amount_of_bugs_reported": 2,
+    "amount_of_bugs_solved": 2,
+    "amount_of_changes_commited": 11,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2073,
+    "amount_of_bugs_reported": 675,
+    "amount_of_bugs_solved": 550,
+    "amount_of_changes_commited": 2996,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2074,
+    "amount_of_bugs_reported": 8,
+    "amount_of_bugs_solved": 4,
+    "amount_of_changes_commited": 183,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2075,
+    "amount_of_bugs_reported": 4,
+    "amount_of_bugs_solved": 4,
+    "amount_of_changes_commited": 1867,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2076,
+    "amount_of_bugs_reported": 91,
+    "amount_of_bugs_solved": 83,
+    "amount_of_changes_commited": 1656,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2077,
+    "amount_of_bugs_reported": 78,
+    "amount_of_bugs_solved": 54,
+    "amount_of_changes_commited": 5572,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2078,
+    "amount_of_bugs_reported": 6,
+    "amount_of_bugs_solved": 6,
+    "amount_of_changes_commited": 53,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2079,
+    "amount_of_bugs_reported": 1,
+    "amount_of_bugs_solved": 1,
+    "amount_of_changes_commited": 191,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2080,
+    "amount_of_bugs_reported": 3,
+    "amount_of_bugs_solved": 3,
+    "amount_of_changes_commited": 502,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2081,
+    "amount_of_bugs_reported": 13,
+    "amount_of_bugs_solved": 9,
+    "amount_of_changes_commited": 112,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2082,
+    "amount_of_bugs_reported": 4,
+    "amount_of_bugs_solved": 2,
+    "amount_of_changes_commited": 72,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2083,
+    "amount_of_bugs_reported": 20,
+    "amount_of_bugs_solved": 18,
+    "amount_of_changes_commited": 102,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2084,
+    "amount_of_bugs_reported": 42,
+    "amount_of_bugs_solved": 34,
+    "amount_of_changes_commited": 44,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2085,
+    "amount_of_bugs_reported": 3,
+    "amount_of_bugs_solved": 3,
+    "amount_of_changes_commited": 41,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2086,
+    "amount_of_bugs_reported": 7,
+    "amount_of_bugs_solved": 6,
+    "amount_of_changes_commited": 268,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2087,
+    "amount_of_bugs_reported": 123,
+    "amount_of_bugs_solved": 104,
+    "amount_of_changes_commited": 318,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2088,
+    "amount_of_bugs_reported": 290,
+    "amount_of_bugs_solved": 189,
+    "amount_of_changes_commited": 927,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2089,
+    "amount_of_bugs_reported": 252,
+    "amount_of_bugs_solved": 202,
+    "amount_of_changes_commited": 1066,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2090,
+    "amount_of_bugs_reported": 7651,
+    "amount_of_bugs_solved": 7459,
+    "amount_of_changes_commited": 17040,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2091,
+    "amount_of_bugs_reported": 77,
+    "amount_of_bugs_solved": 56,
+    "amount_of_changes_commited": 727,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2092,
+    "amount_of_bugs_reported": 87,
+    "amount_of_bugs_solved": 71,
+    "amount_of_changes_commited": 1176,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2093,
+    "amount_of_bugs_reported": 1027,
+    "amount_of_bugs_solved": 846,
+    "amount_of_changes_commited": 1051,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2094,
+    "amount_of_bugs_reported": 12339,
+    "amount_of_bugs_solved": 9969,
+    "amount_of_changes_commited": 17012,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2095,
+    "amount_of_bugs_reported": 4246,
+    "amount_of_bugs_solved": 4215,
+    "amount_of_changes_commited": 10109,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2096,
+    "amount_of_bugs_reported": 10611,
+    "amount_of_bugs_solved": 8782,
+    "amount_of_changes_commited": 63468,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2097,
+    "amount_of_bugs_reported": 839,
+    "amount_of_bugs_solved": 686,
+    "amount_of_changes_commited": 1774,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2098,
+    "amount_of_bugs_reported": 2611,
+    "amount_of_bugs_solved": 2587,
+    "amount_of_changes_commited": 9664,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2099,
+    "amount_of_bugs_reported": 80,
+    "amount_of_bugs_solved": 74,
+    "amount_of_changes_commited": 1811,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2100,
+    "amount_of_bugs_reported": 210,
+    "amount_of_bugs_solved": 205,
+    "amount_of_changes_commited": 1219,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2101,
+    "amount_of_bugs_reported": 3418,
+    "amount_of_bugs_solved": 2426,
+    "amount_of_changes_commited": 4106,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2102,
+    "amount_of_bugs_reported": 8820,
+    "amount_of_bugs_solved": 8747,
+    "amount_of_changes_commited": 34552,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2103,
+    "amount_of_bugs_reported": 89,
+    "amount_of_bugs_solved": 83,
+    "amount_of_changes_commited": 1471,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2104,
+    "amount_of_bugs_reported": 730,
+    "amount_of_bugs_solved": 456,
+    "amount_of_changes_commited": 1310,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2105,
+    "amount_of_bugs_reported": 800,
+    "amount_of_bugs_solved": 711,
+    "amount_of_changes_commited": 923,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2106,
+    "amount_of_bugs_reported": 534,
+    "amount_of_bugs_solved": 502,
+    "amount_of_changes_commited": 3395,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2107,
+    "amount_of_bugs_reported": 7093,
+    "amount_of_bugs_solved": 4260,
+    "amount_of_changes_commited": 6147,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2108,
+    "amount_of_bugs_reported": 732,
+    "amount_of_bugs_solved": 400,
+    "amount_of_changes_commited": 1566,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2109,
+    "amount_of_bugs_reported": 3951,
+    "amount_of_bugs_solved": 3524,
+    "amount_of_changes_commited": 3109,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2110,
+    "amount_of_bugs_reported": 4960,
+    "amount_of_bugs_solved": 4571,
+    "amount_of_changes_commited": 4147,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2111,
+    "amount_of_bugs_reported": 54,
+    "amount_of_bugs_solved": 54,
+    "amount_of_changes_commited": 5992,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2112,
+    "amount_of_bugs_reported": 961,
+    "amount_of_bugs_solved": 585,
+    "amount_of_changes_commited": 1206,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2113,
+    "amount_of_bugs_reported": 797,
+    "amount_of_bugs_solved": 676,
+    "amount_of_changes_commited": 3537,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2114,
+    "amount_of_bugs_reported": 13,
+    "amount_of_bugs_solved": 10,
+    "amount_of_changes_commited": 299,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2115,
+    "amount_of_bugs_reported": 42,
+    "amount_of_bugs_solved": 27,
+    "amount_of_changes_commited": 639,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2116,
+    "amount_of_bugs_reported": 270,
+    "amount_of_bugs_solved": 143,
+    "amount_of_changes_commited": 1773,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2117,
+    "amount_of_bugs_reported": 14,
+    "amount_of_bugs_solved": 8,
+    "amount_of_changes_commited": 296,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2118,
+    "amount_of_bugs_reported": 854,
+    "amount_of_bugs_solved": 702,
+    "amount_of_changes_commited": 2633,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2119,
+    "amount_of_bugs_reported": 686,
+    "amount_of_bugs_solved": 665,
+    "amount_of_changes_commited": 10086,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2120,
+    "amount_of_bugs_reported": 394,
+    "amount_of_bugs_solved": 310,
+    "amount_of_changes_commited": 523,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2121,
+    "amount_of_bugs_reported": 567,
+    "amount_of_bugs_solved": 384,
+    "amount_of_changes_commited": 1215,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2122,
+    "amount_of_bugs_reported": 2110,
+    "amount_of_bugs_solved": 1706,
+    "amount_of_changes_commited": 7639,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2123,
+    "amount_of_bugs_reported": 437,
+    "amount_of_bugs_solved": 391,
+    "amount_of_changes_commited": 2845,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2124,
+    "amount_of_bugs_reported": 737,
+    "amount_of_bugs_solved": 519,
+    "amount_of_changes_commited": 1817,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2125,
+    "amount_of_bugs_reported": 255,
+    "amount_of_bugs_solved": 217,
+    "amount_of_changes_commited": 12201,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2126,
+    "amount_of_bugs_reported": 1109,
+    "amount_of_bugs_solved": 629,
+    "amount_of_changes_commited": 4210,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2127,
+    "amount_of_bugs_reported": 11,
+    "amount_of_bugs_solved": 7,
+    "amount_of_changes_commited": 329,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2128,
+    "amount_of_bugs_reported": 1181,
+    "amount_of_bugs_solved": 719,
+    "amount_of_changes_commited": 1710,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2129,
+    "amount_of_bugs_reported": 2142,
+    "amount_of_bugs_solved": 2125,
+    "amount_of_changes_commited": 2914,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2130,
+    "amount_of_bugs_reported": 8965,
+    "amount_of_bugs_solved": 8840,
+    "amount_of_changes_commited": 36853,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2131,
+    "amount_of_bugs_reported": 600,
+    "amount_of_bugs_solved": 506,
+    "amount_of_changes_commited": 8771,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2132,
+    "amount_of_bugs_reported": 824,
+    "amount_of_bugs_solved": 731,
+    "amount_of_changes_commited": 333,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2133,
+    "amount_of_bugs_reported": 1050,
+    "amount_of_bugs_solved": 836,
+    "amount_of_changes_commited": 1691,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2134,
+    "amount_of_bugs_reported": 15,
+    "amount_of_bugs_solved": 5,
+    "amount_of_changes_commited": 176,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2135,
+    "amount_of_bugs_reported": 456,
+    "amount_of_bugs_solved": 372,
+    "amount_of_changes_commited": 433,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2136,
+    "amount_of_bugs_reported": 3258,
+    "amount_of_bugs_solved": 3147,
+    "amount_of_changes_commited": 3149,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2137,
+    "amount_of_bugs_reported": 2486,
+    "amount_of_bugs_solved": 2206,
+    "amount_of_changes_commited": 10484,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2138,
+    "amount_of_bugs_reported": 79,
+    "amount_of_bugs_solved": 65,
+    "amount_of_changes_commited": 1556,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2139,
+    "amount_of_bugs_reported": 23,
+    "amount_of_bugs_solved": 20,
+    "amount_of_changes_commited": 664,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2140,
+    "amount_of_bugs_reported": 3692,
+    "amount_of_bugs_solved": 3266,
+    "amount_of_changes_commited": 32987,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2141,
+    "amount_of_bugs_reported": 1954,
+    "amount_of_bugs_solved": 1366,
+    "amount_of_changes_commited": 2264,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2142,
+    "amount_of_bugs_reported": 589,
+    "amount_of_bugs_solved": 400,
+    "amount_of_changes_commited": 2967,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2143,
+    "amount_of_bugs_reported": 9,
+    "amount_of_bugs_solved": 6,
+    "amount_of_changes_commited": 63,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2144,
+    "amount_of_bugs_reported": 661,
+    "amount_of_bugs_solved": 589,
+    "amount_of_changes_commited": 2828,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2145,
+    "amount_of_bugs_reported": 1635,
+    "amount_of_bugs_solved": 1122,
+    "amount_of_changes_commited": 3035,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2146,
+    "amount_of_bugs_reported": 307,
+    "amount_of_bugs_solved": 250,
+    "amount_of_changes_commited": 1682,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2147,
+    "amount_of_bugs_reported": 471,
+    "amount_of_bugs_solved": 465,
+    "amount_of_changes_commited": 1465,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2148,
+    "amount_of_bugs_reported": 16,
+    "amount_of_bugs_solved": 14,
+    "amount_of_changes_commited": 371,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2149,
+    "amount_of_bugs_reported": 921,
+    "amount_of_bugs_solved": 921,
+    "amount_of_changes_commited": 1336,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2150,
+    "amount_of_bugs_reported": 218,
+    "amount_of_bugs_solved": 197,
+    "amount_of_changes_commited": 1130,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2151,
+    "amount_of_bugs_reported": 1595,
+    "amount_of_bugs_solved": 1494,
+    "amount_of_changes_commited": 15691,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2152,
+    "amount_of_bugs_reported": 2034,
+    "amount_of_bugs_solved": 1955,
+    "amount_of_changes_commited": 2755,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2153,
+    "amount_of_bugs_reported": 1567,
+    "amount_of_bugs_solved": 1050,
+    "amount_of_changes_commited": 21757,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2154,
+    "amount_of_bugs_reported": 232,
+    "amount_of_bugs_solved": 220,
+    "amount_of_changes_commited": 434,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2155,
+    "amount_of_bugs_reported": 447,
+    "amount_of_bugs_solved": 298,
+    "amount_of_changes_commited": 735,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2156,
+    "amount_of_bugs_reported": 75,
+    "amount_of_bugs_solved": 66,
+    "amount_of_changes_commited": 72,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2157,
+    "amount_of_bugs_reported": 53,
+    "amount_of_bugs_solved": 52,
+    "amount_of_changes_commited": 1370,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2158,
+    "amount_of_bugs_reported": 824,
+    "amount_of_bugs_solved": 824,
+    "amount_of_changes_commited": 1198,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2159,
+    "amount_of_bugs_reported": 426,
+    "amount_of_bugs_solved": 394,
+    "amount_of_changes_commited": 523,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2160,
+    "amount_of_bugs_reported": 5058,
+    "amount_of_bugs_solved": 4468,
+    "amount_of_changes_commited": 20161,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2161,
+    "amount_of_bugs_reported": 299,
+    "amount_of_bugs_solved": 237,
+    "amount_of_changes_commited": 1096,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2162,
+    "amount_of_bugs_reported": 161,
+    "amount_of_bugs_solved": 132,
+    "amount_of_changes_commited": 329,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2163,
+    "amount_of_bugs_reported": 6,
+    "amount_of_bugs_solved": 6,
+    "amount_of_changes_commited": 74,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2164,
+    "amount_of_bugs_reported": 59,
+    "amount_of_bugs_solved": 30,
+    "amount_of_changes_commited": 171,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2165,
+    "amount_of_bugs_reported": 931,
+    "amount_of_bugs_solved": 515,
+    "amount_of_changes_commited": 2273,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2166,
+    "amount_of_bugs_reported": 15,
+    "amount_of_bugs_solved": 14,
+    "amount_of_changes_commited": 521,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2167,
+    "amount_of_bugs_reported": 269,
+    "amount_of_bugs_solved": 154,
+    "amount_of_changes_commited": 1340,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2168,
+    "amount_of_bugs_reported": 83,
+    "amount_of_bugs_solved": 62,
+    "amount_of_changes_commited": 772,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2169,
+    "amount_of_bugs_reported": 757,
+    "amount_of_bugs_solved": 9,
+    "amount_of_changes_commited": 321,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2170,
+    "amount_of_bugs_reported": 858,
+    "amount_of_bugs_solved": 787,
+    "amount_of_changes_commited": 5993,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2171,
+    "amount_of_bugs_reported": 1515,
+    "amount_of_bugs_solved": 1515,
+    "amount_of_changes_commited": 15623,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2172,
+    "amount_of_bugs_reported": 528,
+    "amount_of_bugs_solved": 343,
+    "amount_of_changes_commited": 6002,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2173,
+    "amount_of_bugs_reported": 4157,
+    "amount_of_bugs_solved": 4011,
+    "amount_of_changes_commited": 12259,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2174,
+    "amount_of_bugs_reported": 412,
+    "amount_of_bugs_solved": 376,
+    "amount_of_changes_commited": 12152,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2175,
+    "amount_of_bugs_reported": 1155,
+    "amount_of_bugs_solved": 1019,
+    "amount_of_changes_commited": 5437,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2176,
+    "amount_of_bugs_reported": 419,
+    "amount_of_bugs_solved": 237,
+    "amount_of_changes_commited": 1652,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2177,
+    "amount_of_bugs_reported": 332,
+    "amount_of_bugs_solved": 226,
+    "amount_of_changes_commited": 1232,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2178,
+    "amount_of_bugs_reported": 51,
+    "amount_of_bugs_solved": 49,
+    "amount_of_changes_commited": 741,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2179,
+    "amount_of_bugs_reported": 71,
+    "amount_of_bugs_solved": 69,
+    "amount_of_changes_commited": 2355,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2180,
+    "amount_of_bugs_reported": 141,
+    "amount_of_bugs_solved": 103,
+    "amount_of_changes_commited": 1056,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2181,
+    "amount_of_bugs_reported": 1556,
+    "amount_of_bugs_solved": 1038,
+    "amount_of_changes_commited": 12995,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2182,
+    "amount_of_bugs_reported": 11,
+    "amount_of_bugs_solved": 4,
+    "amount_of_changes_commited": 163,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2183,
+    "amount_of_bugs_reported": 55,
+    "amount_of_bugs_solved": 28,
+    "amount_of_changes_commited": 253,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2184,
+    "amount_of_bugs_reported": 198,
+    "amount_of_bugs_solved": 181,
+    "amount_of_changes_commited": 895,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2185,
+    "amount_of_bugs_reported": 1400,
+    "amount_of_bugs_solved": 1083,
+    "amount_of_changes_commited": 2676,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2186,
+    "amount_of_bugs_reported": 330,
+    "amount_of_bugs_solved": 246,
+    "amount_of_changes_commited": 8968,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2187,
+    "amount_of_bugs_reported": 435,
+    "amount_of_bugs_solved": 353,
+    "amount_of_changes_commited": 901,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2188,
+    "amount_of_bugs_reported": 1002,
+    "amount_of_bugs_solved": 845,
+    "amount_of_changes_commited": 5929,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2189,
+    "amount_of_bugs_reported": 2,
+    "amount_of_bugs_solved": 1,
+    "amount_of_changes_commited": 855,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2190,
+    "amount_of_bugs_reported": 938,
+    "amount_of_bugs_solved": 628,
+    "amount_of_changes_commited": 13187,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2191,
+    "amount_of_bugs_reported": 2036,
+    "amount_of_bugs_solved": 1946,
+    "amount_of_changes_commited": 2598,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2192,
+    "amount_of_bugs_reported": 249,
+    "amount_of_bugs_solved": 226,
+    "amount_of_changes_commited": 559,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2193,
+    "amount_of_bugs_reported": 178,
+    "amount_of_bugs_solved": 159,
+    "amount_of_changes_commited": 328,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2194,
+    "amount_of_bugs_reported": 519,
+    "amount_of_bugs_solved": 439,
+    "amount_of_changes_commited": 4687,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2195,
+    "amount_of_bugs_reported": 71,
+    "amount_of_bugs_solved": 18,
+    "amount_of_changes_commited": 256,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2196,
+    "amount_of_bugs_reported": 30,
+    "amount_of_bugs_solved": 28,
+    "amount_of_changes_commited": 274,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2197,
+    "amount_of_bugs_reported": 1133,
+    "amount_of_bugs_solved": 861,
+    "amount_of_changes_commited": 5346,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2198,
+    "amount_of_bugs_reported": 251,
+    "amount_of_bugs_solved": 137,
+    "amount_of_changes_commited": 1684,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2199,
+    "amount_of_bugs_reported": 362,
+    "amount_of_bugs_solved": 319,
+    "amount_of_changes_commited": 3402,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2200,
+    "amount_of_bugs_reported": 2018,
+    "amount_of_bugs_solved": 1513,
+    "amount_of_changes_commited": 3738,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2201,
+    "amount_of_bugs_reported": 4,
+    "amount_of_bugs_solved": 1,
+    "amount_of_changes_commited": 58,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2202,
+    "amount_of_bugs_reported": 124,
+    "amount_of_bugs_solved": 62,
+    "amount_of_changes_commited": 627,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2203,
+    "amount_of_bugs_reported": 701,
+    "amount_of_bugs_solved": 561,
+    "amount_of_changes_commited": 1282,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2204,
+    "amount_of_bugs_reported": 66,
+    "amount_of_bugs_solved": 43,
+    "amount_of_changes_commited": 475,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2205,
+    "amount_of_bugs_reported": 247,
+    "amount_of_bugs_solved": 222,
+    "amount_of_changes_commited": 3000,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2206,
+    "amount_of_bugs_reported": 34,
+    "amount_of_bugs_solved": 22,
+    "amount_of_changes_commited": 480,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2207,
+    "amount_of_bugs_reported": 13,
+    "amount_of_bugs_solved": 7,
+    "amount_of_changes_commited": 161,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2208,
+    "amount_of_bugs_reported": 772,
+    "amount_of_bugs_solved": 710,
+    "amount_of_changes_commited": 2948,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2209,
+    "amount_of_bugs_reported": 241,
+    "amount_of_bugs_solved": 147,
+    "amount_of_changes_commited": 806,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2210,
+    "amount_of_bugs_reported": 89,
+    "amount_of_bugs_solved": 7,
+    "amount_of_changes_commited": 875,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2211,
+    "amount_of_bugs_reported": 2575,
+    "amount_of_bugs_solved": 2218,
+    "amount_of_changes_commited": 11301,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2212,
+    "amount_of_bugs_reported": 1355,
+    "amount_of_bugs_solved": 1180,
+    "amount_of_changes_commited": 2764,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2213,
+    "amount_of_bugs_reported": 87,
+    "amount_of_bugs_solved": 87,
+    "amount_of_changes_commited": 4178,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2214,
+    "amount_of_bugs_reported": 331,
+    "amount_of_bugs_solved": 306,
+    "amount_of_changes_commited": 4967,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2215,
+    "amount_of_bugs_reported": 122,
+    "amount_of_bugs_solved": 106,
+    "amount_of_changes_commited": 279,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2216,
+    "amount_of_bugs_reported": 24,
+    "amount_of_bugs_solved": 23,
+    "amount_of_changes_commited": 128,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2217,
+    "amount_of_bugs_reported": 2368,
+    "amount_of_bugs_solved": 2222,
+    "amount_of_changes_commited": 1791,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2218,
+    "amount_of_bugs_reported": 28,
+    "amount_of_bugs_solved": 25,
+    "amount_of_changes_commited": 195,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2219,
+    "amount_of_bugs_reported": 54,
+    "amount_of_bugs_solved": 38,
+    "amount_of_changes_commited": 295,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2220,
+    "amount_of_bugs_reported": 364,
+    "amount_of_bugs_solved": 347,
+    "amount_of_changes_commited": 2229,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2221,
+    "amount_of_bugs_reported": 6,
+    "amount_of_bugs_solved": 3,
+    "amount_of_changes_commited": 132,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2222,
+    "amount_of_bugs_reported": 317,
+    "amount_of_bugs_solved": 196,
+    "amount_of_changes_commited": 1766,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2223,
+    "amount_of_bugs_reported": 235,
+    "amount_of_bugs_solved": 190,
+    "amount_of_changes_commited": 1250,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2224,
+    "amount_of_bugs_reported": 8,
+    "amount_of_bugs_solved": 3,
+    "amount_of_changes_commited": 105,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2225,
+    "amount_of_bugs_reported": 2904,
+    "amount_of_bugs_solved": 2799,
+    "amount_of_changes_commited": 4945,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2226,
+    "amount_of_bugs_reported": 244,
+    "amount_of_bugs_solved": 129,
+    "amount_of_changes_commited": 1601,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2227,
+    "amount_of_bugs_reported": 339,
+    "amount_of_bugs_solved": 214,
+    "amount_of_changes_commited": 776,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2228,
+    "amount_of_bugs_reported": 4918,
+    "amount_of_bugs_solved": 4036,
+    "amount_of_changes_commited": 26655,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2229,
+    "amount_of_bugs_reported": 105,
+    "amount_of_bugs_solved": 68,
+    "amount_of_changes_commited": 244,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2230,
+    "amount_of_bugs_reported": 16653,
+    "amount_of_bugs_solved": 16632,
+    "amount_of_changes_commited": 81175,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2231,
+    "amount_of_bugs_reported": 486,
+    "amount_of_bugs_solved": 261,
+    "amount_of_changes_commited": 3455,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2232,
+    "amount_of_bugs_reported": 87,
+    "amount_of_bugs_solved": 0,
+    "amount_of_changes_commited": 257,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2233,
+    "amount_of_bugs_reported": 5,
+    "amount_of_bugs_solved": 1,
+    "amount_of_changes_commited": 15792,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2234,
+    "amount_of_bugs_reported": 136,
+    "amount_of_bugs_solved": 96,
+    "amount_of_changes_commited": 555,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2235,
+    "amount_of_bugs_reported": 255,
+    "amount_of_bugs_solved": 221,
+    "amount_of_changes_commited": 1427,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2236,
+    "amount_of_bugs_reported": 136,
+    "amount_of_bugs_solved": 124,
+    "amount_of_changes_commited": 2034,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2237,
+    "amount_of_bugs_reported": 505,
+    "amount_of_bugs_solved": 445,
+    "amount_of_changes_commited": 2849,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2238,
+    "amount_of_bugs_reported": 199,
+    "amount_of_bugs_solved": 37,
+    "amount_of_changes_commited": 228,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2239,
+    "amount_of_bugs_reported": 73,
+    "amount_of_bugs_solved": 72,
+    "amount_of_changes_commited": 169,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2240,
+    "amount_of_bugs_reported": 5,
+    "amount_of_bugs_solved": 5,
+    "amount_of_changes_commited": 112,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2241,
+    "amount_of_bugs_reported": 166,
+    "amount_of_bugs_solved": 94,
+    "amount_of_changes_commited": 674,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2242,
+    "amount_of_bugs_reported": 555,
+    "amount_of_bugs_solved": 477,
+    "amount_of_changes_commited": 785,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2243,
+    "amount_of_bugs_reported": 85,
+    "amount_of_bugs_solved": 78,
+    "amount_of_changes_commited": 175,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2244,
+    "amount_of_bugs_reported": 20,
+    "amount_of_bugs_solved": 4,
+    "amount_of_changes_commited": 44,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2245,
+    "amount_of_bugs_reported": 78,
+    "amount_of_bugs_solved": 55,
+    "amount_of_changes_commited": 635,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2246,
+    "amount_of_bugs_reported": 3,
+    "amount_of_bugs_solved": 0,
+    "amount_of_changes_commited": 23,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2247,
+    "amount_of_bugs_reported": 4,
+    "amount_of_bugs_solved": 4,
+    "amount_of_changes_commited": 686,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2248,
+    "amount_of_bugs_reported": 35,
+    "amount_of_bugs_solved": 31,
+    "amount_of_changes_commited": 233,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2249,
+    "amount_of_bugs_reported": 87,
+    "amount_of_bugs_solved": 80,
+    "amount_of_changes_commited": 574,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2250,
+    "amount_of_bugs_reported": 6235,
+    "amount_of_bugs_solved": 4926,
+    "amount_of_changes_commited": 10242,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2251,
+    "amount_of_bugs_reported": 149,
+    "amount_of_bugs_solved": 131,
+    "amount_of_changes_commited": 218,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2252,
+    "amount_of_bugs_reported": 248,
+    "amount_of_bugs_solved": 196,
+    "amount_of_changes_commited": 3427,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2253,
+    "amount_of_bugs_reported": 149,
+    "amount_of_bugs_solved": 140,
+    "amount_of_changes_commited": 564,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2254,
+    "amount_of_bugs_reported": 165,
+    "amount_of_bugs_solved": 122,
+    "amount_of_changes_commited": 332,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2255,
+    "amount_of_bugs_reported": 328,
+    "amount_of_bugs_solved": 240,
+    "amount_of_changes_commited": 1766,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2256,
+    "amount_of_bugs_reported": 22,
+    "amount_of_bugs_solved": 15,
+    "amount_of_changes_commited": 62,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2257,
+    "amount_of_bugs_reported": 200,
+    "amount_of_bugs_solved": 167,
+    "amount_of_changes_commited": 306,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2258,
+    "amount_of_bugs_reported": 263,
+    "amount_of_bugs_solved": 200,
+    "amount_of_changes_commited": 26311,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2259,
+    "amount_of_bugs_reported": 4,
+    "amount_of_bugs_solved": 4,
+    "amount_of_changes_commited": 263,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2260,
+    "amount_of_bugs_reported": 202,
+    "amount_of_bugs_solved": 188,
+    "amount_of_changes_commited": 397,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2261,
+    "amount_of_bugs_reported": 57,
+    "amount_of_bugs_solved": 22,
+    "amount_of_changes_commited": 1466,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2262,
+    "amount_of_bugs_reported": 46,
+    "amount_of_bugs_solved": 43,
+    "amount_of_changes_commited": 2123,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2263,
+    "amount_of_bugs_reported": 108,
+    "amount_of_bugs_solved": 56,
+    "amount_of_changes_commited": 543,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2264,
+    "amount_of_bugs_reported": 133,
+    "amount_of_bugs_solved": 128,
+    "amount_of_changes_commited": 2726,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2265,
+    "amount_of_bugs_reported": 855,
+    "amount_of_bugs_solved": 544,
+    "amount_of_changes_commited": 3588,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2266,
+    "amount_of_bugs_reported": 4,
+    "amount_of_bugs_solved": 4,
+    "amount_of_changes_commited": 258,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2267,
+    "amount_of_bugs_reported": 45,
+    "amount_of_bugs_solved": 13,
+    "amount_of_changes_commited": 374,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2268,
+    "amount_of_bugs_reported": 96,
+    "amount_of_bugs_solved": 91,
+    "amount_of_changes_commited": 1587,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2269,
+    "amount_of_bugs_reported": 316,
+    "amount_of_bugs_solved": 282,
+    "amount_of_changes_commited": 3910,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2270,
+    "amount_of_bugs_reported": 6454,
+    "amount_of_bugs_solved": 6165,
+    "amount_of_changes_commited": 4311,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2271,
+    "amount_of_bugs_reported": 11853,
+    "amount_of_bugs_solved": 10152,
+    "amount_of_changes_commited": 56450,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2272,
+    "amount_of_bugs_reported": 12173,
+    "amount_of_bugs_solved": 11505,
+    "amount_of_changes_commited": 11896,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2273,
+    "amount_of_bugs_reported": 1303,
+    "amount_of_bugs_solved": 1063,
+    "amount_of_changes_commited": 5126,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2274,
+    "amount_of_bugs_reported": 5081,
+    "amount_of_bugs_solved": 4807,
+    "amount_of_changes_commited": 5405,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2275,
+    "amount_of_bugs_reported": 13669,
+    "amount_of_bugs_solved": 12322,
+    "amount_of_changes_commited": 20253,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2276,
+    "amount_of_bugs_reported": 7645,
+    "amount_of_bugs_solved": 7311,
+    "amount_of_changes_commited": 7113,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2277,
+    "amount_of_bugs_reported": 63,
+    "amount_of_bugs_solved": 15,
+    "amount_of_changes_commited": 1013,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2278,
+    "amount_of_bugs_reported": 2937,
+    "amount_of_bugs_solved": 2701,
+    "amount_of_changes_commited": 3615,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2279,
+    "amount_of_bugs_reported": 746,
+    "amount_of_bugs_solved": 480,
+    "amount_of_changes_commited": 877,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2280,
+    "amount_of_bugs_reported": 210,
+    "amount_of_bugs_solved": 169,
+    "amount_of_changes_commited": 1327,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2281,
+    "amount_of_bugs_reported": 1642,
+    "amount_of_bugs_solved": 1589,
+    "amount_of_changes_commited": 2026,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2282,
+    "amount_of_bugs_reported": 1769,
+    "amount_of_bugs_solved": 1515,
+    "amount_of_changes_commited": 2012,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2283,
+    "amount_of_bugs_reported": 733,
+    "amount_of_bugs_solved": 698,
+    "amount_of_changes_commited": 504,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2284,
+    "amount_of_bugs_reported": 730,
+    "amount_of_bugs_solved": 456,
+    "amount_of_changes_commited": 1310,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2285,
+    "amount_of_bugs_reported": 1823,
+    "amount_of_bugs_solved": 1455,
+    "amount_of_changes_commited": 4424,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2286,
+    "amount_of_bugs_reported": 685,
+    "amount_of_bugs_solved": 670,
+    "amount_of_changes_commited": 3513,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2287,
+    "amount_of_bugs_reported": 1401,
+    "amount_of_bugs_solved": 1387,
+    "amount_of_changes_commited": 2676,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2288,
+    "amount_of_bugs_reported": 1594,
+    "amount_of_bugs_solved": 1228,
+    "amount_of_changes_commited": 6031,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2289,
+    "amount_of_bugs_reported": 7239,
+    "amount_of_bugs_solved": 6292,
+    "amount_of_changes_commited": 10278,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2290,
+    "amount_of_bugs_reported": 378,
+    "amount_of_bugs_solved": 245,
+    "amount_of_changes_commited": 841,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2291,
+    "amount_of_bugs_reported": 2735,
+    "amount_of_bugs_solved": 2523,
+    "amount_of_changes_commited": 2750,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2292,
+    "amount_of_bugs_reported": 5539,
+    "amount_of_bugs_solved": 4745,
+    "amount_of_changes_commited": 15547,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2293,
+    "amount_of_bugs_reported": 827,
+    "amount_of_bugs_solved": 320,
+    "amount_of_changes_commited": 1659,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2294,
+    "amount_of_bugs_reported": 2650,
+    "amount_of_bugs_solved": 2421,
+    "amount_of_changes_commited": 4698,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2295,
+    "amount_of_bugs_reported": 9071,
+    "amount_of_bugs_solved": 8879,
+    "amount_of_changes_commited": 16868,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2296,
+    "amount_of_bugs_reported": 212,
+    "amount_of_bugs_solved": 179,
+    "amount_of_changes_commited": 370,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2297,
+    "amount_of_bugs_reported": 190,
+    "amount_of_bugs_solved": 125,
+    "amount_of_changes_commited": 614,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2298,
+    "amount_of_bugs_reported": 1180,
+    "amount_of_bugs_solved": 1124,
+    "amount_of_changes_commited": 678,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2299,
+    "amount_of_bugs_reported": 509,
+    "amount_of_bugs_solved": 484,
+    "amount_of_changes_commited": 2101,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2300,
+    "amount_of_bugs_reported": 4311,
+    "amount_of_bugs_solved": 4087,
+    "amount_of_changes_commited": 14532,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2301,
+    "amount_of_bugs_reported": 530,
+    "amount_of_bugs_solved": 479,
+    "amount_of_changes_commited": 1958,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2302,
+    "amount_of_bugs_reported": 483,
+    "amount_of_bugs_solved": 479,
+    "amount_of_changes_commited": 2151,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2303,
+    "amount_of_bugs_reported": 913,
+    "amount_of_bugs_solved": 866,
+    "amount_of_changes_commited": 1216,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2304,
+    "amount_of_bugs_reported": 807,
+    "amount_of_bugs_solved": 750,
+    "amount_of_changes_commited": 1164,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2305,
+    "amount_of_bugs_reported": 1974,
+    "amount_of_bugs_solved": 1935,
+    "amount_of_changes_commited": 4393,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2306,
+    "amount_of_bugs_reported": 2094,
+    "amount_of_bugs_solved": 1714,
+    "amount_of_changes_commited": 6246,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2307,
+    "amount_of_bugs_reported": 527,
+    "amount_of_bugs_solved": 410,
+    "amount_of_changes_commited": 2097,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2308,
+    "amount_of_bugs_reported": 589,
+    "amount_of_bugs_solved": 400,
+    "amount_of_changes_commited": 2967,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2309,
+    "amount_of_bugs_reported": 1340,
+    "amount_of_bugs_solved": 529,
+    "amount_of_changes_commited": 326,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2310,
+    "amount_of_bugs_reported": 1066,
+    "amount_of_bugs_solved": 703,
+    "amount_of_changes_commited": 3214,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2311,
+    "amount_of_bugs_reported": 1473,
+    "amount_of_bugs_solved": 1430,
+    "amount_of_changes_commited": 13625,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2312,
+    "amount_of_bugs_reported": 3243,
+    "amount_of_bugs_solved": 2375,
+    "amount_of_changes_commited": 3017,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2313,
+    "amount_of_bugs_reported": 963,
+    "amount_of_bugs_solved": 886,
+    "amount_of_changes_commited": 4105,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2314,
+    "amount_of_bugs_reported": 52,
+    "amount_of_bugs_solved": 13,
+    "amount_of_changes_commited": 181,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2315,
+    "amount_of_bugs_reported": 21,
+    "amount_of_bugs_solved": 15,
+    "amount_of_changes_commited": 135,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2316,
+    "amount_of_bugs_reported": 242,
+    "amount_of_bugs_solved": 193,
+    "amount_of_changes_commited": 352,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2317,
+    "amount_of_bugs_reported": 226,
+    "amount_of_bugs_solved": 164,
+    "amount_of_changes_commited": 235,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2318,
+    "amount_of_bugs_reported": 8,
+    "amount_of_bugs_solved": 7,
+    "amount_of_changes_commited": 311,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2319,
+    "amount_of_bugs_reported": 56,
+    "amount_of_bugs_solved": 27,
+    "amount_of_changes_commited": 196,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2320,
+    "amount_of_bugs_reported": 561,
+    "amount_of_bugs_solved": 391,
+    "amount_of_changes_commited": 1407,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2321,
+    "amount_of_bugs_reported": 426,
+    "amount_of_bugs_solved": 394,
+    "amount_of_changes_commited": 523,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2322,
+    "amount_of_bugs_reported": 388,
+    "amount_of_bugs_solved": 359,
+    "amount_of_changes_commited": 898,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2323,
+    "amount_of_bugs_reported": 314,
+    "amount_of_bugs_solved": 136,
+    "amount_of_changes_commited": 1912,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2324,
+    "amount_of_bugs_reported": 856,
+    "amount_of_bugs_solved": 608,
+    "amount_of_changes_commited": 2377,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2325,
+    "amount_of_bugs_reported": 4,
+    "amount_of_bugs_solved": 4,
+    "amount_of_changes_commited": 80,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2326,
+    "amount_of_bugs_reported": 228,
+    "amount_of_bugs_solved": 203,
+    "amount_of_changes_commited": 1189,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2327,
+    "amount_of_bugs_reported": 157,
+    "amount_of_bugs_solved": 149,
+    "amount_of_changes_commited": 1220,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2328,
+    "amount_of_bugs_reported": 868,
+    "amount_of_bugs_solved": 595,
+    "amount_of_changes_commited": 8419,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2329,
+    "amount_of_bugs_reported": 97,
+    "amount_of_bugs_solved": 57,
+    "amount_of_changes_commited": 383,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2330,
+    "amount_of_bugs_reported": 436,
+    "amount_of_bugs_solved": 419,
+    "amount_of_changes_commited": 1919,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2331,
+    "amount_of_bugs_reported": 3555,
+    "amount_of_bugs_solved": 3429,
+    "amount_of_changes_commited": 7711,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2332,
+    "amount_of_bugs_reported": 167,
+    "amount_of_bugs_solved": 121,
+    "amount_of_changes_commited": 842,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2333,
+    "amount_of_bugs_reported": 261,
+    "amount_of_bugs_solved": 167,
+    "amount_of_changes_commited": 735,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2334,
+    "amount_of_bugs_reported": 3250,
+    "amount_of_bugs_solved": 1951,
+    "amount_of_changes_commited": 58695,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2335,
+    "amount_of_bugs_reported": 817,
+    "amount_of_bugs_solved": 711,
+    "amount_of_changes_commited": 1268,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2336,
+    "amount_of_bugs_reported": 418,
+    "amount_of_bugs_solved": 345,
+    "amount_of_changes_commited": 1685,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2337,
+    "amount_of_bugs_reported": 935,
+    "amount_of_bugs_solved": 479,
+    "amount_of_changes_commited": 3079,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2338,
+    "amount_of_bugs_reported": 911,
+    "amount_of_bugs_solved": 782,
+    "amount_of_changes_commited": 1403,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2339,
+    "amount_of_bugs_reported": 345,
+    "amount_of_bugs_solved": 231,
+    "amount_of_changes_commited": 1244,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2340,
+    "amount_of_bugs_reported": 703,
+    "amount_of_bugs_solved": 671,
+    "amount_of_changes_commited": 6618,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2341,
+    "amount_of_bugs_reported": 244,
+    "amount_of_bugs_solved": 160,
+    "amount_of_changes_commited": 237,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2342,
+    "amount_of_bugs_reported": 1972,
+    "amount_of_bugs_solved": 1901,
+    "amount_of_changes_commited": 4804,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2343,
+    "amount_of_bugs_reported": 330,
+    "amount_of_bugs_solved": 323,
+    "amount_of_changes_commited": 2575,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2344,
+    "amount_of_bugs_reported": 977,
+    "amount_of_bugs_solved": 542,
+    "amount_of_changes_commited": 1626,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2345,
+    "amount_of_bugs_reported": 784,
+    "amount_of_bugs_solved": 575,
+    "amount_of_changes_commited": 3310,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2346,
+    "amount_of_bugs_reported": 2105,
+    "amount_of_bugs_solved": 1919,
+    "amount_of_changes_commited": 2750,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2347,
+    "amount_of_bugs_reported": 837,
+    "amount_of_bugs_solved": 787,
+    "amount_of_changes_commited": 1767,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2348,
+    "amount_of_bugs_reported": 509,
+    "amount_of_bugs_solved": 474,
+    "amount_of_changes_commited": 4629,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2349,
+    "amount_of_bugs_reported": 47,
+    "amount_of_bugs_solved": 37,
+    "amount_of_changes_commited": 149,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2350,
+    "amount_of_bugs_reported": 1232,
+    "amount_of_bugs_solved": 765,
+    "amount_of_changes_commited": 3685,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2351,
+    "amount_of_bugs_reported": 154,
+    "amount_of_bugs_solved": 126,
+    "amount_of_changes_commited": 173,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2352,
+    "amount_of_bugs_reported": 360,
+    "amount_of_bugs_solved": 317,
+    "amount_of_changes_commited": 568,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2353,
+    "amount_of_bugs_reported": 1465,
+    "amount_of_bugs_solved": 1406,
+    "amount_of_changes_commited": 2796,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2354,
+    "amount_of_bugs_reported": 172,
+    "amount_of_bugs_solved": 148,
+    "amount_of_changes_commited": 254,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2355,
+    "amount_of_bugs_reported": 140,
+    "amount_of_bugs_solved": 82,
+    "amount_of_changes_commited": 751,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2356,
+    "amount_of_bugs_reported": 802,
+    "amount_of_bugs_solved": 562,
+    "amount_of_changes_commited": 1109,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2357,
+    "amount_of_bugs_reported": 53,
+    "amount_of_bugs_solved": 30,
+    "amount_of_changes_commited": 424,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2358,
+    "amount_of_bugs_reported": 332,
+    "amount_of_bugs_solved": 219,
+    "amount_of_changes_commited": 314,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2359,
+    "amount_of_bugs_reported": 1294,
+    "amount_of_bugs_solved": 1151,
+    "amount_of_changes_commited": 690,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2360,
+    "amount_of_bugs_reported": 949,
+    "amount_of_bugs_solved": 737,
+    "amount_of_changes_commited": 3079,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2361,
+    "amount_of_bugs_reported": 744,
+    "amount_of_bugs_solved": 711,
+    "amount_of_changes_commited": 2023,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2362,
+    "amount_of_bugs_reported": 1669,
+    "amount_of_bugs_solved": 1591,
+    "amount_of_changes_commited": 686,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2363,
+    "amount_of_bugs_reported": 239,
+    "amount_of_bugs_solved": 189,
+    "amount_of_changes_commited": 988,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2364,
+    "amount_of_bugs_reported": 3,
+    "amount_of_bugs_solved": 3,
+    "amount_of_changes_commited": 47,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2365,
+    "amount_of_bugs_reported": 564,
+    "amount_of_bugs_solved": 395,
+    "amount_of_changes_commited": 996,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2366,
+    "amount_of_bugs_reported": 802,
+    "amount_of_bugs_solved": 802,
+    "amount_of_changes_commited": 4697,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2367,
+    "amount_of_bugs_reported": 507,
+    "amount_of_bugs_solved": 496,
+    "amount_of_changes_commited": 894,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2368,
+    "amount_of_bugs_reported": 563,
+    "amount_of_bugs_solved": 493,
+    "amount_of_changes_commited": 634,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2369,
+    "amount_of_bugs_reported": 674,
+    "amount_of_bugs_solved": 636,
+    "amount_of_changes_commited": 4221,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2370,
+    "amount_of_bugs_reported": 997,
+    "amount_of_bugs_solved": 933,
+    "amount_of_changes_commited": 42,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2371,
+    "amount_of_bugs_reported": 75,
+    "amount_of_bugs_solved": 38,
+    "amount_of_changes_commited": 1132,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2372,
+    "amount_of_bugs_reported": 1500,
+    "amount_of_bugs_solved": 1243,
+    "amount_of_changes_commited": 6324,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2373,
+    "amount_of_bugs_reported": 15,
+    "amount_of_bugs_solved": 6,
+    "amount_of_changes_commited": 57,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2374,
+    "amount_of_bugs_reported": 155,
+    "amount_of_bugs_solved": 108,
+    "amount_of_changes_commited": 322,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2375,
+    "amount_of_bugs_reported": 24,
+    "amount_of_bugs_solved": 17,
+    "amount_of_changes_commited": 89,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2376,
+    "amount_of_bugs_reported": 1393,
+    "amount_of_bugs_solved": 1245,
+    "amount_of_changes_commited": 1911,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2377,
+    "amount_of_bugs_reported": 451,
+    "amount_of_bugs_solved": 444,
+    "amount_of_changes_commited": 941,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2378,
+    "amount_of_bugs_reported": 295,
+    "amount_of_bugs_solved": 268,
+    "amount_of_changes_commited": 1214,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2379,
+    "amount_of_bugs_reported": 91,
+    "amount_of_bugs_solved": 72,
+    "amount_of_changes_commited": 442,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2380,
+    "amount_of_bugs_reported": 358,
+    "amount_of_bugs_solved": 260,
+    "amount_of_changes_commited": 695,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2381,
+    "amount_of_bugs_reported": 640,
+    "amount_of_bugs_solved": 527,
+    "amount_of_changes_commited": 519,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2382,
+    "amount_of_bugs_reported": 709,
+    "amount_of_bugs_solved": 421,
+    "amount_of_changes_commited": 625,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2383,
+    "amount_of_bugs_reported": 2575,
+    "amount_of_bugs_solved": 2218,
+    "amount_of_changes_commited": 11301,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2384,
+    "amount_of_bugs_reported": 312,
+    "amount_of_bugs_solved": 286,
+    "amount_of_changes_commited": 949,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2385,
+    "amount_of_bugs_reported": 52,
+    "amount_of_bugs_solved": 39,
+    "amount_of_changes_commited": 263,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2386,
+    "amount_of_bugs_reported": 196,
+    "amount_of_bugs_solved": 153,
+    "amount_of_changes_commited": 776,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2387,
+    "amount_of_bugs_reported": 32,
+    "amount_of_bugs_solved": 17,
+    "amount_of_changes_commited": 42,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2388,
+    "amount_of_bugs_reported": 346,
+    "amount_of_bugs_solved": 293,
+    "amount_of_changes_commited": 1570,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2389,
+    "amount_of_bugs_reported": 41,
+    "amount_of_bugs_solved": 29,
+    "amount_of_changes_commited": 2023,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2390,
+    "amount_of_bugs_reported": 385,
+    "amount_of_bugs_solved": 198,
+    "amount_of_changes_commited": 496,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2391,
+    "amount_of_bugs_reported": 170,
+    "amount_of_bugs_solved": 134,
+    "amount_of_changes_commited": 532,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2392,
+    "amount_of_bugs_reported": 33,
+    "amount_of_bugs_solved": 20,
+    "amount_of_changes_commited": 344,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2393,
+    "amount_of_bugs_reported": 63,
+    "amount_of_bugs_solved": 63,
+    "amount_of_changes_commited": 5052,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2394,
+    "amount_of_bugs_reported": 374,
+    "amount_of_bugs_solved": 288,
+    "amount_of_changes_commited": 1213,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2395,
+    "amount_of_bugs_reported": 1106,
+    "amount_of_bugs_solved": 1026,
+    "amount_of_changes_commited": 4062,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2396,
+    "amount_of_bugs_reported": 1391,
+    "amount_of_bugs_solved": 1209,
+    "amount_of_changes_commited": 4965,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2397,
+    "amount_of_bugs_reported": 506,
+    "amount_of_bugs_solved": 389,
+    "amount_of_changes_commited": 1239,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2398,
+    "amount_of_bugs_reported": 74,
+    "amount_of_bugs_solved": 70,
+    "amount_of_changes_commited": 874,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2399,
+    "amount_of_bugs_reported": 518,
+    "amount_of_bugs_solved": 402,
+    "amount_of_changes_commited": 1257,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2400,
+    "amount_of_bugs_reported": 82,
+    "amount_of_bugs_solved": 65,
+    "amount_of_changes_commited": 340,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2401,
+    "amount_of_bugs_reported": 488,
+    "amount_of_bugs_solved": 467,
+    "amount_of_changes_commited": 2325,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2402,
+    "amount_of_bugs_reported": 166,
+    "amount_of_bugs_solved": 156,
+    "amount_of_changes_commited": 910,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2403,
+    "amount_of_bugs_reported": 194,
+    "amount_of_bugs_solved": 186,
+    "amount_of_changes_commited": 613,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2404,
+    "amount_of_bugs_reported": 2811,
+    "amount_of_bugs_solved": 2486,
+    "amount_of_changes_commited": 6521,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2405,
+    "amount_of_bugs_reported": 645,
+    "amount_of_bugs_solved": 613,
+    "amount_of_changes_commited": 1970,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2406,
+    "amount_of_bugs_reported": 24,
+    "amount_of_bugs_solved": 22,
+    "amount_of_changes_commited": 282,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2407,
+    "amount_of_bugs_reported": 2,
+    "amount_of_bugs_solved": 2,
+    "amount_of_changes_commited": 311,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2408,
+    "amount_of_bugs_reported": 493,
+    "amount_of_bugs_solved": 490,
+    "amount_of_changes_commited": 1096,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2409,
+    "amount_of_bugs_reported": 248,
+    "amount_of_bugs_solved": 111,
+    "amount_of_changes_commited": 2352,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2410,
+    "amount_of_bugs_reported": 6,
+    "amount_of_bugs_solved": 3,
+    "amount_of_changes_commited": 662,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2411,
+    "amount_of_bugs_reported": 123,
+    "amount_of_bugs_solved": 108,
+    "amount_of_changes_commited": 315,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2412,
+    "amount_of_bugs_reported": 672,
+    "amount_of_bugs_solved": 652,
+    "amount_of_changes_commited": 3710,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2413,
+    "amount_of_bugs_reported": 318,
+    "amount_of_bugs_solved": 286,
+    "amount_of_changes_commited": 3711,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2414,
+    "amount_of_bugs_reported": 339,
+    "amount_of_bugs_solved": 214,
+    "amount_of_changes_commited": 776,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2415,
+    "amount_of_bugs_reported": 221,
+    "amount_of_bugs_solved": 133,
+    "amount_of_changes_commited": 535,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2416,
+    "amount_of_bugs_reported": 98,
+    "amount_of_bugs_solved": 61,
+    "amount_of_changes_commited": 906,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2417,
+    "amount_of_bugs_reported": 322,
+    "amount_of_bugs_solved": 309,
+    "amount_of_changes_commited": 2650,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2418,
+    "amount_of_bugs_reported": 49,
+    "amount_of_bugs_solved": 23,
+    "amount_of_changes_commited": 161,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2419,
+    "amount_of_bugs_reported": 601,
+    "amount_of_bugs_solved": 465,
+    "amount_of_changes_commited": 10209,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2420,
+    "amount_of_bugs_reported": 531,
+    "amount_of_bugs_solved": 433,
+    "amount_of_changes_commited": 871,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2421,
+    "amount_of_bugs_reported": 231,
+    "amount_of_bugs_solved": 228,
+    "amount_of_changes_commited": 4413,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2422,
+    "amount_of_bugs_reported": 25,
+    "amount_of_bugs_solved": 25,
+    "amount_of_changes_commited": 367,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2423,
+    "amount_of_bugs_reported": 106,
+    "amount_of_bugs_solved": 90,
+    "amount_of_changes_commited": 654,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2424,
+    "amount_of_bugs_reported": 19,
+    "amount_of_bugs_solved": 6,
+    "amount_of_changes_commited": 110,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2425,
+    "amount_of_bugs_reported": 678,
+    "amount_of_bugs_solved": 487,
+    "amount_of_changes_commited": 2582,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2426,
+    "amount_of_bugs_reported": 13,
+    "amount_of_bugs_solved": 13,
+    "amount_of_changes_commited": 363,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2427,
+    "amount_of_bugs_reported": 246,
+    "amount_of_bugs_solved": 143,
+    "amount_of_changes_commited": 684,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2428,
+    "amount_of_bugs_reported": 494,
+    "amount_of_bugs_solved": 417,
+    "amount_of_changes_commited": 771,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2429,
+    "amount_of_bugs_reported": 522,
+    "amount_of_bugs_solved": 490,
+    "amount_of_changes_commited": 6724,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2430,
+    "amount_of_bugs_reported": 56,
+    "amount_of_bugs_solved": 54,
+    "amount_of_changes_commited": 1308,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2431,
+    "amount_of_bugs_reported": 282,
+    "amount_of_bugs_solved": 282,
+    "amount_of_changes_commited": 2124,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2432,
+    "amount_of_bugs_reported": 12,
+    "amount_of_bugs_solved": 3,
+    "amount_of_changes_commited": 169,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2433,
+    "amount_of_bugs_reported": 335,
+    "amount_of_bugs_solved": 294,
+    "amount_of_changes_commited": 800,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2434,
+    "amount_of_bugs_reported": 73,
+    "amount_of_bugs_solved": 35,
+    "amount_of_changes_commited": 191,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2435,
+    "amount_of_bugs_reported": 280,
+    "amount_of_bugs_solved": 266,
+    "amount_of_changes_commited": 67,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2436,
+    "amount_of_bugs_reported": 488,
+    "amount_of_bugs_solved": 291,
+    "amount_of_changes_commited": 727,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2437,
+    "amount_of_bugs_reported": 779,
+    "amount_of_bugs_solved": 693,
+    "amount_of_changes_commited": 1978,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2438,
+    "amount_of_bugs_reported": 77,
+    "amount_of_bugs_solved": 52,
+    "amount_of_changes_commited": 124,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2439,
+    "amount_of_bugs_reported": 425,
+    "amount_of_bugs_solved": 364,
+    "amount_of_changes_commited": 3575,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2440,
+    "amount_of_bugs_reported": 537,
+    "amount_of_bugs_solved": 440,
+    "amount_of_changes_commited": 1491,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2441,
+    "amount_of_bugs_reported": 81,
+    "amount_of_bugs_solved": 50,
+    "amount_of_changes_commited": 386,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2442,
+    "amount_of_bugs_reported": 383,
+    "amount_of_bugs_solved": 330,
+    "amount_of_changes_commited": 1456,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2443,
+    "amount_of_bugs_reported": 20,
+    "amount_of_bugs_solved": 4,
+    "amount_of_changes_commited": 44,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2444,
+    "amount_of_bugs_reported": 4,
+    "amount_of_bugs_solved": 3,
+    "amount_of_changes_commited": 69,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2445,
+    "amount_of_bugs_reported": 162,
+    "amount_of_bugs_solved": 117,
+    "amount_of_changes_commited": 1150,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2446,
+    "amount_of_bugs_reported": 1778,
+    "amount_of_bugs_solved": 1546,
+    "amount_of_changes_commited": 5319,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2447,
+    "amount_of_bugs_reported": 145,
+    "amount_of_bugs_solved": 137,
+    "amount_of_changes_commited": 733,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2448,
+    "amount_of_bugs_reported": 307,
+    "amount_of_bugs_solved": 279,
+    "amount_of_changes_commited": 906,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2449,
+    "amount_of_bugs_reported": 252,
+    "amount_of_bugs_solved": 202,
+    "amount_of_changes_commited": 1066,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2450,
+    "amount_of_bugs_reported": 100,
+    "amount_of_bugs_solved": 94,
+    "amount_of_changes_commited": 117,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2451,
+    "amount_of_bugs_reported": 126,
+    "amount_of_bugs_solved": 126,
+    "amount_of_changes_commited": 356,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2452,
+    "amount_of_bugs_reported": 612,
+    "amount_of_bugs_solved": 612,
+    "amount_of_changes_commited": 1893,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2453,
+    "amount_of_bugs_reported": 3693,
+    "amount_of_bugs_solved": 3591,
+    "amount_of_changes_commited": 1847,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2454,
+    "amount_of_bugs_reported": 2401,
+    "amount_of_bugs_solved": 1832,
+    "amount_of_changes_commited": 5310,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2455,
+    "amount_of_bugs_reported": 3180,
+    "amount_of_bugs_solved": 2901,
+    "amount_of_changes_commited": 10486,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2456,
+    "amount_of_bugs_reported": 1569,
+    "amount_of_bugs_solved": 1412,
+    "amount_of_changes_commited": 1144,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2457,
+    "amount_of_bugs_reported": 1021,
+    "amount_of_bugs_solved": 964,
+    "amount_of_changes_commited": 1230,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2458,
+    "amount_of_bugs_reported": 227,
+    "amount_of_bugs_solved": 179,
+    "amount_of_changes_commited": 308,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2459,
+    "amount_of_bugs_reported": 392,
+    "amount_of_bugs_solved": 347,
+    "amount_of_changes_commited": 1662,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2460,
+    "amount_of_bugs_reported": 1811,
+    "amount_of_bugs_solved": 1753,
+    "amount_of_changes_commited": 3700,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2461,
+    "amount_of_bugs_reported": 1788,
+    "amount_of_bugs_solved": 1622,
+    "amount_of_changes_commited": 3508,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2462,
+    "amount_of_bugs_reported": 1373,
+    "amount_of_bugs_solved": 1373,
+    "amount_of_changes_commited": 1350,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2463,
+    "amount_of_bugs_reported": 42,
+    "amount_of_bugs_solved": 30,
+    "amount_of_changes_commited": 346,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2464,
+    "amount_of_bugs_reported": 3249,
+    "amount_of_bugs_solved": 2670,
+    "amount_of_changes_commited": 6415,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2465,
+    "amount_of_bugs_reported": 42,
+    "amount_of_bugs_solved": 31,
+    "amount_of_changes_commited": 146,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2466,
+    "amount_of_bugs_reported": 253,
+    "amount_of_bugs_solved": 242,
+    "amount_of_changes_commited": 596,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2467,
+    "amount_of_bugs_reported": 2351,
+    "amount_of_bugs_solved": 2174,
+    "amount_of_changes_commited": 2554,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2468,
+    "amount_of_bugs_reported": 8327,
+    "amount_of_bugs_solved": 7502,
+    "amount_of_changes_commited": 31484,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2469,
+    "amount_of_bugs_reported": 13486,
+    "amount_of_bugs_solved": 11256,
+    "amount_of_changes_commited": 29663,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2470,
+    "amount_of_bugs_reported": 1162,
+    "amount_of_bugs_solved": 1094,
+    "amount_of_changes_commited": 5155,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2471,
+    "amount_of_bugs_reported": 7435,
+    "amount_of_bugs_solved": 6845,
+    "amount_of_changes_commited": 4554,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2472,
+    "amount_of_bugs_reported": 303,
+    "amount_of_bugs_solved": 143,
+    "amount_of_changes_commited": 1029,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2473,
+    "amount_of_bugs_reported": 8735,
+    "amount_of_bugs_solved": 7788,
+    "amount_of_changes_commited": 27141,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2474,
+    "amount_of_bugs_reported": 66,
+    "amount_of_bugs_solved": 40,
+    "amount_of_changes_commited": 238,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2475,
+    "amount_of_bugs_reported": 1940,
+    "amount_of_bugs_solved": 1749,
+    "amount_of_changes_commited": 4647,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2476,
+    "amount_of_bugs_reported": 8795,
+    "amount_of_bugs_solved": 6626,
+    "amount_of_changes_commited": 16431,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2477,
+    "amount_of_bugs_reported": 843,
+    "amount_of_bugs_solved": 682,
+    "amount_of_changes_commited": 2053,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2478,
+    "amount_of_bugs_reported": 1476,
+    "amount_of_bugs_solved": 1393,
+    "amount_of_changes_commited": 3757,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2479,
+    "amount_of_bugs_reported": 732,
+    "amount_of_bugs_solved": 400,
+    "amount_of_changes_commited": 1566,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2480,
+    "amount_of_bugs_reported": 1564,
+    "amount_of_bugs_solved": 1089,
+    "amount_of_changes_commited": 2515,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2481,
+    "amount_of_bugs_reported": 659,
+    "amount_of_bugs_solved": 540,
+    "amount_of_changes_commited": 991,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2482,
+    "amount_of_bugs_reported": 475,
+    "amount_of_bugs_solved": 457,
+    "amount_of_changes_commited": 7449,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2483,
+    "amount_of_bugs_reported": 10,
+    "amount_of_bugs_solved": 9,
+    "amount_of_changes_commited": 1337,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2484,
+    "amount_of_bugs_reported": 78,
+    "amount_of_bugs_solved": 62,
+    "amount_of_changes_commited": 272,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2485,
+    "amount_of_bugs_reported": 64,
+    "amount_of_bugs_solved": 38,
+    "amount_of_changes_commited": 943,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2486,
+    "amount_of_bugs_reported": 502,
+    "amount_of_bugs_solved": 379,
+    "amount_of_changes_commited": 2682,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2487,
+    "amount_of_bugs_reported": 50,
+    "amount_of_bugs_solved": 19,
+    "amount_of_changes_commited": 28,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2488,
+    "amount_of_bugs_reported": 147,
+    "amount_of_bugs_solved": 116,
+    "amount_of_changes_commited": 1355,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2489,
+    "amount_of_bugs_reported": 1275,
+    "amount_of_bugs_solved": 988,
+    "amount_of_changes_commited": 798,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2490,
+    "amount_of_bugs_reported": 528,
+    "amount_of_bugs_solved": 528,
+    "amount_of_changes_commited": 1898,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2491,
+    "amount_of_bugs_reported": 799,
+    "amount_of_bugs_solved": 631,
+    "amount_of_changes_commited": 2390,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2492,
+    "amount_of_bugs_reported": 19,
+    "amount_of_bugs_solved": 17,
+    "amount_of_changes_commited": 137,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2493,
+    "amount_of_bugs_reported": 1945,
+    "amount_of_bugs_solved": 1565,
+    "amount_of_changes_commited": 3819,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2494,
+    "amount_of_bugs_reported": 479,
+    "amount_of_bugs_solved": 385,
+    "amount_of_changes_commited": 793,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2495,
+    "amount_of_bugs_reported": 4831,
+    "amount_of_bugs_solved": 4089,
+    "amount_of_changes_commited": 9406,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2496,
+    "amount_of_bugs_reported": 223,
+    "amount_of_bugs_solved": 120,
+    "amount_of_changes_commited": 672,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2497,
+    "amount_of_bugs_reported": 172,
+    "amount_of_bugs_solved": 117,
+    "amount_of_changes_commited": 718,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2498,
+    "amount_of_bugs_reported": 28,
+    "amount_of_bugs_solved": 17,
+    "amount_of_changes_commited": 493,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2499,
+    "amount_of_bugs_reported": 523,
+    "amount_of_bugs_solved": 474,
+    "amount_of_changes_commited": 2339,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2500,
+    "amount_of_bugs_reported": 508,
+    "amount_of_bugs_solved": 305,
+    "amount_of_changes_commited": 4148,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2501,
+    "amount_of_bugs_reported": 1218,
+    "amount_of_bugs_solved": 1196,
+    "amount_of_changes_commited": 4410,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2502,
+    "amount_of_bugs_reported": 565,
+    "amount_of_bugs_solved": 501,
+    "amount_of_changes_commited": 1422,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2503,
+    "amount_of_bugs_reported": 21,
+    "amount_of_bugs_solved": 14,
+    "amount_of_changes_commited": 436,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2504,
+    "amount_of_bugs_reported": 218,
+    "amount_of_bugs_solved": 205,
+    "amount_of_changes_commited": 467,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2505,
+    "amount_of_bugs_reported": 2093,
+    "amount_of_bugs_solved": 1854,
+    "amount_of_changes_commited": 5080,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2506,
+    "amount_of_bugs_reported": 2692,
+    "amount_of_bugs_solved": 2301,
+    "amount_of_changes_commited": 813,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2507,
+    "amount_of_bugs_reported": 14,
+    "amount_of_bugs_solved": 8,
+    "amount_of_changes_commited": 296,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2508,
+    "amount_of_bugs_reported": 611,
+    "amount_of_bugs_solved": 569,
+    "amount_of_changes_commited": 2938,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2509,
+    "amount_of_bugs_reported": 316,
+    "amount_of_bugs_solved": 309,
+    "amount_of_changes_commited": 946,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2510,
+    "amount_of_bugs_reported": 1393,
+    "amount_of_bugs_solved": 1248,
+    "amount_of_changes_commited": 11956,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2511,
+    "amount_of_bugs_reported": 6,
+    "amount_of_bugs_solved": 4,
+    "amount_of_changes_commited": 353,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2512,
+    "amount_of_bugs_reported": 1518,
+    "amount_of_bugs_solved": 1432,
+    "amount_of_changes_commited": 6327,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2513,
+    "amount_of_bugs_reported": 2183,
+    "amount_of_bugs_solved": 2045,
+    "amount_of_changes_commited": 5888,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2514,
+    "amount_of_bugs_reported": 10,
+    "amount_of_bugs_solved": 5,
+    "amount_of_changes_commited": 172,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2515,
+    "amount_of_bugs_reported": 248,
+    "amount_of_bugs_solved": 158,
+    "amount_of_changes_commited": 3762,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2516,
+    "amount_of_bugs_reported": 260,
+    "amount_of_bugs_solved": 238,
+    "amount_of_changes_commited": 919,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2517,
+    "amount_of_bugs_reported": 437,
+    "amount_of_bugs_solved": 391,
+    "amount_of_changes_commited": 2845,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2518,
+    "amount_of_bugs_reported": 421,
+    "amount_of_bugs_solved": 295,
+    "amount_of_changes_commited": 811,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2519,
+    "amount_of_bugs_reported": 440,
+    "amount_of_bugs_solved": 422,
+    "amount_of_changes_commited": 2928,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2520,
+    "amount_of_bugs_reported": 646,
+    "amount_of_bugs_solved": 566,
+    "amount_of_changes_commited": 1621,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2521,
+    "amount_of_bugs_reported": 533,
+    "amount_of_bugs_solved": 392,
+    "amount_of_changes_commited": 2634,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2522,
+    "amount_of_bugs_reported": 2219,
+    "amount_of_bugs_solved": 1969,
+    "amount_of_changes_commited": 10201,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2523,
+    "amount_of_bugs_reported": 4538,
+    "amount_of_bugs_solved": 4538,
+    "amount_of_changes_commited": 3277,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2524,
+    "amount_of_bugs_reported": 790,
+    "amount_of_bugs_solved": 783,
+    "amount_of_changes_commited": 19830,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2525,
+    "amount_of_bugs_reported": 768,
+    "amount_of_bugs_solved": 754,
+    "amount_of_changes_commited": 3443,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2526,
+    "amount_of_bugs_reported": 18,
+    "amount_of_bugs_solved": 5,
+    "amount_of_changes_commited": 232,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2527,
+    "amount_of_bugs_reported": 11,
+    "amount_of_bugs_solved": 7,
+    "amount_of_changes_commited": 329,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2528,
+    "amount_of_bugs_reported": 408,
+    "amount_of_bugs_solved": 406,
+    "amount_of_changes_commited": 590,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2529,
+    "amount_of_bugs_reported": 1702,
+    "amount_of_bugs_solved": 1701,
+    "amount_of_changes_commited": 6304,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2530,
+    "amount_of_bugs_reported": 1617,
+    "amount_of_bugs_solved": 1051,
+    "amount_of_changes_commited": 12843,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2531,
+    "amount_of_bugs_reported": 1141,
+    "amount_of_bugs_solved": 1126,
+    "amount_of_changes_commited": 1996,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2532,
+    "amount_of_bugs_reported": 788,
+    "amount_of_bugs_solved": 602,
+    "amount_of_changes_commited": 5609,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2533,
+    "amount_of_bugs_reported": 33,
+    "amount_of_bugs_solved": 32,
+    "amount_of_changes_commited": 308,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2534,
+    "amount_of_bugs_reported": 2954,
+    "amount_of_bugs_solved": 2556,
+    "amount_of_changes_commited": 11421,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2535,
+    "amount_of_bugs_reported": 11744,
+    "amount_of_bugs_solved": 10850,
+    "amount_of_changes_commited": 14920,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2536,
+    "amount_of_bugs_reported": 14224,
+    "amount_of_bugs_solved": 11797,
+    "amount_of_changes_commited": 31940,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2537,
+    "amount_of_bugs_reported": 59,
+    "amount_of_bugs_solved": 43,
+    "amount_of_changes_commited": 339,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2538,
+    "amount_of_bugs_reported": 1416,
+    "amount_of_bugs_solved": 1377,
+    "amount_of_changes_commited": 3223,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2539,
+    "amount_of_bugs_reported": 15,
+    "amount_of_bugs_solved": 5,
+    "amount_of_changes_commited": 176,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2540,
+    "amount_of_bugs_reported": 925,
+    "amount_of_bugs_solved": 788,
+    "amount_of_changes_commited": 1310,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2541,
+    "amount_of_bugs_reported": 322,
+    "amount_of_bugs_solved": 88,
+    "amount_of_changes_commited": 132,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2542,
+    "amount_of_bugs_reported": 249,
+    "amount_of_bugs_solved": 204,
+    "amount_of_changes_commited": 577,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2543,
+    "amount_of_bugs_reported": 509,
+    "amount_of_bugs_solved": 342,
+    "amount_of_changes_commited": 521,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2544,
+    "amount_of_bugs_reported": 1294,
+    "amount_of_bugs_solved": 1215,
+    "amount_of_changes_commited": 37662,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2545,
+    "amount_of_bugs_reported": 48,
+    "amount_of_bugs_solved": 34,
+    "amount_of_changes_commited": 220,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2546,
+    "amount_of_bugs_reported": 38,
+    "amount_of_bugs_solved": 32,
+    "amount_of_changes_commited": 348,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2547,
+    "amount_of_bugs_reported": 787,
+    "amount_of_bugs_solved": 657,
+    "amount_of_changes_commited": 1557,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2548,
+    "amount_of_bugs_reported": 695,
+    "amount_of_bugs_solved": 636,
+    "amount_of_changes_commited": 2307,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2549,
+    "amount_of_bugs_reported": 403,
+    "amount_of_bugs_solved": 384,
+    "amount_of_changes_commited": 966,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2550,
+    "amount_of_bugs_reported": 566,
+    "amount_of_bugs_solved": 560,
+    "amount_of_changes_commited": 16012,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2551,
+    "amount_of_bugs_reported": 329,
+    "amount_of_bugs_solved": 325,
+    "amount_of_changes_commited": 595,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2552,
+    "amount_of_bugs_reported": 92,
+    "amount_of_bugs_solved": 79,
+    "amount_of_changes_commited": 724,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2553,
+    "amount_of_bugs_reported": 695,
+    "amount_of_bugs_solved": 497,
+    "amount_of_changes_commited": 1115,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2554,
+    "amount_of_bugs_reported": 135,
+    "amount_of_bugs_solved": 135,
+    "amount_of_changes_commited": 194,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2555,
+    "amount_of_bugs_reported": 6838,
+    "amount_of_bugs_solved": 5357,
+    "amount_of_changes_commited": 23749,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2556,
+    "amount_of_bugs_reported": 1014,
+    "amount_of_bugs_solved": 939,
+    "amount_of_changes_commited": 2705,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2557,
+    "amount_of_bugs_reported": 31,
+    "amount_of_bugs_solved": 24,
+    "amount_of_changes_commited": 616,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2558,
+    "amount_of_bugs_reported": 736,
+    "amount_of_bugs_solved": 648,
+    "amount_of_changes_commited": 3937,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2559,
+    "amount_of_bugs_reported": 14,
+    "amount_of_bugs_solved": 11,
+    "amount_of_changes_commited": 514,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2560,
+    "amount_of_bugs_reported": 1141,
+    "amount_of_bugs_solved": 816,
+    "amount_of_changes_commited": 5057,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2561,
+    "amount_of_bugs_reported": 500,
+    "amount_of_bugs_solved": 360,
+    "amount_of_changes_commited": 807,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2562,
+    "amount_of_bugs_reported": 316,
+    "amount_of_bugs_solved": 215,
+    "amount_of_changes_commited": 279,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2563,
+    "amount_of_bugs_reported": 905,
+    "amount_of_bugs_solved": 765,
+    "amount_of_changes_commited": 1400,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2564,
+    "amount_of_bugs_reported": 1150,
+    "amount_of_bugs_solved": 1047,
+    "amount_of_changes_commited": 4266,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2565,
+    "amount_of_bugs_reported": 379,
+    "amount_of_bugs_solved": 258,
+    "amount_of_changes_commited": 15201,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2566,
+    "amount_of_bugs_reported": 921,
+    "amount_of_bugs_solved": 921,
+    "amount_of_changes_commited": 1336,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2567,
+    "amount_of_bugs_reported": 45,
+    "amount_of_bugs_solved": 30,
+    "amount_of_changes_commited": 332,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2568,
+    "amount_of_bugs_reported": 218,
+    "amount_of_bugs_solved": 197,
+    "amount_of_changes_commited": 1130,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2569,
+    "amount_of_bugs_reported": 337,
+    "amount_of_bugs_solved": 283,
+    "amount_of_changes_commited": 959,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2570,
+    "amount_of_bugs_reported": 83,
+    "amount_of_bugs_solved": 79,
+    "amount_of_changes_commited": 588,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2571,
+    "amount_of_bugs_reported": 82,
+    "amount_of_bugs_solved": 62,
+    "amount_of_changes_commited": 643,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2572,
+    "amount_of_bugs_reported": 5242,
+    "amount_of_bugs_solved": 3401,
+    "amount_of_changes_commited": 44928,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2573,
+    "amount_of_bugs_reported": 17,
+    "amount_of_bugs_solved": 9,
+    "amount_of_changes_commited": 146,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2574,
+    "amount_of_bugs_reported": 2034,
+    "amount_of_bugs_solved": 1955,
+    "amount_of_changes_commited": 2755,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2575,
+    "amount_of_bugs_reported": 450,
+    "amount_of_bugs_solved": 423,
+    "amount_of_changes_commited": 3203,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2576,
+    "amount_of_bugs_reported": 1347,
+    "amount_of_bugs_solved": 1282,
+    "amount_of_changes_commited": 5513,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2577,
+    "amount_of_bugs_reported": 825,
+    "amount_of_bugs_solved": 648,
+    "amount_of_changes_commited": 6221,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2578,
+    "amount_of_bugs_reported": 384,
+    "amount_of_bugs_solved": 384,
+    "amount_of_changes_commited": 589,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2579,
+    "amount_of_bugs_reported": 34,
+    "amount_of_bugs_solved": 24,
+    "amount_of_changes_commited": 134,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2580,
+    "amount_of_bugs_reported": 165,
+    "amount_of_bugs_solved": 140,
+    "amount_of_changes_commited": 435,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2581,
+    "amount_of_bugs_reported": 518,
+    "amount_of_bugs_solved": 361,
+    "amount_of_changes_commited": 4051,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2582,
+    "amount_of_bugs_reported": 962,
+    "amount_of_bugs_solved": 855,
+    "amount_of_changes_commited": 4963,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2583,
+    "amount_of_bugs_reported": 1013,
+    "amount_of_bugs_solved": 858,
+    "amount_of_changes_commited": 3279,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2584,
+    "amount_of_bugs_reported": 47,
+    "amount_of_bugs_solved": 36,
+    "amount_of_changes_commited": 1018,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2585,
+    "amount_of_bugs_reported": 46,
+    "amount_of_bugs_solved": 32,
+    "amount_of_changes_commited": 7,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2586,
+    "amount_of_bugs_reported": 620,
+    "amount_of_bugs_solved": 379,
+    "amount_of_changes_commited": 3260,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2587,
+    "amount_of_bugs_reported": 538,
+    "amount_of_bugs_solved": 350,
+    "amount_of_changes_commited": 968,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2588,
+    "amount_of_bugs_reported": 389,
+    "amount_of_bugs_solved": 389,
+    "amount_of_changes_commited": 2839,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2589,
+    "amount_of_bugs_reported": 6,
+    "amount_of_bugs_solved": 6,
+    "amount_of_changes_commited": 208,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2590,
+    "amount_of_bugs_reported": 629,
+    "amount_of_bugs_solved": 469,
+    "amount_of_changes_commited": 1335,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2591,
+    "amount_of_bugs_reported": 1318,
+    "amount_of_bugs_solved": 1181,
+    "amount_of_changes_commited": 16046,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2592,
+    "amount_of_bugs_reported": 4194,
+    "amount_of_bugs_solved": 3715,
+    "amount_of_changes_commited": 9901,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2593,
+    "amount_of_bugs_reported": 23,
+    "amount_of_bugs_solved": 12,
+    "amount_of_changes_commited": 5938,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2594,
+    "amount_of_bugs_reported": 1719,
+    "amount_of_bugs_solved": 1659,
+    "amount_of_changes_commited": 868,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2595,
+    "amount_of_bugs_reported": 4337,
+    "amount_of_bugs_solved": 3594,
+    "amount_of_changes_commited": 9214,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2596,
+    "amount_of_bugs_reported": 749,
+    "amount_of_bugs_solved": 630,
+    "amount_of_changes_commited": 2976,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2597,
+    "amount_of_bugs_reported": 910,
+    "amount_of_bugs_solved": 907,
+    "amount_of_changes_commited": 1796,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2598,
+    "amount_of_bugs_reported": 397,
+    "amount_of_bugs_solved": 324,
+    "amount_of_changes_commited": 101575,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2599,
+    "amount_of_bugs_reported": 1766,
+    "amount_of_bugs_solved": 1305,
+    "amount_of_changes_commited": 13366,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2600,
+    "amount_of_bugs_reported": 1147,
+    "amount_of_bugs_solved": 1081,
+    "amount_of_changes_commited": 1725,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2601,
+    "amount_of_bugs_reported": 75,
+    "amount_of_bugs_solved": 66,
+    "amount_of_changes_commited": 72,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2602,
+    "amount_of_bugs_reported": 5,
+    "amount_of_bugs_solved": 4,
+    "amount_of_changes_commited": 230,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2603,
+    "amount_of_bugs_reported": 63,
+    "amount_of_bugs_solved": 42,
+    "amount_of_changes_commited": 120,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2604,
+    "amount_of_bugs_reported": 12,
+    "amount_of_bugs_solved": 10,
+    "amount_of_changes_commited": 149,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2605,
+    "amount_of_bugs_reported": 85,
+    "amount_of_bugs_solved": 40,
+    "amount_of_changes_commited": 365,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2606,
+    "amount_of_bugs_reported": 52,
+    "amount_of_bugs_solved": 48,
+    "amount_of_changes_commited": 148,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2607,
+    "amount_of_bugs_reported": 711,
+    "amount_of_bugs_solved": 472,
+    "amount_of_changes_commited": 2733,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2608,
+    "amount_of_bugs_reported": 4,
+    "amount_of_bugs_solved": 4,
+    "amount_of_changes_commited": 125,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2609,
+    "amount_of_bugs_reported": 1143,
+    "amount_of_bugs_solved": 891,
+    "amount_of_changes_commited": 1333,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2610,
+    "amount_of_bugs_reported": 6,
+    "amount_of_bugs_solved": 6,
+    "amount_of_changes_commited": 74,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2611,
+    "amount_of_bugs_reported": 6,
+    "amount_of_bugs_solved": 5,
+    "amount_of_changes_commited": 91,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2612,
+    "amount_of_bugs_reported": 413,
+    "amount_of_bugs_solved": 392,
+    "amount_of_changes_commited": 1715,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2613,
+    "amount_of_bugs_reported": 868,
+    "amount_of_bugs_solved": 595,
+    "amount_of_changes_commited": 8419,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2614,
+    "amount_of_bugs_reported": 155,
+    "amount_of_bugs_solved": 136,
+    "amount_of_changes_commited": 294,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2615,
+    "amount_of_bugs_reported": 579,
+    "amount_of_bugs_solved": 399,
+    "amount_of_changes_commited": 955,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2616,
+    "amount_of_bugs_reported": 213,
+    "amount_of_bugs_solved": 171,
+    "amount_of_changes_commited": 4910,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2617,
+    "amount_of_bugs_reported": 215,
+    "amount_of_bugs_solved": 206,
+    "amount_of_changes_commited": 18,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2618,
+    "amount_of_bugs_reported": 1211,
+    "amount_of_bugs_solved": 1141,
+    "amount_of_changes_commited": 281,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2619,
+    "amount_of_bugs_reported": 9,
+    "amount_of_bugs_solved": 5,
+    "amount_of_changes_commited": 59,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2620,
+    "amount_of_bugs_reported": 9,
+    "amount_of_bugs_solved": 9,
+    "amount_of_changes_commited": 274,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2621,
+    "amount_of_bugs_reported": 6260,
+    "amount_of_bugs_solved": 3954,
+    "amount_of_changes_commited": 24957,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2622,
+    "amount_of_bugs_reported": 8,
+    "amount_of_bugs_solved": 1,
+    "amount_of_changes_commited": 22,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2623,
+    "amount_of_bugs_reported": 819,
+    "amount_of_bugs_solved": 335,
+    "amount_of_changes_commited": 3584,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2624,
+    "amount_of_bugs_reported": 947,
+    "amount_of_bugs_solved": 856,
+    "amount_of_changes_commited": 2762,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2625,
+    "amount_of_bugs_reported": 86,
+    "amount_of_bugs_solved": 8,
+    "amount_of_changes_commited": 161,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2626,
+    "amount_of_bugs_reported": 26,
+    "amount_of_bugs_solved": 1,
+    "amount_of_changes_commited": 9,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2627,
+    "amount_of_bugs_reported": 9,
+    "amount_of_bugs_solved": 7,
+    "amount_of_changes_commited": 302,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2628,
+    "amount_of_bugs_reported": 548,
+    "amount_of_bugs_solved": 444,
+    "amount_of_changes_commited": 6521,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2629,
+    "amount_of_bugs_reported": 157,
+    "amount_of_bugs_solved": 133,
+    "amount_of_changes_commited": 151,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2630,
+    "amount_of_bugs_reported": 863,
+    "amount_of_bugs_solved": 855,
+    "amount_of_changes_commited": 3010,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2631,
+    "amount_of_bugs_reported": 16,
+    "amount_of_bugs_solved": 12,
+    "amount_of_changes_commited": 103,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2632,
+    "amount_of_bugs_reported": 10,
+    "amount_of_bugs_solved": 8,
+    "amount_of_changes_commited": 81,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2633,
+    "amount_of_bugs_reported": 4611,
+    "amount_of_bugs_solved": 3419,
+    "amount_of_changes_commited": 12568,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2634,
+    "amount_of_bugs_reported": 2278,
+    "amount_of_bugs_solved": 1891,
+    "amount_of_changes_commited": 4622,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2635,
+    "amount_of_bugs_reported": 75,
+    "amount_of_bugs_solved": 44,
+    "amount_of_changes_commited": 345,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2636,
+    "amount_of_bugs_reported": 412,
+    "amount_of_bugs_solved": 376,
+    "amount_of_changes_commited": 12152,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2637,
+    "amount_of_bugs_reported": 18636,
+    "amount_of_bugs_solved": 16666,
+    "amount_of_changes_commited": 16934,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2638,
+    "amount_of_bugs_reported": 548,
+    "amount_of_bugs_solved": 468,
+    "amount_of_changes_commited": 1660,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2639,
+    "amount_of_bugs_reported": 419,
+    "amount_of_bugs_solved": 237,
+    "amount_of_changes_commited": 1652,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2640,
+    "amount_of_bugs_reported": 25,
+    "amount_of_bugs_solved": 13,
+    "amount_of_changes_commited": 117,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2641,
+    "amount_of_bugs_reported": 12,
+    "amount_of_bugs_solved": 10,
+    "amount_of_changes_commited": 167,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2642,
+    "amount_of_bugs_reported": 219,
+    "amount_of_bugs_solved": 61,
+    "amount_of_changes_commited": 290,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2643,
+    "amount_of_bugs_reported": 39,
+    "amount_of_bugs_solved": 27,
+    "amount_of_changes_commited": 204,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2644,
+    "amount_of_bugs_reported": 343,
+    "amount_of_bugs_solved": 290,
+    "amount_of_changes_commited": 1488,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2645,
+    "amount_of_bugs_reported": 3578,
+    "amount_of_bugs_solved": 2842,
+    "amount_of_changes_commited": 5422,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2646,
+    "amount_of_bugs_reported": 703,
+    "amount_of_bugs_solved": 671,
+    "amount_of_changes_commited": 6618,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2647,
+    "amount_of_bugs_reported": 1722,
+    "amount_of_bugs_solved": 1415,
+    "amount_of_changes_commited": 7790,
+    "amount_of_discussions": null
+  },
+  {
+    "community_id": 1,
+    "tool_id": 2648,
+    "amount_of_bugs_reported": 9,
+    "amount_of_bugs_solved": 9,
+    "amount_of_changes_commited": 383,
+    "amount_of_discussions": null
+  }
+]

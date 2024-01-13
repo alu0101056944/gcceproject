@@ -1,33 +1,35 @@
 -- Dimension tables
 
 CREATE TABLE employee(
-  employee_id integer PRIMARY KEY,
+  employee_id integer,
   name text,
   title text,
   department text
 );
 
 CREATE TABLE tool(
-  tool_id integer PRIMARY KEY,
+  tool_id integer,
   name text,
   author_company text,
   type text,
-  specialization text
+  specialization text,
+  version integer,
+  date_from date
 );
 
 CREATE TABLE date(
-  date_id integer PRIMARY KEY,
+  date_id integer,
   date date
 );
 
 CREATE TABLE community(
-  community_id integer PRIMARY KEY,
+  community_id integer,
   name text,
   type text
 );
 
 CREATE TABLE company(
-  company_id integer PRIMARY KEY,
+  company_id integer,
   name text,
   employee_amount integer,
   amount_of_searches integer,
@@ -35,7 +37,7 @@ CREATE TABLE company(
 );
 
 CREATE TABLE project(
-  project_id integer PRIMARY KEY,
+  project_id integer,
   project_name text,
   downloads integer,
   contributors integer,
@@ -43,40 +45,40 @@ CREATE TABLE project(
 );
 
 CREATE TABLE market(
-  market_id integer PRIMARY KEY
+  market_id integer
 );
 
  -- Fact tables
 
 CREATE TABLE employee_tool(
-  employee_id integer REFERENCES employee (employee_id),
-  tool_id integer REFERENCES tool (tool_id),
+  employee_id integer,
+  tool_id integer,
   years_of_experience integer
 );
 
 CREATE TABLE project_tool(
-  project_id integer REFERENCES project (project_id),
-  tool_id integer REFERENCES tool (tool_id)
+  project_id integer,
+  tool_id integer
 );
 
 CREATE TABLE project_company(
-  project_id integer REFERENCES project (project_id),
-  company_id integer REFERENCES company (company_id),
+  project_id integer,
+  company_id integer,
   budget numeric,
   amount_of_employees_assigned integer
 );
 
 CREATE TABLE tool_date(
-  tool_id integer REFERENCES tool (tool_id),
-  date_id integer REFERENCES date (date_id),
+  tool_id integer,
+  date_id integer,
   version text,
   interest_level integer,
   change_type text
 );
 
 CREATE TABLE community_tool(
-  community_id integer REFERENCES community (community_id),
-  tool_id integer REFERENCES tool (tool_id),
+  community_id integer,
+  tool_id integer,
   amount_of_bugs_reported integer,
   amount_of_bugs_solved integer,
   amount_of_changes_commited integer,
@@ -84,35 +86,35 @@ CREATE TABLE community_tool(
 );
 
 CREATE TABLE tool_project_company(
-  tool_id integer REFERENCES tool (tool_id),
-  project_id integer REFERENCES project (project_id),
-  company_id integer REFERENCES company (company_id)
+  tool_id integer,
+  project_id integer,
+  company_id integer
 );
 
 CREATE TABLE community_tool_date(
-  community_id integer REFERENCES community (community_id),
-  tool_id integer REFERENCES tool (tool_id),
-  date_id integer REFERENCES date (date_id),
+  community_id integer,
+  tool_id integer,
+  date_id integer,
   tool_score integer,
   rank integer
 );
 
 CREATE TABLE company_date(
-  company_id integer REFERENCES company (company_id),
+  company_id integer,
   year integer,
   quarter integer,
   benefit numeric
 );
 
 CREATE TABLE market_date(
-  market_id integer REFERENCES market (market_id),
-  date_id integer REFERENCES date (date_id),
+  market_id integer,
+  date_id integer,
   total_amount_of_offers integer
 );
 
 CREATE TABLE market_tool_date(
-  market_id integer REFERENCES market (market_id),
-  tool_id integer REFERENCES tool (tool_id),
-  date_id integer REFERENCES date (date_id),
+  market_id integer,
+  tool_id integer,
+  date_id integer,
   amount_of_mentions integer
 );

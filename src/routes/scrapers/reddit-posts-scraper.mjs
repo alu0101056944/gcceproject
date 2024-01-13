@@ -31,15 +31,15 @@ export default class RedditPostsScrapper {
     const requestHandler = this.#myHandler.bind(this);
     this.#scraper = new PlaywrightCrawler({
       headless: true,
-      navigationTimeoutSecs: 100000,
-      requestHandlerTimeoutSecs: 100000,
+      navigationTimeoutSecs: 30,
+      requestHandlerTimeoutSecs: 30,
       browserPoolOptions: {
         closeInactiveBrowserAfterSecs: 100000,
-        operationTimeoutSecs: 100000,
+        operationTimeoutSecs: 30,
       },
       requestHandler,
       retryOnBlocked: true,
-      maxConcurrency: 1,
+      maxConcurrency: 4,
       sessionPoolOptions: {
         blockedStatusCodes: [404],
       },
@@ -59,7 +59,7 @@ export default class RedditPostsScrapper {
       await infiniteScroll({
         stopScrollCallback: async () => {
           allPublications = await publication.all();
-          return allPublications.length > 60;
+          return allPublications.length > 20;
         }
       });
 

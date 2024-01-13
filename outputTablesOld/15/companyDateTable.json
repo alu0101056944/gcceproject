@@ -1,0 +1,3502 @@
+[
+  {
+    "company_id": 1222,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": 5.51
+  },
+  {
+    "company_id": 1223,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1224,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1225,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1226,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1227,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1228,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1229,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1230,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1231,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1232,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1233,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": 2.92
+  },
+  {
+    "company_id": 1234,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1235,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1236,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1237,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1238,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1239,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": 350
+  },
+  {
+    "company_id": 1240,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1241,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1242,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1243,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1244,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1245,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1246,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": 350
+  },
+  {
+    "company_id": 1247,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1248,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1249,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1250,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1251,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1252,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1253,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1254,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1255,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1256,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1257,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1258,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1259,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1260,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1261,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1262,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1263,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1264,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1265,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1266,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": 0.011
+  },
+  {
+    "company_id": 1267,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1268,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1269,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1270,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1271,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1272,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1273,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1274,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1275,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1276,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1277,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1278,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1279,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1280,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1281,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1282,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1283,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1284,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1285,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1286,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": 2.06
+  },
+  {
+    "company_id": 1287,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1288,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1289,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1290,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1291,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1292,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1293,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1294,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1295,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1296,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1297,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1298,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1299,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1300,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1301,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1302,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1303,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1304,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1305,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1306,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1307,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1308,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1309,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1310,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1311,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1312,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1313,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1314,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1315,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1316,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1317,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1318,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1319,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1320,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1321,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1322,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1323,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1324,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1325,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1326,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1327,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1328,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1329,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1330,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1331,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1332,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1333,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1334,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1335,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1336,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1337,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1338,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1339,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1340,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1341,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1342,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": 0.23
+  },
+  {
+    "company_id": 1343,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1344,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1345,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1346,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1347,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1348,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1349,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1350,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1351,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1352,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1353,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1354,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1355,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1356,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1357,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1358,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1359,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1360,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1361,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1362,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1363,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1364,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1365,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1366,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1367,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1368,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1369,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1370,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1371,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1372,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1373,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1374,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1375,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1376,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1377,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1378,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1379,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1380,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1381,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1382,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1383,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1384,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1385,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1386,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1387,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1388,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1389,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1390,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1391,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1392,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1393,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1394,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1395,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1396,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1397,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1398,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1399,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1400,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1401,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1402,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1403,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1404,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1405,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": 0.029
+  },
+  {
+    "company_id": 1406,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1407,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1408,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1409,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1410,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1411,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1412,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1413,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1414,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1415,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1416,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1417,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1418,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1419,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1420,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1421,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1422,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1423,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1424,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1425,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1426,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1427,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1428,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": 0.015
+  },
+  {
+    "company_id": 1429,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1430,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1431,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1432,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1433,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1434,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1435,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1436,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1437,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1438,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1439,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1440,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1441,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1442,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1443,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": 0.15
+  },
+  {
+    "company_id": 1444,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1445,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1446,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1447,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1448,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1449,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1450,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1451,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1452,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1453,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1454,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1455,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1456,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1457,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1458,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1459,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1460,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1461,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1462,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": 2.2
+  },
+  {
+    "company_id": 1463,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1464,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1465,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1466,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1467,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1468,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1469,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1470,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1471,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1472,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1473,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1474,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1475,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1476,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1477,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1478,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1479,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1480,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1481,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1482,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1483,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1484,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1485,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1486,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1487,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1488,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1489,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1490,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1491,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1492,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1493,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1494,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1495,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1496,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1497,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1498,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1499,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1500,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1501,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1502,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1503,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1504,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1505,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1506,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1507,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1508,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1509,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1510,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1511,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1512,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1513,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1514,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1515,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1516,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1517,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1518,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1519,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1520,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1521,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1522,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1523,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1524,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1525,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1526,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1527,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1528,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1529,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1530,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1531,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1532,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1533,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1534,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1535,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1536,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1537,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1538,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1539,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1540,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1541,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1542,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1543,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1544,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1545,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1546,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1547,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1548,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1549,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1550,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1551,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1552,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1553,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1554,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1555,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1556,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1557,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1558,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1559,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1560,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1561,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1562,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1563,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1564,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1565,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": 36.53
+  },
+  {
+    "company_id": 1566,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1567,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1568,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1569,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1570,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1571,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1572,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1573,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1574,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1575,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1576,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1577,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1578,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1579,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1580,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1581,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1582,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1583,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1584,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1585,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1586,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1587,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1588,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1589,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1590,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1591,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1592,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": 0.13
+  },
+  {
+    "company_id": 1593,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1594,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1595,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1596,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1597,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1598,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1599,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1600,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1601,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1602,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1603,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1604,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1605,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1606,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1607,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1608,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1609,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1610,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1611,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1612,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1613,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1614,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1615,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1616,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1617,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1618,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": 0.53
+  },
+  {
+    "company_id": 1619,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1620,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1621,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": 0.005
+  },
+  {
+    "company_id": 1622,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1623,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1624,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1625,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1626,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1627,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1628,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": 0.23
+  },
+  {
+    "company_id": 1629,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": 1.12
+  },
+  {
+    "company_id": 1630,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1631,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": 0.3
+  },
+  {
+    "company_id": 1632,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1633,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1634,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1635,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1636,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1637,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1638,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1639,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1640,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1641,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1642,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1643,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1644,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1645,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1646,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1647,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1648,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1649,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1650,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1651,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1652,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1653,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1654,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": 3.96
+  },
+  {
+    "company_id": 1655,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1656,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1657,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1658,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1659,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1660,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1661,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1662,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1663,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1664,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1665,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1666,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1667,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1668,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1669,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1670,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1671,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1672,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1673,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1674,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1675,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1676,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1677,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1678,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1679,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1680,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1681,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1682,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1683,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1684,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1685,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1686,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1687,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1688,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1689,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1690,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1691,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1692,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1693,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1694,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1695,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1696,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1697,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1698,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1699,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1700,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1701,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1702,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1703,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1704,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1705,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1706,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1707,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1708,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1709,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1710,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1711,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1712,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1713,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1714,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1715,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1716,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1717,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1718,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1719,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1720,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  },
+  {
+    "company_id": 1721,
+    "date_id": 4,
+    "year": 2024,
+    "quarter": 1,
+    "benefit": null
+  }
+]

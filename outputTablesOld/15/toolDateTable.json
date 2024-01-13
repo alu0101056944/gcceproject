@@ -1,0 +1,1136 @@
+[
+  {
+    "tool_id": 1229,
+    "date_id": 4,
+    "version": "v18.2.0",
+    "interest_levels": null,
+    "change_type": "patch"
+  },
+  {
+    "tool_id": 1230,
+    "date_id": 4,
+    "version": "v2.7.16",
+    "interest_levels": null,
+    "change_type": "same"
+  },
+  {
+    "tool_id": 1231,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1232,
+    "date_id": 4,
+    "version": "v5.0.11",
+    "interest_levels": null,
+    "change_type": "patch"
+  },
+  {
+    "tool_id": 1233,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1234,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1235,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1236,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1237,
+    "date_id": 4,
+    "version": "v0.0.161",
+    "interest_levels": null,
+    "change_type": "same"
+  },
+  {
+    "tool_id": 1238,
+    "date_id": 4,
+    "version": "289",
+    "interest_levels": null,
+    "change_type": "non-semantic"
+  },
+  {
+    "tool_id": 1239,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1240,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1241,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1242,
+    "date_id": 4,
+    "version": "3.5.4",
+    "interest_levels": null,
+    "change_type": "patch"
+  },
+  {
+    "tool_id": 1243,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1244,
+    "date_id": 4,
+    "version": "v0.6.0",
+    "interest_levels": null,
+    "change_type": "patch"
+  },
+  {
+    "tool_id": 1245,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1246,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1247,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1248,
+    "date_id": 4,
+    "version": "v6.0.0",
+    "interest_levels": null,
+    "change_type": "patch"
+  },
+  {
+    "tool_id": 1249,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1250,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1251,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1252,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1253,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1254,
+    "date_id": 4,
+    "version": "0.15.2.0",
+    "interest_levels": null,
+    "change_type": "patch"
+  },
+  {
+    "tool_id": 1255,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1256,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1257,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1258,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1259,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1260,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1261,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1262,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1263,
+    "date_id": 4,
+    "version": "2.17.2",
+    "interest_levels": null,
+    "change_type": "patch"
+  },
+  {
+    "tool_id": 1264,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1265,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1266,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1267,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1268,
+    "date_id": 4,
+    "version": "v2.3.0",
+    "interest_levels": null,
+    "change_type": "patch"
+  },
+  {
+    "tool_id": 1269,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1270,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1271,
+    "date_id": 4,
+    "version": "v1.4.9",
+    "interest_levels": null,
+    "change_type": "patch"
+  },
+  {
+    "tool_id": 1272,
+    "date_id": 4,
+    "version": "%40builder.io%2Fsdk-vue%400.8.0",
+    "interest_levels": null,
+    "change_type": "same"
+  },
+  {
+    "tool_id": 1273,
+    "date_id": 4,
+    "version": "vite-plugin-imba%400.10.1",
+    "interest_levels": null,
+    "change_type": "patch"
+  },
+  {
+    "tool_id": 1274,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1275,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1276,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1277,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1278,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1279,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1280,
+    "date_id": 4,
+    "version": "v3.8.4",
+    "interest_levels": null,
+    "change_type": "patch"
+  },
+  {
+    "tool_id": 1281,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1282,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1283,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1284,
+    "date_id": 4,
+    "version": "3.14.1",
+    "interest_levels": null,
+    "change_type": "patch"
+  },
+  {
+    "tool_id": 1285,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1286,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1287,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1288,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1289,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1290,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1291,
+    "date_id": 4,
+    "version": "v0.0.33",
+    "interest_levels": null,
+    "change_type": "patch"
+  },
+  {
+    "tool_id": 1292,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1293,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1294,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1295,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1296,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1297,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1298,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1299,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1300,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1301,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1302,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1303,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1304,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1305,
+    "date_id": 4,
+    "version": "v10.0.0",
+    "interest_levels": null,
+    "change_type": "patch"
+  },
+  {
+    "tool_id": 1306,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1307,
+    "date_id": 4,
+    "version": "v2.4.0",
+    "interest_levels": null,
+    "change_type": "patch"
+  },
+  {
+    "tool_id": 1308,
+    "date_id": 4,
+    "version": "4.9.41",
+    "interest_levels": null,
+    "change_type": "patch"
+  },
+  {
+    "tool_id": 1309,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1310,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1311,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1312,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1313,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1314,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1315,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1316,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1317,
+    "date_id": 4,
+    "version": "6.10.10",
+    "interest_levels": null,
+    "change_type": "patch"
+  },
+  {
+    "tool_id": 1318,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1319,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1320,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1321,
+    "date_id": 4,
+    "version": "v15.4",
+    "interest_levels": null,
+    "change_type": "patch"
+  },
+  {
+    "tool_id": 1322,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1323,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1324,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1325,
+    "date_id": 4,
+    "version": "v1.1.0",
+    "interest_levels": null,
+    "change_type": "patch"
+  },
+  {
+    "tool_id": 1326,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1327,
+    "date_id": 4,
+    "version": "2.0.1",
+    "interest_levels": null,
+    "change_type": "patch"
+  },
+  {
+    "tool_id": 1328,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1329,
+    "date_id": 4,
+    "version": "v1.0.0-beta.24",
+    "interest_levels": null,
+    "change_type": "same"
+  },
+  {
+    "tool_id": 1330,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1331,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1332,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1333,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1334,
+    "date_id": 4,
+    "version": "v2.3.4",
+    "interest_levels": null,
+    "change_type": "patch"
+  },
+  {
+    "tool_id": 1335,
+    "date_id": 4,
+    "version": "v1.0",
+    "interest_levels": null,
+    "change_type": "non-semantic"
+  },
+  {
+    "tool_id": 1336,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1337,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1338,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1339,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1340,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1341,
+    "date_id": 4,
+    "version": "v3.0.1",
+    "interest_levels": null,
+    "change_type": "patch"
+  },
+  {
+    "tool_id": 1342,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1343,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1344,
+    "date_id": 4,
+    "version": "v1.0",
+    "interest_levels": null,
+    "change_type": "non-semantic"
+  },
+  {
+    "tool_id": 1345,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1346,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1347,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1348,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1349,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1350,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1351,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1352,
+    "date_id": 4,
+    "version": "v1.1.0",
+    "interest_levels": null,
+    "change_type": "same"
+  },
+  {
+    "tool_id": 1353,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1354,
+    "date_id": 4,
+    "version": "9.3.2",
+    "interest_levels": null,
+    "change_type": "patch"
+  },
+  {
+    "tool_id": 1355,
+    "date_id": 4,
+    "version": "v2.2.1",
+    "interest_levels": null,
+    "change_type": "patch"
+  },
+  {
+    "tool_id": 1356,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1357,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1358,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1359,
+    "date_id": 4,
+    "version": "v0.4.0",
+    "interest_levels": null,
+    "change_type": "patch"
+  },
+  {
+    "tool_id": 1360,
+    "date_id": 4,
+    "version": "ver2.1",
+    "interest_levels": null,
+    "change_type": "non-semantic"
+  },
+  {
+    "tool_id": 1361,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1362,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1363,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1364,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1365,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1366,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1367,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1368,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1369,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1370,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1371,
+    "date_id": 4,
+    "version": "v1.4.3",
+    "interest_levels": null,
+    "change_type": "patch"
+  },
+  {
+    "tool_id": 1372,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1373,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1374,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1375,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1376,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1377,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1378,
+    "date_id": 4,
+    "version": "3.2.1",
+    "interest_levels": null,
+    "change_type": "patch"
+  },
+  {
+    "tool_id": 1379,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1380,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1381,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1382,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1383,
+    "date_id": 4,
+    "version": "2.1",
+    "interest_levels": null,
+    "change_type": "non-semantic"
+  },
+  {
+    "tool_id": 1384,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1385,
+    "date_id": 4,
+    "version": "v2.0.0-beta.9",
+    "interest_levels": null,
+    "change_type": "same"
+  },
+  {
+    "tool_id": 1386,
+    "date_id": 4,
+    "version": "v1.4.0",
+    "interest_levels": null,
+    "change_type": "patch"
+  },
+  {
+    "tool_id": 1387,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1388,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1389,
+    "date_id": 4,
+    "version": null,
+    "interest_levels": null,
+    "change_type": null
+  },
+  {
+    "tool_id": 1390,
+    "date_id": 4,
+    "version": "1.4.13",
+    "interest_levels": null,
+    "change_type": "same"
+  }
+]
