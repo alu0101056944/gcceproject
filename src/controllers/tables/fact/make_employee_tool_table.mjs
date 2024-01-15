@@ -13,17 +13,14 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
 
-/**
- * @param {number} amountOfTools
- */
-export default async function makeEmployeeToolTable(amountOfTools) {
+export default async function makeEmployeeToolTable(toolTable) {
   const table = [];
 
   for (let i = 1; i <= 20; i++) {
-    for (let j = 1; j <= amountOfTools; j++) {
+    for (const toolRecord of toolTable) {
       table.push({
         employee_id: i,
-        tool_id: j,
+        tool_id: toolRecord.tool_id,
         years_of_experience: getRandomInt(0, 10),
       });
     }

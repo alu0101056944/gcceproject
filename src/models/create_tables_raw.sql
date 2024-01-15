@@ -14,12 +14,12 @@ CREATE TABLE tool(
   type text,
   specialization text,
   version integer,
-  date_from date
+  date_from timestamp
 );
 
 CREATE TABLE date(
   date_id integer,
-  date date
+  date timestamp
 );
 
 CREATE TABLE community(

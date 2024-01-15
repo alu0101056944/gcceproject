@@ -42,7 +42,7 @@ async function getDependencyTreeAfterAll() {
             await readFile('outputTables/toolTable.json', 'utf8');
         const toolTable = JSON.parse(FILE_CONTENT);
 
-        const table = await makeEmployeeToolTable(toolTable.length);
+        const table = await makeEmployeeToolTable(toolTable);
         await new Promise(resolve => setTimeout(resolve, 1000));
         return table;
       },

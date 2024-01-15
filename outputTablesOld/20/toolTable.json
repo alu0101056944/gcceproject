@@ -1,0 +1,6442 @@
+[
+  {
+    "tool_id": 1729,
+    "name": "react",
+    "author_company": "facebook",
+    "specialization": "frontend",
+    "type": "ui"
+  },
+  {
+    "tool_id": 1730,
+    "name": "vue",
+    "author_company": "vuejs",
+    "specialization": "frontend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 1731,
+    "name": "Front-End-Checklist",
+    "author_company": "thedaviddias",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1732,
+    "name": "vite",
+    "author_company": "vitejs",
+    "specialization": "frontend",
+    "type": "build-tool"
+  },
+  {
+    "tool_id": 1733,
+    "name": "ionic-framework",
+    "author_company": "ionic-team",
+    "specialization": "frontend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 1734,
+    "name": "frontend-dev-bookmarks",
+    "author_company": "dypsilon",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1735,
+    "name": "awesome-cheatsheets",
+    "author_company": "LeCoupa",
+    "specialization": "frontend",
+    "type": "language"
+  },
+  {
+    "tool_id": 1736,
+    "name": "gold-miner",
+    "author_company": "xitu",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1737,
+    "name": "quivr",
+    "author_company": "StanGirard",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1738,
+    "name": "weekly",
+    "author_company": "ascoders",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1739,
+    "name": "GitHubDaily",
+    "author_company": "GitHubDaily",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1740,
+    "name": "expo",
+    "author_company": "expo",
+    "specialization": "frontend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 1741,
+    "name": "fe-interview",
+    "author_company": "haizlin",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1742,
+    "name": "iview",
+    "author_company": "iview",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1743,
+    "name": "ant-design-vue",
+    "author_company": "vueComponent",
+    "specialization": "frontend",
+    "type": "ui"
+  },
+  {
+    "tool_id": 1744,
+    "name": "EasySpider",
+    "author_company": "NaiboWang",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1745,
+    "name": "Hello-Python",
+    "author_company": "mouredev",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1746,
+    "name": "tui.editor",
+    "author_company": "nhn",
+    "specialization": "frontend",
+    "type": "editor"
+  },
+  {
+    "tool_id": 1747,
+    "name": "Front-End-Performance-Checklist",
+    "author_company": "thedaviddias",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1748,
+    "name": "amis",
+    "author_company": "baidu",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1749,
+    "name": "full-stack-fastapi-postgresql",
+    "author_company": "tiangolo",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1750,
+    "name": "marko",
+    "author_company": "marko-js",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1751,
+    "name": "TW-Elements",
+    "author_company": "mdbootstrap",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1752,
+    "name": "tachyons",
+    "author_company": "tachyons-css",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1753,
+    "name": "tui.calendar",
+    "author_company": "nhn",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1754,
+    "name": "gdbgui",
+    "author_company": "cs01",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1755,
+    "name": "material-design-for-bootstrap",
+    "author_company": "mdbootstrap",
+    "specialization": "frontend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 1756,
+    "name": "Awsome-Front-End-learning-resource",
+    "author_company": "helloqingfeng",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1757,
+    "name": "gremlins.js",
+    "author_company": "marmelab",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1758,
+    "name": "frontend-stuff",
+    "author_company": "moklick",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1759,
+    "name": "ng-zorro-antd",
+    "author_company": "NG-ZORRO",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1760,
+    "name": "StableStudio",
+    "author_company": "Stability-AI",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1761,
+    "name": "vue-enterprise-boilerplate",
+    "author_company": "bencodezen",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1762,
+    "name": "growth-ebook",
+    "author_company": "phodal",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1763,
+    "name": "Hippy",
+    "author_company": "Tencent",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1764,
+    "name": "it-tools",
+    "author_company": "CorentinTh",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1765,
+    "name": "frontend-case-studies",
+    "author_company": "andrew--r",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1766,
+    "name": "backbone.marionette",
+    "author_company": "marionettejs",
+    "specialization": "frontend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 1767,
+    "name": "hospitalrun-frontend",
+    "author_company": "HospitalRun",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1768,
+    "name": "zeroclipboard",
+    "author_company": "zeroclipboard",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1769,
+    "name": "FE-Interview",
+    "author_company": "lgwebdream",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1770,
+    "name": "developer-roadmap-chinese",
+    "author_company": "goodjack",
+    "specialization": "frontend",
+    "type": "devops"
+  },
+  {
+    "tool_id": 1771,
+    "name": "nicegui",
+    "author_company": "zauberzeug",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1772,
+    "name": "builder",
+    "author_company": "BuilderIO",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1773,
+    "name": "imba",
+    "author_company": "imba",
+    "specialization": "frontend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 1774,
+    "name": "alternative-front-ends",
+    "author_company": "mendel5",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1775,
+    "name": "papercups",
+    "author_company": "papercups-io",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1776,
+    "name": "FrontEndGitHub",
+    "author_company": "FrontEndGitHub",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1777,
+    "name": "nerv",
+    "author_company": "NervJS",
+    "specialization": "frontend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 1778,
+    "name": "webpacker",
+    "author_company": "rails",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1779,
+    "name": "TNT-Weekly",
+    "author_company": "tnfe",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1780,
+    "name": "AmazeFileManager",
+    "author_company": "TeamAmaze",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1781,
+    "name": "Front-End-Design-Checklist",
+    "author_company": "thedaviddias",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1782,
+    "name": "codefather",
+    "author_company": "liyupi",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1783,
+    "name": "reagent",
+    "author_company": "reagent-project",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1784,
+    "name": "san",
+    "author_company": "baidu",
+    "specialization": "frontend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 1785,
+    "name": "webhook.site",
+    "author_company": "webhooksite",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1786,
+    "name": "Front-End-Web-Development-Resources",
+    "author_company": "RitikPatni",
+    "specialization": "frontend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 1787,
+    "name": "telegram-list",
+    "author_company": "goq",
+    "specialization": "frontend",
+    "type": "devops"
+  },
+  {
+    "tool_id": 1788,
+    "name": "forum",
+    "author_company": "frontendbr",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1789,
+    "name": "front-end-handbook-2019",
+    "author_company": "FrontendMasters",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1790,
+    "name": "javascript-code-challenges",
+    "author_company": "sadanandpai",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1791,
+    "name": "frontend-learning-kit",
+    "author_company": "sadanandpai",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1792,
+    "name": "mometa",
+    "author_company": "imcuttle",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1793,
+    "name": "pattern.css",
+    "author_company": "bansal",
+    "specialization": "frontend",
+    "type": "ui"
+  },
+  {
+    "tool_id": 1794,
+    "name": "mianshiya-public",
+    "author_company": "liyupi",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1795,
+    "name": "create-react-app-typescript",
+    "author_company": "wmonk",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1796,
+    "name": "roadmaps",
+    "author_company": "WeMakeDevs",
+    "specialization": "frontend",
+    "type": "devops"
+  },
+  {
+    "tool_id": 1797,
+    "name": "awesome-jupyter",
+    "author_company": "markusschanta",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1798,
+    "name": "plasmic",
+    "author_company": "plasmicapp",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1799,
+    "name": "react-fontawesome",
+    "author_company": "FortAwesome",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1800,
+    "name": "visualization-collection",
+    "author_company": "hepengwei",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1801,
+    "name": "frontend-tech-list",
+    "author_company": "alienzhou",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1802,
+    "name": "frontend",
+    "author_company": "home-assistant",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1803,
+    "name": "webpack-libs-optimizations",
+    "author_company": "GoogleChromeLabs",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1804,
+    "name": "ui-buttons",
+    "author_company": "eludadev",
+    "specialization": "frontend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 1805,
+    "name": "rfs",
+    "author_company": "twbs",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1806,
+    "name": "smooth-scrollbar",
+    "author_company": "idiotWu",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1807,
+    "name": "OverlayScrollbars",
+    "author_company": "KingSora",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1808,
+    "name": "localResizeIMG",
+    "author_company": "think2011",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1809,
+    "name": "FrontEndCollection",
+    "author_company": "cheatsheet1999",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1810,
+    "name": "redux-orm",
+    "author_company": "redux-orm",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1811,
+    "name": "mini.css",
+    "author_company": "Chalarangelo",
+    "specialization": "frontend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 1812,
+    "name": "blogs",
+    "author_company": "sl1673495",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1813,
+    "name": "hop",
+    "author_company": "hop-protocol",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1814,
+    "name": "fe-interview",
+    "author_company": "azl397985856",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1815,
+    "name": "free-programming-resources",
+    "author_company": "liyupi",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1816,
+    "name": "guiadofrontend",
+    "author_company": "arthurspk",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1817,
+    "name": "vecty",
+    "author_company": "hexops",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1818,
+    "name": "neo",
+    "author_company": "neomjs",
+    "specialization": "frontend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 1819,
+    "name": "hiper",
+    "author_company": "pod4g",
+    "specialization": "frontend",
+    "type": "testing"
+  },
+  {
+    "tool_id": 1820,
+    "name": "ViewUI",
+    "author_company": "view-design",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1821,
+    "name": "Jailer",
+    "author_company": "Wisser",
+    "specialization": "frontend",
+    "type": "testing"
+  },
+  {
+    "tool_id": 1822,
+    "name": "awesome-casestudy",
+    "author_company": "luruke",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1823,
+    "name": "code-nav",
+    "author_company": "liyupi",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1824,
+    "name": "growth-in-action",
+    "author_company": "phodal",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1825,
+    "name": "img2css",
+    "author_company": "javierbyte",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1826,
+    "name": "OverVue",
+    "author_company": "open-source-labs",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1827,
+    "name": "omatsuri",
+    "author_company": "rtivital",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1828,
+    "name": "webpack-book",
+    "author_company": "survivejs",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1829,
+    "name": "vue-fontawesome",
+    "author_company": "FortAwesome",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1830,
+    "name": "meli",
+    "author_company": "getmeli",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1831,
+    "name": "ansible-cmdb",
+    "author_company": "fboender",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1832,
+    "name": "the-front-end-knowledge-you-may-not-know",
+    "author_company": "justjavac",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1833,
+    "name": "jest-preview",
+    "author_company": "nvh95",
+    "specialization": "frontend",
+    "type": "testing"
+  },
+  {
+    "tool_id": 1834,
+    "name": "cli",
+    "author_company": "create-go-app",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1835,
+    "name": "devmap",
+    "author_company": "zualex",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1836,
+    "name": "userbase",
+    "author_company": "smallbets",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1837,
+    "name": "percy",
+    "author_company": "chinedufn",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1838,
+    "name": "webapp.rs",
+    "author_company": "saschagrunert",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1839,
+    "name": "frontendDaily",
+    "author_company": "kujian",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1840,
+    "name": "react-imgpro",
+    "author_company": "nitin42",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1841,
+    "name": "blaze",
+    "author_company": "blenderskool",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1842,
+    "name": "user-event",
+    "author_company": "testing-library",
+    "specialization": "frontend",
+    "type": "testing"
+  },
+  {
+    "tool_id": 1843,
+    "name": "bttn.css",
+    "author_company": "ganapativs",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1844,
+    "name": "fe",
+    "author_company": "phodal",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1845,
+    "name": "spring-boot-vuejs",
+    "author_company": "jonashackt",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1846,
+    "name": "icestark",
+    "author_company": "ice-lab",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1847,
+    "name": "sql-mother",
+    "author_company": "liyupi",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1848,
+    "name": "frontend-development",
+    "author_company": "codingknite",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1849,
+    "name": "webpack-starter",
+    "author_company": "wbkd",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1850,
+    "name": "apihub",
+    "author_company": "hiteshchoudhary",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1851,
+    "name": "yuindex",
+    "author_company": "liyupi",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1852,
+    "name": "clean-code-javascript",
+    "author_company": "devictoribero",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1853,
+    "name": "layerJS",
+    "author_company": "layerJS",
+    "specialization": "frontend",
+    "type": "ui"
+  },
+  {
+    "tool_id": 1854,
+    "name": "openfl",
+    "author_company": "openfl",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1855,
+    "name": "python-web",
+    "author_company": "mouredev",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1856,
+    "name": "imgcook",
+    "author_company": "imgcook",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1857,
+    "name": "Awesome-Interview",
+    "author_company": "Awesome-Interview",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1858,
+    "name": "reactpatterns",
+    "author_company": "chantastic",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1859,
+    "name": "nipplejs",
+    "author_company": "yoannmoinet",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1860,
+    "name": "CrossUI",
+    "author_company": "linb",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1861,
+    "name": "frontend-mini-challenges",
+    "author_company": "sadanandpai",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1862,
+    "name": "ng-devui",
+    "author_company": "DevCloudFE",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1863,
+    "name": "chatgpt.js",
+    "author_company": "KudoAI",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1864,
+    "name": "yulegeyu",
+    "author_company": "liyupi",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1865,
+    "name": "react-native-picker-select",
+    "author_company": "lawnstarter",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1866,
+    "name": "farm",
+    "author_company": "farm-fe",
+    "specialization": "frontend",
+    "type": "compiler"
+  },
+  {
+    "tool_id": 1867,
+    "name": "bulmaswatch",
+    "author_company": "jenil",
+    "specialization": "frontend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 1868,
+    "name": "frontdesk",
+    "author_company": "miripiruni",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1869,
+    "name": "sift.js",
+    "author_company": "crcn",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1870,
+    "name": "login-flow",
+    "author_company": "mxstbr",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1871,
+    "name": "piral",
+    "author_company": "smapiot",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1872,
+    "name": "semana-javascript-expert05",
+    "author_company": "ErickWendel",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1873,
+    "name": "watching-you",
+    "author_company": "jj811208",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1874,
+    "name": "dev-practice",
+    "author_company": "alinebastos",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1875,
+    "name": "fe-necessary-book",
+    "author_company": "ddzy",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1876,
+    "name": "vue-beautiful-chat",
+    "author_company": "mattmezza",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1877,
+    "name": "visual-center",
+    "author_company": "javierbyte",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1878,
+    "name": "shariff",
+    "author_company": "heiseonline",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1879,
+    "name": "myblog",
+    "author_company": "lihongxun945",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1880,
+    "name": "blog",
+    "author_company": "dongyuanxin",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1881,
+    "name": "reitit",
+    "author_company": "metosin",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1882,
+    "name": "sql-father-frontend-public",
+    "author_company": "liyupi",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1883,
+    "name": "saas-boilerplate",
+    "author_company": "apptension",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1884,
+    "name": "bank",
+    "author_company": "pietrzakadrian",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1885,
+    "name": "aurelia",
+    "author_company": "aurelia",
+    "specialization": "frontend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 1886,
+    "name": "jetpack",
+    "author_company": "KidkArolis",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1887,
+    "name": "thing-translator",
+    "author_company": "dmotz",
+    "specialization": "frontend",
+    "type": "language"
+  },
+  {
+    "tool_id": 1888,
+    "name": "AwesomeSites",
+    "author_company": "ezshine",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1889,
+    "name": "tiny-engine",
+    "author_company": "opentiny",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1890,
+    "name": "coffee",
+    "author_company": "Coframe",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1891,
+    "name": "layr",
+    "author_company": "layrjs",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1892,
+    "name": "frontend",
+    "author_company": "kottans",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1893,
+    "name": "prepare_frontend_interview",
+    "author_company": "junh0328",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1894,
+    "name": "tiny-vue",
+    "author_company": "opentiny",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1895,
+    "name": "Equal",
+    "author_company": "Equal-UI",
+    "specialization": "frontend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 1896,
+    "name": "F2E",
+    "author_company": "ponkans",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1897,
+    "name": "roadmap-do-desenvolvedor-web",
+    "author_company": "hideraldus13",
+    "specialization": "frontend",
+    "type": "devops"
+  },
+  {
+    "tool_id": 1898,
+    "name": "Project-Ideas-And-Resources",
+    "author_company": "The-Cool-Coders",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1899,
+    "name": "kvision",
+    "author_company": "rjaros",
+    "specialization": "frontend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 1900,
+    "name": "Sublime-Text-Plugins-for-Frontend-Web-Development",
+    "author_company": "jfilter",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1901,
+    "name": "programming-challenges",
+    "author_company": "michelbernardods",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1902,
+    "name": "frontend-guideline",
+    "author_company": "juntossomosmais",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1903,
+    "name": "vanilla-todo",
+    "author_company": "morris",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1904,
+    "name": "baklava",
+    "author_company": "Trendyol",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1905,
+    "name": "Home-Assistant-Mobile-First",
+    "author_company": "Clooos",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1906,
+    "name": "angular-tree-component",
+    "author_company": "CirclonGroup",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1907,
+    "name": "mern-course-bootcamp",
+    "author_company": "jeanrauwers",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1908,
+    "name": "nvim",
+    "author_company": "ecosse3",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 1909,
+    "name": "awesome-scalability",
+    "author_company": "binhnguyennus",
+    "specialization": "backend",
+    "type": "devops"
+  },
+  {
+    "tool_id": 1910,
+    "name": "appwrite",
+    "author_company": "appwrite",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1911,
+    "name": "awesome-cheatsheets",
+    "author_company": "LeCoupa",
+    "specialization": "backend",
+    "type": "language"
+  },
+  {
+    "tool_id": 1912,
+    "name": "pocketbase",
+    "author_company": "pocketbase",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1913,
+    "name": "GitHubDaily",
+    "author_company": "GitHubDaily",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1914,
+    "name": "parse-server",
+    "author_company": "parse-community",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1915,
+    "name": "sonic",
+    "author_company": "valeriansaliou",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1916,
+    "name": "Hello-Python",
+    "author_company": "mouredev",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1917,
+    "name": "full-stack-fastapi-postgresql",
+    "author_company": "tiangolo",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1918,
+    "name": "october",
+    "author_company": "octobercms",
+    "specialization": "backend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 1919,
+    "name": "domain-driven-hexagon",
+    "author_company": "Sairyss",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1920,
+    "name": "nakama",
+    "author_company": "heroiclabs",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1921,
+    "name": "nhost",
+    "author_company": "nhost",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1922,
+    "name": "web-skills",
+    "author_company": "andreasbm",
+    "specialization": "backend",
+    "type": "testing"
+  },
+  {
+    "tool_id": 1923,
+    "name": "vagas",
+    "author_company": "backend-br",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1924,
+    "name": "developer-roadmap-chinese",
+    "author_company": "goodjack",
+    "specialization": "backend",
+    "type": "devops"
+  },
+  {
+    "tool_id": 1925,
+    "name": "awesome-system-design-resources",
+    "author_company": "ashishps1",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1926,
+    "name": "rowy",
+    "author_company": "rowyio",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1927,
+    "name": "cockpit",
+    "author_company": "agentejo",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1928,
+    "name": "codefather",
+    "author_company": "liyupi",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1929,
+    "name": "hoodie",
+    "author_company": "hoodiehq",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1930,
+    "name": "lucene-solr",
+    "author_company": "apache",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1931,
+    "name": "encore",
+    "author_company": "encoredev",
+    "specialization": "backend",
+    "type": "devops"
+  },
+  {
+    "tool_id": 1932,
+    "name": "EasyAdminBundle",
+    "author_company": "EasyCorp",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1933,
+    "name": "interviewGuide",
+    "author_company": "NotFound9",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1934,
+    "name": "mianshiya-public",
+    "author_company": "liyupi",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1935,
+    "name": "roadmaps",
+    "author_company": "WeMakeDevs",
+    "specialization": "backend",
+    "type": "devops"
+  },
+  {
+    "tool_id": 1936,
+    "name": "simplebank",
+    "author_company": "techschool",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1937,
+    "name": "olivia",
+    "author_company": "olivia-ai",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1938,
+    "name": "go-backend-clean-architecture",
+    "author_company": "amitshekhariitbhu",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1939,
+    "name": "Robyn",
+    "author_company": "sparckles",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1940,
+    "name": "mirrord",
+    "author_company": "metalbear-co",
+    "specialization": "backend",
+    "type": "devops"
+  },
+  {
+    "tool_id": 1941,
+    "name": "nodejs-integration-tests-best-practices",
+    "author_company": "testjavascript",
+    "specialization": "backend",
+    "type": "testing"
+  },
+  {
+    "tool_id": 1942,
+    "name": "CRUD",
+    "author_company": "Laravel-Backpack",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1943,
+    "name": "free-programming-resources",
+    "author_company": "liyupi",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1944,
+    "name": "ownphotos",
+    "author_company": "hooram",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1945,
+    "name": "readyset",
+    "author_company": "readysettech",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1946,
+    "name": "tinyhttp",
+    "author_company": "tinyhttp",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1947,
+    "name": "code-nav",
+    "author_company": "liyupi",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1948,
+    "name": "growth-in-action",
+    "author_company": "phodal",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1949,
+    "name": "node-typescript-boilerplate",
+    "author_company": "jsynowiec",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1950,
+    "name": "ultimate-backend",
+    "author_company": "juicycleff",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1951,
+    "name": "cli",
+    "author_company": "create-go-app",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1952,
+    "name": "devmap",
+    "author_company": "zualex",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1953,
+    "name": "webapp.rs",
+    "author_company": "saschagrunert",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1954,
+    "name": "lucene",
+    "author_company": "apache",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1955,
+    "name": "slides",
+    "author_company": "TritonHo",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1956,
+    "name": "guiadobackend",
+    "author_company": "arthurspk",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1957,
+    "name": "blaze",
+    "author_company": "blenderskool",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1958,
+    "name": "lumber",
+    "author_company": "ForestAdmin",
+    "specialization": "backend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 1959,
+    "name": "backend-cheats",
+    "author_company": "cheatsnake",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1960,
+    "name": "spring-boot-vuejs",
+    "author_company": "jonashackt",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1961,
+    "name": "apihub",
+    "author_company": "hiteshchoudhary",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1962,
+    "name": "gobetween",
+    "author_company": "yyyar",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1963,
+    "name": "yuindex",
+    "author_company": "liyupi",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1964,
+    "name": "sql-father-backend-public",
+    "author_company": "liyupi",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1965,
+    "name": "Awesome-Interview",
+    "author_company": "Awesome-Interview",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1966,
+    "name": "rust-web-developer-roadmap",
+    "author_company": "anshulrgoyal",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1967,
+    "name": "silicon",
+    "author_company": "matt-42",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1968,
+    "name": "dart_frog",
+    "author_company": "VeryGoodOpenSource",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1969,
+    "name": "lastbackend",
+    "author_company": "lastbackend",
+    "specialization": "backend",
+    "type": "devops"
+  },
+  {
+    "tool_id": 1970,
+    "name": "fusio",
+    "author_company": "apioo",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1971,
+    "name": "NotyKT",
+    "author_company": "PatilShreyas",
+    "specialization": "backend",
+    "type": "testing"
+  },
+  {
+    "tool_id": 1972,
+    "name": "dev-practice",
+    "author_company": "alinebastos",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1973,
+    "name": "Java-Notes",
+    "author_company": "PansonPanson",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1974,
+    "name": "awesome-backend",
+    "author_company": "zhashkevych",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1975,
+    "name": "toggl_api_docs",
+    "author_company": "toggl",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1976,
+    "name": "goyave",
+    "author_company": "go-goyave",
+    "specialization": "backend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 1977,
+    "name": "kuzzle",
+    "author_company": "kuzzleio",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1978,
+    "name": "Systemizer",
+    "author_company": "honzaap",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1979,
+    "name": "saas-boilerplate",
+    "author_company": "apptension",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1980,
+    "name": "bank",
+    "author_company": "pietrzakadrian",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1981,
+    "name": "simple-admin-core",
+    "author_company": "suyuan32",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1982,
+    "name": "layr",
+    "author_company": "layrjs",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1983,
+    "name": "backend-best-practices",
+    "author_company": "Sairyss",
+    "specialization": "backend",
+    "type": "devops"
+  },
+  {
+    "tool_id": 1984,
+    "name": "axios-module",
+    "author_company": "nuxt-community",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1985,
+    "name": "pavex",
+    "author_company": "LukeMathWalker",
+    "specialization": "backend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 1986,
+    "name": "laravel-realworld-example-app",
+    "author_company": "gothinkster",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1987,
+    "name": "local-web-server",
+    "author_company": "lwsjs",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1988,
+    "name": "roadmap-do-desenvolvedor-web",
+    "author_company": "hideraldus13",
+    "specialization": "backend",
+    "type": "devops"
+  },
+  {
+    "tool_id": 1989,
+    "name": "oh-my-backend",
+    "author_company": "bzick",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1990,
+    "name": "programming-challenges",
+    "author_company": "michelbernardods",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1991,
+    "name": "learn-nodejs-hard-way",
+    "author_company": "ishtms",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1992,
+    "name": "chiselstrike",
+    "author_company": "chiselstrike",
+    "specialization": "backend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 1993,
+    "name": "symfony-6-es-cqrs-boilerplate",
+    "author_company": "jorge07",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1994,
+    "name": "desafios",
+    "author_company": "backend-br",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1995,
+    "name": "solr",
+    "author_company": "apache",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1996,
+    "name": "ucall",
+    "author_company": "unum-cloud",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1997,
+    "name": "osu-web",
+    "author_company": "ppy",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1998,
+    "name": "XBackBone",
+    "author_company": "sergix44",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 1999,
+    "name": "IT-Note",
+    "author_company": "InSeong-So",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2000,
+    "name": "refactor-like-a-superhero",
+    "author_company": "bespoyasov",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2001,
+    "name": "elixir-phoenix-realworld-example-app",
+    "author_company": "gothinkster",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2002,
+    "name": "nextacular",
+    "author_company": "nextacular",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2003,
+    "name": "hospitalrun-server",
+    "author_company": "HospitalRun",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2004,
+    "name": "felix",
+    "author_company": "mojocn",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2005,
+    "name": "framework",
+    "author_company": "featherhttp",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2006,
+    "name": "free-courses",
+    "author_company": "alinebastos",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2007,
+    "name": "resources",
+    "author_company": "CodeChefVIT",
+    "specialization": "backend",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2008,
+    "name": "SleepingOwlAdmin",
+    "author_company": "LaravelRUS",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2009,
+    "name": "rails-handbook",
+    "author_company": "infinum",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2010,
+    "name": "nullstack",
+    "author_company": "nullstack",
+    "specialization": "backend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 2011,
+    "name": "structr",
+    "author_company": "structr",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2012,
+    "name": "tailadmin-free-tailwind-dashboard-template",
+    "author_company": "TailAdmin",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2013,
+    "name": "nextjs-wordpress-starter",
+    "author_company": "WebDevStudios",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2014,
+    "name": "repractise",
+    "author_company": "phodal",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2015,
+    "name": "Saturn",
+    "author_company": "SaturnFramework",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2016,
+    "name": "python-web-guide",
+    "author_company": "PegasusWang",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2017,
+    "name": "rustc_codegen_clr",
+    "author_company": "FractalFir",
+    "specialization": "backend",
+    "type": "compiler"
+  },
+  {
+    "tool_id": 2018,
+    "name": "2023-CS-Study",
+    "author_company": "devSquad-study",
+    "specialization": "backend",
+    "type": "db"
+  },
+  {
+    "tool_id": 2019,
+    "name": "curriculum",
+    "author_company": "HackYourFuture",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2020,
+    "name": "hydra",
+    "author_company": "pnxtech",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2021,
+    "name": "abap2xlsx",
+    "author_company": "abap2xlsx",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2022,
+    "name": "live-torrent",
+    "author_company": "Davenchy",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2023,
+    "name": "ethql",
+    "author_company": "Consensys",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2024,
+    "name": "blockbook",
+    "author_company": "trezor",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2025,
+    "name": "study-collection-backend",
+    "author_company": "Frankle97",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2026,
+    "name": "hydra",
+    "author_company": "micro-plat",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2027,
+    "name": "lux",
+    "author_company": "postlight",
+    "specialization": "backend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 2028,
+    "name": "everything-chatgpt",
+    "author_company": "terminalcommandnewsletter",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2029,
+    "name": "go-web-workshop",
+    "author_company": "campoy",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2030,
+    "name": "Stackoverflow-Clone-Frontend",
+    "author_company": "Mayank0255",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2031,
+    "name": "dotenx",
+    "author_company": "dotenx",
+    "specialization": "backend",
+    "type": "ui"
+  },
+  {
+    "tool_id": 2032,
+    "name": "wsify",
+    "author_company": "alash3al",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2033,
+    "name": "forum",
+    "author_company": "backend-br",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2034,
+    "name": "Serverless-Boilerplate-Express-TypeScript",
+    "author_company": "ixartz",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2035,
+    "name": "developer-roadmap-zh-CN",
+    "author_company": "forthespada",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2036,
+    "name": "actix-realworld-example-app",
+    "author_company": "fairingrey",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2037,
+    "name": "backend-swe-interview-questions",
+    "author_company": "tamhoang1412",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2038,
+    "name": "para",
+    "author_company": "Erudika",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2039,
+    "name": "mojo.js",
+    "author_company": "mojolicious",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2040,
+    "name": "choiceof.dev",
+    "author_company": "bdebon",
+    "specialization": "backend",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2041,
+    "name": "udash-core",
+    "author_company": "UdashFramework",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2042,
+    "name": "golang_step_by_step",
+    "author_company": "Shitaibin",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2043,
+    "name": "libfirm",
+    "author_company": "libfirm",
+    "specialization": "backend",
+    "type": "compiler"
+  },
+  {
+    "tool_id": 2044,
+    "name": "full-stack-fastapi-couchbase",
+    "author_company": "tiangolo",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2045,
+    "name": "nestjs-starter-rest-api",
+    "author_company": "monstar-lab-oss",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2046,
+    "name": "blog",
+    "author_company": "alienzhou",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2047,
+    "name": "Everything-Tech",
+    "author_company": "moabukar",
+    "specialization": "backend",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2048,
+    "name": "happyx",
+    "author_company": "HapticX",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2049,
+    "name": "links",
+    "author_company": "gmartins-dev",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2050,
+    "name": "raxx",
+    "author_company": "CrowdHailer",
+    "specialization": "backend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 2051,
+    "name": "next-api-decorators",
+    "author_company": "instantcommerce",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2052,
+    "name": "Conduit",
+    "author_company": "ConduitPlatform",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2053,
+    "name": "i18next-http-backend",
+    "author_company": "i18next",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2054,
+    "name": "mern-authentication",
+    "author_company": "flaviuse",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2055,
+    "name": "conf",
+    "author_company": "docops-hq",
+    "specialization": "backend",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2056,
+    "name": "Ultimate-NodeJs-Resources",
+    "author_company": "DhanushNehru",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2057,
+    "name": "roadmap-backend-2023",
+    "author_company": "gabrielrangel95",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2058,
+    "name": "Pharmacy-Mangment-System",
+    "author_company": "LalanaChami",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2059,
+    "name": "terraform-aws-tfstate-backend",
+    "author_company": "cloudposse",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2060,
+    "name": "DjReact",
+    "author_company": "justdjango",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2061,
+    "name": "vagas",
+    "author_company": "dotnetdevbr",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2062,
+    "name": "backend",
+    "author_company": "kottans",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2063,
+    "name": "koa-vue-notes-api",
+    "author_company": "johndatserakis",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2064,
+    "name": "vagas",
+    "author_company": "backend-pt",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2065,
+    "name": "open_source_bms",
+    "author_company": "xyl-tools",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2066,
+    "name": "inspect",
+    "author_company": "csfloat",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2067,
+    "name": "forest-rails",
+    "author_company": "ForestAdmin",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2068,
+    "name": "jsx-mail",
+    "author_company": "Theryston",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2069,
+    "name": "jsx-mail",
+    "author_company": "Theryston",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2070,
+    "name": "hasura-auth",
+    "author_company": "nhost",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2071,
+    "name": "vue-storefront-api",
+    "author_company": "vuestorefront",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2072,
+    "name": "NodeJS-Interview-Questions",
+    "author_company": "tshemsedinov",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2073,
+    "name": "tweek",
+    "author_company": "Soluto",
+    "specialization": "backend",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2074,
+    "name": "Kanary",
+    "author_company": "SeunAdelekan",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2075,
+    "name": "nest-auth-example",
+    "author_company": "leosuncin",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2076,
+    "name": "sifrr",
+    "author_company": "sifrr",
+    "specialization": "backend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 2077,
+    "name": "concourse",
+    "author_company": "cinchapi",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2078,
+    "name": "plain-free-bootstrap-admin-template",
+    "author_company": "PlainAdmin",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2079,
+    "name": "eShopOnContainersDDD",
+    "author_company": "charlessolar",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2080,
+    "name": "node-boilerplate",
+    "author_company": "santoshshinde2012",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2081,
+    "name": "http-fake-backend",
+    "author_company": "micromata",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2082,
+    "name": "whatsapp-bot",
+    "author_company": "caioagiani",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2083,
+    "name": "db-query-matchers",
+    "author_company": "sds",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2084,
+    "name": "three-layer",
+    "author_company": "Holmusk",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2085,
+    "name": "free-react-tailwind-admin-dashboard",
+    "author_company": "TailAdmin",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2086,
+    "name": "CleanArchitecture",
+    "author_company": "ESchouten",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2087,
+    "name": "Parse-Swift",
+    "author_company": "parse-community",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2088,
+    "name": "yii2-usuario",
+    "author_company": "2amigos",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2089,
+    "name": "the-book-of-secret-knowledge",
+    "author_company": "trimstray",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2090,
+    "name": "netdata",
+    "author_company": "netdata",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2091,
+    "name": "devops-exercises",
+    "author_company": "bregman-arie",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2092,
+    "name": "awesome-scalability",
+    "author_company": "binhnguyennus",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2093,
+    "name": "act",
+    "author_company": "nektos",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2094,
+    "name": "gitea",
+    "author_company": "go-gitea",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2095,
+    "name": "kong",
+    "author_company": "Kong",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2096,
+    "name": "sentry",
+    "author_company": "getsentry",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2097,
+    "name": "cli",
+    "author_company": "httpie",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2098,
+    "name": "dokku",
+    "author_company": "dokku",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2099,
+    "name": "90DaysOfDevOps",
+    "author_company": "MichaelCade",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2100,
+    "name": "docker_practice",
+    "author_company": "yeasy",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2101,
+    "name": "lens",
+    "author_company": "lensapp",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2102,
+    "name": "jenkins",
+    "author_company": "jenkinsci",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2103,
+    "name": "awesome-sysadmin",
+    "author_company": "awesome-foss",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2104,
+    "name": "goreplay",
+    "author_company": "buger",
+    "specialization": "devops",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2105,
+    "name": "watchtower",
+    "author_company": "containrrr",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2106,
+    "name": "wtf",
+    "author_company": "wtfutil",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2107,
+    "name": "argo-cd",
+    "author_company": "argoproj",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2108,
+    "name": "sops",
+    "author_company": "getsops",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2109,
+    "name": "kubesphere",
+    "author_company": "kubesphere",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2110,
+    "name": "apisix",
+    "author_company": "apache",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2111,
+    "name": "onedev",
+    "author_company": "theonedev",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2112,
+    "name": "walle-web",
+    "author_company": "meolu",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2113,
+    "name": "lynis",
+    "author_company": "CISOfy",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2114,
+    "name": "awesome-mlops",
+    "author_company": "visenger",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2115,
+    "name": "awesome-sre",
+    "author_company": "dastergon",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2116,
+    "name": "kubeshark",
+    "author_company": "kubeshark",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2117,
+    "name": "test-your-sysadmin-skills",
+    "author_company": "trimstray",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2118,
+    "name": "infracost",
+    "author_company": "infracost",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2119,
+    "name": "unleash",
+    "author_company": "Unleash",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2120,
+    "name": "webhook",
+    "author_company": "adnanh",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2121,
+    "name": "spug",
+    "author_company": "openspug",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2122,
+    "name": "dagger",
+    "author_company": "dagger",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2123,
+    "name": "kubescape",
+    "author_company": "kubescape",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2124,
+    "name": "task",
+    "author_company": "go-task",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2125,
+    "name": "bytebase",
+    "author_company": "bytebase",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2126,
+    "name": "pyroscope",
+    "author_company": "grafana",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2127,
+    "name": "howtheysre",
+    "author_company": "upgundecha",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2128,
+    "name": "semaphore",
+    "author_company": "ansible-semaphore",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2129,
+    "name": "openebs",
+    "author_company": "openebs",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2130,
+    "name": "origin",
+    "author_company": "openshift",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2131,
+    "name": "miller",
+    "author_company": "johnkerl",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2132,
+    "name": "Yearning",
+    "author_company": "cookieY",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2133,
+    "name": "fission",
+    "author_company": "fission",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2134,
+    "name": "devops-resources",
+    "author_company": "bregman-arie",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2135,
+    "name": "ansible-for-devops",
+    "author_company": "geerlingguy",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2136,
+    "name": "flyway",
+    "author_company": "flyway",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2137,
+    "name": "xonsh",
+    "author_company": "xonsh",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2138,
+    "name": "homelab",
+    "author_company": "khuedoan",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2139,
+    "name": "DevOps-Guide",
+    "author_company": "Tikam02",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2140,
+    "name": "chef",
+    "author_company": "chef",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2141,
+    "name": "terragrunt",
+    "author_company": "gruntwork-io",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2142,
+    "name": "terratest",
+    "author_company": "gruntwork-io",
+    "specialization": "devops",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2143,
+    "name": "DevOps-Roadmap",
+    "author_company": "milanm",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2144,
+    "name": "healthchecks",
+    "author_company": "healthchecks",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2145,
+    "name": "atlantis",
+    "author_company": "runatlantis",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2146,
+    "name": "wasm3",
+    "author_company": "wasm3",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2147,
+    "name": "sh",
+    "author_company": "amoffat",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2148,
+    "name": "developer-roadmap-chinese",
+    "author_company": "goodjack",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2149,
+    "name": "tfsec",
+    "author_company": "aquasecurity",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2150,
+    "name": "datree",
+    "author_company": "datreeio",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2151,
+    "name": "checkov",
+    "author_company": "bridgecrewio",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2152,
+    "name": "steampipe",
+    "author_company": "turbot",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2153,
+    "name": "st2",
+    "author_company": "StackStorm",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2154,
+    "name": "k3sup",
+    "author_company": "alexellis",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2155,
+    "name": "cabot",
+    "author_company": "arachnys",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2156,
+    "name": "guide",
+    "author_company": "hobby-kube",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2157,
+    "name": "theByteBook",
+    "author_company": "isno",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2158,
+    "name": "laravel-backup",
+    "author_company": "spatie",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2159,
+    "name": "goss",
+    "author_company": "goss-org",
+    "specialization": "devops",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2160,
+    "name": "rundeck",
+    "author_company": "rundeck",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2161,
+    "name": "shuttle",
+    "author_company": "shuttle-hq",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2162,
+    "name": "gaia",
+    "author_company": "gaia-pipeline",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2163,
+    "name": "DevSecOps",
+    "author_company": "sottlmarek",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2164,
+    "name": "udemy-docker-mastery",
+    "author_company": "BretFisher",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2165,
+    "name": "clearml",
+    "author_company": "allegroai",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2166,
+    "name": "awesome-terraform",
+    "author_company": "shuaibiyy",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2167,
+    "name": "awless",
+    "author_company": "wallix",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2168,
+    "name": "xxh",
+    "author_company": "xxh",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2169,
+    "name": "Daily-Question",
+    "author_company": "shfshanyue",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2170,
+    "name": "rainbond",
+    "author_company": "goodrain",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2171,
+    "name": "tsuru",
+    "author_company": "tsuru",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2172,
+    "name": "ThreatMapper",
+    "author_company": "deepfence",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2173,
+    "name": "jx",
+    "author_company": "jenkins-x",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2174,
+    "name": "faraday",
+    "author_company": "infobyte",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2175,
+    "name": "cds",
+    "author_company": "ovh",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2176,
+    "name": "terrascan",
+    "author_company": "tenable",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2177,
+    "name": "gatus",
+    "author_company": "TwiN",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2178,
+    "name": "learn-to-cloud",
+    "author_company": "learntocloud",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2179,
+    "name": "telegram-list",
+    "author_company": "goq",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2180,
+    "name": "encore",
+    "author_company": "encoredev",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2181,
+    "name": "liquibase",
+    "author_company": "liquibase",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2182,
+    "name": "awesome-devsecops",
+    "author_company": "devsecops",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2183,
+    "name": "wgcloud",
+    "author_company": "tianshiyeben",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2184,
+    "name": "k8sgpt",
+    "author_company": "k8sgpt-ai",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2185,
+    "name": "litmus",
+    "author_company": "litmuschaos",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2186,
+    "name": "porter",
+    "author_company": "porter-dev",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2187,
+    "name": "arkade",
+    "author_company": "alexellis",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2188,
+    "name": "devspace",
+    "author_company": "devspace-sh",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2189,
+    "name": "GameDevMind",
+    "author_company": "gonglei007",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2190,
+    "name": "werf",
+    "author_company": "werf",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2191,
+    "name": "hygieia",
+    "author_company": "hygieia",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2192,
+    "name": "roadmaps",
+    "author_company": "WeMakeDevs",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2193,
+    "name": "kubefwd",
+    "author_company": "txn2",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2194,
+    "name": "BoostNote-App",
+    "author_company": "BoostIO",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2195,
+    "name": "opendevops",
+    "author_company": "opendevops-cn",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2196,
+    "name": "awesome-ci",
+    "author_company": "ligurio",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2197,
+    "name": "woodpecker",
+    "author_company": "woodpecker-ci",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2198,
+    "name": "mgmt",
+    "author_company": "purpleidea",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2199,
+    "name": "bunkerweb",
+    "author_company": "bunkerity",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2200,
+    "name": "copilot-cli",
+    "author_company": "aws",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2201,
+    "name": "kubernetes-workshop",
+    "author_company": "eon01",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2202,
+    "name": "adminset",
+    "author_company": "guohongze",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2203,
+    "name": "mirrord",
+    "author_company": "metalbear-co",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2204,
+    "name": "coroot",
+    "author_company": "coroot",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2205,
+    "name": "flipt",
+    "author_company": "flipt-io",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2206,
+    "name": "prometheus-book",
+    "author_company": "yunlzheng",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2207,
+    "name": "awesome-computer-science-opportunities",
+    "author_company": "anu0012",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2208,
+    "name": "errbot",
+    "author_company": "errbotio",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2209,
+    "name": "assh",
+    "author_company": "moul",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2210,
+    "name": "Nodejs-Roadmap",
+    "author_company": "qufei1993",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2211,
+    "name": "inspec",
+    "author_company": "inspec",
+    "specialization": "devops",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2212,
+    "name": "cloudnative-pg",
+    "author_company": "cloudnative-pg",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2213,
+    "name": "erda",
+    "author_company": "erda-project",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2214,
+    "name": "zadig",
+    "author_company": "koderover",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2215,
+    "name": "stern",
+    "author_company": "stern",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2216,
+    "name": "DevOps",
+    "author_company": "Pradumnasaraf",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2217,
+    "name": "minishift",
+    "author_company": "minishift",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2218,
+    "name": "introduction-to-bash-scripting",
+    "author_company": "bobbyiliev",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2219,
+    "name": "goreman",
+    "author_company": "mattn",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2220,
+    "name": "gomplate",
+    "author_company": "hairyhenderson",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2221,
+    "name": "choerodon",
+    "author_company": "open-hand",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2222,
+    "name": "sysbox",
+    "author_company": "nestybox",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2223,
+    "name": "minicron",
+    "author_company": "jamesrwhite",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2224,
+    "name": "awesome-ssh",
+    "author_company": "moul",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2225,
+    "name": "incubator-devlake",
+    "author_company": "apache",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2226,
+    "name": "robusta",
+    "author_company": "robusta-dev",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2227,
+    "name": "pytest-testinfra",
+    "author_company": "pytest-dev",
+    "specialization": "devops",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2228,
+    "name": "bk-ci",
+    "author_company": "TencentBlueKing",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2229,
+    "name": "syncd",
+    "author_company": "dreamans",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2230,
+    "name": "juju",
+    "author_company": "juju",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2231,
+    "name": "mitogen",
+    "author_company": "mitogen-hq",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2232,
+    "name": "blog",
+    "author_company": "amandakelake",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2233,
+    "name": "DevOps-Bash-tools",
+    "author_company": "HariSekhon",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2234,
+    "name": "shell-operator",
+    "author_company": "flant",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2235,
+    "name": "archerysec",
+    "author_company": "archerysec",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2236,
+    "name": "ledge",
+    "author_company": "phodal",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2237,
+    "name": "otomi-core",
+    "author_company": "redkubes",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2238,
+    "name": "snowflake",
+    "author_company": "subhra74",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2239,
+    "name": "ansible-vagrant-examples",
+    "author_company": "geerlingguy",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2240,
+    "name": "developer-roadmap",
+    "author_company": "DasyDong",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2241,
+    "name": "terracognita",
+    "author_company": "cycloidio",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2242,
+    "name": "botkube",
+    "author_company": "kubeshop",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2243,
+    "name": "grafana-aws-cloudwatch-dashboards",
+    "author_company": "monitoringartist",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2244,
+    "name": "DevOps-Bootcamp",
+    "author_company": "kunal-kushwaha",
+    "specialization": "devops",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2245,
+    "name": "preevy",
+    "author_company": "livecycle",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2246,
+    "name": "awesome-roadmaps",
+    "author_company": "orsanawwad",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2247,
+    "name": "awesome-cloud-native",
+    "author_company": "rootsongjc",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2248,
+    "name": "tutorials",
+    "author_company": "antonputra",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2249,
+    "name": "terraboard",
+    "author_company": "camptocamp",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2250,
+    "name": "fleet",
+    "author_company": "fleetdm",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2251,
+    "name": "flightplan",
+    "author_company": "pstadler",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2252,
+    "name": "mist-ce",
+    "author_company": "mistio",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2253,
+    "name": "Practical.CleanArchitecture",
+    "author_company": "phongnguyend",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2254,
+    "name": "frontail",
+    "author_company": "mthenw",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2255,
+    "name": "kapitan",
+    "author_company": "kapicorp",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2256,
+    "name": "cicd-goat",
+    "author_company": "cider-security-research",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2257,
+    "name": "vagrant-digitalocean",
+    "author_company": "devopsgroup-io",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2258,
+    "name": "oneuptime",
+    "author_company": "OneUptime",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2259,
+    "name": "awesome-argo",
+    "author_company": "akuity",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2260,
+    "name": "raspberry-pi-dramble",
+    "author_company": "geerlingguy",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2261,
+    "name": "SREWorks",
+    "author_company": "alibaba",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2262,
+    "name": "lastbackend",
+    "author_company": "lastbackend",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2263,
+    "name": "sshportal",
+    "author_company": "moul",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2264,
+    "name": "flow-core-x",
+    "author_company": "FlowCI",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2265,
+    "name": "nixops",
+    "author_company": "NixOS",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2266,
+    "name": "meetup",
+    "author_company": "baiyutang",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2267,
+    "name": "archer",
+    "author_company": "jly8866",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2268,
+    "name": "webterminal",
+    "author_company": "jimmy201602",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2269,
+    "name": "nodebestpractices",
+    "author_company": "goldbergyoni",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2270,
+    "name": "puppeteer",
+    "author_company": "puppeteer",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2271,
+    "name": "storybook",
+    "author_company": "storybookjs",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2272,
+    "name": "playwright",
+    "author_company": "microsoft",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2273,
+    "name": "hoppscotch",
+    "author_company": "hoppscotch",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2274,
+    "name": "localstack",
+    "author_company": "localstack",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2275,
+    "name": "cypress",
+    "author_company": "cypress-io",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2276,
+    "name": "jest",
+    "author_company": "jestjs",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2277,
+    "name": "javascript-testing-best-practices",
+    "author_company": "goldbergyoni",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2278,
+    "name": "mocha",
+    "author_company": "mochajs",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2279,
+    "name": "testify",
+    "author_company": "stretchr",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2280,
+    "name": "learn-go-with-tests",
+    "author_company": "quii",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2281,
+    "name": "ava",
+    "author_company": "avajs",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2282,
+    "name": "enzyme",
+    "author_company": "enzymejs",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2283,
+    "name": "react-testing-library",
+    "author_company": "testing-library",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2284,
+    "name": "goreplay",
+    "author_company": "buger",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2285,
+    "name": "Catch2",
+    "author_company": "catchorg",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2286,
+    "name": "faker",
+    "author_company": "joke2k",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2287,
+    "name": "jasmine",
+    "author_company": "jasmine",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2288,
+    "name": "mockito",
+    "author_company": "mockito",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2289,
+    "name": "phpstan",
+    "author_company": "phpstan",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2290,
+    "name": "httpbin",
+    "author_company": "postmanlabs",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2291,
+    "name": "nightwatch",
+    "author_company": "nightwatchjs",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2292,
+    "name": "pytest",
+    "author_company": "pytest-dev",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2293,
+    "name": "bruno",
+    "author_company": "usebruno",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2294,
+    "name": "Detox",
+    "author_company": "wix",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2295,
+    "name": "metersphere",
+    "author_company": "metersphere",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2296,
+    "name": "pollyjs",
+    "author_company": "Netflix",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2297,
+    "name": "toxiproxy",
+    "author_company": "Shopify",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2298,
+    "name": "chromedp",
+    "author_company": "chromedp",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2299,
+    "name": "Quick",
+    "author_company": "Quick",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2300,
+    "name": "robotframework",
+    "author_company": "robotframework",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2301,
+    "name": "pest",
+    "author_company": "pestphp",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2302,
+    "name": "react-cosmos",
+    "author_company": "react-cosmos",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2303,
+    "name": "factory_bot",
+    "author_company": "thoughtbot",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2304,
+    "name": "ginkgo",
+    "author_company": "onsi",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2305,
+    "name": "karate",
+    "author_company": "karatelabs",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2306,
+    "name": "testcontainers-java",
+    "author_company": "testcontainers",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2307,
+    "name": "hurl",
+    "author_company": "Orange-OpenSource",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2308,
+    "name": "terratest",
+    "author_company": "gruntwork-io",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2309,
+    "name": "undetected-chromedriver",
+    "author_company": "ultrafunkamsterdam",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2310,
+    "name": "artillery",
+    "author_company": "artilleryio",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2311,
+    "name": "hypothesis",
+    "author_company": "HypothesisWorks",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2312,
+    "name": "foundry",
+    "author_company": "foundry-rs",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2313,
+    "name": "ts-jest",
+    "author_company": "kulshekhar",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2314,
+    "name": "web-skills",
+    "author_company": "andreasbm",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2315,
+    "name": "HeadlessBrowsers",
+    "author_company": "dhamaniasad",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2316,
+    "name": "go-grpc-middleware",
+    "author_company": "grpc-ecosystem",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2317,
+    "name": "go-sqlmock",
+    "author_company": "DATA-DOG",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2318,
+    "name": "howtheytest",
+    "author_company": "abhivaikar",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2319,
+    "name": "bash-oo-framework",
+    "author_company": "niieani",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2320,
+    "name": "doctest",
+    "author_company": "doctest",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2321,
+    "name": "goss",
+    "author_company": "goss-org",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2322,
+    "name": "mockery",
+    "author_company": "vektra",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2323,
+    "name": "miragejs",
+    "author_company": "miragejs",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2324,
+    "name": "mockk",
+    "author_company": "mockk",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2325,
+    "name": "jest-cheat-sheet",
+    "author_company": "sapegin",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2326,
+    "name": "react-hooks-testing-library",
+    "author_company": "testing-library",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2327,
+    "name": "cypress-realworld-app",
+    "author_company": "cypress-io",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2328,
+    "name": "syzkaller",
+    "author_company": "google",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2329,
+    "name": "gotests",
+    "author_company": "cweill",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2330,
+    "name": "Nimble",
+    "author_company": "Quick",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2331,
+    "name": "Codeception",
+    "author_company": "Codeception",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2332,
+    "name": "go-fuzz",
+    "author_company": "dvyukov",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2333,
+    "name": "maildev",
+    "author_company": "maildev",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2334,
+    "name": "wpt",
+    "author_company": "web-platform-tests",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2335,
+    "name": "rod",
+    "author_company": "go-rod",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2336,
+    "name": "bats-core",
+    "author_company": "bats-core",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2337,
+    "name": "pywinauto",
+    "author_company": "pywinauto",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2338,
+    "name": "intern",
+    "author_company": "theintern",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2339,
+    "name": "tcpcopy",
+    "author_company": "session-replay-tools",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2340,
+    "name": "AFLplusplus",
+    "author_company": "AFLplusplus",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2341,
+    "name": "jest-dom",
+    "author_company": "testing-library",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2342,
+    "name": "kotest",
+    "author_company": "kotest",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2343,
+    "name": "mimesis",
+    "author_company": "lk-geimfari",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2344,
+    "name": "powermock",
+    "author_company": "powermock",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2345,
+    "name": "dredd",
+    "author_company": "apiaryio",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2346,
+    "name": "CodeceptJS",
+    "author_company": "codeceptjs",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2347,
+    "name": "qunit",
+    "author_company": "qunitjs",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2348,
+    "name": "fast-check",
+    "author_company": "dubzzz",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2349,
+    "name": "httplab",
+    "author_company": "qustavo",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2350,
+    "name": "httprunner",
+    "author_company": "httprunner",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2351,
+    "name": "go-cmp",
+    "author_company": "google",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2352,
+    "name": "pa11y",
+    "author_company": "pa11y",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2353,
+    "name": "molecule",
+    "author_company": "ansible",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2354,
+    "name": "jest-image-snapshot",
+    "author_company": "americanexpress",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2355,
+    "name": "awaitility",
+    "author_company": "awaitility",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2356,
+    "name": "manticore",
+    "author_company": "trailofbits",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2357,
+    "name": "inKino",
+    "author_company": "roughike",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2358,
+    "name": "swift-snapshot-testing",
+    "author_company": "pointfreeco",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2359,
+    "name": "thunder-client-support",
+    "author_company": "rangav",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2360,
+    "name": "spock",
+    "author_company": "spockframework",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2361,
+    "name": "shoulda-matchers",
+    "author_company": "thoughtbot",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2362,
+    "name": "tox",
+    "author_company": "tox-dev",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2363,
+    "name": "cypress-example-recipes",
+    "author_company": "cypress-io",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2364,
+    "name": "migration",
+    "author_company": "phodal",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2365,
+    "name": "factory_boy",
+    "author_company": "FactoryBoy",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2366,
+    "name": "qawolf",
+    "author_company": "qawolf",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2367,
+    "name": "minitest",
+    "author_company": "minitest",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2368,
+    "name": "dom-testing-library",
+    "author_company": "testing-library",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2369,
+    "name": "AutoFixture",
+    "author_company": "AutoFixture",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2370,
+    "name": "macaca",
+    "author_company": "alibaba",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2371,
+    "name": "nodejs-integration-tests-best-practices",
+    "author_company": "testjavascript",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2372,
+    "name": "garden",
+    "author_company": "garden-io",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2373,
+    "name": "awesome-http-benchmark",
+    "author_company": "denji",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2374,
+    "name": "rewire",
+    "author_company": "jhnns",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2375,
+    "name": "puppeteer-examples",
+    "author_company": "checkly",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2376,
+    "name": "Pester",
+    "author_company": "pester",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2377,
+    "name": "react-native-testing-library",
+    "author_company": "callstack",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2378,
+    "name": "database_cleaner",
+    "author_company": "DatabaseCleaner",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2379,
+    "name": "php-ddd-example",
+    "author_company": "CodelyTV",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2380,
+    "name": "vim-test",
+    "author_company": "vim-test",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2381,
+    "name": "keploy",
+    "author_company": "keploy",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2382,
+    "name": "pandera",
+    "author_company": "unionai-oss",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2383,
+    "name": "inspec",
+    "author_company": "inspec",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2384,
+    "name": "conftest",
+    "author_company": "open-policy-agent",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2385,
+    "name": "toxy",
+    "author_company": "h2non",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2386,
+    "name": "Papercut-SMTP",
+    "author_company": "ChangemakerStudios",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2387,
+    "name": "hiper",
+    "author_company": "pod4g",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2388,
+    "name": "testcontainers-go",
+    "author_company": "testcontainers",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2389,
+    "name": "testing-nestjs",
+    "author_company": "jmcdo29",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2390,
+    "name": "badssl.com",
+    "author_company": "chromium",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2391,
+    "name": "pumba",
+    "author_company": "alexei-led",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2392,
+    "name": "maelstrom",
+    "author_company": "jepsen-io",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2393,
+    "name": "Jailer",
+    "author_company": "Wisser",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2394,
+    "name": "vcrpy",
+    "author_company": "kevin1024",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2395,
+    "name": "stryker-js",
+    "author_company": "stryker-mutator",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2396,
+    "name": "assertj",
+    "author_company": "assertj",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2397,
+    "name": "NSubstitute",
+    "author_company": "nsubstitute",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2398,
+    "name": "sonic-server",
+    "author_company": "SonicCloudOrg",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2399,
+    "name": "echidna",
+    "author_company": "crytic",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2400,
+    "name": "refurb",
+    "author_company": "dosisod",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2401,
+    "name": "mongodb-memory-server",
+    "author_company": "nodkz",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2402,
+    "name": "httpexpect",
+    "author_company": "gavv",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2403,
+    "name": "ladle",
+    "author_company": "tajo",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2404,
+    "name": "nunit",
+    "author_company": "nunit",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2405,
+    "name": "zalenium",
+    "author_company": "zalando",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2406,
+    "name": "android-modular-architecture",
+    "author_company": "vmadalin",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2407,
+    "name": "testing-distributed-systems",
+    "author_company": "asatarin",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2408,
+    "name": "ReportGenerator",
+    "author_company": "danielpalme",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2409,
+    "name": "stf",
+    "author_company": "DeviceFarmer",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2410,
+    "name": "Penetration-Testing-Tools",
+    "author_company": "mgeeky",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2411,
+    "name": "specta",
+    "author_company": "specta",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2412,
+    "name": "tapjs",
+    "author_company": "tapjs",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2413,
+    "name": "hoverfly",
+    "author_company": "SpectoLabs",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2414,
+    "name": "pytest-testinfra",
+    "author_company": "pytest-dev",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2415,
+    "name": "jest-extended",
+    "author_company": "jest-community",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2416,
+    "name": "jest-preview",
+    "author_company": "nvh95",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2417,
+    "name": "finatra",
+    "author_company": "twitter",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2418,
+    "name": "lighthousebot",
+    "author_company": "GoogleChromeLabs",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2419,
+    "name": "phoronix-test-suite",
+    "author_company": "phoronix-test-suite",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2420,
+    "name": "spek",
+    "author_company": "spekframework",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2421,
+    "name": "Verify",
+    "author_company": "VerifyTests",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2422,
+    "name": "sqa-wiki",
+    "author_company": "ligurio",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2423,
+    "name": "abseil-py",
+    "author_company": "abseil",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2424,
+    "name": "Fuzzing101",
+    "author_company": "antonio-morales",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2425,
+    "name": "generatedata",
+    "author_company": "benkeen",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2426,
+    "name": "FuzzingPaper",
+    "author_company": "wcventure",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2427,
+    "name": "HTTPretty",
+    "author_company": "gabrielfalcao",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2428,
+    "name": "user-event",
+    "author_company": "testing-library",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2429,
+    "name": "pythonVSCode",
+    "author_company": "DonJayamanne",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2430,
+    "name": "sonic-agent",
+    "author_company": "SonicCloudOrg",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2431,
+    "name": "testbench",
+    "author_company": "orchestral",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2432,
+    "name": "reactopt",
+    "author_company": "reactopt",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2433,
+    "name": "spectator",
+    "author_company": "ngneat",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2434,
+    "name": "gock",
+    "author_company": "h2non",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2435,
+    "name": "Mocky",
+    "author_company": "MockyAbstract",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2436,
+    "name": "FlaUI",
+    "author_company": "FlaUI",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2437,
+    "name": "schemathesis",
+    "author_company": "schemathesis",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2438,
+    "name": "SwiftMonkey",
+    "author_company": "zalando",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2439,
+    "name": "mountebank",
+    "author_company": "bbyars",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2440,
+    "name": "infection",
+    "author_company": "infection",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2441,
+    "name": "martian",
+    "author_company": "google",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2442,
+    "name": "shouldly",
+    "author_company": "shouldly",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2443,
+    "name": "DevOps-Bootcamp",
+    "author_company": "kunal-kushwaha",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2444,
+    "name": "js-unit-testing-guide",
+    "author_company": "mawrkus",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2445,
+    "name": "powerfulseal",
+    "author_company": "powerfulseal",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2446,
+    "name": "testng",
+    "author_company": "testng-team",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2447,
+    "name": "should.js",
+    "author_company": "shouldjs",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2448,
+    "name": "nut.js",
+    "author_company": "nut-tree",
+    "specialization": "testing",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2449,
+    "name": "the-book-of-secret-knowledge",
+    "author_company": "trimstray",
+    "specialization": "security",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2450,
+    "name": "Awesome-Hacking",
+    "author_company": "Hack-with-Github",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2451,
+    "name": "cs-video-courses",
+    "author_company": "Developer-Y",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2452,
+    "name": "PayloadsAllTheThings",
+    "author_company": "swisskyrepo",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2453,
+    "name": "caddy",
+    "author_company": "caddyserver",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2454,
+    "name": "x64dbg",
+    "author_company": "x64dbg",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2455,
+    "name": "mitmproxy",
+    "author_company": "mitmproxy",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2456,
+    "name": "algo",
+    "author_company": "trailofbits",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2457,
+    "name": "quivr",
+    "author_company": "StanGirard",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2458,
+    "name": "nginxconfig.io",
+    "author_company": "digitalocean",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2459,
+    "name": "CheatSheetSeries",
+    "author_company": "OWASP",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2460,
+    "name": "hosts",
+    "author_company": "StevenBlack",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2461,
+    "name": "openzeppelin-contracts",
+    "author_company": "OpenZeppelin",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2462,
+    "name": "setup-ipsec-vpn",
+    "author_company": "hwdsl2",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2463,
+    "name": "API-Security-Checklist",
+    "author_company": "shieldfy",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2464,
+    "name": "osquery",
+    "author_company": "osquery",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2465,
+    "name": "security-guide-for-developers",
+    "author_company": "FallibleInc",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2466,
+    "name": "macOS-Security-and-Privacy-Guide",
+    "author_company": "drduh",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2467,
+    "name": "trivy",
+    "author_company": "aquasecurity",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2468,
+    "name": "radare2",
+    "author_company": "radareorg",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2469,
+    "name": "matomo",
+    "author_company": "matomo-org",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2470,
+    "name": "authelia",
+    "author_company": "authelia",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2471,
+    "name": "keepassxc",
+    "author_company": "keepassxreboot",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2472,
+    "name": "slim",
+    "author_company": "slimtoolkit",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2473,
+    "name": "cilium",
+    "author_company": "cilium",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2474,
+    "name": "How-To-Secure-A-Linux-Server",
+    "author_company": "imthenachoman",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2475,
+    "name": "nuclei",
+    "author_company": "projectdiscovery",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2476,
+    "name": "teleport",
+    "author_company": "gravitational",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2477,
+    "name": "bettercap",
+    "author_company": "bettercap",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2478,
+    "name": "hydra",
+    "author_company": "ory",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2479,
+    "name": "sops",
+    "author_company": "getsops",
+    "specialization": "security",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2480,
+    "name": "cutter",
+    "author_company": "rizinorg",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2481,
+    "name": "gitleaks",
+    "author_company": "gitleaks",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2482,
+    "name": "tink",
+    "author_company": "google",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2483,
+    "name": "nginx-admins-handbook",
+    "author_company": "trimstray",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2484,
+    "name": "hacker101",
+    "author_company": "Hacker0x01",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2485,
+    "name": "personal-security-checklist",
+    "author_company": "Lissy93",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2486,
+    "name": "trufflehog",
+    "author_company": "trufflesecurity",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2487,
+    "name": "secguide",
+    "author_company": "Tencent",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2488,
+    "name": "sniffnet",
+    "author_company": "GyulyVGC",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2489,
+    "name": "wifiphisher",
+    "author_company": "wifiphisher",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2490,
+    "name": "DOMPurify",
+    "author_company": "cure53",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2491,
+    "name": "javascript-obfuscator",
+    "author_company": "javascript-obfuscator",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2492,
+    "name": "hacker-roadmap",
+    "author_company": "sundowndev",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2493,
+    "name": "keeweb",
+    "author_company": "keeweb",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2494,
+    "name": "routersploit",
+    "author_company": "threat9",
+    "specialization": "security",
+    "type": "embedded"
+  },
+  {
+    "tool_id": 2495,
+    "name": "zaproxy",
+    "author_company": "zaproxy",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2496,
+    "name": "RustScan",
+    "author_company": "RustScan",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2497,
+    "name": "labs",
+    "author_company": "docker",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2498,
+    "name": "awesome-security",
+    "author_company": "sbilly",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2499,
+    "name": "dirsearch",
+    "author_company": "maurosoria",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2500,
+    "name": "infisical",
+    "author_company": "Infisical",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2501,
+    "name": "chezmoi",
+    "author_company": "twpayne",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2502,
+    "name": "vuls",
+    "author_company": "future-architect",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2503,
+    "name": "awesome-web-security",
+    "author_company": "qazbnm456",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2504,
+    "name": "YubiKey-Guide",
+    "author_company": "drduh",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2505,
+    "name": "cryptomator",
+    "author_company": "cryptomator",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2506,
+    "name": "gophish",
+    "author_company": "gophish",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2507,
+    "name": "test-your-sysadmin-skills",
+    "author_company": "trimstray",
+    "specialization": "security",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2508,
+    "name": "urh",
+    "author_company": "jopohl",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2509,
+    "name": "helmet",
+    "author_company": "helmetjs",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2510,
+    "name": "systeminformer",
+    "author_company": "winsiderss",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2511,
+    "name": "how-to-secure-anything",
+    "author_company": "veeral-patel",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2512,
+    "name": "scapy",
+    "author_company": "secdev",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2513,
+    "name": "fail2ban",
+    "author_company": "fail2ban",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2514,
+    "name": "the-practical-linux-hardening-guide",
+    "author_company": "trimstray",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2515,
+    "name": "openvpn",
+    "author_company": "OpenVPN",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2516,
+    "name": "mvt",
+    "author_company": "mvt-project",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2517,
+    "name": "kubescape",
+    "author_company": "kubescape",
+    "specialization": "security",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2518,
+    "name": "xray",
+    "author_company": "chaitin",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2519,
+    "name": "Atlas",
+    "author_company": "Atlas-OS",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2520,
+    "name": "opensnitch",
+    "author_company": "evilsocket",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2521,
+    "name": "DB-GPT",
+    "author_company": "eosphoros-ai",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2522,
+    "name": "oss-fuzz",
+    "author_company": "google",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2523,
+    "name": "IdentityServer4",
+    "author_company": "IdentityServer",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2524,
+    "name": "juice-shop",
+    "author_company": "juice-shop",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2525,
+    "name": "prowler",
+    "author_company": "prowler-cloud",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2526,
+    "name": "awesome-ctf",
+    "author_company": "apsdehal",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2527,
+    "name": "howtheysre",
+    "author_company": "upgundecha",
+    "specialization": "security",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2528,
+    "name": "DVWA",
+    "author_company": "digininja",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2529,
+    "name": "Mailpile",
+    "author_company": "mailpile",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2530,
+    "name": "nmap",
+    "author_company": "nmap",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2531,
+    "name": "user.js",
+    "author_company": "arkenfox",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2532,
+    "name": "netmaker",
+    "author_company": "gravitl",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2533,
+    "name": "my-arsenal-of-aws-security-tools",
+    "author_company": "toniblyx",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2534,
+    "name": "monero",
+    "author_company": "monero-project",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2535,
+    "name": "spring-security",
+    "author_company": "spring-projects",
+    "specialization": "security",
+    "type": "framework"
+  },
+  {
+    "tool_id": 2536,
+    "name": "wazuh",
+    "author_company": "wazuh",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2537,
+    "name": "nishang",
+    "author_company": "samratashok",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2538,
+    "name": "wpscan",
+    "author_company": "wpscanteam",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2539,
+    "name": "devops-resources",
+    "author_company": "bregman-arie",
+    "specialization": "security",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2540,
+    "name": "Quasar",
+    "author_company": "quasar",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2541,
+    "name": "trape",
+    "author_company": "jofpin",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2542,
+    "name": "KeychainAccess",
+    "author_company": "kishikawakatsumi",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2543,
+    "name": "SafeLine",
+    "author_company": "chaitin",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2544,
+    "name": "nuclei-templates",
+    "author_company": "projectdiscovery",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2545,
+    "name": "school-of-sre",
+    "author_company": "linkedin",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2546,
+    "name": "android-security-awesome",
+    "author_company": "ashishb",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2547,
+    "name": "crowdsec",
+    "author_company": "crowdsecurity",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2548,
+    "name": "shadowsocks-rust",
+    "author_company": "shadowsocks",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2549,
+    "name": "gosec",
+    "author_company": "securego",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2550,
+    "name": "sigma",
+    "author_company": "SigmaHQ",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2551,
+    "name": "Sn1per",
+    "author_company": "1N3",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2552,
+    "name": "smart-contract-best-practices",
+    "author_company": "Consensys",
+    "specialization": "security",
+    "type": "documentation"
+  },
+  {
+    "tool_id": 2553,
+    "name": "grype",
+    "author_company": "anchore",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2554,
+    "name": "404StarLink",
+    "author_company": "knownsec",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2555,
+    "name": "graylog2-server",
+    "author_company": "Graylog2",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2556,
+    "name": "unicorn",
+    "author_company": "unicorn-engine",
+    "specialization": "security",
+    "type": "framework"
+  },
+  {
+    "tool_id": 2557,
+    "name": "awesome-threat-intelligence",
+    "author_company": "hslatman",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2558,
+    "name": "brakeman",
+    "author_company": "presidentbeef",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2559,
+    "name": "awesome-incident-response",
+    "author_company": "meirwah",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2560,
+    "name": "capstone",
+    "author_company": "capstone-engine",
+    "specialization": "security",
+    "type": "framework"
+  },
+  {
+    "tool_id": 2561,
+    "name": "objection",
+    "author_company": "sensepost",
+    "specialization": "security",
+    "type": "framework"
+  },
+  {
+    "tool_id": 2562,
+    "name": "secretive",
+    "author_company": "maxgoedjen",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2563,
+    "name": "lego",
+    "author_company": "go-acme",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2564,
+    "name": "falco",
+    "author_company": "falcosecurity",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2565,
+    "name": "pyre-check",
+    "author_company": "facebook",
+    "specialization": "security",
+    "type": "code-quality"
+  },
+  {
+    "tool_id": 2566,
+    "name": "tfsec",
+    "author_company": "aquasecurity",
+    "specialization": "security",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2567,
+    "name": "web-check",
+    "author_company": "Lissy93",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2568,
+    "name": "datree",
+    "author_company": "datreeio",
+    "specialization": "security",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2569,
+    "name": "wstg",
+    "author_company": "OWASP",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2570,
+    "name": "awesome-hacker-search-engines",
+    "author_company": "edoardottt",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2571,
+    "name": "pyWhat",
+    "author_company": "bee-san",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2572,
+    "name": "frappe",
+    "author_company": "frappe",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2573,
+    "name": "system-bus-radio",
+    "author_company": "fulldecent",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2574,
+    "name": "steampipe",
+    "author_company": "turbot",
+    "specialization": "security",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2575,
+    "name": "cleverhans",
+    "author_company": "cleverhans-lab",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2576,
+    "name": "arkime",
+    "author_company": "arkime",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2577,
+    "name": "ScoutSuite",
+    "author_company": "nccgroup",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2578,
+    "name": "docker-ipsec-vpn-server",
+    "author_company": "hwdsl2",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2579,
+    "name": "awesome-appsec",
+    "author_company": "paragonie",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2580,
+    "name": "jwt",
+    "author_company": "golang-jwt",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2581,
+    "name": "certificates",
+    "author_company": "smallstep",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2582,
+    "name": "onionshare",
+    "author_company": "onionshare",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2583,
+    "name": "firezone",
+    "author_company": "firezone",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2584,
+    "name": "cve",
+    "author_company": "trickest",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2585,
+    "name": "gitrob",
+    "author_company": "michenriksen",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2586,
+    "name": "yakit",
+    "author_company": "yaklang",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2587,
+    "name": "cloudmapper",
+    "author_company": "duo-labs",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2588,
+    "name": "airgeddon",
+    "author_company": "v1s1t0r1sh3r3",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2589,
+    "name": "Awesome-WAF",
+    "author_company": "0xInfection",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2590,
+    "name": "bandit",
+    "author_company": "PyCQA",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2591,
+    "name": "zeek",
+    "author_company": "zeek",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2592,
+    "name": "DependencyCheck",
+    "author_company": "jeremylong",
+    "specialization": "security",
+    "type": "build-tool"
+  },
+  {
+    "tool_id": 2593,
+    "name": "PoC-in-GitHub",
+    "author_company": "nomi-sec",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2594,
+    "name": "bromite",
+    "author_company": "bromite",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2595,
+    "name": "tutanota",
+    "author_company": "tutao",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2596,
+    "name": "PrivateBin",
+    "author_company": "PrivateBin",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2597,
+    "name": "tpotce",
+    "author_company": "telekom-security",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2598,
+    "name": "maltrail",
+    "author_company": "stamparm",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2599,
+    "name": "authentik",
+    "author_company": "goauthentik",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2600,
+    "name": "gopass",
+    "author_company": "gopasspw",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2601,
+    "name": "guide",
+    "author_company": "hobby-kube",
+    "specialization": "security",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2602,
+    "name": "bugbounty-cheatsheet",
+    "author_company": "EdOverflow",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2603,
+    "name": "aquatone",
+    "author_company": "michenriksen",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2604,
+    "name": "awesome-web-hacking",
+    "author_company": "infoslack",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2605,
+    "name": "awesome-privacy",
+    "author_company": "Lissy93",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2606,
+    "name": "kubernetes-network-policy-recipes",
+    "author_company": "ahmetb",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2607,
+    "name": "clusterfuzz",
+    "author_company": "google",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2608,
+    "name": "linux-kernel-exploitation",
+    "author_company": "xairy",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2609,
+    "name": "CTFd",
+    "author_company": "CTFd",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2610,
+    "name": "DevSecOps",
+    "author_company": "sottlmarek",
+    "specialization": "security",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2611,
+    "name": "AllAboutBugBounty",
+    "author_company": "daffainfo",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2612,
+    "name": "reconftw",
+    "author_company": "six2dez",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2613,
+    "name": "syzkaller",
+    "author_company": "google",
+    "specialization": "security",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2614,
+    "name": "wgcf",
+    "author_company": "ViRb3",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2615,
+    "name": "libreddit",
+    "author_company": "libreddit",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2616,
+    "name": "WhatWeb",
+    "author_company": "urbanadventurer",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2617,
+    "name": "osmedeus",
+    "author_company": "j3ssie",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2618,
+    "name": "AutoSploit",
+    "author_company": "NullArray",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2619,
+    "name": "awesome-infosec",
+    "author_company": "onlurking",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2620,
+    "name": "1earn",
+    "author_company": "ffffffff0x",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2621,
+    "name": "MISP",
+    "author_company": "MISP",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2622,
+    "name": "awesome-shodan-queries",
+    "author_company": "jakejarvis",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2623,
+    "name": "simplex-chat",
+    "author_company": "simplex-chat",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2624,
+    "name": "cowrie",
+    "author_company": "cowrie",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2625,
+    "name": "awesome-security-hardening",
+    "author_company": "decalage2",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2626,
+    "name": "Hacking-Security-Ebooks",
+    "author_company": "yeahhub",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2627,
+    "name": "Active-Directory-Exploitation-Cheat-Sheet",
+    "author_company": "S1ckB0y1337",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2628,
+    "name": "cli",
+    "author_company": "snyk",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2629,
+    "name": "ipatool",
+    "author_company": "majd",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2630,
+    "name": "pouch",
+    "author_company": "AliyunContainerService",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2631,
+    "name": "Cheatsheet-God",
+    "author_company": "OlivierLaflamme",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2632,
+    "name": "security-101-for-saas-startups",
+    "author_company": "forter",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2633,
+    "name": "kata-containers",
+    "author_company": "kata-containers",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2634,
+    "name": "aircrack-ng",
+    "author_company": "aircrack-ng",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2635,
+    "name": "Ladon",
+    "author_company": "k8gege",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2636,
+    "name": "faraday",
+    "author_company": "infobyte",
+    "specialization": "security",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2637,
+    "name": "w3af",
+    "author_company": "andresriancho",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2638,
+    "name": "security_monkey",
+    "author_company": "Netflix",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2639,
+    "name": "terrascan",
+    "author_company": "tenable",
+    "specialization": "security",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2640,
+    "name": "supercookie",
+    "author_company": "jonasstrehle",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2641,
+    "name": "pspy",
+    "author_company": "DominicBreuker",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2642,
+    "name": "can-i-take-over-xyz",
+    "author_company": "EdOverflow",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2643,
+    "name": "wireguard-docs",
+    "author_company": "pirate",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2644,
+    "name": "santa",
+    "author_company": "google",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2645,
+    "name": "opencti",
+    "author_company": "OpenCTI-Platform",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2646,
+    "name": "AFLplusplus",
+    "author_company": "AFLplusplus",
+    "specialization": "security",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2647,
+    "name": "ockam",
+    "author_company": "build-trust",
+    "specialization": "security",
+    "type": null
+  },
+  {
+    "tool_id": 2648,
+    "name": "google-ctf",
+    "author_company": "google",
+    "specialization": "security",
+    "type": null
+  }
+]
