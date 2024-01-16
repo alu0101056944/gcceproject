@@ -26,6 +26,12 @@ export default async function getAllIssueAmountsObject(allPartialURL) {
     async ({ page, request, log, outputObject }) => {
       log.info('Scraper for github issues on community-tool table visited ' +
           request.url);
+
+      outputObject[request.label] = {
+        open: 0,
+        closed: 0,
+        total: 0,
+      };
       
       const parseIssueAmount = async (state) => {
         const summaryOpenLinkLocator = page.getByRole('link')
@@ -35,14 +41,12 @@ export default async function getAllIssueAmountsObject(allPartialURL) {
         return AMOUNT;
       }
 
-      const AMOUNT_OF_OPEN_ISSUES = await parseIssueAmount('Open');
-      const AMOUNT_OF_CLOSED_ISSUES = await parseIssueAmount('Closed');
+      const AMOUNT_OF_OPEN_ISSUES = await parseIssueAmount('Open') ?? 0;
+      const AMOUNT_OF_CLOSED_ISSUES = await parseIssueAmount('Closed') ?? 0;
       const TOTAL_ISSUES = AMOUNT_OF_CLOSED_ISSUES + AMOUNT_OF_OPEN_ISSUES;
-      outputObject[request.label] = {
-        open: AMOUNT_OF_OPEN_ISSUES,
-        closed: AMOUNT_OF_CLOSED_ISSUES,
-        total: TOTAL_ISSUES,
-      };
+      outputObject[request.label].open = AMOUNT_OF_OPEN_ISSUES;
+      outputObject[request.label].closed = AMOUNT_OF_CLOSED_ISSUES;
+      outputObject[request.label].total = TOTAL_ISSUES;
     },
   );
   scraper.create([]);

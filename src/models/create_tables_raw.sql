@@ -99,10 +99,8 @@ CREATE TABLE community_tool_date(
   rank integer
 );
 
-CREATE TABLE company_date(
+CREATE TABLE company_date( -- to use date_from on orchestration
   company_id integer,
-  year integer,
-  quarter integer,
   benefit numeric
 );
 

@@ -9,7 +9,7 @@
 
 import getStocks from "../../scraper_use_cases/get_company_benefits.mjs";
 
-export default async function makeCompanyDate(companyTable, idOfToday) {
+export default async function makeCompanyDate(companyTable) {
   const allRecord = [];
 
   const companyNameToDelta = await getStocks(companyTable.map(record => record.name));
@@ -17,9 +17,6 @@ export default async function makeCompanyDate(companyTable, idOfToday) {
   for (const companyRecord of companyTable) {
     const record = {
       company_id: companyRecord.company_id,
-      date_id: idOfToday,
-      year: new Date().getFullYear(),
-      quarter: Math.floor((new Date().getMonth() + 3) / 3),
       benefit: companyNameToDelta[companyRecord.name],
     }
     allRecord.push(record);

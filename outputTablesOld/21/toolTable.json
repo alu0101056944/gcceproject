@@ -1,0 +1,3782 @@
+[
+  {
+    "tool_id": 2649,
+    "name": "react",
+    "author_company": "facebook",
+    "specialization": "frontend",
+    "type": "ui"
+  },
+  {
+    "tool_id": 2650,
+    "name": "vue",
+    "author_company": "vuejs",
+    "specialization": "frontend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 2651,
+    "name": "Front-End-Checklist",
+    "author_company": "thedaviddias",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2652,
+    "name": "vite",
+    "author_company": "vitejs",
+    "specialization": "frontend",
+    "type": "build-tool"
+  },
+  {
+    "tool_id": 2653,
+    "name": "ionic-framework",
+    "author_company": "ionic-team",
+    "specialization": "frontend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 2654,
+    "name": "frontend-dev-bookmarks",
+    "author_company": "dypsilon",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2655,
+    "name": "awesome-cheatsheets",
+    "author_company": "LeCoupa",
+    "specialization": "frontend",
+    "type": "language"
+  },
+  {
+    "tool_id": 2656,
+    "name": "gold-miner",
+    "author_company": "xitu",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2657,
+    "name": "quivr",
+    "author_company": "StanGirard",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2658,
+    "name": "weekly",
+    "author_company": "ascoders",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2659,
+    "name": "GitHubDaily",
+    "author_company": "GitHubDaily",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2660,
+    "name": "expo",
+    "author_company": "expo",
+    "specialization": "frontend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 2661,
+    "name": "fe-interview",
+    "author_company": "haizlin",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2662,
+    "name": "iview",
+    "author_company": "iview",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2663,
+    "name": "ant-design-vue",
+    "author_company": "vueComponent",
+    "specialization": "frontend",
+    "type": "ui"
+  },
+  {
+    "tool_id": 2664,
+    "name": "EasySpider",
+    "author_company": "NaiboWang",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2665,
+    "name": "Hello-Python",
+    "author_company": "mouredev",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2666,
+    "name": "tui.editor",
+    "author_company": "nhn",
+    "specialization": "frontend",
+    "type": "editor"
+  },
+  {
+    "tool_id": 2667,
+    "name": "Front-End-Performance-Checklist",
+    "author_company": "thedaviddias",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2668,
+    "name": "amis",
+    "author_company": "baidu",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2669,
+    "name": "full-stack-fastapi-postgresql",
+    "author_company": "tiangolo",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2670,
+    "name": "marko",
+    "author_company": "marko-js",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2671,
+    "name": "TW-Elements",
+    "author_company": "mdbootstrap",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2672,
+    "name": "tachyons",
+    "author_company": "tachyons-css",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2673,
+    "name": "tui.calendar",
+    "author_company": "nhn",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2674,
+    "name": "gdbgui",
+    "author_company": "cs01",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2675,
+    "name": "material-design-for-bootstrap",
+    "author_company": "mdbootstrap",
+    "specialization": "frontend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 2676,
+    "name": "Awsome-Front-End-learning-resource",
+    "author_company": "helloqingfeng",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2677,
+    "name": "gremlins.js",
+    "author_company": "marmelab",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2678,
+    "name": "frontend-stuff",
+    "author_company": "moklick",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2679,
+    "name": "ng-zorro-antd",
+    "author_company": "NG-ZORRO",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2680,
+    "name": "StableStudio",
+    "author_company": "Stability-AI",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2681,
+    "name": "vue-enterprise-boilerplate",
+    "author_company": "bencodezen",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2682,
+    "name": "growth-ebook",
+    "author_company": "phodal",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2683,
+    "name": "Hippy",
+    "author_company": "Tencent",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2684,
+    "name": "it-tools",
+    "author_company": "CorentinTh",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2685,
+    "name": "frontend-case-studies",
+    "author_company": "andrew--r",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2686,
+    "name": "backbone.marionette",
+    "author_company": "marionettejs",
+    "specialization": "frontend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 2687,
+    "name": "hospitalrun-frontend",
+    "author_company": "HospitalRun",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2688,
+    "name": "zeroclipboard",
+    "author_company": "zeroclipboard",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2689,
+    "name": "FE-Interview",
+    "author_company": "lgwebdream",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2690,
+    "name": "developer-roadmap-chinese",
+    "author_company": "goodjack",
+    "specialization": "frontend",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2691,
+    "name": "nicegui",
+    "author_company": "zauberzeug",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2692,
+    "name": "builder",
+    "author_company": "BuilderIO",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2693,
+    "name": "imba",
+    "author_company": "imba",
+    "specialization": "frontend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 2694,
+    "name": "alternative-front-ends",
+    "author_company": "mendel5",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2695,
+    "name": "papercups",
+    "author_company": "papercups-io",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2696,
+    "name": "FrontEndGitHub",
+    "author_company": "FrontEndGitHub",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2697,
+    "name": "nerv",
+    "author_company": "NervJS",
+    "specialization": "frontend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 2698,
+    "name": "webpacker",
+    "author_company": "rails",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2699,
+    "name": "TNT-Weekly",
+    "author_company": "tnfe",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2700,
+    "name": "AmazeFileManager",
+    "author_company": "TeamAmaze",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2701,
+    "name": "Front-End-Design-Checklist",
+    "author_company": "thedaviddias",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2702,
+    "name": "codefather",
+    "author_company": "liyupi",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2703,
+    "name": "reagent",
+    "author_company": "reagent-project",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2704,
+    "name": "san",
+    "author_company": "baidu",
+    "specialization": "frontend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 2705,
+    "name": "webhook.site",
+    "author_company": "webhooksite",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2706,
+    "name": "Front-End-Web-Development-Resources",
+    "author_company": "RitikPatni",
+    "specialization": "frontend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 2707,
+    "name": "telegram-list",
+    "author_company": "goq",
+    "specialization": "frontend",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2708,
+    "name": "forum",
+    "author_company": "frontendbr",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2709,
+    "name": "front-end-handbook-2019",
+    "author_company": "FrontendMasters",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2710,
+    "name": "javascript-code-challenges",
+    "author_company": "sadanandpai",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2711,
+    "name": "frontend-learning-kit",
+    "author_company": "sadanandpai",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2712,
+    "name": "mometa",
+    "author_company": "imcuttle",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2713,
+    "name": "pattern.css",
+    "author_company": "bansal",
+    "specialization": "frontend",
+    "type": "ui"
+  },
+  {
+    "tool_id": 2714,
+    "name": "mianshiya-public",
+    "author_company": "liyupi",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2715,
+    "name": "create-react-app-typescript",
+    "author_company": "wmonk",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2716,
+    "name": "roadmaps",
+    "author_company": "WeMakeDevs",
+    "specialization": "frontend",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2717,
+    "name": "plasmic",
+    "author_company": "plasmicapp",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2718,
+    "name": "awesome-jupyter",
+    "author_company": "markusschanta",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2719,
+    "name": "react-fontawesome",
+    "author_company": "FortAwesome",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2720,
+    "name": "visualization-collection",
+    "author_company": "hepengwei",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2721,
+    "name": "frontend-tech-list",
+    "author_company": "alienzhou",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2722,
+    "name": "frontend",
+    "author_company": "home-assistant",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2723,
+    "name": "webpack-libs-optimizations",
+    "author_company": "GoogleChromeLabs",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2724,
+    "name": "ui-buttons",
+    "author_company": "eludadev",
+    "specialization": "frontend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 2725,
+    "name": "rfs",
+    "author_company": "twbs",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2726,
+    "name": "smooth-scrollbar",
+    "author_company": "idiotWu",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2727,
+    "name": "OverlayScrollbars",
+    "author_company": "KingSora",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2728,
+    "name": "localResizeIMG",
+    "author_company": "think2011",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2729,
+    "name": "FrontEndCollection",
+    "author_company": "cheatsheet1999",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2730,
+    "name": "redux-orm",
+    "author_company": "redux-orm",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2731,
+    "name": "mini.css",
+    "author_company": "Chalarangelo",
+    "specialization": "frontend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 2732,
+    "name": "blogs",
+    "author_company": "sl1673495",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2733,
+    "name": "hop",
+    "author_company": "hop-protocol",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2734,
+    "name": "fe-interview",
+    "author_company": "azl397985856",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2735,
+    "name": "free-programming-resources",
+    "author_company": "liyupi",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2736,
+    "name": "guiadofrontend",
+    "author_company": "arthurspk",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2737,
+    "name": "vecty",
+    "author_company": "hexops",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2738,
+    "name": "neo",
+    "author_company": "neomjs",
+    "specialization": "frontend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 2739,
+    "name": "hiper",
+    "author_company": "pod4g",
+    "specialization": "frontend",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2740,
+    "name": "ViewUI",
+    "author_company": "view-design",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2741,
+    "name": "Jailer",
+    "author_company": "Wisser",
+    "specialization": "frontend",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2742,
+    "name": "awesome-casestudy",
+    "author_company": "luruke",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2743,
+    "name": "code-nav",
+    "author_company": "liyupi",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2744,
+    "name": "growth-in-action",
+    "author_company": "phodal",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2745,
+    "name": "img2css",
+    "author_company": "javierbyte",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2746,
+    "name": "OverVue",
+    "author_company": "open-source-labs",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2747,
+    "name": "omatsuri",
+    "author_company": "rtivital",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2748,
+    "name": "webpack-book",
+    "author_company": "survivejs",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2749,
+    "name": "vue-fontawesome",
+    "author_company": "FortAwesome",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2750,
+    "name": "meli",
+    "author_company": "getmeli",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2751,
+    "name": "ansible-cmdb",
+    "author_company": "fboender",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2752,
+    "name": "the-front-end-knowledge-you-may-not-know",
+    "author_company": "justjavac",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2753,
+    "name": "jest-preview",
+    "author_company": "nvh95",
+    "specialization": "frontend",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2754,
+    "name": "cli",
+    "author_company": "create-go-app",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2755,
+    "name": "devmap",
+    "author_company": "zualex",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2756,
+    "name": "userbase",
+    "author_company": "smallbets",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2757,
+    "name": "percy",
+    "author_company": "chinedufn",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2758,
+    "name": "webapp.rs",
+    "author_company": "saschagrunert",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2759,
+    "name": "frontendDaily",
+    "author_company": "kujian",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2760,
+    "name": "react-imgpro",
+    "author_company": "nitin42",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2761,
+    "name": "blaze",
+    "author_company": "blenderskool",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2762,
+    "name": "user-event",
+    "author_company": "testing-library",
+    "specialization": "frontend",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2763,
+    "name": "bttn.css",
+    "author_company": "ganapativs",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2764,
+    "name": "fe",
+    "author_company": "phodal",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2765,
+    "name": "spring-boot-vuejs",
+    "author_company": "jonashackt",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2766,
+    "name": "icestark",
+    "author_company": "ice-lab",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2767,
+    "name": "sql-mother",
+    "author_company": "liyupi",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2768,
+    "name": "frontend-development",
+    "author_company": "codingknite",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2769,
+    "name": "webpack-starter",
+    "author_company": "wbkd",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2770,
+    "name": "apihub",
+    "author_company": "hiteshchoudhary",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2771,
+    "name": "yuindex",
+    "author_company": "liyupi",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2772,
+    "name": "clean-code-javascript",
+    "author_company": "devictoribero",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2773,
+    "name": "layerJS",
+    "author_company": "layerJS",
+    "specialization": "frontend",
+    "type": "ui"
+  },
+  {
+    "tool_id": 2774,
+    "name": "openfl",
+    "author_company": "openfl",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2775,
+    "name": "python-web",
+    "author_company": "mouredev",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2776,
+    "name": "imgcook",
+    "author_company": "imgcook",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2777,
+    "name": "Awesome-Interview",
+    "author_company": "Awesome-Interview",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2778,
+    "name": "reactpatterns",
+    "author_company": "chantastic",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2779,
+    "name": "nipplejs",
+    "author_company": "yoannmoinet",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2780,
+    "name": "frontend-mini-challenges",
+    "author_company": "sadanandpai",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2781,
+    "name": "CrossUI",
+    "author_company": "linb",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2782,
+    "name": "ng-devui",
+    "author_company": "DevCloudFE",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2783,
+    "name": "chatgpt.js",
+    "author_company": "KudoAI",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2784,
+    "name": "yulegeyu",
+    "author_company": "liyupi",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2785,
+    "name": "react-native-picker-select",
+    "author_company": "lawnstarter",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2786,
+    "name": "farm",
+    "author_company": "farm-fe",
+    "specialization": "frontend",
+    "type": "compiler"
+  },
+  {
+    "tool_id": 2787,
+    "name": "bulmaswatch",
+    "author_company": "jenil",
+    "specialization": "frontend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 2788,
+    "name": "sift.js",
+    "author_company": "crcn",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2789,
+    "name": "frontdesk",
+    "author_company": "miripiruni",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2790,
+    "name": "login-flow",
+    "author_company": "mxstbr",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2791,
+    "name": "piral",
+    "author_company": "smapiot",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2792,
+    "name": "semana-javascript-expert05",
+    "author_company": "ErickWendel",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2793,
+    "name": "watching-you",
+    "author_company": "jj811208",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2794,
+    "name": "dev-practice",
+    "author_company": "alinebastos",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2795,
+    "name": "fe-necessary-book",
+    "author_company": "ddzy",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2796,
+    "name": "vue-beautiful-chat",
+    "author_company": "mattmezza",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2797,
+    "name": "visual-center",
+    "author_company": "javierbyte",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2798,
+    "name": "shariff",
+    "author_company": "heiseonline",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2799,
+    "name": "myblog",
+    "author_company": "lihongxun945",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2800,
+    "name": "blog",
+    "author_company": "dongyuanxin",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2801,
+    "name": "reitit",
+    "author_company": "metosin",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2802,
+    "name": "saas-boilerplate",
+    "author_company": "apptension",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2803,
+    "name": "sql-father-frontend-public",
+    "author_company": "liyupi",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2804,
+    "name": "bank",
+    "author_company": "pietrzakadrian",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2805,
+    "name": "aurelia",
+    "author_company": "aurelia",
+    "specialization": "frontend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 2806,
+    "name": "jetpack",
+    "author_company": "KidkArolis",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2807,
+    "name": "thing-translator",
+    "author_company": "dmotz",
+    "specialization": "frontend",
+    "type": "language"
+  },
+  {
+    "tool_id": 2808,
+    "name": "AwesomeSites",
+    "author_company": "ezshine",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2809,
+    "name": "tiny-engine",
+    "author_company": "opentiny",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2810,
+    "name": "coffee",
+    "author_company": "Coframe",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2811,
+    "name": "layr",
+    "author_company": "layrjs",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2812,
+    "name": "frontend",
+    "author_company": "kottans",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2813,
+    "name": "tiny-vue",
+    "author_company": "opentiny",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2814,
+    "name": "prepare_frontend_interview",
+    "author_company": "junh0328",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2815,
+    "name": "Equal",
+    "author_company": "Equal-UI",
+    "specialization": "frontend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 2816,
+    "name": "F2E",
+    "author_company": "ponkans",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2817,
+    "name": "Project-Ideas-And-Resources",
+    "author_company": "The-Cool-Coders",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2818,
+    "name": "roadmap-do-desenvolvedor-web",
+    "author_company": "hideraldus13",
+    "specialization": "frontend",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2819,
+    "name": "kvision",
+    "author_company": "rjaros",
+    "specialization": "frontend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 2820,
+    "name": "Sublime-Text-Plugins-for-Frontend-Web-Development",
+    "author_company": "jfilter",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2821,
+    "name": "programming-challenges",
+    "author_company": "michelbernardods",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2822,
+    "name": "frontend-guideline",
+    "author_company": "juntossomosmais",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2823,
+    "name": "vanilla-todo",
+    "author_company": "morris",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2824,
+    "name": "Home-Assistant-Mobile-First",
+    "author_company": "Clooos",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2825,
+    "name": "baklava",
+    "author_company": "Trendyol",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2826,
+    "name": "angular-tree-component",
+    "author_company": "CirclonGroup",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2827,
+    "name": "mern-course-bootcamp",
+    "author_company": "jeanrauwers",
+    "specialization": "frontend",
+    "type": null
+  },
+  {
+    "tool_id": 2828,
+    "name": "oruga",
+    "author_company": "oruga-ui",
+    "specialization": "frontend",
+    "type": "ui"
+  },
+  {
+    "tool_id": 2829,
+    "name": "awesome-scalability",
+    "author_company": "binhnguyennus",
+    "specialization": "backend",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2830,
+    "name": "appwrite",
+    "author_company": "appwrite",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2831,
+    "name": "awesome-cheatsheets",
+    "author_company": "LeCoupa",
+    "specialization": "backend",
+    "type": "language"
+  },
+  {
+    "tool_id": 2832,
+    "name": "pocketbase",
+    "author_company": "pocketbase",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2833,
+    "name": "GitHubDaily",
+    "author_company": "GitHubDaily",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2834,
+    "name": "parse-server",
+    "author_company": "parse-community",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2835,
+    "name": "sonic",
+    "author_company": "valeriansaliou",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2836,
+    "name": "Hello-Python",
+    "author_company": "mouredev",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2837,
+    "name": "full-stack-fastapi-postgresql",
+    "author_company": "tiangolo",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2838,
+    "name": "october",
+    "author_company": "octobercms",
+    "specialization": "backend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 2839,
+    "name": "domain-driven-hexagon",
+    "author_company": "Sairyss",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2840,
+    "name": "nakama",
+    "author_company": "heroiclabs",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2841,
+    "name": "nhost",
+    "author_company": "nhost",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2842,
+    "name": "web-skills",
+    "author_company": "andreasbm",
+    "specialization": "backend",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2843,
+    "name": "vagas",
+    "author_company": "backend-br",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2844,
+    "name": "developer-roadmap-chinese",
+    "author_company": "goodjack",
+    "specialization": "backend",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2845,
+    "name": "awesome-system-design-resources",
+    "author_company": "ashishps1",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2846,
+    "name": "rowy",
+    "author_company": "rowyio",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2847,
+    "name": "cockpit",
+    "author_company": "agentejo",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2848,
+    "name": "codefather",
+    "author_company": "liyupi",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2849,
+    "name": "hoodie",
+    "author_company": "hoodiehq",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2850,
+    "name": "lucene-solr",
+    "author_company": "apache",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2851,
+    "name": "encore",
+    "author_company": "encoredev",
+    "specialization": "backend",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2852,
+    "name": "EasyAdminBundle",
+    "author_company": "EasyCorp",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2853,
+    "name": "interviewGuide",
+    "author_company": "NotFound9",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2854,
+    "name": "mianshiya-public",
+    "author_company": "liyupi",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2855,
+    "name": "roadmaps",
+    "author_company": "WeMakeDevs",
+    "specialization": "backend",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2856,
+    "name": "simplebank",
+    "author_company": "techschool",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2857,
+    "name": "olivia",
+    "author_company": "olivia-ai",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2858,
+    "name": "go-backend-clean-architecture",
+    "author_company": "amitshekhariitbhu",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2859,
+    "name": "Robyn",
+    "author_company": "sparckles",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2860,
+    "name": "mirrord",
+    "author_company": "metalbear-co",
+    "specialization": "backend",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2861,
+    "name": "nodejs-integration-tests-best-practices",
+    "author_company": "testjavascript",
+    "specialization": "backend",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2862,
+    "name": "CRUD",
+    "author_company": "Laravel-Backpack",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2863,
+    "name": "free-programming-resources",
+    "author_company": "liyupi",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2864,
+    "name": "ownphotos",
+    "author_company": "hooram",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2865,
+    "name": "readyset",
+    "author_company": "readysettech",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2866,
+    "name": "tinyhttp",
+    "author_company": "tinyhttp",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2867,
+    "name": "code-nav",
+    "author_company": "liyupi",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2868,
+    "name": "growth-in-action",
+    "author_company": "phodal",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2869,
+    "name": "node-typescript-boilerplate",
+    "author_company": "jsynowiec",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2870,
+    "name": "ultimate-backend",
+    "author_company": "juicycleff",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2871,
+    "name": "cli",
+    "author_company": "create-go-app",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2872,
+    "name": "devmap",
+    "author_company": "zualex",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2873,
+    "name": "webapp.rs",
+    "author_company": "saschagrunert",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2874,
+    "name": "lucene",
+    "author_company": "apache",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2875,
+    "name": "slides",
+    "author_company": "TritonHo",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2876,
+    "name": "blaze",
+    "author_company": "blenderskool",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2877,
+    "name": "guiadobackend",
+    "author_company": "arthurspk",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2878,
+    "name": "lumber",
+    "author_company": "ForestAdmin",
+    "specialization": "backend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 2879,
+    "name": "backend-cheats",
+    "author_company": "cheatsnake",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2880,
+    "name": "spring-boot-vuejs",
+    "author_company": "jonashackt",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2881,
+    "name": "apihub",
+    "author_company": "hiteshchoudhary",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2882,
+    "name": "gobetween",
+    "author_company": "yyyar",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2883,
+    "name": "yuindex",
+    "author_company": "liyupi",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2884,
+    "name": "sql-father-backend-public",
+    "author_company": "liyupi",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2885,
+    "name": "Awesome-Interview",
+    "author_company": "Awesome-Interview",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2886,
+    "name": "rust-web-developer-roadmap",
+    "author_company": "anshulrgoyal",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2887,
+    "name": "silicon",
+    "author_company": "matt-42",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2888,
+    "name": "dart_frog",
+    "author_company": "VeryGoodOpenSource",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2889,
+    "name": "lastbackend",
+    "author_company": "lastbackend",
+    "specialization": "backend",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2890,
+    "name": "fusio",
+    "author_company": "apioo",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2891,
+    "name": "NotyKT",
+    "author_company": "PatilShreyas",
+    "specialization": "backend",
+    "type": "testing"
+  },
+  {
+    "tool_id": 2892,
+    "name": "dev-practice",
+    "author_company": "alinebastos",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2893,
+    "name": "Java-Notes",
+    "author_company": "PansonPanson",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2894,
+    "name": "awesome-backend",
+    "author_company": "zhashkevych",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2895,
+    "name": "toggl_api_docs",
+    "author_company": "toggl",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2896,
+    "name": "goyave",
+    "author_company": "go-goyave",
+    "specialization": "backend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 2897,
+    "name": "saas-boilerplate",
+    "author_company": "apptension",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2898,
+    "name": "kuzzle",
+    "author_company": "kuzzleio",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2899,
+    "name": "Systemizer",
+    "author_company": "honzaap",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2900,
+    "name": "bank",
+    "author_company": "pietrzakadrian",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2901,
+    "name": "simple-admin-core",
+    "author_company": "suyuan32",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2902,
+    "name": "layr",
+    "author_company": "layrjs",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2903,
+    "name": "backend-best-practices",
+    "author_company": "Sairyss",
+    "specialization": "backend",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2904,
+    "name": "axios-module",
+    "author_company": "nuxt-community",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2905,
+    "name": "pavex",
+    "author_company": "LukeMathWalker",
+    "specialization": "backend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 2906,
+    "name": "laravel-realworld-example-app",
+    "author_company": "gothinkster",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2907,
+    "name": "local-web-server",
+    "author_company": "lwsjs",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2908,
+    "name": "roadmap-do-desenvolvedor-web",
+    "author_company": "hideraldus13",
+    "specialization": "backend",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2909,
+    "name": "oh-my-backend",
+    "author_company": "bzick",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2910,
+    "name": "programming-challenges",
+    "author_company": "michelbernardods",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2911,
+    "name": "learn-nodejs-hard-way",
+    "author_company": "ishtms",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2912,
+    "name": "chiselstrike",
+    "author_company": "chiselstrike",
+    "specialization": "backend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 2913,
+    "name": "symfony-6-es-cqrs-boilerplate",
+    "author_company": "jorge07",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2914,
+    "name": "desafios",
+    "author_company": "backend-br",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2915,
+    "name": "solr",
+    "author_company": "apache",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2916,
+    "name": "ucall",
+    "author_company": "unum-cloud",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2917,
+    "name": "osu-web",
+    "author_company": "ppy",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2918,
+    "name": "XBackBone",
+    "author_company": "sergix44",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2919,
+    "name": "IT-Note",
+    "author_company": "InSeong-So",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2920,
+    "name": "refactor-like-a-superhero",
+    "author_company": "bespoyasov",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2921,
+    "name": "elixir-phoenix-realworld-example-app",
+    "author_company": "gothinkster",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2922,
+    "name": "nextacular",
+    "author_company": "nextacular",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2923,
+    "name": "hospitalrun-server",
+    "author_company": "HospitalRun",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2924,
+    "name": "felix",
+    "author_company": "mojocn",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2925,
+    "name": "framework",
+    "author_company": "featherhttp",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2926,
+    "name": "free-courses",
+    "author_company": "alinebastos",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2927,
+    "name": "resources",
+    "author_company": "CodeChefVIT",
+    "specialization": "backend",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2928,
+    "name": "SleepingOwlAdmin",
+    "author_company": "LaravelRUS",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2929,
+    "name": "rails-handbook",
+    "author_company": "infinum",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2930,
+    "name": "nullstack",
+    "author_company": "nullstack",
+    "specialization": "backend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 2931,
+    "name": "structr",
+    "author_company": "structr",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2932,
+    "name": "tailadmin-free-tailwind-dashboard-template",
+    "author_company": "TailAdmin",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2933,
+    "name": "nextjs-wordpress-starter",
+    "author_company": "WebDevStudios",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2934,
+    "name": "repractise",
+    "author_company": "phodal",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2935,
+    "name": "Saturn",
+    "author_company": "SaturnFramework",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2936,
+    "name": "python-web-guide",
+    "author_company": "PegasusWang",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2937,
+    "name": "rustc_codegen_clr",
+    "author_company": "FractalFir",
+    "specialization": "backend",
+    "type": "compiler"
+  },
+  {
+    "tool_id": 2938,
+    "name": "2023-CS-Study",
+    "author_company": "devSquad-study",
+    "specialization": "backend",
+    "type": "db"
+  },
+  {
+    "tool_id": 2939,
+    "name": "curriculum",
+    "author_company": "HackYourFuture",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2940,
+    "name": "hydra",
+    "author_company": "pnxtech",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2941,
+    "name": "abap2xlsx",
+    "author_company": "abap2xlsx",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2942,
+    "name": "live-torrent",
+    "author_company": "Davenchy",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2943,
+    "name": "ethql",
+    "author_company": "Consensys",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2944,
+    "name": "blockbook",
+    "author_company": "trezor",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2945,
+    "name": "study-collection-backend",
+    "author_company": "Frankle97",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2946,
+    "name": "hydra",
+    "author_company": "micro-plat",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2947,
+    "name": "lux",
+    "author_company": "postlight",
+    "specialization": "backend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 2948,
+    "name": "everything-chatgpt",
+    "author_company": "terminalcommandnewsletter",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2949,
+    "name": "go-web-workshop",
+    "author_company": "campoy",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2950,
+    "name": "Stackoverflow-Clone-Frontend",
+    "author_company": "Mayank0255",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2951,
+    "name": "dotenx",
+    "author_company": "dotenx",
+    "specialization": "backend",
+    "type": "ui"
+  },
+  {
+    "tool_id": 2952,
+    "name": "wsify",
+    "author_company": "alash3al",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2953,
+    "name": "forum",
+    "author_company": "backend-br",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2954,
+    "name": "Serverless-Boilerplate-Express-TypeScript",
+    "author_company": "ixartz",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2955,
+    "name": "developer-roadmap-zh-CN",
+    "author_company": "forthespada",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2956,
+    "name": "actix-realworld-example-app",
+    "author_company": "fairingrey",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2957,
+    "name": "backend-swe-interview-questions",
+    "author_company": "tamhoang1412",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2958,
+    "name": "para",
+    "author_company": "Erudika",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2959,
+    "name": "mojo.js",
+    "author_company": "mojolicious",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2960,
+    "name": "choiceof.dev",
+    "author_company": "bdebon",
+    "specialization": "backend",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2961,
+    "name": "udash-core",
+    "author_company": "UdashFramework",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2962,
+    "name": "golang_step_by_step",
+    "author_company": "Shitaibin",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2963,
+    "name": "libfirm",
+    "author_company": "libfirm",
+    "specialization": "backend",
+    "type": "compiler"
+  },
+  {
+    "tool_id": 2964,
+    "name": "full-stack-fastapi-couchbase",
+    "author_company": "tiangolo",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2965,
+    "name": "nestjs-starter-rest-api",
+    "author_company": "monstar-lab-oss",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2966,
+    "name": "blog",
+    "author_company": "alienzhou",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2967,
+    "name": "Everything-Tech",
+    "author_company": "moabukar",
+    "specialization": "backend",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2968,
+    "name": "happyx",
+    "author_company": "HapticX",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2969,
+    "name": "links",
+    "author_company": "gmartins-dev",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2970,
+    "name": "raxx",
+    "author_company": "CrowdHailer",
+    "specialization": "backend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 2971,
+    "name": "next-api-decorators",
+    "author_company": "instantcommerce",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2972,
+    "name": "Conduit",
+    "author_company": "ConduitPlatform",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2973,
+    "name": "i18next-http-backend",
+    "author_company": "i18next",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2974,
+    "name": "mern-authentication",
+    "author_company": "flaviuse",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2975,
+    "name": "Ultimate-NodeJs-Resources",
+    "author_company": "DhanushNehru",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2976,
+    "name": "conf",
+    "author_company": "docops-hq",
+    "specialization": "backend",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2977,
+    "name": "roadmap-backend-2023",
+    "author_company": "gabrielrangel95",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2978,
+    "name": "Pharmacy-Mangment-System",
+    "author_company": "LalanaChami",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2979,
+    "name": "terraform-aws-tfstate-backend",
+    "author_company": "cloudposse",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2980,
+    "name": "DjReact",
+    "author_company": "justdjango",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2981,
+    "name": "vagas",
+    "author_company": "dotnetdevbr",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2982,
+    "name": "backend",
+    "author_company": "kottans",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2983,
+    "name": "koa-vue-notes-api",
+    "author_company": "johndatserakis",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2984,
+    "name": "vagas",
+    "author_company": "backend-pt",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2985,
+    "name": "open_source_bms",
+    "author_company": "xyl-tools",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2986,
+    "name": "marten",
+    "author_company": "martenframework",
+    "specialization": "backend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 2987,
+    "name": "inspect",
+    "author_company": "csfloat",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2988,
+    "name": "forest-rails",
+    "author_company": "ForestAdmin",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2989,
+    "name": "jsx-mail",
+    "author_company": "Theryston",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2990,
+    "name": "hasura-auth",
+    "author_company": "nhost",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2991,
+    "name": "vue-storefront-api",
+    "author_company": "vuestorefront",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2992,
+    "name": "NodeJS-Interview-Questions",
+    "author_company": "tshemsedinov",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2993,
+    "name": "tweek",
+    "author_company": "Soluto",
+    "specialization": "backend",
+    "type": "devops"
+  },
+  {
+    "tool_id": 2994,
+    "name": "Kanary",
+    "author_company": "SeunAdelekan",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2995,
+    "name": "nest-auth-example",
+    "author_company": "leosuncin",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2996,
+    "name": "sifrr",
+    "author_company": "sifrr",
+    "specialization": "backend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 2997,
+    "name": "plain-free-bootstrap-admin-template",
+    "author_company": "PlainAdmin",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2998,
+    "name": "node-boilerplate",
+    "author_company": "santoshshinde2012",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 2999,
+    "name": "concourse",
+    "author_company": "cinchapi",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 3000,
+    "name": "eShopOnContainersDDD",
+    "author_company": "charlessolar",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 3001,
+    "name": "http-fake-backend",
+    "author_company": "micromata",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 3002,
+    "name": "whatsapp-bot",
+    "author_company": "caioagiani",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 3003,
+    "name": "db-query-matchers",
+    "author_company": "sds",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 3004,
+    "name": "free-react-tailwind-admin-dashboard",
+    "author_company": "TailAdmin",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 3005,
+    "name": "three-layer",
+    "author_company": "Holmusk",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 3006,
+    "name": "CleanArchitecture",
+    "author_company": "ESchouten",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 3007,
+    "name": "Parse-Swift",
+    "author_company": "parse-community",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 3008,
+    "name": "yii2-usuario",
+    "author_company": "2amigos",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 3009,
+    "name": "nest-user-auth",
+    "author_company": "EricKit",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 3010,
+    "name": "storaji",
+    "author_company": "IndomaximTechID",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 3011,
+    "name": "icms2",
+    "author_company": "instantsoft",
+    "specialization": "backend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 3012,
+    "name": "node-clean-architecture",
+    "author_company": "rasouza",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 3013,
+    "name": "yii2-gentelella",
+    "author_company": "yiister",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 3014,
+    "name": "GoldenEye",
+    "author_company": "oskardudycz",
+    "specialization": "backend",
+    "type": "framework"
+  },
+  {
+    "tool_id": 3015,
+    "name": "Taisite-Platform",
+    "author_company": "amazingTest",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 3016,
+    "name": "backend-interview-questions",
+    "author_company": "starandtina",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 3017,
+    "name": "Ukrainian_IT_Communities",
+    "author_company": "nikit0ns",
+    "specialization": "backend",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3018,
+    "name": "justchat",
+    "author_company": "justdjango",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 3019,
+    "name": "gvmd",
+    "author_company": "greenbone",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 3020,
+    "name": "otter",
+    "author_company": "poowf",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 3021,
+    "name": "better-coder",
+    "author_company": "liyupi",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 3022,
+    "name": "plumier",
+    "author_company": "plumier",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 3023,
+    "name": "gindex-v4",
+    "author_company": "tks18",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 3024,
+    "name": "appy",
+    "author_company": "JKHeadley",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 3025,
+    "name": "i18next-xhr-backend",
+    "author_company": "i18next",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 3026,
+    "name": "mage-enhanced-admin-grids",
+    "author_company": "blmage",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 3027,
+    "name": "TodoMVC-DDD-CQRS-EventSourcing",
+    "author_company": "charlessolar",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 3028,
+    "name": "creatly-backend",
+    "author_company": "Creatly",
+    "specialization": "backend",
+    "type": null
+  },
+  {
+    "tool_id": 3029,
+    "name": "the-book-of-secret-knowledge",
+    "author_company": "trimstray",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3030,
+    "name": "netdata",
+    "author_company": "netdata",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3031,
+    "name": "devops-exercises",
+    "author_company": "bregman-arie",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3032,
+    "name": "awesome-scalability",
+    "author_company": "binhnguyennus",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3033,
+    "name": "act",
+    "author_company": "nektos",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3034,
+    "name": "gitea",
+    "author_company": "go-gitea",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3035,
+    "name": "kong",
+    "author_company": "Kong",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3036,
+    "name": "sentry",
+    "author_company": "getsentry",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3037,
+    "name": "cli",
+    "author_company": "httpie",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3038,
+    "name": "dokku",
+    "author_company": "dokku",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3039,
+    "name": "90DaysOfDevOps",
+    "author_company": "MichaelCade",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3040,
+    "name": "docker_practice",
+    "author_company": "yeasy",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3041,
+    "name": "lens",
+    "author_company": "lensapp",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3042,
+    "name": "jenkins",
+    "author_company": "jenkinsci",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3043,
+    "name": "awesome-sysadmin",
+    "author_company": "awesome-foss",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3044,
+    "name": "goreplay",
+    "author_company": "buger",
+    "specialization": "devops",
+    "type": "testing"
+  },
+  {
+    "tool_id": 3045,
+    "name": "watchtower",
+    "author_company": "containrrr",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3046,
+    "name": "wtf",
+    "author_company": "wtfutil",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3047,
+    "name": "argo-cd",
+    "author_company": "argoproj",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3048,
+    "name": "sops",
+    "author_company": "getsops",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3049,
+    "name": "kubesphere",
+    "author_company": "kubesphere",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3050,
+    "name": "apisix",
+    "author_company": "apache",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3051,
+    "name": "onedev",
+    "author_company": "theonedev",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3052,
+    "name": "walle-web",
+    "author_company": "meolu",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3053,
+    "name": "lynis",
+    "author_company": "CISOfy",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3054,
+    "name": "awesome-mlops",
+    "author_company": "visenger",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3055,
+    "name": "awesome-sre",
+    "author_company": "dastergon",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3056,
+    "name": "kubeshark",
+    "author_company": "kubeshark",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3057,
+    "name": "test-your-sysadmin-skills",
+    "author_company": "trimstray",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3058,
+    "name": "infracost",
+    "author_company": "infracost",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3059,
+    "name": "unleash",
+    "author_company": "Unleash",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3060,
+    "name": "webhook",
+    "author_company": "adnanh",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3061,
+    "name": "spug",
+    "author_company": "openspug",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3062,
+    "name": "dagger",
+    "author_company": "dagger",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3063,
+    "name": "kubescape",
+    "author_company": "kubescape",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3064,
+    "name": "task",
+    "author_company": "go-task",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3065,
+    "name": "bytebase",
+    "author_company": "bytebase",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3066,
+    "name": "pyroscope",
+    "author_company": "grafana",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3067,
+    "name": "howtheysre",
+    "author_company": "upgundecha",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3068,
+    "name": "semaphore",
+    "author_company": "ansible-semaphore",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3069,
+    "name": "openebs",
+    "author_company": "openebs",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3070,
+    "name": "origin",
+    "author_company": "openshift",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3071,
+    "name": "miller",
+    "author_company": "johnkerl",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3072,
+    "name": "Yearning",
+    "author_company": "cookieY",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3073,
+    "name": "fission",
+    "author_company": "fission",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3074,
+    "name": "devops-resources",
+    "author_company": "bregman-arie",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3075,
+    "name": "ansible-for-devops",
+    "author_company": "geerlingguy",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3076,
+    "name": "flyway",
+    "author_company": "flyway",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3077,
+    "name": "xonsh",
+    "author_company": "xonsh",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3078,
+    "name": "homelab",
+    "author_company": "khuedoan",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3079,
+    "name": "DevOps-Guide",
+    "author_company": "Tikam02",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3080,
+    "name": "terragrunt",
+    "author_company": "gruntwork-io",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3081,
+    "name": "chef",
+    "author_company": "chef",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3082,
+    "name": "terratest",
+    "author_company": "gruntwork-io",
+    "specialization": "devops",
+    "type": "testing"
+  },
+  {
+    "tool_id": 3083,
+    "name": "DevOps-Roadmap",
+    "author_company": "milanm",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3084,
+    "name": "healthchecks",
+    "author_company": "healthchecks",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3085,
+    "name": "atlantis",
+    "author_company": "runatlantis",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3086,
+    "name": "wasm3",
+    "author_company": "wasm3",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3087,
+    "name": "sh",
+    "author_company": "amoffat",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3088,
+    "name": "developer-roadmap-chinese",
+    "author_company": "goodjack",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3089,
+    "name": "tfsec",
+    "author_company": "aquasecurity",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3090,
+    "name": "datree",
+    "author_company": "datreeio",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3091,
+    "name": "checkov",
+    "author_company": "bridgecrewio",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3092,
+    "name": "steampipe",
+    "author_company": "turbot",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3093,
+    "name": "st2",
+    "author_company": "StackStorm",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3094,
+    "name": "k3sup",
+    "author_company": "alexellis",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3095,
+    "name": "cabot",
+    "author_company": "arachnys",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3096,
+    "name": "guide",
+    "author_company": "hobby-kube",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3097,
+    "name": "theByteBook",
+    "author_company": "isno",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3098,
+    "name": "laravel-backup",
+    "author_company": "spatie",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3099,
+    "name": "goss",
+    "author_company": "goss-org",
+    "specialization": "devops",
+    "type": "testing"
+  },
+  {
+    "tool_id": 3100,
+    "name": "rundeck",
+    "author_company": "rundeck",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3101,
+    "name": "shuttle",
+    "author_company": "shuttle-hq",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3102,
+    "name": "gaia",
+    "author_company": "gaia-pipeline",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3103,
+    "name": "DevSecOps",
+    "author_company": "sottlmarek",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3104,
+    "name": "udemy-docker-mastery",
+    "author_company": "BretFisher",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3105,
+    "name": "clearml",
+    "author_company": "allegroai",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3106,
+    "name": "awesome-terraform",
+    "author_company": "shuaibiyy",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3107,
+    "name": "awless",
+    "author_company": "wallix",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3108,
+    "name": "xxh",
+    "author_company": "xxh",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3109,
+    "name": "Daily-Question",
+    "author_company": "shfshanyue",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3110,
+    "name": "rainbond",
+    "author_company": "goodrain",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3111,
+    "name": "tsuru",
+    "author_company": "tsuru",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3112,
+    "name": "ThreatMapper",
+    "author_company": "deepfence",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3113,
+    "name": "jx",
+    "author_company": "jenkins-x",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3114,
+    "name": "faraday",
+    "author_company": "infobyte",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3115,
+    "name": "cds",
+    "author_company": "ovh",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3116,
+    "name": "terrascan",
+    "author_company": "tenable",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3117,
+    "name": "gatus",
+    "author_company": "TwiN",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3118,
+    "name": "learn-to-cloud",
+    "author_company": "learntocloud",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3119,
+    "name": "telegram-list",
+    "author_company": "goq",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3120,
+    "name": "encore",
+    "author_company": "encoredev",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3121,
+    "name": "liquibase",
+    "author_company": "liquibase",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3122,
+    "name": "awesome-devsecops",
+    "author_company": "devsecops",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3123,
+    "name": "wgcloud",
+    "author_company": "tianshiyeben",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3124,
+    "name": "k8sgpt",
+    "author_company": "k8sgpt-ai",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3125,
+    "name": "litmus",
+    "author_company": "litmuschaos",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3126,
+    "name": "porter",
+    "author_company": "porter-dev",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3127,
+    "name": "arkade",
+    "author_company": "alexellis",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3128,
+    "name": "devspace",
+    "author_company": "devspace-sh",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3129,
+    "name": "GameDevMind",
+    "author_company": "gonglei007",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3130,
+    "name": "werf",
+    "author_company": "werf",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3131,
+    "name": "hygieia",
+    "author_company": "hygieia",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3132,
+    "name": "roadmaps",
+    "author_company": "WeMakeDevs",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3133,
+    "name": "kubefwd",
+    "author_company": "txn2",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3134,
+    "name": "BoostNote-App",
+    "author_company": "BoostIO",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3135,
+    "name": "opendevops",
+    "author_company": "opendevops-cn",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3136,
+    "name": "awesome-ci",
+    "author_company": "ligurio",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3137,
+    "name": "woodpecker",
+    "author_company": "woodpecker-ci",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3138,
+    "name": "mgmt",
+    "author_company": "purpleidea",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3139,
+    "name": "bunkerweb",
+    "author_company": "bunkerity",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3140,
+    "name": "copilot-cli",
+    "author_company": "aws",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3141,
+    "name": "kubernetes-workshop",
+    "author_company": "eon01",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3142,
+    "name": "adminset",
+    "author_company": "guohongze",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3143,
+    "name": "mirrord",
+    "author_company": "metalbear-co",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3144,
+    "name": "coroot",
+    "author_company": "coroot",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3145,
+    "name": "flipt",
+    "author_company": "flipt-io",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3146,
+    "name": "prometheus-book",
+    "author_company": "yunlzheng",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3147,
+    "name": "awesome-computer-science-opportunities",
+    "author_company": "anu0012",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3148,
+    "name": "errbot",
+    "author_company": "errbotio",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3149,
+    "name": "assh",
+    "author_company": "moul",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3150,
+    "name": "Nodejs-Roadmap",
+    "author_company": "qufei1993",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3151,
+    "name": "inspec",
+    "author_company": "inspec",
+    "specialization": "devops",
+    "type": "testing"
+  },
+  {
+    "tool_id": 3152,
+    "name": "cloudnative-pg",
+    "author_company": "cloudnative-pg",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3153,
+    "name": "erda",
+    "author_company": "erda-project",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3154,
+    "name": "zadig",
+    "author_company": "koderover",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3155,
+    "name": "stern",
+    "author_company": "stern",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3156,
+    "name": "DevOps",
+    "author_company": "Pradumnasaraf",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3157,
+    "name": "minishift",
+    "author_company": "minishift",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3158,
+    "name": "introduction-to-bash-scripting",
+    "author_company": "bobbyiliev",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3159,
+    "name": "goreman",
+    "author_company": "mattn",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3160,
+    "name": "gomplate",
+    "author_company": "hairyhenderson",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3161,
+    "name": "choerodon",
+    "author_company": "open-hand",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3162,
+    "name": "sysbox",
+    "author_company": "nestybox",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3163,
+    "name": "minicron",
+    "author_company": "jamesrwhite",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3164,
+    "name": "awesome-ssh",
+    "author_company": "moul",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3165,
+    "name": "incubator-devlake",
+    "author_company": "apache",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3166,
+    "name": "robusta",
+    "author_company": "robusta-dev",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3167,
+    "name": "pytest-testinfra",
+    "author_company": "pytest-dev",
+    "specialization": "devops",
+    "type": "testing"
+  },
+  {
+    "tool_id": 3168,
+    "name": "bk-ci",
+    "author_company": "TencentBlueKing",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3169,
+    "name": "syncd",
+    "author_company": "dreamans",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3170,
+    "name": "juju",
+    "author_company": "juju",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3171,
+    "name": "mitogen",
+    "author_company": "mitogen-hq",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3172,
+    "name": "blog",
+    "author_company": "amandakelake",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3173,
+    "name": "DevOps-Bash-tools",
+    "author_company": "HariSekhon",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3174,
+    "name": "shell-operator",
+    "author_company": "flant",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3175,
+    "name": "archerysec",
+    "author_company": "archerysec",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3176,
+    "name": "ledge",
+    "author_company": "phodal",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3177,
+    "name": "otomi-core",
+    "author_company": "redkubes",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3178,
+    "name": "snowflake",
+    "author_company": "subhra74",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3179,
+    "name": "ansible-vagrant-examples",
+    "author_company": "geerlingguy",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3180,
+    "name": "developer-roadmap",
+    "author_company": "DasyDong",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3181,
+    "name": "terracognita",
+    "author_company": "cycloidio",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3182,
+    "name": "botkube",
+    "author_company": "kubeshop",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3183,
+    "name": "DevOps-Bootcamp",
+    "author_company": "kunal-kushwaha",
+    "specialization": "devops",
+    "type": "testing"
+  },
+  {
+    "tool_id": 3184,
+    "name": "grafana-aws-cloudwatch-dashboards",
+    "author_company": "monitoringartist",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3185,
+    "name": "preevy",
+    "author_company": "livecycle",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3186,
+    "name": "awesome-roadmaps",
+    "author_company": "orsanawwad",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3187,
+    "name": "awesome-cloud-native",
+    "author_company": "rootsongjc",
+    "specialization": "devops",
+    "type": "devops"
+  },
+  {
+    "tool_id": 3188,
+    "name": "tutorials",
+    "author_company": "antonputra",
+    "specialization": "devops",
+    "type": "devops"
+  }
+]
