@@ -104,7 +104,7 @@ CREATE TABLE company_date( -- to use date_from on orchestration
   benefit numeric
 );
 
-CREATE TABLE market_date(
+CREATE TABLE market_date( -- not orchestrated in apache hop
   market_id integer,
   date_id integer,
   total_amount_of_offers integer
