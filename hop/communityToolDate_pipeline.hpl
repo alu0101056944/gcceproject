@@ -896,81 +896,6 @@
     </GUI>
   </transform>
   <transform>
-    <name>local_and_global_date_id_map</name>
-    <type>JsonInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <include>N</include>
-    <include_field/>
-    <rownum>N</rownum>
-    <addresultfile>N</addresultfile>
-    <readurl>N</readurl>
-    <removeSourceField>N</removeSourceField>
-    <IsIgnoreEmptyFile>N</IsIgnoreEmptyFile>
-    <doNotFailIfNoFile>Y</doNotFailIfNoFile>
-    <ignoreMissingPath>Y</ignoreMissingPath>
-    <defaultPathLeafToNull>Y</defaultPathLeafToNull>
-    <rownum_field/>
-    <file>
-      <name>C:\Users\Marcos\Desktop\hop_gcceproject\date_id_map.json.json</name>
-      <filemask/>
-      <exclude_filemask/>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-    </file>
-    <fields>
-      <field>
-        <name>global_date_id</name>
-        <path>$.data.*.global_date_id</path>
-        <type>Integer</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>local_date_id</name>
-        <path>$.data.*.local_date_id</path>
-        <type>Integer</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-    </fields>
-    <limit>0</limit>
-    <IsInFields>N</IsInFields>
-    <IsAFile>N</IsAFile>
-    <valueField/>
-    <shortFileFieldName/>
-    <pathFieldName/>
-    <hiddenFieldName/>
-    <lastModificationTimeFieldName/>
-    <uriNameFieldName/>
-    <rootUriNameFieldName/>
-    <extensionFieldName/>
-    <sizeFieldName/>
-    <attributes/>
-    <GUI>
-      <xloc>1056</xloc>
-      <yloc>256</yloc>
-    </GUI>
-  </transform>
-  <transform>
     <name>local_and_global_community_id_map</name>
     <type>JsonInput</type>
     <description/>
@@ -1048,6 +973,81 @@
     <GUI>
       <xloc>0</xloc>
       <yloc>576</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>local_and_global_date_id_map</name>
+    <type>JsonInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <include>N</include>
+    <include_field/>
+    <rownum>N</rownum>
+    <addresultfile>N</addresultfile>
+    <readurl>N</readurl>
+    <removeSourceField>N</removeSourceField>
+    <IsIgnoreEmptyFile>N</IsIgnoreEmptyFile>
+    <doNotFailIfNoFile>Y</doNotFailIfNoFile>
+    <ignoreMissingPath>Y</ignoreMissingPath>
+    <defaultPathLeafToNull>Y</defaultPathLeafToNull>
+    <rownum_field/>
+    <file>
+      <name>C:\Users\Marcos\Desktop\hop_gcceproject\date_id_map.json.json</name>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
+    <fields>
+      <field>
+        <name>global_date_id</name>
+        <path>$.data.*.global_date_id</path>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>local_date_id</name>
+        <path>$.data.*.local_date_id</path>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+    </fields>
+    <limit>0</limit>
+    <IsInFields>N</IsInFields>
+    <IsAFile>N</IsAFile>
+    <valueField/>
+    <shortFileFieldName/>
+    <pathFieldName/>
+    <hiddenFieldName/>
+    <lastModificationTimeFieldName/>
+    <uriNameFieldName/>
+    <rootUriNameFieldName/>
+    <extensionFieldName/>
+    <sizeFieldName/>
+    <attributes/>
+    <GUI>
+      <xloc>1056</xloc>
+      <yloc>256</yloc>
     </GUI>
   </transform>
   <transform>
@@ -1332,19 +1332,23 @@ FROM "public".community_tool_date
     <fields>
       <field>
         <name>community_id</name>
+        <rename/>
       </field>
       <field>
-        <name>local_tool_id</name>
+        <name>global_tool_id</name>
         <rename>tool_id</rename>
       </field>
       <field>
         <name>local_date_id</name>
+        <rename/>
       </field>
       <field>
         <name>tool_score</name>
+        <rename/>
       </field>
       <field>
         <name>rank</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>

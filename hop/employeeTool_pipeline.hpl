@@ -126,12 +126,17 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>substitute_local_by_global</from>
+      <from>Sort rows 5</from>
       <to>Merge join 2</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Sort rows 5</from>
+      <from>substitute_local_by_global</from>
+      <to>Sort rows 6</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows 6</from>
       <to>Merge join 2</to>
       <enabled>Y</enabled>
     </hop>
@@ -202,7 +207,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <join_type>LEFT OUTER</join_type>
+    <join_type>INNER</join_type>
     <keys_1>
       <key>local_employee_id</key>
     </keys_1>
@@ -350,22 +355,6 @@
     <fields>
       <field>
         <name>tool_id</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-      <field>
-        <name>employee_id</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-      <field>
-        <name>years_of_experience</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
@@ -1011,9 +1000,11 @@ FROM "public".employee_tool
       </field>
       <field>
         <name>tool_id</name>
+        <rename/>
       </field>
       <field>
         <name>years_of_experience</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1021,6 +1012,40 @@ FROM "public".employee_tool
     <GUI>
       <xloc>416</xloc>
       <yloc>224</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Sort rows 6</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>${java.io.tmpdir}</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>local_employee_id</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>224</xloc>
+      <yloc>336</yloc>
     </GUI>
   </transform>
   <transform_error_handling>
