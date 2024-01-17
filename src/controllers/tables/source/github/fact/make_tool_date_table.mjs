@@ -50,15 +50,11 @@ function toChangeType(allVersion) {
 
   const allNumbers = [];
   for (const version of allSemantic) {
-    let currentNumber = '';
     const numbers = [];
-    for (let i = 0; i < version.length; i++) {
-      if (version[i].match(/\d/)) {
-        currentNumber += version[i];
-      } else {
-        numbers.push(parseInt(currentNumber));
-        currentNumber = '';
-      }
+    const numberRegExp = /\d+/g;
+    let execResult;
+    while (execResult = numberRegExp.exec(version)) {
+      numbers.push(execResult[0]);
     }
     allNumbers.push(numbers);
   }
@@ -69,7 +65,7 @@ function toChangeType(allVersion) {
   for (let i = 0; i < 3; i++) { // [major|minor|patch]
     changeType = allChangeType[i];
     const relevantNumbers = allNumbers.map(numbers => numbers[i]);
-    const thereIsChange = new Set(relevantNumbers).length > 1;
+    const thereIsChange = new Set(relevantNumbers).size > 1;
     if (thereIsChange) {
       break;
     }
