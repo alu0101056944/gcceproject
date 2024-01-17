@@ -1,6 +1,0 @@
- [2024-01-13T00:00:00.000Z] to [yyyy-mm-dd hh:mm:ss.ffffff] (f = fractional seconds)
-
- example:
-date_id,date
-7,2024/01/13
-

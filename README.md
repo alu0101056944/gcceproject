@@ -1,4 +1,4 @@
-# Project for the first part of *Gestión de la Comunicación y Conocimiento Empresarial* subject
+# Project for the first part of the *Gestión de la Comunicación y Conocimiento Empresarial* subject
 
 This project makes output tables from information obtained through web scraping different programming library sources. Right now it is able to gather the following information:
 
@@ -147,6 +147,8 @@ The apache hop project is at `hop/gcce_project/` but all the workflows and pipel
  - When index.mjs finishes execution, the `todayDateTable.json` contains a different string date format than apache hop uses. So each time I executed it, after .csv convertion I had to change the `2024-01-08T00:00:00.000Z` format to `2024/01/08 00:00:00.000` in the .csv file for apache hop to execute correctly. So it must be manually changed after each execution.
 
 ## TODO
+ - Do bug testing, there are most likely a lot of bugs left in the code.
+ - Update old tests that are no longer valid.
  - at [src\controllers\tables\source\linkedin\fact\make_market_tool_date_table.mjs](src\controllers\tables\source\linkedin\fact\make_market_tool_date_table.mjs) differentiate between markets.
  - at [src\controllers\tables\fact\make_market_date_table.mjs](src\controllers\tables\source\linkedin\fact\make_market_date_table.mjs) differentiate between all markets because right know all markets get the same `amount_of_offers_attribute`.
  - at [src\controllers\tables\source\github\fact\make_community_tool_date_table.mjs](src\controllers\tables\source\github\fact\make_community_tool_date_table.mjs) rank is temporarily NULL. Think about how to calculate a rank.
